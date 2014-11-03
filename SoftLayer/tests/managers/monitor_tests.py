@@ -24,3 +24,4 @@ class MonitorTests(testing.TestCase):
         result = self.monitor_manager.list_guest_status()
 
         self.assertEqual(result, fixtures.SoftLayer_Account.getVirtualGuests)
+        self.assert_called_with('SoftLayer_Account', 'getVirtualGuests')
