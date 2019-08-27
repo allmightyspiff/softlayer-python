@@ -323,8 +323,32 @@ getSubnets = [
         'subnetType': 'PRIMARY',
         'ipAddressCount': 10,
         'virtualGuests': [],
-        'hardware': []
-    }]
+        'hardware': [],
+        "podName": "dal05.pod04",
+        "networkVlan": {
+            "accountId": 123,
+            "id": 2581232,
+            "modifyDate": "2019-07-17T01:09:51+08:00",
+            "vlanNumber": 795
+        },
+    },
+    {
+        "gateway": "5.111.11.111",
+        "id": '111',
+        "modifyDate": "2018-07-24T17:14:57+08:00",
+        'networkIdentifier': '10.0.0.1',
+        'ipAddressCount': 10,
+        'cidr': '/24',
+        'virtualGuests': [],
+        'hardware': [],
+        "networkVlanId": 22222,
+        "sortOrder": "2",
+        "subnetType": "SECONDARY_ON_VLAN",
+        "totalIpAddresses": "8",
+        "usableIpAddressCount": "5",
+        "version": 4
+    }
+]
 
 getSshKeys = [{'id': '100', 'label': 'Test 1'},
               {'id': '101', 'label': 'Test 2',
@@ -742,3 +766,48 @@ getApplicationDeliveryControllers = [
         }
     }
 ]
+
+getApplicationDeliveryControllers = [
+    {
+        "accountId": 11111,
+        "createDate": "2015-05-06T06:23:52+08:00",
+        "id": 11222,
+        "name": "SLADC307608-1",
+        "datacenter": {
+            "id": 449494,
+            "longName": "Dallas 9",
+        },
+        "description": "Citrix NetScaler VPX 10.5 10Mbps Standard",
+        "managementIpAddress": "10.142.63.122",
+        "outboundPublicBandwidthUsage": ".00319",
+        "primaryIpAddress": "169.54.234.116",
+    },
+    {
+        "accountId": 11111,
+        "createDate": "2015-12-23T23:09:02+08:00",
+        "id": 22222,
+        "name": "SLADC307608-2",
+        "datacenter": {
+            "id": 265592,
+            "longName": "Amsterdam 1",
+        },
+        "description": "Citrix NetScaler VPX 10.1 10Mbps Standard",
+        "managementIpAddress": "10.68.117.198",
+        "outboundPublicBandwidthUsage": ".00851",
+        "primaryIpAddress": "159.122.23.227",
+    },
+    {
+        "accountId": 11111,
+        "createDate": "2016-10-26T23:09:31+08:00",
+        "id": 33333,
+        "name": "SLADC307608-3",
+        "datacenter": {
+            "id": 265592,
+            "longName": "Amsterdam 1",
+        },
+        "description": "Citrix NetScaler VPX 10.5 200Mbps Standard",
+        "managementIpAddress": "10.68.165.8",
+        "outboundPublicBandwidthUsage": ".0007",
+        "primaryIpAddress": "159.122.23.251",
+    }]
+
