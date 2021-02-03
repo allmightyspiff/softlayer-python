@@ -23,13 +23,19 @@ class RegistrationManager(object):
         # 4 is a DETAULT_PERSON
         # 1 is NETWORK
         self.regional_register = self.client['Account_Regional_Registry_Detail']
+        # https://sldn.softlayer.com/reference/services/SoftLayer_Network_Subnet_Registration_Status/getAllObjects/
+        self.statuses = {
+            'OPEN': 1,
+            'PENDING_REGISTER': 2
+        }
+
 
     def detail(self, identifier):
         """Gets subnet registration information
 
         :return: subnet registration object
         """
-        mask = 'account,personDetail,networkDetail'
+        mask = 'mask[personDetail[properties[propertyType]],networkDetail,status]'
         registration = self.subnet.getActiveRegistration(id=identifier)
 
         if registration:
@@ -75,6 +81,7 @@ class RegistrationManager(object):
             'detailReferences': [
                 {'detailId': contact_id}
             ],
+            'statusId': self.statuses['PENDING_REGISTER'],
         }
 
     def get_public_subnets(self):
@@ -115,8 +122,14 @@ class RegistrationManager(object):
                     network_param['detailId'] = utils.lookup(detail, 'detail', 'id')
                 else:
                     person_param['id'] = detail.get('id')
-            return self.client.call('SoftLayer_Network_Subnet_Registration', 'editRegistrationAttachedDetails',
-                                    person_param, network_param, id=registration_id)
+            result = self.client.call('SoftLayer_Network_Subnet_Registration', 'editRegistrationAttachedDetails',
+                                      person_param, network_param, id=registration_id)
+            status = self.client.call('SoftLayer_Network_Subnet_Registration', 'getStatus', id=registration_id)
+            if status.get('keyName') == 'OPEN':
+                # If we get into the OPEN state, need to manually move to PENDING_REGISTER
+                self.client.call('SoftLayer_Network_Subnet_Registration', 'editObject', 
+                                 {"statusId": self.statuses['PENDING_REGISTER']}, id=registration_id)
+            return result
 
         else:
             new_registration = self.get_registration_template(contact_id, subnet)
@@ -233,6 +246,7 @@ class ContactPerson(object):
         self.id = registry_detail.get('id')  # pylint: disable=invalid-name
         for property_contact in self.properties:
             setattr(self, property_contact['propertyType']['keyName'], property_contact.get('value'))
+
 
     def __repr__(self):
         """Prints out First + Last name"""
