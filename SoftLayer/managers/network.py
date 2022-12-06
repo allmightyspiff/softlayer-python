@@ -38,6 +38,7 @@ DEFAULT_SUBNET_MASK = ','.join(['hardware',
                                 'addressSpace',
                                 'endPointIpAddress'
                                 ])
+
 DEFAULT_VLAN_MASK = ','.join([
     'firewallInterfaces',
     'hardwareCount',
