@@ -7,7 +7,7 @@
 """
 
 
-class SearchingManager(object):
+class SearchManager(object):
     """Manager to help searcha via the SoftLayer API.
 
     :param SoftLayer.API.BaseClient client: the client instance
