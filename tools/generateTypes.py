@@ -144,7 +144,7 @@ class SLDNgenerator():
         service_dir = service_dir.replace("_", "/")
         
         # Remove the very last part -> ./services/Virtual/  
-        service_dir = service_dir.replace(service_parts[-1], "")
+        # service_dir = service_dir.replace(service_parts[-1], "")
 
 
         if not (os.path.isdir(service_dir)):
@@ -163,8 +163,10 @@ class SLDNgenerator():
             'mainService': serviceJson.get('name'),
             'methods': '\n'.join(method_definitions)
         }
-        with open(f"{service_dir}/{service_parts[-1]}.py", "w", encoding="utf-8") as f:
+        with open(f"{service_dir}/__init__.py", "w", encoding="utf-8") as f:
             f.write(template.substitute(substitions))
+        # with open(f"{service_dir}/{service_parts[-1]}.py", "w", encoding="utf-8") as f:
+        #     f.write(template.substitute(substitions))
         
     def writeDatatypeMarkdown(self, serviceJson):
         # The full SLDN Name, like 'SoftLayer_Virtual_Guest'
@@ -196,13 +198,14 @@ class SLDNgenerator():
             returnType = f"list[{returnType}]"
         parameters = []
         call_args = []
-        if json.get('static') is False:
-            parameters.append("id: int")
-            call_args.append("id")
+
         for param in json.get('parameters', []):
             param_type = self.typeCheck(param.get('type'))
             parameters.append(f"{param.get('name')}: {param_type}")
             call_args.append(f"{param.get('name')}")
+        if not json.get('static', False):
+            parameters.append("identifier: int")
+            call_args.append("id=identifier")
         if json.get('maskable'):
             parameters.append("objectMask: Optional[str] = None")
             call_args.append("mask=objectMask")
@@ -245,6 +248,12 @@ class SLDNgenerator():
     def typeCheck(sl_type: str) -> str:
         if sl_type == 'string':
             return 'str'
+        if sl_type == 'boolean':
+            return 'bool'
+        if sl_type == 'dateTime':
+            return 'str'
+        if 'SoftLayer_' in sl_type:
+            return f"'{sl_type}'"
         return sl_type
 
 
@@ -261,9 +270,9 @@ def main(download, clean):
     if clean:
         dirs = ['datatypes', 'services']
         for directory in dirs:
-            print(f"Removing {cwd}/{directory}")
+            print(f"Removing {cwd}/SoftLayer/{directory}")
             try:
-                shutil.rmtree(f'{cwd}/{directory}')
+                shutil.rmtree(f'{cwd}/SoftLayer/{directory}')
             except FileNotFoundError:
                 print("Directory doesnt exist...")
 
