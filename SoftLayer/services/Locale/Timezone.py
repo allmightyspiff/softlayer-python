@@ -7,7 +7,7 @@ class SoftLayer_Locale_Timezone(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Locale_Timezone'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Locale_Timezone(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Locale_Timezone]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Locale_Timezone(object):
             offset=offset
         )
         from SoftLayer.datatypes.Locale.Timezone import Timezone
-        return SL_Timezone(data)
+        return Timezone(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Locale_Timezone':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,6 +41,6 @@ class SoftLayer_Locale_Timezone(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Locale.Timezone import Timezone
-        return SL_Timezone(data)
+        return Timezone(data)
 
 

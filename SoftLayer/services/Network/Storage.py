@@ -7,11 +7,12 @@ class SoftLayer_Network_Storage(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Storage'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromHardware(
         self,
         hardwareObjectTemplate: SoftLayer_Hardware
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromHardware',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromHardwareList(
         self,
         hardwareObjectTemplates: SoftLayer_Hardware
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromHardwareList',
@@ -33,13 +35,14 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromHost(
         self,
         typeClassName: str,
         hostId: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Storage_Allowed_Host':
+
         data = self.client.call(
             self.service,
             'allowAccessFromHost',
@@ -48,14 +51,15 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromHostList(
         self,
         hostObjectTemplates: SoftLayer_Container_Network_Storage_Host,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage_Allowed_Host]':
+
         data = self.client.call(
             self.service,
             'allowAccessFromHostList',
@@ -63,13 +67,14 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromIpAddress(
         self,
         ipAddressObjectTemplate: SoftLayer_Network_Subnet_IpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromIpAddress',
@@ -78,11 +83,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromIpAddressList(
         self,
         ipAddressObjectTemplates: SoftLayer_Network_Subnet_IpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromIpAddressList',
@@ -91,11 +97,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromSubnet(
         self,
         subnetObjectTemplate: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromSubnet',
@@ -104,11 +111,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromSubnetList(
         self,
         subnetObjectTemplates: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromSubnetList',
@@ -117,11 +125,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromVirtualGuest(
         self,
         virtualGuestObjectTemplate: SoftLayer_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromVirtualGuest',
@@ -130,11 +139,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessFromVirtualGuestList(
         self,
         virtualGuestObjectTemplates: SoftLayer_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessFromVirtualGuestList',
@@ -143,11 +153,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromHardware(
         self,
         hardwareObjectTemplate: SoftLayer_Hardware
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromHardware',
@@ -156,11 +167,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromHardwareList(
         self,
         hardwareObjectTemplates: SoftLayer_Hardware
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromHardwareList',
@@ -169,11 +181,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromIpAddress(
         self,
         ipAddressObjectTemplate: SoftLayer_Network_Subnet_IpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromIpAddress',
@@ -182,11 +195,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromIpAddressList(
         self,
         ipAddressObjectTemplates: SoftLayer_Network_Subnet_IpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromIpAddressList',
@@ -195,11 +209,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromSubnet(
         self,
         subnetObjectTemplate: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromSubnet',
@@ -208,11 +223,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromSubnetList(
         self,
         subnetObjectTemplates: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromSubnetList',
@@ -221,11 +237,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromVirtualGuest(
         self,
         virtualGuestObjectTemplate: SoftLayer_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromVirtualGuest',
@@ -234,11 +251,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToReplicantFromVirtualGuestList(
         self,
         virtualGuestObjectTemplates: SoftLayer_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToReplicantFromVirtualGuestList',
@@ -247,11 +265,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def assignCredential(
         self,
         username: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'assignCredential',
@@ -260,12 +279,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def assignNewCredential(
         self,
         type: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Storage_Credential':
+
         data = self.client.call(
             self.service,
             'assignNewCredential',
@@ -273,15 +293,16 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Credential import Credential
-        return SL_Credential(data)
+        return Credential(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def changePassword(
         self,
         username: str,
         currentPassword: str,
         newPassword: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'changePassword',
@@ -292,13 +313,14 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def collectBandwidth(
         self,
         type: str,
         startDate: dateTime,
         endDate: dateTime
     ) -> 'unsignedLong':
+
         data = self.client.call(
             self.service,
             'collectBandwidth',
@@ -309,11 +331,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def collectBytesUsed(
         self,
         
     ) -> 'unsignedLong':
+
         data = self.client.call(
             self.service,
             'collectBytesUsed',
@@ -322,11 +345,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def convertCloneDependentToIndependent(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'convertCloneDependentToIndependent',
@@ -335,11 +359,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createFolder(
         self,
         folder: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createFolder',
@@ -348,12 +373,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createOrUpdateLunId(
         self,
         lunId: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Storage_Property':
+
         data = self.client.call(
             self.service,
             'createOrUpdateLunId',
@@ -361,14 +387,15 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Property import Property
-        return SL_Property(data)
+        return Property(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createSnapshot(
         self,
         notes: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Storage':
+
         data = self.client.call(
             self.service,
             'createSnapshot',
@@ -376,13 +403,14 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteAllFiles(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteAllFiles',
@@ -391,11 +419,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteFile(
         self,
         fileId: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteFile',
@@ -404,11 +433,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteFiles(
         self,
         fileIds: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteFiles',
@@ -417,11 +447,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteFolder(
         self,
         folder: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteFolder',
@@ -430,11 +461,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -443,11 +475,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def disableSnapshots(
         self,
         scheduleType: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'disableSnapshots',
@@ -456,11 +489,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def disasterRecoveryFailoverToReplicant(
         self,
         replicantId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'disasterRecoveryFailoverToReplicant',
@@ -469,25 +503,27 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def downloadFile(
         self,
         fileId: str
     ) -> 'SoftLayer_Container_Utility_File_Entity':
+
         data = self.client.call(
             self.service,
             'downloadFile',
             fileId
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editCredential(
         self,
         username: str,
         newPassword: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editCredential',
@@ -497,11 +533,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -510,7 +547,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def enableSnapshots(
         self,
         scheduleType: str,
@@ -519,6 +556,7 @@ class SoftLayer_Network_Storage(object):
         hour: int,
         dayOfWeek: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'enableSnapshots',
@@ -531,11 +569,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def failbackFromReplicant(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'failbackFromReplicant',
@@ -544,11 +583,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def failoverToReplicant(
         self,
         replicantId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'failoverToReplicant',
@@ -557,12 +597,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllFiles(
         self,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Container_Utility_File_Entity]':
+
         data = self.client.call(
             self.service,
             'getAllFiles',
@@ -570,15 +611,16 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllFilesByFilter(
         self,
         filter: SoftLayer_Container_Utility_File_Entity,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Container_Utility_File_Entity]':
+
         data = self.client.call(
             self.service,
             'getAllFilesByFilter',
@@ -587,9 +629,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowableHardware(
         self,
         filterHostname: str,
@@ -597,6 +639,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getAllowableHardware',
@@ -606,9 +649,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowableIpAddresses(
         self,
         subnetId: int,
@@ -617,6 +660,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getAllowableIpAddresses',
@@ -627,9 +671,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowableSubnets(
         self,
         filterNetworkIdentifier: str,
@@ -637,6 +681,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getAllowableSubnets',
@@ -646,9 +691,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowableVirtualGuests(
         self,
         filterHostname: str,
@@ -656,6 +701,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getAllowableVirtualGuests',
@@ -665,13 +711,14 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedHostsLimit(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getAllowedHostsLimit',
@@ -680,13 +727,14 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getByUsername(
         self,
         username: str,
         type: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getByUsername',
@@ -695,78 +743,84 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCdnUrls(
         self,
         
     ) -> 'list[SoftLayer_Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl]':
+
         data = self.client.call(
             self.service,
             'getCdnUrls',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.Hub.ObjectStorage.ContentDeliveryUrl import ContentDeliveryUrl
-        return SL_ContentDeliveryUrl(data)
+        return ContentDeliveryUrl(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getClusterResource(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Service_Resource':
+
         data = self.client.call(
             self.service,
             'getClusterResource',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Service.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDuplicateConversionStatus(
         self,
         
     ) -> 'SoftLayer_Container_Network_Storage_DuplicateConversionStatusInformation':
+
         data = self.client.call(
             self.service,
             'getDuplicateConversionStatus',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.DuplicateConversionStatusInformation import DuplicateConversionStatusInformation
-        return SL_DuplicateConversionStatusInformation(data)
+        return DuplicateConversionStatusInformation(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFileBlockEncryptedLocations(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Location]':
+
         data = self.client.call(
             self.service,
             'getFileBlockEncryptedLocations',
             mask=objectMask
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFileByIdentifier(
         self,
         identifier: str
     ) -> 'SoftLayer_Container_Utility_File_Entity':
+
         data = self.client.call(
             self.service,
             'getFileByIdentifier',
             identifier
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFileCount(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getFileCount',
@@ -775,12 +829,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFileList(
         self,
         folder: str,
         path: str
     ) -> 'list[SoftLayer_Container_Utility_File_Entity]':
+
         data = self.client.call(
             self.service,
             'getFileList',
@@ -788,13 +843,14 @@ class SoftLayer_Network_Storage(object):
             path
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFilePendingDeleteCount(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getFilePendingDeleteCount',
@@ -803,39 +859,42 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFilesPendingDelete(
         self,
         
     ) -> 'list[SoftLayer_Container_Utility_File_Entity]':
+
         data = self.client.call(
             self.service,
             'getFilesPendingDelete',
             
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFolderList(
         self,
         
     ) -> 'list[SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Folder]':
+
         data = self.client.call(
             self.service,
             'getFolderList',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.Hub.ObjectStorage.Folder import Folder
-        return SL_Folder(data)
+        return Folder(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGraph(
         self,
         startDate: dateTime,
         endDate: dateTime,
         type: str
     ) -> 'SoftLayer_Container_Bandwidth_GraphOutputs':
+
         data = self.client.call(
             self.service,
             'getGraph',
@@ -844,13 +903,14 @@ class SoftLayer_Network_Storage(object):
             type
         )
         from SoftLayer.datatypes.Container.Bandwidth.GraphOutputs import GraphOutputs
-        return SL_GraphOutputs(data)
+        return GraphOutputs(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaximumExpansionSize(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getMaximumExpansionSize',
@@ -859,24 +919,26 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkConnectionDetails(
         self,
         
     ) -> 'SoftLayer_Container_Network_Storage_NetworkConnectionInformation':
+
         data = self.client.call(
             self.service,
             'getNetworkConnectionDetails',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.NetworkConnectionInformation import NetworkConnectionInformation
-        return SL_NetworkConnectionInformation(data)
+        return NetworkConnectionInformation(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMountAddress(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getNetworkMountAddress',
@@ -885,11 +947,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMountPath(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getNetworkMountPath',
@@ -898,12 +961,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -911,27 +975,29 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObjectStorageConnectionInformation(
         self,
         
     ) -> 'list[SoftLayer_Container_Network_Service_Resource_ObjectStorage_ConnectionInformation]':
+
         data = self.client.call(
             self.service,
             'getObjectStorageConnectionInformation',
             
         )
         from SoftLayer.datatypes.Container.Network.Service.Resource.ObjectStorage.ConnectionInformation import ConnectionInformation
-        return SL_ConnectionInformation(data)
+        return ConnectionInformation(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObjectsByCredential(
         self,
         credentialObject: SoftLayer_Network_Storage_Credential,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getObjectsByCredential',
@@ -939,26 +1005,28 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRecycleBinFileByIdentifier(
         self,
         fileId: str
     ) -> 'SoftLayer_Container_Utility_File_Entity':
+
         data = self.client.call(
             self.service,
             'getRecycleBinFileByIdentifier',
             fileId
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRemainingAllowedHosts(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getRemainingAllowedHosts',
@@ -967,11 +1035,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRemainingAllowedHostsForReplicant(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getRemainingAllowedHostsForReplicant',
@@ -980,11 +1049,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicationTimestamp(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getReplicationTimestamp',
@@ -993,13 +1063,14 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshotsForVolume(
         self,
         objectMask: Optional[str] = None,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getSnapshotsForVolume',
@@ -1008,26 +1079,28 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageGroupsNetworkConnectionDetails(
         self,
         
     ) -> 'list[SoftLayer_Container_Network_Storage_NetworkConnectionInformation]':
+
         data = self.client.call(
             self.service,
             'getStorageGroupsNetworkConnectionDetails',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.NetworkConnectionInformation import NetworkConnectionInformation
-        return SL_NetworkConnectionInformation(data)
+        return NetworkConnectionInformation(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTargetIpAddresses(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getTargetIpAddresses',
@@ -1036,50 +1109,54 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getValidReplicationTargetDatacenterLocations(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Location]':
+
         data = self.client.call(
             self.service,
             'getValidReplicationTargetDatacenterLocations',
             mask=objectMask
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVolumeCountLimits(
         self,
         
     ) -> 'list[SoftLayer_Container_Network_Storage_DataCenterLimits_VolumeCountLimitContainer]':
+
         data = self.client.call(
             self.service,
             'getVolumeCountLimits',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.DataCenterLimits.VolumeCountLimitContainer import VolumeCountLimitContainer
-        return SL_VolumeCountLimitContainer(data)
+        return VolumeCountLimitContainer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVolumeDuplicateParameters(
         self,
         
     ) -> 'SoftLayer_Container_Network_Storage_VolumeDuplicateParameters':
+
         data = self.client.call(
             self.service,
             'getVolumeDuplicateParameters',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.VolumeDuplicateParameters import VolumeDuplicateParameters
-        return SL_VolumeDuplicateParameters(data)
+        return VolumeDuplicateParameters(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def immediateFailoverToReplicant(
         self,
         replicantId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'immediateFailoverToReplicant',
@@ -1088,11 +1165,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def initiateOriginVolumeReclaim(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'initiateOriginVolumeReclaim',
@@ -1101,11 +1179,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def initiateVolumeCutover(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'initiateVolumeCutover',
@@ -1114,11 +1193,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isBlockingOperationInProgress(
         self,
         exemptStatusKeyNames: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isBlockingOperationInProgress',
@@ -1127,11 +1207,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isDuplicateReadyForSnapshot(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isDuplicateReadyForSnapshot',
@@ -1140,11 +1221,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isDuplicateReadyToMount(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isDuplicateReadyToMount',
@@ -1153,11 +1235,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isVolumeActive(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isVolumeActive',
@@ -1166,11 +1249,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def refreshDependentDuplicate(
         self,
         snapshotId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'refreshDependentDuplicate',
@@ -1179,12 +1263,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def refreshDuplicate(
         self,
         snapshotId: int,
         forceRefresh: boolean
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'refreshDuplicate',
@@ -1194,11 +1279,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromHardware(
         self,
         hardwareObjectTemplate: SoftLayer_Hardware
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromHardware',
@@ -1207,11 +1293,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromHardwareList(
         self,
         hardwareObjectTemplates: SoftLayer_Hardware
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromHardwareList',
@@ -1220,13 +1307,14 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromHost(
         self,
         typeClassName: str,
         hostId: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Storage_Allowed_Host':
+
         data = self.client.call(
             self.service,
             'removeAccessFromHost',
@@ -1235,14 +1323,15 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromHostList(
         self,
         hostObjectTemplates: SoftLayer_Container_Network_Storage_Host,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage_Allowed_Host]':
+
         data = self.client.call(
             self.service,
             'removeAccessFromHostList',
@@ -1250,13 +1339,14 @@ class SoftLayer_Network_Storage(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromIpAddress(
         self,
         ipAddressObjectTemplate: SoftLayer_Network_Subnet_IpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromIpAddress',
@@ -1265,11 +1355,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromIpAddressList(
         self,
         ipAddressObjectTemplates: SoftLayer_Network_Subnet_IpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromIpAddressList',
@@ -1278,11 +1369,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromSubnet(
         self,
         subnetObjectTemplate: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromSubnet',
@@ -1291,11 +1383,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromSubnetList(
         self,
         subnetObjectTemplates: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromSubnetList',
@@ -1304,11 +1397,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromVirtualGuest(
         self,
         virtualGuestObjectTemplate: SoftLayer_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromVirtualGuest',
@@ -1317,11 +1411,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessFromVirtualGuestList(
         self,
         virtualGuestObjectTemplates: SoftLayer_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessFromVirtualGuestList',
@@ -1330,11 +1425,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToReplicantFromHardwareList(
         self,
         hardwareObjectTemplates: SoftLayer_Hardware
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToReplicantFromHardwareList',
@@ -1343,11 +1439,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToReplicantFromIpAddressList(
         self,
         ipAddressObjectTemplates: SoftLayer_Network_Subnet_IpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToReplicantFromIpAddressList',
@@ -1356,11 +1453,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToReplicantFromSubnet(
         self,
         subnetObjectTemplate: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToReplicantFromSubnet',
@@ -1369,11 +1467,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToReplicantFromSubnetList(
         self,
         subnetObjectTemplates: SoftLayer_Network_Subnet
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToReplicantFromSubnetList',
@@ -1382,11 +1481,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToReplicantFromVirtualGuestList(
         self,
         virtualGuestObjectTemplates: SoftLayer_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToReplicantFromVirtualGuestList',
@@ -1395,11 +1495,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeCredential(
         self,
         username: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeCredential',
@@ -1408,24 +1509,26 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def restoreFile(
         self,
         fileId: str
     ) -> 'SoftLayer_Container_Utility_File_Entity':
+
         data = self.client.call(
             self.service,
             'restoreFile',
             fileId
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def restoreFromSnapshot(
         self,
         snapshotId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'restoreFromSnapshot',
@@ -1434,11 +1537,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def sendPasswordReminderEmail(
         self,
         username: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'sendPasswordReminderEmail',
@@ -1447,11 +1551,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setMountable(
         self,
         mountable: boolean
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setMountable',
@@ -1460,11 +1565,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setSnapshotAllocation(
         self,
         capacityGb: int
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'setSnapshotAllocation',
@@ -1473,11 +1579,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setSnapshotNotification(
         self,
         notificationFlag: boolean
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'setSnapshotNotification',
@@ -1486,11 +1593,12 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def upgradeVolumeCapacity(
         self,
         itemId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'upgradeVolumeCapacity',
@@ -1499,38 +1607,41 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def uploadFile(
         self,
         file: SoftLayer_Container_Utility_File_Entity
     ) -> 'SoftLayer_Container_Utility_File_Entity':
+
         data = self.client.call(
             self.service,
             'uploadFile',
             file
         )
         from SoftLayer.datatypes.Container.Utility.File.Entity import Entity
-        return SL_Entity(data)
+        return Entity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def validateHostsAccess(
         self,
         hostObjectTemplates: SoftLayer_Container_Network_Storage_Host
     ) -> 'list[SoftLayer_Container_Network_Storage_HostsGatewayInformation]':
+
         data = self.client.call(
             self.service,
             'validateHostsAccess',
             hostObjectTemplates
         )
         from SoftLayer.datatypes.Container.Network.Storage.HostsGatewayInformation import HostsGatewayInformation
-        return SL_HostsGatewayInformation(data)
+        return HostsGatewayInformation(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -1538,14 +1649,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountPassword(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Password':
+
         data = self.client.call(
             self.service,
             'getAccountPassword',
@@ -1553,9 +1665,9 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveTransactions(
         self,
         objectMask: Optional[str] = None,
@@ -1563,6 +1675,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Provisioning_Version1_Transaction]':
+
         data = self.client.call(
             self.service,
             'getActiveTransactions',
@@ -1572,14 +1685,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowDisasterRecoveryFailback(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAllowDisasterRecoveryFailback',
@@ -1589,12 +1703,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowDisasterRecoveryFailover(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAllowDisasterRecoveryFailover',
@@ -1604,7 +1719,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedHardware(
         self,
         objectMask: Optional[str] = None,
@@ -1612,6 +1727,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getAllowedHardware',
@@ -1621,9 +1737,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -1631,6 +1747,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getAllowedIpAddresses',
@@ -1640,9 +1757,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedReplicationHardware(
         self,
         objectMask: Optional[str] = None,
@@ -1650,6 +1767,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getAllowedReplicationHardware',
@@ -1659,9 +1777,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedReplicationIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -1669,6 +1787,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getAllowedReplicationIpAddresses',
@@ -1678,9 +1797,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedReplicationSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -1688,6 +1807,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getAllowedReplicationSubnets',
@@ -1697,9 +1817,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedReplicationVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -1707,6 +1827,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getAllowedReplicationVirtualGuests',
@@ -1716,9 +1837,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -1726,6 +1847,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getAllowedSubnets',
@@ -1735,9 +1857,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -1745,6 +1867,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getAllowedVirtualGuests',
@@ -1754,14 +1877,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -1769,14 +1893,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItemCategory(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Category':
+
         data = self.client.call(
             self.service,
             'getBillingItemCategory',
@@ -1784,14 +1909,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBytesUsed(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getBytesUsed',
@@ -1801,12 +1927,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreationScheduleId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getCreationScheduleId',
@@ -1816,7 +1943,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCredentials(
         self,
         objectMask: Optional[str] = None,
@@ -1824,6 +1951,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Credential]':
+
         data = self.client.call(
             self.service,
             'getCredentials',
@@ -1833,14 +1961,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Credential import Credential
-        return SL_Credential(data)
+        return Credential(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDailySchedule(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Schedule':
+
         data = self.client.call(
             self.service,
             'getDailySchedule',
@@ -1848,14 +1977,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDependentDuplicate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDependentDuplicate',
@@ -1865,7 +1995,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDependentDuplicates(
         self,
         objectMask: Optional[str] = None,
@@ -1873,6 +2003,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getDependentDuplicates',
@@ -1882,9 +2013,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEvents(
         self,
         objectMask: Optional[str] = None,
@@ -1892,6 +2023,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Event]':
+
         data = self.client.call(
             self.service,
             'getEvents',
@@ -1901,14 +2033,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFailbackNotAllowed(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFailbackNotAllowed',
@@ -1918,12 +2051,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFailoverNotAllowed(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFailoverNotAllowed',
@@ -1933,12 +2067,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFileNetworkMountAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFileNetworkMountAddress',
@@ -1948,12 +2083,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFixReplicationCurrentStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFixReplicationCurrentStatus',
@@ -1963,12 +2099,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getHardware',
@@ -1976,14 +2113,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHasEncryptionAtRest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHasEncryptionAtRest',
@@ -1993,12 +2131,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlySchedule(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Schedule':
+
         data = self.client.call(
             self.service,
             'getHourlySchedule',
@@ -2006,14 +2145,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIntervalSchedule(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Schedule':
+
         data = self.client.call(
             self.service,
             'getIntervalSchedule',
@@ -2021,14 +2161,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIops(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getIops',
@@ -2038,12 +2179,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsConvertToIndependentTransactionInProgress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsConvertToIndependentTransactionInProgress',
@@ -2053,12 +2195,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsDependentDuplicateProvisionCompleted(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsDependentDuplicateProvisionCompleted',
@@ -2068,12 +2211,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsInDedicatedServiceResource(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsInDedicatedServiceResource',
@@ -2083,12 +2227,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsMagneticStorage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getIsMagneticStorage',
@@ -2098,12 +2243,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsProvisionInProgress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsProvisionInProgress',
@@ -2113,12 +2259,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsReadyForSnapshot(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsReadyForSnapshot',
@@ -2128,12 +2275,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsReadyToMount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsReadyToMount',
@@ -2143,7 +2291,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIscsiLuns(
         self,
         objectMask: Optional[str] = None,
@@ -2151,6 +2299,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getIscsiLuns',
@@ -2160,14 +2309,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIscsiReplicatingVolume(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage':
+
         data = self.client.call(
             self.service,
             'getIscsiReplicatingVolume',
@@ -2175,9 +2325,9 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIscsiTargetIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -2185,6 +2335,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getIscsiTargetIpAddresses',
@@ -2196,12 +2347,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLunId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getLunId',
@@ -2211,7 +2363,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManualSnapshots(
         self,
         objectMask: Optional[str] = None,
@@ -2219,6 +2371,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getManualSnapshots',
@@ -2228,14 +2381,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetricTrackingObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Metric_Tracking_Object':
+
         data = self.client.call(
             self.service,
             'getMetricTrackingObject',
@@ -2243,14 +2397,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Metric.Tracking.Object import Object
-        return SL_Object(data)
+        return Object(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMountPath(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getMountPath',
@@ -2260,12 +2415,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMountableFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getMountableFlag',
@@ -2275,12 +2431,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMoveAndSplitStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getMoveAndSplitStatus',
@@ -2290,7 +2447,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNotificationSubscribers(
         self,
         objectMask: Optional[str] = None,
@@ -2298,6 +2455,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_User_Subscriber]':
+
         data = self.client.call(
             self.service,
             'getNotificationSubscribers',
@@ -2307,14 +2465,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.User.Subscriber import Subscriber
-        return SL_Subscriber(data)
+        return Subscriber(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOriginalSnapshotName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getOriginalSnapshotName',
@@ -2324,12 +2483,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOriginalVolumeId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getOriginalVolumeId',
@@ -2339,12 +2499,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOriginalVolumeName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getOriginalVolumeName',
@@ -2354,12 +2515,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOriginalVolumeSize(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getOriginalVolumeSize',
@@ -2369,12 +2531,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOsType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Iscsi_OS_Type':
+
         data = self.client.call(
             self.service,
             'getOsType',
@@ -2382,14 +2545,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Iscsi.OS.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOsTypeId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getOsTypeId',
@@ -2399,7 +2563,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParentPartnerships(
         self,
         objectMask: Optional[str] = None,
@@ -2407,6 +2571,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Partnership]':
+
         data = self.client.call(
             self.service,
             'getParentPartnerships',
@@ -2416,14 +2581,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Partnership import Partnership
-        return SL_Partnership(data)
+        return Partnership(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParentVolume(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage':
+
         data = self.client.call(
             self.service,
             'getParentVolume',
@@ -2431,9 +2597,9 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPartnerships(
         self,
         objectMask: Optional[str] = None,
@@ -2441,6 +2607,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Partnership]':
+
         data = self.client.call(
             self.service,
             'getPartnerships',
@@ -2450,9 +2617,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Partnership import Partnership
-        return SL_Partnership(data)
+        return Partnership(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPermissionsGroups(
         self,
         objectMask: Optional[str] = None,
@@ -2460,6 +2627,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Group]':
+
         data = self.client.call(
             self.service,
             'getPermissionsGroups',
@@ -2469,9 +2637,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProperties(
         self,
         objectMask: Optional[str] = None,
@@ -2479,6 +2647,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Property]':
+
         data = self.client.call(
             self.service,
             'getProperties',
@@ -2488,14 +2657,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Property import Property
-        return SL_Property(data)
+        return Property(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProvisionedIops(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getProvisionedIops',
@@ -2505,7 +2675,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicatingLuns(
         self,
         objectMask: Optional[str] = None,
@@ -2513,6 +2683,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getReplicatingLuns',
@@ -2522,14 +2693,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicatingVolume(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage':
+
         data = self.client.call(
             self.service,
             'getReplicatingVolume',
@@ -2537,9 +2709,9 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicationEvents(
         self,
         objectMask: Optional[str] = None,
@@ -2547,6 +2719,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Event]':
+
         data = self.client.call(
             self.service,
             'getReplicationEvents',
@@ -2556,9 +2729,9 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicationPartners(
         self,
         objectMask: Optional[str] = None,
@@ -2566,6 +2739,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getReplicationPartners',
@@ -2575,14 +2749,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicationSchedule(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Schedule':
+
         data = self.client.call(
             self.service,
             'getReplicationSchedule',
@@ -2590,14 +2765,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicationStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getReplicationStatus',
@@ -2607,7 +2783,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSchedules(
         self,
         objectMask: Optional[str] = None,
@@ -2615,6 +2791,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Schedule]':
+
         data = self.client.call(
             self.service,
             'getSchedules',
@@ -2624,14 +2801,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceResource(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Service_Resource':
+
         data = self.client.call(
             self.service,
             'getServiceResource',
@@ -2639,14 +2817,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Service.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceResourceBackendIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getServiceResourceBackendIpAddress',
@@ -2656,12 +2835,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceResourceName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getServiceResourceName',
@@ -2671,12 +2851,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshotCapacityGb(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSnapshotCapacityGb',
@@ -2686,12 +2867,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshotCreationTimestamp(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSnapshotCreationTimestamp',
@@ -2701,12 +2883,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshotDeletionThresholdPercentage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSnapshotDeletionThresholdPercentage',
@@ -2716,12 +2899,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshotNotificationStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSnapshotNotificationStatus',
@@ -2731,12 +2915,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshotSizeBytes(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSnapshotSizeBytes',
@@ -2746,12 +2931,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshotSpaceAvailable(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSnapshotSpaceAvailable',
@@ -2761,7 +2947,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshots(
         self,
         objectMask: Optional[str] = None,
@@ -2769,6 +2955,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getSnapshots',
@@ -2778,14 +2965,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStaasVersion(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getStaasVersion',
@@ -2795,7 +2983,7 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageGroups(
         self,
         objectMask: Optional[str] = None,
@@ -2803,6 +2991,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Group]':
+
         data = self.client.call(
             self.service,
             'getStorageGroups',
@@ -2812,14 +3001,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageTierLevel(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getStorageTierLevel',
@@ -2829,12 +3019,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Type':
+
         data = self.client.call(
             self.service,
             'getStorageType',
@@ -2842,14 +3033,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalBytesUsed(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getTotalBytesUsed',
@@ -2859,12 +3051,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalScheduleSnapshotRetentionCount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getTotalScheduleSnapshotRetentionCount',
@@ -2874,12 +3067,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUsageNotification(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Notification':
+
         data = self.client.call(
             self.service,
             'getUsageNotification',
@@ -2887,14 +3081,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Notification import Notification
-        return SL_Notification(data)
+        return Notification(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVendorName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getVendorName',
@@ -2904,12 +3099,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'getVirtualGuest',
@@ -2917,9 +3113,9 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVolumeHistory(
         self,
         objectMask: Optional[str] = None,
@@ -2927,6 +3123,7 @@ class SoftLayer_Network_Storage(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_History]':
+
         data = self.client.call(
             self.service,
             'getVolumeHistory',
@@ -2936,14 +3133,15 @@ class SoftLayer_Network_Storage(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.History import History
-        return SL_History(data)
+        return History(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVolumeStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getVolumeStatus',
@@ -2953,12 +3151,13 @@ class SoftLayer_Network_Storage(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getWebccAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Password':
+
         data = self.client.call(
             self.service,
             'getWebccAccount',
@@ -2966,14 +3165,15 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getWeeklySchedule(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Schedule':
+
         data = self.client.call(
             self.service,
             'getWeeklySchedule',
@@ -2981,6 +3181,6 @@ class SoftLayer_Network_Storage(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
 

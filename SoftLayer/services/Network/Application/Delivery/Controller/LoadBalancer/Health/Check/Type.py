@@ -7,7 +7,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Chec
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Chec
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Chec
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Health.Check.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,6 +41,6 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Chec
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Health.Check.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

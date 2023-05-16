@@ -7,11 +7,12 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Storage_Allowed_Host'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def assignSubnetsToAcl(
         self,
         subnetIds: int
     ) -> 'list[int]':
+
         data = self.client.call(
             self.service,
             'assignSubnetsToAcl',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_Storage_Allowed_Host
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -33,7 +35,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -41,6 +43,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Allowed_Host]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -50,14 +53,15 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Allowed_Host':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -65,13 +69,14 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeSubnetsFromAcl(
         self,
         subnetIds: int
     ) -> 'list[int]':
+
         data = self.client.call(
             self.service,
             'removeSubnetsFromAcl',
@@ -80,11 +85,12 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setCredentialPassword(
         self,
         password: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setCredentialPassword',
@@ -93,7 +99,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssignedGroups(
         self,
         objectMask: Optional[str] = None,
@@ -101,6 +107,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Group]':
+
         data = self.client.call(
             self.service,
             'getAssignedGroups',
@@ -110,9 +117,9 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssignedIscsiVolumes(
         self,
         objectMask: Optional[str] = None,
@@ -120,6 +127,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAssignedIscsiVolumes',
@@ -129,9 +137,9 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssignedNfsVolumes(
         self,
         objectMask: Optional[str] = None,
@@ -139,6 +147,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAssignedNfsVolumes',
@@ -148,9 +157,9 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssignedReplicationVolumes(
         self,
         objectMask: Optional[str] = None,
@@ -158,6 +167,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAssignedReplicationVolumes',
@@ -167,9 +177,9 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssignedVolumes(
         self,
         objectMask: Optional[str] = None,
@@ -177,6 +187,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAssignedVolumes',
@@ -186,14 +197,15 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCredential(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Credential':
+
         data = self.client.call(
             self.service,
             'getCredential',
@@ -201,14 +213,15 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Credential import Credential
-        return SL_Credential(data)
+        return Credential(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSourceSubnet(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSourceSubnet',
@@ -218,7 +231,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnetsInAcl(
         self,
         objectMask: Optional[str] = None,
@@ -226,6 +239,7 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getSubnetsInAcl',
@@ -235,6 +249,6 @@ class SoftLayer_Network_Storage_Allowed_Host(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
 

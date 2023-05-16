@@ -7,7 +7,7 @@ class SoftLayer_Provisioning_Hook_Type(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Provisioning_Hook_Type'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllHookTypes(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Provisioning_Hook_Type(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Provisioning_Hook_Type]':
+
         data = self.client.call(
             self.service,
             'getAllHookTypes',
@@ -24,14 +25,15 @@ class SoftLayer_Provisioning_Hook_Type(object):
             offset=offset
         )
         from SoftLayer.datatypes.Provisioning.Hook.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Hook_Type':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,6 +41,6 @@ class SoftLayer_Provisioning_Hook_Type(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Hook.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

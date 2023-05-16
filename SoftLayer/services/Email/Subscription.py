@@ -7,11 +7,12 @@ class SoftLayer_Email_Subscription(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Email_Subscription'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def disable(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'disable',
@@ -20,11 +21,12 @@ class SoftLayer_Email_Subscription(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def enable(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'enable',
@@ -33,7 +35,7 @@ class SoftLayer_Email_Subscription(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -41,6 +43,7 @@ class SoftLayer_Email_Subscription(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Email_Subscription]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -50,14 +53,15 @@ class SoftLayer_Email_Subscription(object):
             offset=offset
         )
         from SoftLayer.datatypes.Email.Subscription import Subscription
-        return SL_Subscription(data)
+        return Subscription(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Email_Subscription':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -65,14 +69,15 @@ class SoftLayer_Email_Subscription(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Email.Subscription import Subscription
-        return SL_Subscription(data)
+        return Subscription(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEnabled(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getEnabled',

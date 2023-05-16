@@ -7,24 +7,26 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Storage_Hub_Cleversafe_Account'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def credentialCreate(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage_Credential]':
+
         data = self.client.call(
             self.service,
             'credentialCreate',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Credential import Credential
-        return SL_Credential(data)
+        return Credential(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def credentialDelete(
         self,
         credential: SoftLayer_Network_Storage_Credential
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'credentialDelete',
@@ -33,7 +35,7 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -41,6 +43,7 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Hub_Cleversafe_Account]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -50,26 +53,28 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Hub.Cleversafe.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBuckets(
         self,
         
     ) -> 'list[SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Bucket]':
+
         data = self.client.call(
             self.service,
             'getBuckets',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.Hub.ObjectStorage.Bucket import Bucket
-        return SL_Bucket(data)
+        return Bucket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCapacityUsage(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getCapacityUsage',
@@ -78,7 +83,7 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCloudObjectStorageMetrics(
         self,
         start: str,
@@ -87,6 +92,7 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
         storageClass: str,
         metrics: str
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getCloudObjectStorageMetrics',
@@ -99,11 +105,12 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCredentialLimit(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getCredentialLimit',
@@ -112,25 +119,27 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEndpoints(
         self,
         accountId: int
     ) -> 'list[SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Endpoint]':
+
         data = self.client.call(
             self.service,
             'getEndpoints',
             accountId
         )
         from SoftLayer.datatypes.Container.Network.Storage.Hub.ObjectStorage.Endpoint import Endpoint
-        return SL_Endpoint(data)
+        return Endpoint(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEndpointsWithRefetch(
         self,
         accountId: int,
         refetch: boolean
     ) -> 'list[SoftLayer_Container_Network_Storage_Hub_ObjectStorage_Endpoint]':
+
         data = self.client.call(
             self.service,
             'getEndpointsWithRefetch',
@@ -138,14 +147,15 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             refetch
         )
         from SoftLayer.datatypes.Container.Network.Storage.Hub.ObjectStorage.Endpoint import Endpoint
-        return SL_Endpoint(data)
+        return Endpoint(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Hub_Cleversafe_Account':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -153,14 +163,15 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Hub.Cleversafe.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -168,14 +179,15 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -183,14 +195,15 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCancelledBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getCancelledBillingItem',
@@ -198,9 +211,9 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCredentials(
         self,
         objectMask: Optional[str] = None,
@@ -208,6 +221,7 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Credential]':
+
         data = self.client.call(
             self.service,
             'getCredentials',
@@ -217,14 +231,15 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Credential import Credential
-        return SL_Credential(data)
+        return Credential(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetricTrackingObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Metric_Tracking_Object':
+
         data = self.client.call(
             self.service,
             'getMetricTrackingObject',
@@ -232,14 +247,15 @@ class SoftLayer_Network_Storage_Hub_Cleversafe_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Metric.Tracking.Object import Object
-        return SL_Object(data)
+        return Object(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUuid(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getUuid',

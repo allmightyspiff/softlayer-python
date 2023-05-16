@@ -7,11 +7,12 @@ class SoftLayer_Resource_Group(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Resource_Group'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Resource_Group
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,12 +21,13 @@ class SoftLayer_Resource_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Resource_Group':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,9 +35,9 @@ class SoftLayer_Resource_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Resource.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAncestorGroups(
         self,
         objectMask: Optional[str] = None,
@@ -43,6 +45,7 @@ class SoftLayer_Resource_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group]':
+
         data = self.client.call(
             self.service,
             'getAncestorGroups',
@@ -52,9 +55,9 @@ class SoftLayer_Resource_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -62,6 +65,7 @@ class SoftLayer_Resource_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -71,9 +75,9 @@ class SoftLayer_Resource_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareMembers(
         self,
         objectMask: Optional[str] = None,
@@ -81,6 +85,7 @@ class SoftLayer_Resource_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Member]':
+
         data = self.client.call(
             self.service,
             'getHardwareMembers',
@@ -90,9 +95,9 @@ class SoftLayer_Resource_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMembers(
         self,
         objectMask: Optional[str] = None,
@@ -100,6 +105,7 @@ class SoftLayer_Resource_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Member]':
+
         data = self.client.call(
             self.service,
             'getMembers',
@@ -109,14 +115,15 @@ class SoftLayer_Resource_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRootResourceGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Resource_Group':
+
         data = self.client.call(
             self.service,
             'getRootResourceGroup',
@@ -124,9 +131,9 @@ class SoftLayer_Resource_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Resource.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnetMembers(
         self,
         objectMask: Optional[str] = None,
@@ -134,6 +141,7 @@ class SoftLayer_Resource_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Member]':
+
         data = self.client.call(
             self.service,
             'getSubnetMembers',
@@ -143,14 +151,15 @@ class SoftLayer_Resource_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTemplate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Resource_Group_Template':
+
         data = self.client.call(
             self.service,
             'getTemplate',
@@ -158,9 +167,9 @@ class SoftLayer_Resource_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Resource.Group.Template import Template
-        return SL_Template(data)
+        return Template(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVlanMembers(
         self,
         objectMask: Optional[str] = None,
@@ -168,6 +177,7 @@ class SoftLayer_Resource_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Member]':
+
         data = self.client.call(
             self.service,
             'getVlanMembers',
@@ -177,6 +187,6 @@ class SoftLayer_Resource_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
 

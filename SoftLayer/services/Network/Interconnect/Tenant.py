@@ -7,11 +7,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Interconnect_Tenant'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def allowDeleteConnection(
         self,
         serviceKey: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowDeleteConnection',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createConnection(
         self,
         templateObject: SoftLayer_Network_Interconnect_Tenant
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'createConnection',
@@ -33,11 +35,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteConnection(
         self,
         receivedObject: SoftLayer_Network_Interconnect_Tenant
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteConnection',
@@ -46,11 +49,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editConnection(
         self,
         receivedObject: SoftLayer_Network_Interconnect_Tenant
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'editConnection',
@@ -59,11 +63,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllConnections(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAllConnections',
@@ -72,7 +77,7 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -80,6 +85,7 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Interconnect_Tenant]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -89,13 +95,14 @@ class SoftLayer_Network_Interconnect_Tenant(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Interconnect.Tenant import Tenant
-        return SL_Tenant(data)
+        return Tenant(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllPortLabelsWithCurrentUsage(
         self,
         directLinkLocationId: int
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getAllPortLabelsWithCurrentUsage',
@@ -104,11 +111,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBgpIpRange(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getBgpIpRange',
@@ -117,12 +125,13 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getConnection(
         self,
         serviceKey: str,
         provider: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getConnection',
@@ -132,11 +141,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDirectLinkSpeeds(
         self,
         offeringType: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDirectLinkSpeeds',
@@ -145,11 +155,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkZones(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getNetworkZones',
@@ -158,12 +169,13 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Interconnect_Tenant':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -171,13 +183,14 @@ class SoftLayer_Network_Interconnect_Tenant(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Interconnect.Tenant import Tenant
-        return SL_Tenant(data)
+        return Tenant(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPorts(
         self,
         provider: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPorts',
@@ -186,11 +199,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isAdnAccount(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isAdnAccount',
@@ -199,11 +213,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def rejectApprovalRequests(
         self,
         serviceKey: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'rejectApprovalRequests',
@@ -212,11 +227,12 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateConnectionStatus(
         self,
         tenantId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateConnectionStatus',
@@ -225,12 +241,13 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Network_Interconnect':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -238,14 +255,15 @@ class SoftLayer_Network_Interconnect_Tenant(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Network.Interconnect import Interconnect
-        return SL_Interconnect(data)
+        return Interconnect(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenterName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDatacenterName',
@@ -255,12 +273,13 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPortLabel(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPortLabel',
@@ -270,12 +289,13 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_DirectLink_ServiceType':
+
         data = self.client.call(
             self.service,
             'getServiceType',
@@ -283,14 +303,15 @@ class SoftLayer_Network_Interconnect_Tenant(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.DirectLink.ServiceType import ServiceType
-        return SL_ServiceType(data)
+        return ServiceType(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVendorName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getVendorName',
@@ -300,12 +321,13 @@ class SoftLayer_Network_Interconnect_Tenant(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getZoneName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getZoneName',

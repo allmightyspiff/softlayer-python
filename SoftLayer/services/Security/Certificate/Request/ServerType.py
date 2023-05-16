@@ -7,7 +7,7 @@ class SoftLayer_Security_Certificate_Request_ServerType(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Security_Certificate_Request_ServerType'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Security_Certificate_Request_ServerType(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Certificate_Request_ServerType]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Security_Certificate_Request_ServerType(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Certificate.Request.ServerType import ServerType
-        return SL_ServerType(data)
+        return ServerType(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Security_Certificate_Request_ServerType':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,6 +41,6 @@ class SoftLayer_Security_Certificate_Request_ServerType(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Security.Certificate.Request.ServerType import ServerType
-        return SL_ServerType(data)
+        return ServerType(data)
 
 

@@ -7,25 +7,27 @@ class SoftLayer_Network_Media_Transcode_Job_Status(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Media_Transcode_Job_Status'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllStatuses(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Media_Transcode_Job_Status]':
+
         data = self.client.call(
             self.service,
             'getAllStatuses',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Media.Transcode.Job.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Media_Transcode_Job_Status':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,6 +35,6 @@ class SoftLayer_Network_Media_Transcode_Job_Status(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Media.Transcode.Job.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
 

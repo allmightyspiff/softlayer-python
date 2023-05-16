@@ -7,12 +7,13 @@ class SoftLayer_Billing_Invoice_Item(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Billing_Invoice_Item'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice_Item':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,9 +21,9 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssociatedChildren(
         self,
         objectMask: Optional[str] = None,
@@ -30,6 +31,7 @@ class SoftLayer_Billing_Invoice_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice_Item]':
+
         data = self.client.call(
             self.service,
             'getAssociatedChildren',
@@ -39,14 +41,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssociatedInvoiceItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice_Item':
+
         data = self.client.call(
             self.service,
             'getAssociatedInvoiceItem',
@@ -54,14 +57,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -69,14 +73,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCategory(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Category':
+
         data = self.client.call(
             self.service,
             'getCategory',
@@ -84,9 +89,9 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -94,6 +99,7 @@ class SoftLayer_Billing_Invoice_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice_Item]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -103,14 +109,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDPart(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDPart',
@@ -120,7 +127,7 @@ class SoftLayer_Billing_Invoice_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFilteredAssociatedChildren(
         self,
         objectMask: Optional[str] = None,
@@ -128,6 +135,7 @@ class SoftLayer_Billing_Invoice_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice_Item]':
+
         data = self.client.call(
             self.service,
             'getFilteredAssociatedChildren',
@@ -137,14 +145,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHourlyFlag',
@@ -154,12 +163,13 @@ class SoftLayer_Billing_Invoice_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInvoice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice':
+
         data = self.client.call(
             self.service,
             'getInvoice',
@@ -167,14 +177,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -182,9 +193,9 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNonZeroAssociatedChildren(
         self,
         objectMask: Optional[str] = None,
@@ -192,6 +203,7 @@ class SoftLayer_Billing_Invoice_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice_Item]':
+
         data = self.client.call(
             self.service,
             'getNonZeroAssociatedChildren',
@@ -201,14 +213,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice_Item':
+
         data = self.client.call(
             self.service,
             'getParent',
@@ -216,14 +229,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProduct(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getProduct',
@@ -231,14 +245,15 @@ class SoftLayer_Billing_Invoice_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTopLevelProductGroupName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getTopLevelProductGroupName',
@@ -248,12 +263,13 @@ class SoftLayer_Billing_Invoice_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalOneTimeAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getTotalOneTimeAmount',
@@ -263,12 +279,13 @@ class SoftLayer_Billing_Invoice_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalOneTimeTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getTotalOneTimeTaxAmount',
@@ -278,12 +295,13 @@ class SoftLayer_Billing_Invoice_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalRecurringAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getTotalRecurringAmount',
@@ -293,12 +311,13 @@ class SoftLayer_Billing_Invoice_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalRecurringTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getTotalRecurringTaxAmount',
@@ -308,12 +327,13 @@ class SoftLayer_Billing_Invoice_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUsageChargeFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getUsageChargeFlag',

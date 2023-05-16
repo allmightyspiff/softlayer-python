@@ -7,11 +7,12 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Virtual_ReservedCapacityGroup'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Virtual_ReservedCapacityGroup
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,12 +21,13 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_ReservedCapacityGroup':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,14 +35,15 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.ReservedCapacityGroup import ReservedCapacityGroup
-        return SL_ReservedCapacityGroup(data)
+        return ReservedCapacityGroup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -48,9 +51,9 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableInstances(
         self,
         objectMask: Optional[str] = None,
@@ -58,6 +61,7 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_ReservedCapacityGroup_Instance]':
+
         data = self.client.call(
             self.service,
             'getAvailableInstances',
@@ -67,14 +71,15 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.ReservedCapacityGroup.Instance import Instance
-        return SL_Instance(data)
+        return Instance(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendRouter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Router_Backend':
+
         data = self.client.call(
             self.service,
             'getBackendRouter',
@@ -82,9 +87,9 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Router.Backend import Backend
-        return SL_Backend(data)
+        return Backend(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInstances(
         self,
         objectMask: Optional[str] = None,
@@ -92,6 +97,7 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_ReservedCapacityGroup_Instance]':
+
         data = self.client.call(
             self.service,
             'getInstances',
@@ -101,14 +107,15 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.ReservedCapacityGroup.Instance import Instance
-        return SL_Instance(data)
+        return Instance(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInstancesCount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getInstancesCount',
@@ -118,7 +125,7 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOccupiedInstances(
         self,
         objectMask: Optional[str] = None,
@@ -126,6 +133,7 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_ReservedCapacityGroup_Instance]':
+
         data = self.client.call(
             self.service,
             'getOccupiedInstances',
@@ -135,6 +143,6 @@ class SoftLayer_Virtual_ReservedCapacityGroup(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.ReservedCapacityGroup.Instance import Instance
-        return SL_Instance(data)
+        return Instance(data)
 
 

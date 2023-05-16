@@ -7,12 +7,13 @@ class SoftLayer_Virtual_PlacementGroup(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Virtual_PlacementGroup'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Virtual_PlacementGroup,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Virtual_PlacementGroup':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Virtual_PlacementGroup(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Virtual.PlacementGroup import PlacementGroup
-        return SL_PlacementGroup(data)
+        return PlacementGroup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_Virtual_PlacementGroup(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Virtual_PlacementGroup
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,12 +51,13 @@ class SoftLayer_Virtual_PlacementGroup(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableRouters(
         self,
         datacenterId: int,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getAvailableRouters',
@@ -61,14 +65,15 @@ class SoftLayer_Virtual_PlacementGroup(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_PlacementGroup':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -76,14 +81,15 @@ class SoftLayer_Virtual_PlacementGroup(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.PlacementGroup import PlacementGroup
-        return SL_PlacementGroup(data)
+        return PlacementGroup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -91,14 +97,15 @@ class SoftLayer_Virtual_PlacementGroup(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendRouter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Router_Backend':
+
         data = self.client.call(
             self.service,
             'getBackendRouter',
@@ -106,9 +113,9 @@ class SoftLayer_Virtual_PlacementGroup(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Router.Backend import Backend
-        return SL_Backend(data)
+        return Backend(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGuests(
         self,
         objectMask: Optional[str] = None,
@@ -116,6 +123,7 @@ class SoftLayer_Virtual_PlacementGroup(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getGuests',
@@ -125,14 +133,15 @@ class SoftLayer_Virtual_PlacementGroup(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRule(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_PlacementGroup_Rule':
+
         data = self.client.call(
             self.service,
             'getRule',
@@ -140,6 +149,6 @@ class SoftLayer_Virtual_PlacementGroup(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.PlacementGroup.Rule import Rule
-        return SL_Rule(data)
+        return Rule(data)
 
 

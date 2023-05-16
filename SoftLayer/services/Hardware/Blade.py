@@ -7,12 +7,13 @@ class SoftLayer_Hardware_Blade(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Hardware_Blade'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Blade':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_Hardware_Blade(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Blade import Blade
-        return SL_Blade(data)
+        return Blade(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareChild(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getHardwareChild',
@@ -35,14 +37,15 @@ class SoftLayer_Hardware_Blade(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareParent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getHardwareParent',
@@ -50,6 +53,6 @@ class SoftLayer_Hardware_Blade(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
 

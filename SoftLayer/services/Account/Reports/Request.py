@@ -7,7 +7,7 @@ class SoftLayer_Account_Reports_Request(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Reports_Request'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createRequest(
         self,
         recipientContact: SoftLayer_Account_Contact,
@@ -16,6 +16,7 @@ class SoftLayer_Account_Reports_Request(object):
         requestorContact: SoftLayer_Account_Contact,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Reports_Request':
+
         data = self.client.call(
             self.service,
             'createRequest',
@@ -26,9 +27,9 @@ class SoftLayer_Account_Reports_Request(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Reports.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -36,6 +37,7 @@ class SoftLayer_Account_Reports_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'SoftLayer_Account_Reports_Request':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -45,14 +47,15 @@ class SoftLayer_Account_Reports_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Reports.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Reports_Request':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -60,14 +63,15 @@ class SoftLayer_Account_Reports_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Reports.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRequestByRequestKey(
         self,
         requestKey: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Reports_Request':
+
         data = self.client.call(
             self.service,
             'getRequestByRequestKey',
@@ -75,13 +79,14 @@ class SoftLayer_Account_Reports_Request(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Reports.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def sendReportEmail(
         self,
         request: SoftLayer_Account_Reports_Request
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'sendReportEmail',
@@ -90,11 +95,12 @@ class SoftLayer_Account_Reports_Request(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateTicketOnDecline(
         self,
         request: SoftLayer_Account_Reports_Request
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateTicketOnDecline',
@@ -103,12 +109,13 @@ class SoftLayer_Account_Reports_Request(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -116,14 +123,15 @@ class SoftLayer_Account_Reports_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountContact(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Contact':
+
         data = self.client.call(
             self.service,
             'getAccountContact',
@@ -131,14 +139,15 @@ class SoftLayer_Account_Reports_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Contact import Contact
-        return SL_Contact(data)
+        return Contact(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReportType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Compliance_Report_Type':
+
         data = self.client.call(
             self.service,
             'getReportType',
@@ -146,14 +155,15 @@ class SoftLayer_Account_Reports_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Compliance.Report.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRequestorContact(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Contact':
+
         data = self.client.call(
             self.service,
             'getRequestorContact',
@@ -161,14 +171,15 @@ class SoftLayer_Account_Reports_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Contact import Contact
-        return SL_Contact(data)
+        return Contact(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTicket(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'getTicket',
@@ -176,14 +187,15 @@ class SoftLayer_Account_Reports_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getUser',
@@ -191,6 +203,6 @@ class SoftLayer_Account_Reports_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
 

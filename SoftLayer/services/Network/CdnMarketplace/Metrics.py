@@ -7,7 +7,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_CdnMarketplace_Metrics'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getCustomerInvoicingMetrics(
         self,
         vendorName: str,
@@ -15,6 +15,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endDate: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getCustomerInvoicingMetrics',
@@ -24,9 +25,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCustomerRealTimeMetrics(
         self,
         vendorName: str,
@@ -34,6 +35,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endTime: int,
         timeInterval: int
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getCustomerRealTimeMetrics',
@@ -43,9 +45,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             timeInterval
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCustomerUsageMetrics(
         self,
         vendorName: str,
@@ -53,6 +55,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endDate: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getCustomerUsageMetrics',
@@ -62,9 +65,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMappingBandwidthByRegionMetrics(
         self,
         mappingUniqueId: str,
@@ -72,6 +75,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endDate: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getMappingBandwidthByRegionMetrics',
@@ -81,9 +85,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMappingBandwidthMetrics(
         self,
         mappingUniqueId: str,
@@ -91,6 +95,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endDate: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getMappingBandwidthMetrics',
@@ -100,9 +105,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMappingHitsByTypeMetrics(
         self,
         mappingUniqueId: str,
@@ -110,6 +115,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endDate: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getMappingHitsByTypeMetrics',
@@ -119,9 +125,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMappingHitsMetrics(
         self,
         mappingUniqueId: str,
@@ -129,6 +135,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endDate: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getMappingHitsMetrics',
@@ -138,9 +145,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMappingIntegratedMetrics(
         self,
         mappingUniqueId: str,
@@ -148,6 +155,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endTime: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getMappingIntegratedMetrics',
@@ -157,9 +165,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMappingRealTimeMetrics(
         self,
         mappingUniqueId: str,
@@ -167,6 +175,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endTime: int,
         timeInterval: int
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getMappingRealTimeMetrics',
@@ -176,9 +185,9 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             timeInterval
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMappingUsageMetrics(
         self,
         mappingUniqueId: str,
@@ -186,6 +195,7 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
         endDate: int,
         frequency: str
     ) -> 'list[SoftLayer_Container_Network_CdnMarketplace_Metrics]':
+
         data = self.client.call(
             self.service,
             'getMappingUsageMetrics',
@@ -195,6 +205,6 @@ class SoftLayer_Network_CdnMarketplace_Metrics(object):
             frequency
         )
         from SoftLayer.datatypes.Container.Network.CdnMarketplace.Metrics import Metrics
-        return SL_Metrics(data)
+        return Metrics(data)
 
 

@@ -7,11 +7,12 @@ class SoftLayer_Event_Log(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Event_Log'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllEventNames(
         self,
         objectName: str
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getAllEventNames',
@@ -20,11 +21,12 @@ class SoftLayer_Event_Log(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllEventObjectNames(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getAllEventObjectNames',
@@ -33,7 +35,7 @@ class SoftLayer_Event_Log(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -41,6 +43,7 @@ class SoftLayer_Event_Log(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Event_Log]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -50,13 +53,14 @@ class SoftLayer_Event_Log(object):
             offset=offset
         )
         from SoftLayer.datatypes.Event.Log import Log
-        return SL_Log(data)
+        return Log(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllUserTypes(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getAllUserTypes',
@@ -65,12 +69,13 @@ class SoftLayer_Event_Log(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getUser',
@@ -78,6 +83,6 @@ class SoftLayer_Event_Log(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
 

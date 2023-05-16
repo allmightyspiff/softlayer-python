@@ -7,12 +7,13 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Workload_Citrix_Deployment_Resource'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Workload_Citrix_Deployment_Resource,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Workload_Citrix_Deployment_Resource':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,9 +21,9 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Workload.Citrix.Deployment.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -30,6 +31,7 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Workload_Citrix_Deployment_Resource]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -39,14 +41,15 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
             offset=offset
         )
         from SoftLayer.datatypes.Workload.Citrix.Deployment.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Workload_Citrix_Deployment_Resource':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -54,14 +57,15 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Workload.Citrix.Deployment.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -69,14 +73,15 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDeployment(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Workload_Citrix_Deployment':
+
         data = self.client.call(
             self.service,
             'getDeployment',
@@ -84,14 +89,15 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Workload.Citrix.Deployment import Deployment
-        return SL_Deployment(data)
+        return Deployment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrder(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Order':
+
         data = self.client.call(
             self.service,
             'getOrder',
@@ -99,14 +105,15 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Order import Order
-        return SL_Order(data)
+        return Order(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRole(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Workload_Citrix_Deployment_Resource_Role':
+
         data = self.client.call(
             self.service,
             'getRole',
@@ -114,6 +121,6 @@ class SoftLayer_Workload_Citrix_Deployment_Resource(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Workload.Citrix.Deployment.Resource.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
 

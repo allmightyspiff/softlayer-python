@@ -7,11 +7,12 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Media_Data_Transfer_Request'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Media_Data_Transfer_Request
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,25 +21,27 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllRequestStatuses(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Account_Media_Data_Transfer_Request_Status]':
+
         data = self.client.call(
             self.service,
             'getAllRequestStatuses',
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Media.Data.Transfer.Request.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Media_Data_Transfer_Request':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -46,14 +49,15 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Media.Data.Transfer.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -61,9 +65,9 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveTickets(
         self,
         objectMask: Optional[str] = None,
@@ -71,6 +75,7 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getActiveTickets',
@@ -80,14 +85,15 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -95,14 +101,15 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCreateUser',
@@ -110,14 +117,15 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMedia(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Media':
+
         data = self.client.call(
             self.service,
             'getMedia',
@@ -125,14 +133,15 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Media import Media
-        return SL_Media(data)
+        return Media(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getModifyEmployee',
@@ -140,14 +149,15 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getModifyUser',
@@ -155,9 +165,9 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getShipments(
         self,
         objectMask: Optional[str] = None,
@@ -165,6 +175,7 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Shipment]':
+
         data = self.client.call(
             self.service,
             'getShipments',
@@ -174,14 +185,15 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Shipment import Shipment
-        return SL_Shipment(data)
+        return Shipment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Media_Data_Transfer_Request_Status':
+
         data = self.client.call(
             self.service,
             'getStatus',
@@ -189,9 +201,9 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Media.Data.Transfer.Request.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTickets(
         self,
         objectMask: Optional[str] = None,
@@ -199,6 +211,7 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getTickets',
@@ -208,6 +221,6 @@ class SoftLayer_Account_Media_Data_Transfer_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Shipment_Tracking_Data'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Account_Shipment_Tracking_Data,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Shipment_Tracking_Data':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,14 +21,15 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Shipment.Tracking.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObjects(
         self,
         templateObjects: SoftLayer_Account_Shipment_Tracking_Data,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Account_Shipment_Tracking_Data]':
+
         data = self.client.call(
             self.service,
             'createObjects',
@@ -35,13 +37,14 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Shipment.Tracking.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -50,11 +53,12 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Shipment_Tracking_Data
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -63,12 +67,13 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Shipment_Tracking_Data':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -76,14 +81,15 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Shipment.Tracking.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getCreateEmployee',
@@ -91,14 +97,15 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCreateUser',
@@ -106,14 +113,15 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getModifyEmployee',
@@ -121,14 +129,15 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getModifyUser',
@@ -136,14 +145,15 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getShipment(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Shipment':
+
         data = self.client.call(
             self.service,
             'getShipment',
@@ -151,6 +161,6 @@ class SoftLayer_Account_Shipment_Tracking_Data(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Shipment import Shipment
-        return SL_Shipment(data)
+        return Shipment(data)
 
 

@@ -7,13 +7,14 @@ class SoftLayer_Notification_Mobile(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Notification_Mobile'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createSubscriberForMobileDevice(
         self,
         keyName: str,
         resourceTableId: int,
         userRecordId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createSubscriberForMobileDevice',
@@ -24,12 +25,13 @@ class SoftLayer_Notification_Mobile(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Notification_Mobile':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -37,14 +39,15 @@ class SoftLayer_Notification_Mobile(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Notification.Mobile import Mobile
-        return SL_Mobile(data)
+        return Mobile(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Notification]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -52,9 +55,9 @@ class SoftLayer_Notification_Mobile(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Notification import Notification
-        return SL_Notification(data)
+        return Notification(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPreferences(
         self,
         objectMask: Optional[str] = None,
@@ -62,6 +65,7 @@ class SoftLayer_Notification_Mobile(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_Preference]':
+
         data = self.client.call(
             self.service,
             'getPreferences',
@@ -71,9 +75,9 @@ class SoftLayer_Notification_Mobile(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.Preference import Preference
-        return SL_Preference(data)
+        return Preference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRequiredPreferences(
         self,
         objectMask: Optional[str] = None,
@@ -81,6 +85,7 @@ class SoftLayer_Notification_Mobile(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_Preference]':
+
         data = self.client.call(
             self.service,
             'getRequiredPreferences',
@@ -90,6 +95,6 @@ class SoftLayer_Notification_Mobile(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.Preference import Preference
-        return SL_Preference(data)
+        return Preference(data)
 
 

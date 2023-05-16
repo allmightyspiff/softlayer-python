@@ -7,12 +7,13 @@ class SoftLayer_Account_ProofOfConcept(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_ProofOfConcept'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def approveReview(
         self,
         requestId: int,
         accessToken: str
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'approveReview',
@@ -22,13 +23,14 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def denyReview(
         self,
         requestId: int,
         accessToken: str,
         reason: str
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'denyReview',
@@ -39,11 +41,12 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAuthenticationUrl(
         self,
         targetPage: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAuthenticationUrl',
@@ -52,13 +55,14 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRequestsPendingIntegratedOfferingTeamReview(
         self,
         accessToken: str,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Container_Account_ProofOfConcept_Review_Summary]':
+
         data = self.client.call(
             self.service,
             'getRequestsPendingIntegratedOfferingTeamReview',
@@ -67,15 +71,16 @@ class SoftLayer_Account_ProofOfConcept(object):
             offset=offset
         )
         from SoftLayer.datatypes.Container.Account.ProofOfConcept.Review.Summary import Summary
-        return SL_Summary(data)
+        return Summary(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRequestsPendingOverThresholdReview(
         self,
         accessToken: str,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Container_Account_ProofOfConcept_Review_Summary]':
+
         data = self.client.call(
             self.service,
             'getRequestsPendingOverThresholdReview',
@@ -84,13 +89,14 @@ class SoftLayer_Account_ProofOfConcept(object):
             offset=offset
         )
         from SoftLayer.datatypes.Container.Account.ProofOfConcept.Review.Summary import Summary
-        return SL_Summary(data)
+        return Summary(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReviewerAccessToken(
         self,
         unverifiedAuthenticationCode: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getReviewerAccessToken',
@@ -99,11 +105,12 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReviewerEmailFromAccessToken(
         self,
         accessToken: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getReviewerEmailFromAccessToken',
@@ -112,20 +119,21 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubmittedRequest(
         self,
         requestId: int
     ) -> 'SoftLayer_Container_Account_ProofOfConcept_Review':
+
         data = self.client.call(
             self.service,
             'getSubmittedRequest',
             requestId
         )
         from SoftLayer.datatypes.Container.Account.ProofOfConcept.Review import Review
-        return SL_Review(data)
+        return Review(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubmittedRequests(
         self,
         email: str,
@@ -133,6 +141,7 @@ class SoftLayer_Account_ProofOfConcept(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Container_Account_ProofOfConcept_Review_Summary]':
+
         data = self.client.call(
             self.service,
             'getSubmittedRequests',
@@ -142,13 +151,14 @@ class SoftLayer_Account_ProofOfConcept(object):
             offset=offset
         )
         from SoftLayer.datatypes.Container.Account.ProofOfConcept.Review.Summary import Summary
-        return SL_Summary(data)
+        return Summary(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSupportEmailAddress(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSupportEmailAddress',
@@ -157,11 +167,12 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalRequestsPendingIntegratedOfferingTeamReview(
         self,
         accessToken: str
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getTotalRequestsPendingIntegratedOfferingTeamReview',
@@ -170,11 +181,12 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalRequestsPendingOverThresholdReviewCount(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getTotalRequestsPendingOverThresholdReviewCount',
@@ -183,12 +195,13 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isCurrentReviewer(
         self,
         requestId: int,
         accessToken: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isCurrentReviewer',
@@ -198,11 +211,12 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isIntegratedOfferingTeamReviewer(
         self,
         emailAddress: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isIntegratedOfferingTeamReviewer',
@@ -211,11 +225,12 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isOverThresholdReviewer(
         self,
         emailAddress: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isOverThresholdReviewer',
@@ -224,38 +239,41 @@ class SoftLayer_Account_ProofOfConcept(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def requestAccountTeamFundedAccount(
         self,
         request: SoftLayer_Container_Account_ProofOfConcept_Request_AccountFunded
     ) -> 'SoftLayer_Container_Account_ProofOfConcept_Review_Summary':
+
         data = self.client.call(
             self.service,
             'requestAccountTeamFundedAccount',
             request
         )
         from SoftLayer.datatypes.Container.Account.ProofOfConcept.Review.Summary import Summary
-        return SL_Summary(data)
+        return Summary(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def requestGlobalFundedAccount(
         self,
         request: SoftLayer_Container_Account_ProofOfConcept_Request_GlobalFunded
     ) -> 'SoftLayer_Container_Account_ProofOfConcept_Review_Summary':
+
         data = self.client.call(
             self.service,
             'requestGlobalFundedAccount',
             request
         )
         from SoftLayer.datatypes.Container.Account.ProofOfConcept.Review.Summary import Summary
-        return SL_Summary(data)
+        return Summary(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def verifyReviewer(
         self,
         requestId: int,
         reviewerEmailAddress: str
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'verifyReviewer',

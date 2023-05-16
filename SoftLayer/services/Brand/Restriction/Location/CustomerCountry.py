@@ -7,7 +7,7 @@ class SoftLayer_Brand_Restriction_Location_CustomerCountry(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Brand_Restriction_Location_CustomerCountry'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Brand_Restriction_Location_CustomerCountry(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Brand_Restriction_Location_CustomerCountry]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Brand_Restriction_Location_CustomerCountry(object):
             offset=offset
         )
         from SoftLayer.datatypes.Brand.Restriction.Location.CustomerCountry import CustomerCountry
-        return SL_CustomerCountry(data)
+        return CustomerCountry(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Brand_Restriction_Location_CustomerCountry':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,14 +41,15 @@ class SoftLayer_Brand_Restriction_Location_CustomerCountry(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Brand.Restriction.Location.CustomerCountry import CustomerCountry
-        return SL_CustomerCountry(data)
+        return CustomerCountry(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBrand(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Brand':
+
         data = self.client.call(
             self.service,
             'getBrand',
@@ -54,14 +57,15 @@ class SoftLayer_Brand_Restriction_Location_CustomerCountry(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Brand import Brand
-        return SL_Brand(data)
+        return Brand(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -69,6 +73,6 @@ class SoftLayer_Brand_Restriction_Location_CustomerCountry(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
 

@@ -7,11 +7,12 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Storage_Group_Nfs'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def addAllowedHost(
         self,
         allowedHost: SoftLayer_Network_Storage_Allowed_Host
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addAllowedHost',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def attachToVolume(
         self,
         volume: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'attachToVolume',
@@ -33,12 +35,13 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Group_Nfs':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -46,13 +49,14 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Group.Nfs import Nfs
-        return SL_Nfs(data)
+        return Nfs(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAllowedHost(
         self,
         allowedHost: SoftLayer_Network_Storage_Allowed_Host
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAllowedHost',
@@ -61,11 +65,12 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeFromVolume(
         self,
         volume: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeFromVolume',
@@ -74,11 +79,12 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Network_Storage_Group
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -87,11 +93,12 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -100,11 +107,12 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_Storage_Group
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -113,7 +121,7 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -121,6 +129,7 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Group]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -130,27 +139,29 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkConnectionDetails(
         self,
         
     ) -> 'SoftLayer_Container_Network_Storage_NetworkConnectionInformation':
+
         data = self.client.call(
             self.service,
             'getNetworkConnectionDetails',
             
         )
         from SoftLayer.datatypes.Container.Network.Storage.NetworkConnectionInformation import NetworkConnectionInformation
-        return SL_NetworkConnectionInformation(data)
+        return NetworkConnectionInformation(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -158,9 +169,9 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedHosts(
         self,
         objectMask: Optional[str] = None,
@@ -168,6 +179,7 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Allowed_Host]':
+
         data = self.client.call(
             self.service,
             'getAllowedHosts',
@@ -177,9 +189,9 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedVolumes(
         self,
         objectMask: Optional[str] = None,
@@ -187,6 +199,7 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAttachedVolumes',
@@ -196,14 +209,15 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGroupType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Group_Type':
+
         data = self.client.call(
             self.service,
             'getGroupType',
@@ -211,14 +225,15 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Group.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOsType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Iscsi_OS_Type':
+
         data = self.client.call(
             self.service,
             'getOsType',
@@ -226,14 +241,15 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Iscsi.OS.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceResource(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Service_Resource':
+
         data = self.client.call(
             self.service,
             'getServiceResource',
@@ -241,6 +257,6 @@ class SoftLayer_Network_Storage_Group_Nfs(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Service.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
 

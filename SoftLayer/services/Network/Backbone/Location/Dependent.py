@@ -7,12 +7,13 @@ class SoftLayer_Network_Backbone_Location_Dependent(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Backbone_Location_Dependent'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Network_Backbone_Location_Dependent]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -20,14 +21,15 @@ class SoftLayer_Network_Backbone_Location_Dependent(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Backbone.Location.Dependent import Dependent
-        return SL_Dependent(data)
+        return Dependent(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Backbone_Location_Dependent':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -35,15 +37,16 @@ class SoftLayer_Network_Backbone_Location_Dependent(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Backbone.Location.Dependent import Dependent
-        return SL_Dependent(data)
+        return Dependent(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSourceDependentsByName(
         self,
         locationName: str,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getSourceDependentsByName',
@@ -52,14 +55,15 @@ class SoftLayer_Network_Backbone_Location_Dependent(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDependentLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDependentLocation',
@@ -67,14 +71,15 @@ class SoftLayer_Network_Backbone_Location_Dependent(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSourceLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getSourceLocation',
@@ -82,6 +87,6 @@ class SoftLayer_Network_Backbone_Location_Dependent(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
 

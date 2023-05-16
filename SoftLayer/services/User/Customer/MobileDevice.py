@@ -7,12 +7,13 @@ class SoftLayer_User_Customer_MobileDevice(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_User_Customer_MobileDevice'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_User_Customer_MobileDevice,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Customer_MobileDevice':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_User_Customer_MobileDevice(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Customer.MobileDevice import MobileDevice
-        return SL_MobileDevice(data)
+        return MobileDevice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_User_Customer_MobileDevice(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_User_Customer_MobileDevice
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,12 +51,13 @@ class SoftLayer_User_Customer_MobileDevice(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer_MobileDevice':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -61,9 +65,9 @@ class SoftLayer_User_Customer_MobileDevice(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer.MobileDevice import MobileDevice
-        return SL_MobileDevice(data)
+        return MobileDevice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailablePushNotificationSubscriptions(
         self,
         objectMask: Optional[str] = None,
@@ -71,6 +75,7 @@ class SoftLayer_User_Customer_MobileDevice(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification]':
+
         data = self.client.call(
             self.service,
             'getAvailablePushNotificationSubscriptions',
@@ -80,14 +85,15 @@ class SoftLayer_User_Customer_MobileDevice(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification import Notification
-        return SL_Notification(data)
+        return Notification(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCustomer(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCustomer',
@@ -95,14 +101,15 @@ class SoftLayer_User_Customer_MobileDevice(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOperatingSystem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer_MobileDevice_OperatingSystem':
+
         data = self.client.call(
             self.service,
             'getOperatingSystem',
@@ -110,9 +117,9 @@ class SoftLayer_User_Customer_MobileDevice(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer.MobileDevice.OperatingSystem import OperatingSystem
-        return SL_OperatingSystem(data)
+        return OperatingSystem(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPushNotificationSubscriptions(
         self,
         objectMask: Optional[str] = None,
@@ -120,6 +127,7 @@ class SoftLayer_User_Customer_MobileDevice(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_User_Subscriber]':
+
         data = self.client.call(
             self.service,
             'getPushNotificationSubscriptions',
@@ -129,14 +137,15 @@ class SoftLayer_User_Customer_MobileDevice(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.User.Subscriber import Subscriber
-        return SL_Subscriber(data)
+        return Subscriber(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer_MobileDevice_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -144,6 +153,6 @@ class SoftLayer_User_Customer_MobileDevice(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer.MobileDevice.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

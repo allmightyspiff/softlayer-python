@@ -7,12 +7,13 @@ class SoftLayer_Billing_Order_Item(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Billing_Order_Item'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Order_Item':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Order.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -35,9 +37,9 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBundledItems(
         self,
         objectMask: Optional[str] = None,
@@ -45,6 +47,7 @@ class SoftLayer_Billing_Order_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order_Item]':
+
         data = self.client.call(
             self.service,
             'getBundledItems',
@@ -54,14 +57,15 @@ class SoftLayer_Billing_Order_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCategory(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Category':
+
         data = self.client.call(
             self.service,
             'getCategory',
@@ -69,9 +73,9 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -79,6 +83,7 @@ class SoftLayer_Billing_Order_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order_Item]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -88,14 +93,15 @@ class SoftLayer_Billing_Order_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIdentifier(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getGlobalIdentifier',
@@ -105,12 +111,13 @@ class SoftLayer_Billing_Order_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareGenericComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Component_Model_Generic':
+
         data = self.client.call(
             self.service,
             'getHardwareGenericComponent',
@@ -118,14 +125,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Component.Model.Generic import Generic
-        return SL_Generic(data)
+        return Generic(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getItem',
@@ -133,9 +141,9 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemCategoryAnswers(
         self,
         objectMask: Optional[str] = None,
@@ -143,6 +151,7 @@ class SoftLayer_Billing_Order_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order_Item_Category_Answer]':
+
         data = self.client.call(
             self.service,
             'getItemCategoryAnswers',
@@ -152,14 +161,15 @@ class SoftLayer_Billing_Order_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order.Item.Category.Answer import Answer
-        return SL_Answer(data)
+        return Answer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemPrice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Price':
+
         data = self.client.call(
             self.service,
             'getItemPrice',
@@ -167,14 +177,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -182,9 +193,9 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextOrderChildren(
         self,
         objectMask: Optional[str] = None,
@@ -192,6 +203,7 @@ class SoftLayer_Billing_Order_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order_Item]':
+
         data = self.client.call(
             self.service,
             'getNextOrderChildren',
@@ -201,14 +213,15 @@ class SoftLayer_Billing_Order_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOldBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getOldBillingItem',
@@ -216,14 +229,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrder(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Order':
+
         data = self.client.call(
             self.service,
             'getOrder',
@@ -231,14 +245,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Order import Order
-        return SL_Order(data)
+        return Order(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrderApprovalDate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'dateTime':
+
         data = self.client.call(
             self.service,
             'getOrderApprovalDate',
@@ -248,12 +263,13 @@ class SoftLayer_Billing_Order_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPackage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package':
+
         data = self.client.call(
             self.service,
             'getPackage',
@@ -261,14 +277,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Order_Item':
+
         data = self.client.call(
             self.service,
             'getParent',
@@ -276,14 +293,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Order.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPreset(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package_Preset':
+
         data = self.client.call(
             self.service,
             'getPreset',
@@ -291,14 +309,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package.Preset import Preset
-        return SL_Preset(data)
+        return Preset(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPromoCode(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Promotion':
+
         data = self.client.call(
             self.service,
             'getPromoCode',
@@ -306,14 +325,15 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Promotion import Promotion
-        return SL_Promotion(data)
+        return Promotion(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRedundantPowerSupplyCount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getRedundantPowerSupplyCount',
@@ -323,12 +343,13 @@ class SoftLayer_Billing_Order_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareDescription(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Description':
+
         data = self.client.call(
             self.service,
             'getSoftwareDescription',
@@ -336,9 +357,9 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageGroups(
         self,
         objectMask: Optional[str] = None,
@@ -346,6 +367,7 @@ class SoftLayer_Billing_Order_Item(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Configuration_Storage_Group_Order]':
+
         data = self.client.call(
             self.service,
             'getStorageGroups',
@@ -355,14 +377,15 @@ class SoftLayer_Billing_Order_Item(object):
             offset=offset
         )
         from SoftLayer.datatypes.Configuration.Storage.Group.Order import Order
-        return SL_Order(data)
+        return Order(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalRecurringAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getTotalRecurringAmount',
@@ -372,12 +395,13 @@ class SoftLayer_Billing_Order_Item(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getUpgradeItem',
@@ -385,6 +409,6 @@ class SoftLayer_Billing_Order_Item(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
 

@@ -7,7 +7,7 @@ class SoftLayer_Sales_Presale_Event(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Sales_Presale_Event'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Sales_Presale_Event(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Sales_Presale_Event]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Sales_Presale_Event(object):
             offset=offset
         )
         from SoftLayer.datatypes.Sales.Presale.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Sales_Presale_Event':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,14 +41,15 @@ class SoftLayer_Sales_Presale_Event(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Sales.Presale.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getActiveFlag',
@@ -56,12 +59,13 @@ class SoftLayer_Sales_Presale_Event(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getExpiredFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getExpiredFlag',
@@ -71,12 +75,13 @@ class SoftLayer_Sales_Presale_Event(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getItem',
@@ -84,14 +89,15 @@ class SoftLayer_Sales_Presale_Event(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -99,9 +105,9 @@ class SoftLayer_Sales_Presale_Event(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrders(
         self,
         objectMask: Optional[str] = None,
@@ -109,6 +115,7 @@ class SoftLayer_Sales_Presale_Event(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order]':
+
         data = self.client.call(
             self.service,
             'getOrders',
@@ -118,6 +125,6 @@ class SoftLayer_Sales_Presale_Event(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order import Order
-        return SL_Order(data)
+        return Order(data)
 
 

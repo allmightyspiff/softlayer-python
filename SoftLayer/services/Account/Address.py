@@ -7,12 +7,13 @@ class SoftLayer_Account_Address(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Address'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Account_Address,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Address':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Account_Address(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Address
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -35,25 +37,27 @@ class SoftLayer_Account_Address(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllDataCenters(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Account_Address]':
+
         data = self.client.call(
             self.service,
             'getAllDataCenters',
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkAddress(
         self,
         name: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Account_Address]':
+
         data = self.client.call(
             self.service,
             'getNetworkAddress',
@@ -61,14 +65,15 @@ class SoftLayer_Account_Address(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Address':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -76,14 +81,15 @@ class SoftLayer_Account_Address(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -91,14 +97,15 @@ class SoftLayer_Account_Address(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCreateUser',
@@ -106,14 +113,15 @@ class SoftLayer_Account_Address(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -121,14 +129,15 @@ class SoftLayer_Account_Address(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getModifyEmployee',
@@ -136,14 +145,15 @@ class SoftLayer_Account_Address(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getModifyUser',
@@ -151,14 +161,15 @@ class SoftLayer_Account_Address(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Address_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -166,6 +177,6 @@ class SoftLayer_Account_Address(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Address.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

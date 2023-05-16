@@ -7,12 +7,13 @@ class SoftLayer_Account_Note(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Note'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Account_Note,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Note':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Account_Note(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Note import Note
-        return SL_Note(data)
+        return Note(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_Account_Note(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Note
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,12 +51,13 @@ class SoftLayer_Account_Note(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Note':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -61,14 +65,15 @@ class SoftLayer_Account_Note(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Note import Note
-        return SL_Note(data)
+        return Note(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -76,14 +81,15 @@ class SoftLayer_Account_Note(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCustomer(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCustomer',
@@ -91,9 +97,9 @@ class SoftLayer_Account_Note(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNoteHistory(
         self,
         objectMask: Optional[str] = None,
@@ -101,6 +107,7 @@ class SoftLayer_Account_Note(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Note_History]':
+
         data = self.client.call(
             self.service,
             'getNoteHistory',
@@ -110,6 +117,6 @@ class SoftLayer_Account_Note(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Note.History import History
-        return SL_History(data)
+        return History(data)
 
 

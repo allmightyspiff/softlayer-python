@@ -7,64 +7,69 @@ class SoftLayer_Locale_Country(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Locale_Country'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllVatCountryCodesAndVatIdRegexes(
         self,
         
     ) -> 'list[SoftLayer_Container_Collection_Locale_VatCountryCodeAndFormat]':
+
         data = self.client.call(
             self.service,
             'getAllVatCountryCodesAndVatIdRegexes',
             
         )
         from SoftLayer.datatypes.Container.Collection.Locale.VatCountryCodeAndFormat import VatCountryCodeAndFormat
-        return SL_VatCountryCodeAndFormat(data)
+        return VatCountryCodeAndFormat(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableCountries(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Locale_Country]':
+
         data = self.client.call(
             self.service,
             'getAvailableCountries',
             mask=objectMask
         )
         from SoftLayer.datatypes.Locale.Country import Country
-        return SL_Country(data)
+        return Country(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCountries(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Locale_Country]':
+
         data = self.client.call(
             self.service,
             'getCountries',
             mask=objectMask
         )
         from SoftLayer.datatypes.Locale.Country import Country
-        return SL_Country(data)
+        return Country(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCountriesAndStates(
         self,
         usFirstFlag: boolean
     ) -> 'list[SoftLayer_Container_Collection_Locale_CountryCode]':
+
         data = self.client.call(
             self.service,
             'getCountriesAndStates',
             usFirstFlag
         )
         from SoftLayer.datatypes.Container.Collection.Locale.CountryCode import CountryCode
-        return SL_CountryCode(data)
+        return CountryCode(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Locale_Country':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -72,13 +77,14 @@ class SoftLayer_Locale_Country(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Locale.Country import Country
-        return SL_Country(data)
+        return Country(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPostalCodeRequiredCountryCodes(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getPostalCodeRequiredCountryCodes',
@@ -87,11 +93,12 @@ class SoftLayer_Locale_Country(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVatCountries(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getVatCountries',
@@ -100,11 +107,12 @@ class SoftLayer_Locale_Country(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVatRequiredCountryCodes(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getVatRequiredCountryCodes',
@@ -113,11 +121,12 @@ class SoftLayer_Locale_Country(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isEuropeanUnionCountry(
         self,
         iso2CountryCode: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isEuropeanUnionCountry',
@@ -126,7 +135,7 @@ class SoftLayer_Locale_Country(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStates(
         self,
         objectMask: Optional[str] = None,
@@ -134,6 +143,7 @@ class SoftLayer_Locale_Country(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Locale_StateProvince]':
+
         data = self.client.call(
             self.service,
             'getStates',
@@ -143,6 +153,6 @@ class SoftLayer_Locale_Country(object):
             offset=offset
         )
         from SoftLayer.datatypes.Locale.StateProvince import StateProvince
-        return SL_StateProvince(data)
+        return StateProvince(data)
 
 

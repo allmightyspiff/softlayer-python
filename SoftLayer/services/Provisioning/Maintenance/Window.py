@@ -7,11 +7,12 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Provisioning_Maintenance_Window'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def addCustomerUpgradeWindow(
         self,
         customerUpgradeWindow: SoftLayer_Container_Provisioning_Maintenance_Window
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addCustomerUpgradeWindow',
@@ -20,25 +21,27 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaintenanceClassifications(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Provisioning_Maintenance_Classification]':
+
         data = self.client.call(
             self.service,
             'getMaintenanceClassifications',
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Maintenance.Classification import Classification
-        return SL_Classification(data)
+        return Classification(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaintenanceStartEndTime(
         self,
         ticketId: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Provisioning_Maintenance_Window':
+
         data = self.client.call(
             self.service,
             'getMaintenanceStartEndTime',
@@ -46,14 +49,15 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Maintenance.Window import Window
-        return SL_Window(data)
+        return Window(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaintenanceWindowForTicket(
         self,
         maintenanceWindowId: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Provisioning_Maintenance_Window':
+
         data = self.client.call(
             self.service,
             'getMaintenanceWindowForTicket',
@@ -61,14 +65,15 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Maintenance.Window import Window
-        return SL_Window(data)
+        return Window(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaintenanceWindowTicketsByTicketId(
         self,
         ticketId: int,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Provisioning_Maintenance_Ticket]':
+
         data = self.client.call(
             self.service,
             'getMaintenanceWindowTicketsByTicketId',
@@ -76,9 +81,9 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Maintenance.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaintenanceWindows(
         self,
         beginDate: dateTime,
@@ -87,6 +92,7 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
         slotsNeeded: int,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Provisioning_Maintenance_Window]':
+
         data = self.client.call(
             self.service,
             'getMaintenanceWindows',
@@ -97,9 +103,9 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Maintenance.Window import Window
-        return SL_Window(data)
+        return Window(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaintenceWindows(
         self,
         beginDate: dateTime,
@@ -108,6 +114,7 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
         slotsNeeded: int,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Provisioning_Maintenance_Window]':
+
         data = self.client.call(
             self.service,
             'getMaintenceWindows',
@@ -118,6 +125,6 @@ class SoftLayer_Provisioning_Maintenance_Window(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Maintenance.Window import Window
-        return SL_Window(data)
+        return Window(data)
 
 

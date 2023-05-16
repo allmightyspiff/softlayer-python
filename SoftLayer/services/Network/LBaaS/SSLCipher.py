@@ -7,7 +7,7 @@ class SoftLayer_Network_LBaaS_SSLCipher(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_LBaaS_SSLCipher'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Network_LBaaS_SSLCipher(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LBaaS_SSLCipher]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Network_LBaaS_SSLCipher(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LBaaS.SSLCipher import SSLCipher
-        return SL_SSLCipher(data)
+        return SSLCipher(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_LBaaS_SSLCipher':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,6 +41,6 @@ class SoftLayer_Network_LBaaS_SSLCipher(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.LBaaS.SSLCipher import SSLCipher
-        return SL_SSLCipher(data)
+        return SSLCipher(data)
 
 

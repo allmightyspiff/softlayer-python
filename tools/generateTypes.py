@@ -26,11 +26,12 @@ $methods
 
 """
 
-METHODDEF = """# This file was automatically generated with tools/generateTypes.py
+METHODDEF = """
     def $methodName(
         self,
         $arguments
     ) -> '$returnType':
+
         data = self.client.call(
             self.service,
             '$methodName',
@@ -229,7 +230,7 @@ class SLDNgenerator():
         if 'SoftLayer_' not in returnType:
             return 'return data'
         class_name = returnType.split('_')
-        return f"return SL_{class_name[-1]}(data)"        
+        return f"return {class_name[-1]}(data)"        
 
     @staticmethod
     def getImportPath(returnType: str) -> str:

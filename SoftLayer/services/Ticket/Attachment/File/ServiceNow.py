@@ -7,12 +7,13 @@ class SoftLayer_Ticket_Attachment_File_ServiceNow(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Ticket_Attachment_File_ServiceNow'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Attachment_File_ServiceNow':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,13 +21,14 @@ class SoftLayer_Ticket_Attachment_File_ServiceNow(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Attachment.File.ServiceNow import ServiceNow
-        return SL_ServiceNow(data)
+        return ServiceNow(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getExtensionWhitelist(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getExtensionWhitelist',
@@ -35,12 +37,13 @@ class SoftLayer_Ticket_Attachment_File_ServiceNow(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTicket(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'getTicket',
@@ -48,14 +51,15 @@ class SoftLayer_Ticket_Attachment_File_ServiceNow(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpdate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Update':
+
         data = self.client.call(
             self.service,
             'getUpdate',
@@ -63,6 +67,6 @@ class SoftLayer_Ticket_Attachment_File_ServiceNow(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Update import Update
-        return SL_Update(data)
+        return Update(data)
 
 

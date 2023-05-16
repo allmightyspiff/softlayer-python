@@ -7,7 +7,7 @@ class SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref(objec
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref(objec
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref(objec
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.CrossRegion.Country.Xref import Xref
-        return SL_Xref(data)
+        return Xref(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,14 +41,15 @@ class SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref(objec
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.CrossRegion.Country.Xref import Xref
-        return SL_Xref(data)
+        return Xref(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getValidCountriesForRegion(
         self,
         locationGroupName: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref]':
+
         data = self.client.call(
             self.service,
             'getValidCountriesForRegion',
@@ -54,14 +57,15 @@ class SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref(objec
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.CrossRegion.Country.Xref import Xref
-        return SL_Xref(data)
+        return Xref(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCountry(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Locale_Country':
+
         data = self.client.call(
             self.service,
             'getCountry',
@@ -69,14 +73,15 @@ class SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref(objec
             filter=objectFilter
         )
         from SoftLayer.datatypes.Locale.Country import Country
-        return SL_Country(data)
+        return Country(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocationGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location_Group':
+
         data = self.client.call(
             self.service,
             'getLocationGroup',
@@ -84,6 +89,6 @@ class SoftLayer_Network_Storage_MassDataMigration_CrossRegion_Country_Xref(objec
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
 

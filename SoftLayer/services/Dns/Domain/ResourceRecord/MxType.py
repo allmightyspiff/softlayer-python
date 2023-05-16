@@ -7,12 +7,13 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Dns_Domain_ResourceRecord_MxType'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Dns_Domain_ResourceRecord_MxType,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Dns_Domain_ResourceRecord_MxType':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,14 +21,15 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Dns.Domain.ResourceRecord.MxType import MxType
-        return SL_MxType(data)
+        return MxType(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObjects(
         self,
         templateObjects: SoftLayer_Dns_Domain_ResourceRecord,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Dns_Domain_ResourceRecord]':
+
         data = self.client.call(
             self.service,
             'createObjects',
@@ -35,13 +37,14 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Dns.Domain.ResourceRecord import ResourceRecord
-        return SL_ResourceRecord(data)
+        return ResourceRecord(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -50,11 +53,12 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObjects(
         self,
         templateObjects: SoftLayer_Dns_Domain_ResourceRecord_MxType
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObjects',
@@ -63,11 +67,12 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Dns_Domain_ResourceRecord_MxType
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -76,11 +81,12 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObjects(
         self,
         templateObjects: SoftLayer_Dns_Domain_ResourceRecord_MxType
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObjects',
@@ -89,12 +95,13 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Dns_Domain_ResourceRecord_MxType':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -102,14 +109,15 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Dns.Domain.ResourceRecord.MxType import MxType
-        return SL_MxType(data)
+        return MxType(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDomain(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Dns_Domain':
+
         data = self.client.call(
             self.service,
             'getDomain',
@@ -117,6 +125,6 @@ class SoftLayer_Dns_Domain_ResourceRecord_MxType(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Dns.Domain import Domain
-        return SL_Domain(data)
+        return Domain(data)
 
 

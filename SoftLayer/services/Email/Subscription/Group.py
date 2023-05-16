@@ -7,7 +7,7 @@ class SoftLayer_Email_Subscription_Group(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Email_Subscription_Group'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Email_Subscription_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Email_Subscription_Group]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Email_Subscription_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Email.Subscription.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Email_Subscription_Group':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,9 +41,9 @@ class SoftLayer_Email_Subscription_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Email.Subscription.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubscriptions(
         self,
         objectMask: Optional[str] = None,
@@ -49,6 +51,7 @@ class SoftLayer_Email_Subscription_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Email_Subscription]':
+
         data = self.client.call(
             self.service,
             'getSubscriptions',
@@ -58,6 +61,6 @@ class SoftLayer_Email_Subscription_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Email.Subscription import Subscription
-        return SL_Subscription(data)
+        return Subscription(data)
 
 

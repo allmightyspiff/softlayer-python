@@ -7,7 +7,7 @@ class IntegratedOfferingTeam_Region(object):
     def __init__(self, client: Client) -> None:
         self.service = 'IntegratedOfferingTeam_Region'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class IntegratedOfferingTeam_Region(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[IntegratedOfferingTeam_Container_Region]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -26,11 +27,12 @@ class IntegratedOfferingTeam_Region(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegionLeads(
         self,
         
     ) -> 'list[IntegratedOfferingTeam_Container_Region_Lead]':
+
         data = self.client.call(
             self.service,
             'getRegionLeads',

@@ -7,7 +7,7 @@ class SoftLayer_Account_ProofOfConcept_Campaign_Code(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_ProofOfConcept_Campaign_Code'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Account_ProofOfConcept_Campaign_Code(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_ProofOfConcept_Campaign_Code]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Account_ProofOfConcept_Campaign_Code(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.ProofOfConcept.Campaign.Code import Code
-        return SL_Code(data)
+        return Code(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_ProofOfConcept_Campaign_Code':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,6 +41,6 @@ class SoftLayer_Account_ProofOfConcept_Campaign_Code(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.ProofOfConcept.Campaign.Code import Code
-        return SL_Code(data)
+        return Code(data)
 
 

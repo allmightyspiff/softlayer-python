@@ -7,11 +7,12 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_LBaaS_LoadBalancer'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def cancelLoadBalancer(
         self,
         uuid: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'cancelLoadBalancer',
@@ -20,13 +21,14 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def enableOrDisableDataLogs(
         self,
         uuid: str,
         enabled: boolean,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'enableOrDisableDataLogs',
@@ -35,9 +37,9 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -45,6 +47,7 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LBaaS_LoadBalancer]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -54,9 +57,9 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getListenerTimeSeriesData(
         self,
         loadBalancerUuid: str,
@@ -64,6 +67,7 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         timeRange: str,
         listenerUuid: str
     ) -> 'list[SoftLayer_Network_LBaaS_LoadBalancerMonitoringMetricDataPoint]':
+
         data = self.client.call(
             self.service,
             'getListenerTimeSeriesData',
@@ -73,14 +77,15 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             listenerUuid
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancerMonitoringMetricDataPoint import LoadBalancerMonitoringMetricDataPoint
-        return SL_LoadBalancerMonitoringMetricDataPoint(data)
+        return LoadBalancerMonitoringMetricDataPoint(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLoadBalancer(
         self,
         uuid: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'getLoadBalancer',
@@ -88,40 +93,43 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLoadBalancerMemberHealth(
         self,
         uuid: str
     ) -> 'list[SoftLayer_Network_LBaaS_PoolMembersHealth]':
+
         data = self.client.call(
             self.service,
             'getLoadBalancerMemberHealth',
             uuid
         )
         from SoftLayer.datatypes.Network.LBaaS.PoolMembersHealth import PoolMembersHealth
-        return SL_PoolMembersHealth(data)
+        return PoolMembersHealth(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLoadBalancerStatistics(
         self,
         uuid: str
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancerStatistics':
+
         data = self.client.call(
             self.service,
             'getLoadBalancerStatistics',
             uuid
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancerStatistics import LoadBalancerStatistics
-        return SL_LoadBalancerStatistics(data)
+        return LoadBalancerStatistics(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -129,14 +137,15 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def serviceLoadBalancer(
         self,
         data: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'serviceLoadBalancer',
@@ -144,15 +153,16 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateLoadBalancer(
         self,
         uuid: str,
         newDescription: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'updateLoadBalancer',
@@ -161,15 +171,16 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateSslCiphers(
         self,
         loadBalancerUuid: str,
         cipherList: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'updateSslCiphers',
@@ -178,14 +189,15 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -193,9 +205,9 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHealthMonitors(
         self,
         objectMask: Optional[str] = None,
@@ -203,6 +215,7 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LBaaS_HealthMonitor]':
+
         data = self.client.call(
             self.service,
             'getHealthMonitors',
@@ -212,9 +225,9 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LBaaS.HealthMonitor import HealthMonitor
-        return SL_HealthMonitor(data)
+        return HealthMonitor(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getL7Pools(
         self,
         objectMask: Optional[str] = None,
@@ -222,6 +235,7 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LBaaS_L7Pool]':
+
         data = self.client.call(
             self.service,
             'getL7Pools',
@@ -231,9 +245,9 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LBaaS.L7Pool import L7Pool
-        return SL_L7Pool(data)
+        return L7Pool(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getListeners(
         self,
         objectMask: Optional[str] = None,
@@ -241,6 +255,7 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LBaaS_Listener]':
+
         data = self.client.call(
             self.service,
             'getListeners',
@@ -250,9 +265,9 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LBaaS.Listener import Listener
-        return SL_Listener(data)
+        return Listener(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMembers(
         self,
         objectMask: Optional[str] = None,
@@ -260,6 +275,7 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LBaaS_Member]':
+
         data = self.client.call(
             self.service,
             'getMembers',
@@ -269,9 +285,9 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LBaaS.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSslCiphers(
         self,
         objectMask: Optional[str] = None,
@@ -279,6 +295,7 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LBaaS_SSLCipher]':
+
         data = self.client.call(
             self.service,
             'getSslCiphers',
@@ -288,6 +305,6 @@ class SoftLayer_Network_LBaaS_LoadBalancer(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LBaaS.SSLCipher import SSLCipher
-        return SL_SSLCipher(data)
+        return SSLCipher(data)
 
 

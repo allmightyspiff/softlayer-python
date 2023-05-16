@@ -7,11 +7,12 @@ class SoftLayer_User_Permission_Role(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_User_Permission_Role'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def addUser(
         self,
         user: SoftLayer_User_Customer
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'addUser',
@@ -20,12 +21,13 @@ class SoftLayer_User_Permission_Role(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_User_Permission_Role,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Permission_Role':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -33,13 +35,14 @@ class SoftLayer_User_Permission_Role(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Permission.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -48,12 +51,13 @@ class SoftLayer_User_Permission_Role(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_User_Permission_Role,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Permission_Role':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -61,14 +65,15 @@ class SoftLayer_User_Permission_Role(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Permission.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Permission_Role':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -76,13 +81,14 @@ class SoftLayer_User_Permission_Role(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Permission.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def linkGroup(
         self,
         group: SoftLayer_User_Permission_Group
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'linkGroup',
@@ -91,11 +97,12 @@ class SoftLayer_User_Permission_Role(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeUser(
         self,
         user: SoftLayer_User_Customer
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'removeUser',
@@ -104,11 +111,12 @@ class SoftLayer_User_Permission_Role(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def unlinkGroup(
         self,
         group: SoftLayer_User_Permission_Group
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'unlinkGroup',
@@ -117,12 +125,13 @@ class SoftLayer_User_Permission_Role(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -130,9 +139,9 @@ class SoftLayer_User_Permission_Role(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActions(
         self,
         objectMask: Optional[str] = None,
@@ -140,6 +149,7 @@ class SoftLayer_User_Permission_Role(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Permission_Action]':
+
         data = self.client.call(
             self.service,
             'getActions',
@@ -149,9 +159,9 @@ class SoftLayer_User_Permission_Role(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Permission.Action import Action
-        return SL_Action(data)
+        return Action(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGroups(
         self,
         objectMask: Optional[str] = None,
@@ -159,6 +169,7 @@ class SoftLayer_User_Permission_Role(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Permission_Group]':
+
         data = self.client.call(
             self.service,
             'getGroups',
@@ -168,9 +179,9 @@ class SoftLayer_User_Permission_Role(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Permission.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUsers(
         self,
         objectMask: Optional[str] = None,
@@ -178,6 +189,7 @@ class SoftLayer_User_Permission_Role(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Customer]':
+
         data = self.client.call(
             self.service,
             'getUsers',
@@ -187,6 +199,6 @@ class SoftLayer_User_Permission_Role(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
 

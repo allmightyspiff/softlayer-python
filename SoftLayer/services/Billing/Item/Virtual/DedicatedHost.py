@@ -7,12 +7,13 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Billing_Item_Virtual_DedicatedHost'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Virtual_DedicatedHost':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,9 +21,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Virtual.DedicatedHost import DedicatedHost
-        return SL_DedicatedHost(data)
+        return DedicatedHost(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def cancelItem(
         self,
         cancelImmediately: boolean,
@@ -30,6 +31,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         reason: str,
         customerNote: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'cancelItem',
@@ -41,11 +43,12 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def cancelService(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'cancelService',
@@ -54,11 +57,12 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def cancelServiceOnAnniversaryDate(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'cancelServiceOnAnniversaryDate',
@@ -67,13 +71,14 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceBillingItemsByCategory(
         self,
         categoryCode: str,
         includeZeroRecurringFee: boolean,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getServiceBillingItemsByCategory',
@@ -82,13 +87,14 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAssociationId(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAssociationId',
@@ -97,11 +103,12 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setAssociationId(
         self,
         associatedId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setAssociationId',
@@ -110,11 +117,12 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def voidCancelService(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'voidCancelService',
@@ -123,12 +131,13 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getResource(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_DedicatedHost':
+
         data = self.client.call(
             self.service,
             'getResource',
@@ -136,14 +145,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.DedicatedHost import DedicatedHost
-        return SL_DedicatedHost(data)
+        return DedicatedHost(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -151,14 +161,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAgreement(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Agreement':
+
         data = self.client.call(
             self.service,
             'getActiveAgreement',
@@ -166,14 +177,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Agreement import Agreement
-        return SL_Agreement(data)
+        return Agreement(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAgreementFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Agreement':
+
         data = self.client.call(
             self.service,
             'getActiveAgreementFlag',
@@ -181,9 +193,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Agreement import Agreement
-        return SL_Agreement(data)
+        return Agreement(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAssociatedChildren(
         self,
         objectMask: Optional[str] = None,
@@ -191,6 +203,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveAssociatedChildren',
@@ -200,9 +213,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAssociatedGuestDiskBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -210,6 +223,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveAssociatedGuestDiskBillingItems',
@@ -219,9 +233,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveBundledItems(
         self,
         objectMask: Optional[str] = None,
@@ -229,6 +243,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveBundledItems',
@@ -238,14 +253,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveCancellationItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Cancellation_Request_Item':
+
         data = self.client.call(
             self.service,
             'getActiveCancellationItem',
@@ -253,9 +269,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Request.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveChildren(
         self,
         objectMask: Optional[str] = None,
@@ -263,6 +279,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveChildren',
@@ -272,14 +289,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getActiveFlag',
@@ -289,7 +307,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveSparePoolAssociatedGuestDiskBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -297,6 +315,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveSparePoolAssociatedGuestDiskBillingItems',
@@ -306,9 +325,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveSparePoolBundledItems(
         self,
         objectMask: Optional[str] = None,
@@ -316,6 +335,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveSparePoolBundledItems',
@@ -325,14 +345,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssociatedBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getAssociatedBillingItem',
@@ -340,9 +361,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssociatedBillingItemHistory(
         self,
         objectMask: Optional[str] = None,
@@ -350,6 +371,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item_Association_History]':
+
         data = self.client.call(
             self.service,
             'getAssociatedBillingItemHistory',
@@ -359,9 +381,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item.Association.History import History
-        return SL_History(data)
+        return History(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssociatedChildren(
         self,
         objectMask: Optional[str] = None,
@@ -369,6 +391,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAssociatedChildren',
@@ -378,9 +401,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssociatedParent(
         self,
         objectMask: Optional[str] = None,
@@ -388,6 +411,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAssociatedParent',
@@ -397,9 +421,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableMatchingVlans(
         self,
         objectMask: Optional[str] = None,
@@ -407,6 +431,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getAvailableMatchingVlans',
@@ -416,14 +441,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Bandwidth_Version1_Allocation':
+
         data = self.client.call(
             self.service,
             'getBandwidthAllocation',
@@ -431,9 +457,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allocation import Allocation
-        return SL_Allocation(data)
+        return Allocation(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillableChildren(
         self,
         objectMask: Optional[str] = None,
@@ -441,6 +467,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getBillableChildren',
@@ -450,9 +477,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBundledItems(
         self,
         objectMask: Optional[str] = None,
@@ -460,6 +487,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getBundledItems',
@@ -469,9 +497,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCanceledChildren(
         self,
         objectMask: Optional[str] = None,
@@ -479,6 +507,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getCanceledChildren',
@@ -488,14 +517,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCancellationReason(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Cancellation_Reason':
+
         data = self.client.call(
             self.service,
             'getCancellationReason',
@@ -503,9 +533,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Reason import Reason
-        return SL_Reason(data)
+        return Reason(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCancellationRequests(
         self,
         objectMask: Optional[str] = None,
@@ -513,6 +543,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item_Cancellation_Request]':
+
         data = self.client.call(
             self.service,
             'getCancellationRequests',
@@ -522,14 +553,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCategory(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Category':
+
         data = self.client.call(
             self.service,
             'getCategory',
@@ -537,9 +569,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -547,6 +579,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -556,9 +589,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildrenWithActiveAgreement(
         self,
         objectMask: Optional[str] = None,
@@ -566,6 +599,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getChildrenWithActiveAgreement',
@@ -575,9 +609,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDowngradeItems(
         self,
         objectMask: Optional[str] = None,
@@ -585,6 +619,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getDowngradeItems',
@@ -594,9 +629,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFilteredNextInvoiceChildren(
         self,
         objectMask: Optional[str] = None,
@@ -604,6 +639,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getFilteredNextInvoiceChildren',
@@ -613,14 +649,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHourlyFlag',
@@ -630,12 +667,13 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInvoiceItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice_Item':
+
         data = self.client.call(
             self.service,
             'getInvoiceItem',
@@ -643,9 +681,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInvoiceItems(
         self,
         objectMask: Optional[str] = None,
@@ -653,6 +691,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice_Item]':
+
         data = self.client.call(
             self.service,
             'getInvoiceItems',
@@ -662,14 +701,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getItem',
@@ -677,14 +717,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -692,9 +733,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceChildren(
         self,
         objectMask: Optional[str] = None,
@@ -702,6 +743,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceChildren',
@@ -711,14 +753,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalOneTimeAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalOneTimeAmount',
@@ -728,12 +771,13 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalOneTimeTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalOneTimeTaxAmount',
@@ -743,12 +787,13 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalRecurringAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalRecurringAmount',
@@ -758,12 +803,13 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalRecurringTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalRecurringTaxAmount',
@@ -773,7 +819,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNonZeroNextInvoiceChildren(
         self,
         objectMask: Optional[str] = None,
@@ -781,6 +827,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getNonZeroNextInvoiceChildren',
@@ -790,14 +837,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrderItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Order_Item':
+
         data = self.client.call(
             self.service,
             'getOrderItem',
@@ -805,14 +853,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Order.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOriginalLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getOriginalLocation',
@@ -820,14 +869,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPackage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package':
+
         data = self.client.call(
             self.service,
             'getPackage',
@@ -835,14 +885,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getParent',
@@ -850,14 +901,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParentVirtualGuestBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'getParentVirtualGuestBillingItem',
@@ -865,14 +917,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingCancellationFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPendingCancellationFlag',
@@ -882,12 +935,13 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingOrderItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Order_Item':
+
         data = self.client.call(
             self.service,
             'getPendingOrderItem',
@@ -895,14 +949,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Order.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProvisionTransaction(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'getProvisionTransaction',
@@ -910,14 +965,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareDescription(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Description':
+
         data = self.client.call(
             self.service,
             'getSoftwareDescription',
@@ -925,14 +981,15 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getUpgradeItem',
@@ -940,9 +997,9 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeItems(
         self,
         objectMask: Optional[str] = None,
@@ -950,6 +1007,7 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getUpgradeItems',
@@ -959,6 +1017,6 @@ class SoftLayer_Billing_Item_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
 

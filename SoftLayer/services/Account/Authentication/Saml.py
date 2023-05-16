@@ -7,12 +7,13 @@ class SoftLayer_Account_Authentication_Saml(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Authentication_Saml'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Account_Authentication_Saml,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Authentication_Saml':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Account_Authentication_Saml(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Authentication.Saml import Saml
-        return SL_Saml(data)
+        return Saml(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_Account_Authentication_Saml(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Authentication_Saml
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,11 +51,12 @@ class SoftLayer_Account_Authentication_Saml(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetadata(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getMetadata',
@@ -61,12 +65,13 @@ class SoftLayer_Account_Authentication_Saml(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Authentication_Saml':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -74,14 +79,15 @@ class SoftLayer_Account_Authentication_Saml(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Authentication.Saml import Saml
-        return SL_Saml(data)
+        return Saml(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -89,9 +95,9 @@ class SoftLayer_Account_Authentication_Saml(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -99,6 +105,7 @@ class SoftLayer_Account_Authentication_Saml(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Authentication_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -108,6 +115,6 @@ class SoftLayer_Account_Authentication_Saml(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Authentication.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
 

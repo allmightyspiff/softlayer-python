@@ -7,11 +7,12 @@ class SoftLayer_Virtual_DedicatedHost(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Virtual_DedicatedHost'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -20,11 +21,12 @@ class SoftLayer_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Virtual_DedicatedHost
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -33,12 +35,13 @@ class SoftLayer_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableRouters(
         self,
         dedicatedHost: SoftLayer_Virtual_DedicatedHost,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getAvailableRouters',
@@ -46,14 +49,15 @@ class SoftLayer_Virtual_DedicatedHost(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_DedicatedHost':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -61,13 +65,14 @@ class SoftLayer_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.DedicatedHost import DedicatedHost
-        return SL_DedicatedHost(data)
+        return DedicatedHost(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setTags',
@@ -76,12 +81,13 @@ class SoftLayer_Virtual_DedicatedHost(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -89,14 +95,15 @@ class SoftLayer_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllocationStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Container_Virtual_DedicatedHost_AllocationStatus':
+
         data = self.client.call(
             self.service,
             'getAllocationStatus',
@@ -104,14 +111,15 @@ class SoftLayer_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Container.Virtual.DedicatedHost.AllocationStatus import AllocationStatus
-        return SL_AllocationStatus(data)
+        return AllocationStatus(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendRouter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Router_Backend':
+
         data = self.client.call(
             self.service,
             'getBackendRouter',
@@ -119,14 +127,15 @@ class SoftLayer_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Router.Backend import Backend
-        return SL_Backend(data)
+        return Backend(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Virtual_DedicatedHost':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -134,14 +143,15 @@ class SoftLayer_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Virtual.DedicatedHost import DedicatedHost
-        return SL_DedicatedHost(data)
+        return DedicatedHost(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -149,9 +159,9 @@ class SoftLayer_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGuests(
         self,
         objectMask: Optional[str] = None,
@@ -159,6 +169,7 @@ class SoftLayer_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getGuests',
@@ -168,9 +179,9 @@ class SoftLayer_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInternalTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -178,6 +189,7 @@ class SoftLayer_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getInternalTagReferences',
@@ -187,14 +199,15 @@ class SoftLayer_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPciDeviceAllocationStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Container_Virtual_DedicatedHost_Pci_Device_AllocationStatus':
+
         data = self.client.call(
             self.service,
             'getPciDeviceAllocationStatus',
@@ -202,9 +215,9 @@ class SoftLayer_Virtual_DedicatedHost(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Container.Virtual.DedicatedHost.Pci.Device.AllocationStatus import AllocationStatus
-        return SL_AllocationStatus(data)
+        return AllocationStatus(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPciDevices(
         self,
         objectMask: Optional[str] = None,
@@ -212,6 +225,7 @@ class SoftLayer_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Host_PciDevice]':
+
         data = self.client.call(
             self.service,
             'getPciDevices',
@@ -221,9 +235,9 @@ class SoftLayer_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Host.PciDevice import PciDevice
-        return SL_PciDevice(data)
+        return PciDevice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -231,6 +245,7 @@ class SoftLayer_Virtual_DedicatedHost(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -240,6 +255,6 @@ class SoftLayer_Virtual_DedicatedHost(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
 

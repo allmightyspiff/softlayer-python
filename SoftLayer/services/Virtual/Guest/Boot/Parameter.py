@@ -7,11 +7,12 @@ class SoftLayer_Virtual_Guest_Boot_Parameter(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Virtual_Guest_Boot_Parameter'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Virtual_Guest_Boot_Parameter
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,11 +21,12 @@ class SoftLayer_Virtual_Guest_Boot_Parameter(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -33,11 +35,12 @@ class SoftLayer_Virtual_Guest_Boot_Parameter(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Virtual_Guest_Boot_Parameter
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -46,12 +49,13 @@ class SoftLayer_Virtual_Guest_Boot_Parameter(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest_Boot_Parameter':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -59,14 +63,15 @@ class SoftLayer_Virtual_Guest_Boot_Parameter(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest.Boot.Parameter import Parameter
-        return SL_Parameter(data)
+        return Parameter(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGuest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'getGuest',
@@ -74,14 +79,15 @@ class SoftLayer_Virtual_Guest_Boot_Parameter(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGuestBootParameterType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest_Boot_Parameter_Type':
+
         data = self.client.call(
             self.service,
             'getGuestBootParameterType',
@@ -89,6 +95,6 @@ class SoftLayer_Virtual_Guest_Boot_Parameter(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest.Boot.Parameter.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

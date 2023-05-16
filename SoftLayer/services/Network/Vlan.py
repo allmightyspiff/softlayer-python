@@ -7,11 +7,12 @@ class SoftLayer_Network_Vlan(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Vlan'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_Vlan
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCancelFailureReasons(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getCancelFailureReasons',
@@ -33,38 +35,41 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallProtectableIpAddresses(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getFirewallProtectableIpAddresses',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallProtectableSubnets(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getFirewallProtectableSubnets',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -72,27 +77,29 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateVlan(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getPrivateVlan',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateVlanByIpAddress(
         self,
         ipAddress: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getPrivateVlanByIpAddress',
@@ -100,14 +107,15 @@ class SoftLayer_Network_Vlan(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicVlanByFqdn(
         self,
         fqdn: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getPublicVlanByFqdn',
@@ -115,27 +123,29 @@ class SoftLayer_Network_Vlan(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReverseDomainRecords(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Dns_Domain]':
+
         data = self.client.call(
             self.service,
             'getReverseDomainRecords',
             mask=objectMask
         )
         from SoftLayer.datatypes.Dns.Domain import Domain
-        return SL_Domain(data)
+        return Domain(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVlanForIpAddress(
         self,
         ipAddress: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getVlanForIpAddress',
@@ -143,13 +153,14 @@ class SoftLayer_Network_Vlan(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setTags',
@@ -158,11 +169,12 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateFirewallIntraVlanCommunication(
         self,
         enabled: boolean
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'updateFirewallIntraVlanCommunication',
@@ -171,25 +183,27 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def upgrade(
         self,
         
     ) -> 'SoftLayer_Container_Product_Order_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'upgrade',
             
         )
         from SoftLayer.datatypes.Container.Product.Order.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -197,9 +211,9 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAdditionalPrimarySubnets(
         self,
         objectMask: Optional[str] = None,
@@ -207,6 +221,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getAdditionalPrimarySubnets',
@@ -216,14 +231,15 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedNetworkGateway(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Gateway':
+
         data = self.client.call(
             self.service,
             'getAttachedNetworkGateway',
@@ -231,14 +247,15 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Gateway import Gateway
-        return SL_Gateway(data)
+        return Gateway(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedNetworkGatewayFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getAttachedNetworkGatewayFlag',
@@ -248,12 +265,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedNetworkGatewayVlan(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Gateway_Vlan':
+
         data = self.client.call(
             self.service,
             'getAttachedNetworkGatewayVlan',
@@ -261,14 +279,15 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Gateway.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -276,14 +295,15 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -291,14 +311,15 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDedicatedFirewallFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getDedicatedFirewallFlag',
@@ -308,12 +329,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getExtensionRouter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Router':
+
         data = self.client.call(
             self.service,
             'getExtensionRouter',
@@ -321,9 +343,9 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Router import Router
-        return SL_Router(data)
+        return Router(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallGuestNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -331,6 +353,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component_Firewall]':
+
         data = self.client.call(
             self.service,
             'getFirewallGuestNetworkComponents',
@@ -340,9 +363,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component.Firewall import Firewall
-        return SL_Firewall(data)
+        return Firewall(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallInterfaces(
         self,
         objectMask: Optional[str] = None,
@@ -350,6 +373,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Firewall_Module_Context_Interface]':
+
         data = self.client.call(
             self.service,
             'getFirewallInterfaces',
@@ -359,9 +383,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Firewall.Module.Context.Interface import Interface
-        return SL_Interface(data)
+        return Interface(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -369,6 +393,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component_Firewall]':
+
         data = self.client.call(
             self.service,
             'getFirewallNetworkComponents',
@@ -378,9 +403,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component.Firewall import Firewall
-        return SL_Firewall(data)
+        return Firewall(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallRules(
         self,
         objectMask: Optional[str] = None,
@@ -388,6 +413,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan_Firewall_Rule]':
+
         data = self.client.call(
             self.service,
             'getFirewallRules',
@@ -397,9 +423,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan.Firewall.Rule import Rule
-        return SL_Rule(data)
+        return Rule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGuestNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -407,6 +433,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getGuestNetworkComponents',
@@ -416,9 +443,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardware(
         self,
         objectMask: Optional[str] = None,
@@ -426,6 +453,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardware',
@@ -435,14 +463,15 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHighAvailabilityFirewallFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHighAvailabilityFirewallFlag',
@@ -452,12 +481,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocalDiskStorageCapabilityFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getLocalDiskStorageCapabilityFlag',
@@ -467,12 +497,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetwork(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network':
+
         data = self.client.call(
             self.service,
             'getNetwork',
@@ -480,9 +511,9 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network import Network
-        return SL_Network(data)
+        return Network(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkComponentTrunks(
         self,
         objectMask: Optional[str] = None,
@@ -490,6 +521,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component_Network_Vlan_Trunk]':
+
         data = self.client.call(
             self.service,
             'getNetworkComponentTrunks',
@@ -499,9 +531,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component.Network.Vlan.Trunk import Trunk
-        return SL_Trunk(data)
+        return Trunk(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -509,6 +541,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getNetworkComponents',
@@ -518,9 +551,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkComponentsTrunkable(
         self,
         objectMask: Optional[str] = None,
@@ -528,6 +561,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getNetworkComponentsTrunkable',
@@ -537,14 +571,15 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkSpace(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getNetworkSpace',
@@ -554,12 +589,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlanFirewall(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan_Firewall':
+
         data = self.client.call(
             self.service,
             'getNetworkVlanFirewall',
@@ -567,14 +603,15 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan.Firewall import Firewall
-        return SL_Firewall(data)
+        return Firewall(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPodName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPodName',
@@ -584,12 +621,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryRouter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Router':
+
         data = self.client.call(
             self.service,
             'getPrimaryRouter',
@@ -597,14 +635,15 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Router import Router
-        return SL_Router(data)
+        return Router(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimarySubnet(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet':
+
         data = self.client.call(
             self.service,
             'getPrimarySubnet',
@@ -612,14 +651,15 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimarySubnetVersion6(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet':
+
         data = self.client.call(
             self.service,
             'getPrimarySubnetVersion6',
@@ -627,9 +667,9 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimarySubnets(
         self,
         objectMask: Optional[str] = None,
@@ -637,6 +677,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getPrimarySubnets',
@@ -646,9 +687,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateNetworkGateways(
         self,
         objectMask: Optional[str] = None,
@@ -656,6 +697,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Gateway]':
+
         data = self.client.call(
             self.service,
             'getPrivateNetworkGateways',
@@ -665,9 +707,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Gateway import Gateway
-        return SL_Gateway(data)
+        return Gateway(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProtectedIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -675,6 +717,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getProtectedIpAddresses',
@@ -684,9 +727,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicNetworkGateways(
         self,
         objectMask: Optional[str] = None,
@@ -694,6 +737,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Gateway]':
+
         data = self.client.call(
             self.service,
             'getPublicNetworkGateways',
@@ -703,14 +747,15 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Gateway import Gateway
-        return SL_Gateway(data)
+        return Gateway(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSanStorageCapabilityFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getSanStorageCapabilityFlag',
@@ -720,12 +765,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecondaryRouter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getSecondaryRouter',
@@ -733,9 +779,9 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecondarySubnets(
         self,
         objectMask: Optional[str] = None,
@@ -743,6 +789,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getSecondarySubnets',
@@ -752,9 +799,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -762,6 +809,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getSubnets',
@@ -771,9 +819,9 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -781,6 +829,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -790,14 +839,15 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTotalPrimaryIpAddressCount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getTotalPrimaryIpAddressCount',
@@ -807,12 +857,13 @@ class SoftLayer_Network_Vlan(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -820,9 +871,9 @@ class SoftLayer_Network_Vlan(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -830,6 +881,7 @@ class SoftLayer_Network_Vlan(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuests',
@@ -839,6 +891,6 @@ class SoftLayer_Network_Vlan(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_User_Customer_Notification_Virtual_Guest'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_User_Customer_Notification_Virtual_Guest,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Customer_Notification_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,14 +21,15 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Customer.Notification.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObjects(
         self,
         templateObjects: SoftLayer_User_Customer_Notification_Virtual_Guest,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_User_Customer_Notification_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'createObjects',
@@ -35,13 +37,14 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Customer.Notification.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObjects(
         self,
         templateObjects: SoftLayer_User_Customer_Notification_Virtual_Guest
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObjects',
@@ -50,12 +53,13 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def findByGuestId(
         self,
         id: int,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_User_Customer_Notification_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'findByGuestId',
@@ -63,14 +67,15 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Customer.Notification.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer_Notification_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -78,14 +83,15 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer.Notification.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGuest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'getGuest',
@@ -93,14 +99,15 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getUser',
@@ -108,6 +115,6 @@ class SoftLayer_User_Customer_Notification_Virtual_Guest(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_Provisioning_Maintenance_Slots(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Provisioning_Maintenance_Slots'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Maintenance_Slots':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,6 +21,6 @@ class SoftLayer_Provisioning_Maintenance_Slots(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Maintenance.Slots import Slots
-        return SL_Slots(data)
+        return Slots(data)
 
 

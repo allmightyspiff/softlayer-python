@@ -7,11 +7,12 @@ class SoftLayer_Account_Password(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Password'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Password
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,12 +21,13 @@ class SoftLayer_Account_Password(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Password':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,14 +35,15 @@ class SoftLayer_Account_Password(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -48,14 +51,15 @@ class SoftLayer_Account_Password(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Password_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -63,6 +67,6 @@ class SoftLayer_Account_Password(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Password.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

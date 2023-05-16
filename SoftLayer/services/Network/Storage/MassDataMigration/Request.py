@@ -7,7 +7,7 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Storage_MassDataMigration_Request'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_MassDataMigration_Request]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,27 +25,29 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllRequestStatuses(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage_MassDataMigration_Request_Status]':
+
         data = self.client.call(
             self.service,
             'getAllRequestStatuses',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.Request.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_MassDataMigration_Request':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -52,27 +55,29 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingRequests(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage_MassDataMigration_Request]':
+
         data = self.client.call(
             self.service,
             'getPendingRequests',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -80,9 +85,9 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveTickets(
         self,
         objectMask: Optional[str] = None,
@@ -90,6 +95,7 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getActiveTickets',
@@ -99,14 +105,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Address':
+
         data = self.client.call(
             self.service,
             'getAddress',
@@ -114,14 +121,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -129,14 +137,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getCreateEmployee',
@@ -144,14 +153,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCreateUser',
@@ -159,14 +169,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDeviceConfiguration(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_MassDataMigration_Request_DeviceConfiguration':
+
         data = self.client.call(
             self.service,
             'getDeviceConfiguration',
@@ -174,14 +185,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.Request.DeviceConfiguration import DeviceConfiguration
-        return SL_DeviceConfiguration(data)
+        return DeviceConfiguration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDeviceModel(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDeviceModel',
@@ -191,7 +203,7 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getKeyContacts(
         self,
         objectMask: Optional[str] = None,
@@ -199,6 +211,7 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_MassDataMigration_Request_KeyContact]':
+
         data = self.client.call(
             self.service,
             'getKeyContacts',
@@ -208,14 +221,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.Request.KeyContact import KeyContact
-        return SL_KeyContact(data)
+        return KeyContact(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getModifyEmployee',
@@ -223,14 +237,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getModifyUser',
@@ -238,9 +253,9 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getShipments(
         self,
         objectMask: Optional[str] = None,
@@ -248,6 +263,7 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Shipment]':
+
         data = self.client.call(
             self.service,
             'getShipments',
@@ -257,14 +273,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Shipment import Shipment
-        return SL_Shipment(data)
+        return Shipment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_MassDataMigration_Request_Status':
+
         data = self.client.call(
             self.service,
             'getStatus',
@@ -272,14 +289,15 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.MassDataMigration.Request.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTicket(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'getTicket',
@@ -287,9 +305,9 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTickets(
         self,
         objectMask: Optional[str] = None,
@@ -297,6 +315,7 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getTickets',
@@ -306,6 +325,6 @@ class SoftLayer_Network_Storage_MassDataMigration_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
 

@@ -7,11 +7,12 @@ class SoftLayer_User_Customer_External_Binding(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_User_Customer_External_Binding'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def disable(
         self,
         reason: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'disable',
@@ -20,11 +21,12 @@ class SoftLayer_User_Customer_External_Binding(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def enable(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'enable',
@@ -33,12 +35,13 @@ class SoftLayer_User_Customer_External_Binding(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer_External_Binding':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -46,13 +49,14 @@ class SoftLayer_User_Customer_External_Binding(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer.External.Binding import Binding
-        return SL_Binding(data)
+        return Binding(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -61,11 +65,12 @@ class SoftLayer_User_Customer_External_Binding(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateNote(
         self,
         text: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateNote',
@@ -74,12 +79,13 @@ class SoftLayer_User_Customer_External_Binding(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getUser',
@@ -87,9 +93,9 @@ class SoftLayer_User_Customer_External_Binding(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -97,6 +103,7 @@ class SoftLayer_User_Customer_External_Binding(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_External_Binding_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -106,14 +113,15 @@ class SoftLayer_User_Customer_External_Binding(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.External.Binding.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -121,14 +129,15 @@ class SoftLayer_User_Customer_External_Binding(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNote(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getNote',
@@ -138,12 +147,13 @@ class SoftLayer_User_Customer_External_Binding(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_External_Binding_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -151,14 +161,15 @@ class SoftLayer_User_Customer_External_Binding(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.External.Binding.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVendor(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_External_Binding_Vendor':
+
         data = self.client.call(
             self.service,
             'getVendor',
@@ -166,6 +177,6 @@ class SoftLayer_User_Customer_External_Binding(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.External.Binding.Vendor import Vendor
-        return SL_Vendor(data)
+        return Vendor(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_Network_LBaaS_HealthMonitor(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_LBaaS_HealthMonitor'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_LBaaS_HealthMonitor':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,15 +21,16 @@ class SoftLayer_Network_LBaaS_HealthMonitor(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.LBaaS.HealthMonitor import HealthMonitor
-        return SL_HealthMonitor(data)
+        return HealthMonitor(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateLoadBalancerHealthMonitors(
         self,
         loadBalancerUuid: str,
         healthMonitorConfigurations: SoftLayer_Network_LBaaS_LoadBalancerHealthMonitorConfiguration,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_LBaaS_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'updateLoadBalancerHealthMonitors',
@@ -37,6 +39,6 @@ class SoftLayer_Network_LBaaS_HealthMonitor(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.LBaaS.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
 

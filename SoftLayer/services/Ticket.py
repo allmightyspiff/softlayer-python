@@ -7,11 +7,12 @@ class SoftLayer_Ticket(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Ticket'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def addAssignedAgent(
         self,
         agentId: int
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'addAssignedAgent',
@@ -20,11 +21,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addAttachedAdditionalEmails(
         self,
         emails: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addAttachedAdditionalEmails',
@@ -33,12 +35,13 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addAttachedDedicatedHost(
         self,
         dedicatedHostId: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket_Attachment_Dedicated_Host':
+
         data = self.client.call(
             self.service,
             'addAttachedDedicatedHost',
@@ -46,14 +49,15 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket.Attachment.Dedicated.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addAttachedFile(
         self,
         fileAttachment: SoftLayer_Container_Utility_File_Attachment,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket_Attachment_File':
+
         data = self.client.call(
             self.service,
             'addAttachedFile',
@@ -61,14 +65,15 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket.Attachment.File import File
-        return SL_File(data)
+        return File(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addAttachedHardware(
         self,
         hardwareId: int,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket_Attachment_Hardware':
+
         data = self.client.call(
             self.service,
             'addAttachedHardware',
@@ -76,15 +81,16 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket.Attachment.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addAttachedVirtualGuest(
         self,
         guestId: int,
         callCommit: boolean,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket_Attachment_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'addAttachedVirtualGuest',
@@ -93,13 +99,14 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket.Attachment.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addFinalComments(
         self,
         finalComments: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addFinalComments',
@@ -108,11 +115,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addScheduledAlert(
         self,
         activationTime: str
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'addScheduledAlert',
@@ -121,11 +129,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addScheduledAutoClose(
         self,
         activationTime: str
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'addScheduledAutoClose',
@@ -134,13 +143,14 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addUpdate(
         self,
         templateObject: SoftLayer_Ticket_Update,
         attachedFiles: SoftLayer_Container_Utility_File_Attachment,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Ticket_Update]':
+
         data = self.client.call(
             self.service,
             'addUpdate',
@@ -149,9 +159,9 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket.Update import Update
-        return SL_Update(data)
+        return Update(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createAdministrativeTicket(
         self,
         templateObject: SoftLayer_Ticket,
@@ -164,6 +174,7 @@ class SoftLayer_Ticket(object):
         attachmentType: enum,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'createAdministrativeTicket',
@@ -178,9 +189,9 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createCancelServerTicket(
         self,
         attachmentId: int,
@@ -190,6 +201,7 @@ class SoftLayer_Ticket(object):
         attachmentType: enum,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'createCancelServerTicket',
@@ -201,9 +213,9 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createCancelServiceTicket(
         self,
         attachmentId: int,
@@ -212,6 +224,7 @@ class SoftLayer_Ticket(object):
         attachmentType: enum,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'createCancelServiceTicket',
@@ -222,9 +235,9 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createStandardTicket(
         self,
         templateObject: SoftLayer_Ticket,
@@ -237,6 +250,7 @@ class SoftLayer_Ticket(object):
         attachmentType: enum,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'createStandardTicket',
@@ -251,9 +265,9 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createUpgradeTicket(
         self,
         attachmentId: int,
@@ -264,6 +278,7 @@ class SoftLayer_Ticket(object):
         title: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'createUpgradeTicket',
@@ -276,9 +291,9 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def edit(
         self,
         templateObject: SoftLayer_Ticket,
@@ -286,6 +301,7 @@ class SoftLayer_Ticket(object):
         attachedFiles: SoftLayer_Container_Utility_File_Attachment,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'edit',
@@ -295,39 +311,42 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllTicketGroups(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Ticket_Group]':
+
         data = self.client.call(
             self.service,
             'getAllTicketGroups',
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllTicketStatuses(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Ticket_Status]':
+
         data = self.client.call(
             self.service,
             'getAllTicketStatuses',
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedFile(
         self,
         attachmentId: int
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getAttachedFile',
@@ -336,12 +355,13 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -349,14 +369,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTicketsClosedSinceDate(
         self,
         closeDate: dateTime,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getTicketsClosedSinceDate',
@@ -364,13 +385,14 @@ class SoftLayer_Ticket(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def markAsViewed(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'markAsViewed',
@@ -379,11 +401,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAssignedAgent(
         self,
         agentId: int
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'removeAssignedAgent',
@@ -392,11 +415,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAttachedAdditionalEmails(
         self,
         emails: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAttachedAdditionalEmails',
@@ -405,11 +429,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAttachedHardware(
         self,
         hardwareId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAttachedHardware',
@@ -418,11 +443,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAttachedVirtualGuest(
         self,
         guestId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAttachedVirtualGuest',
@@ -431,11 +457,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeScheduledAlert(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'removeScheduledAlert',
@@ -444,11 +471,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeScheduledAutoClose(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'removeScheduledAutoClose',
@@ -457,11 +485,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setTags',
@@ -470,11 +499,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def surveyEligible(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'surveyEligible',
@@ -483,11 +513,12 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateAttachedAdditionalEmails(
         self,
         emails: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateAttachedAdditionalEmails',
@@ -496,12 +527,13 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -509,9 +541,9 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssignedAgents(
         self,
         objectMask: Optional[str] = None,
@@ -519,6 +551,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Customer]':
+
         data = self.client.call(
             self.service,
             'getAssignedAgents',
@@ -528,14 +561,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssignedUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getAssignedUser',
@@ -543,9 +577,9 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedAdditionalEmails(
         self,
         objectMask: Optional[str] = None,
@@ -553,6 +587,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Customer_AdditionalEmail]':
+
         data = self.client.call(
             self.service,
             'getAttachedAdditionalEmails',
@@ -562,9 +597,9 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Customer.AdditionalEmail import AdditionalEmail
-        return SL_AdditionalEmail(data)
+        return AdditionalEmail(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedDedicatedHosts(
         self,
         objectMask: Optional[str] = None,
@@ -572,6 +607,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_DedicatedHost]':
+
         data = self.client.call(
             self.service,
             'getAttachedDedicatedHosts',
@@ -581,9 +617,9 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.DedicatedHost import DedicatedHost
-        return SL_DedicatedHost(data)
+        return DedicatedHost(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedFiles(
         self,
         objectMask: Optional[str] = None,
@@ -591,6 +627,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_Attachment_File]':
+
         data = self.client.call(
             self.service,
             'getAttachedFiles',
@@ -600,9 +637,9 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.Attachment.File import File
-        return SL_File(data)
+        return File(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedHardware(
         self,
         objectMask: Optional[str] = None,
@@ -610,6 +647,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getAttachedHardware',
@@ -619,14 +657,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedHardwareCount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getAttachedHardwareCount',
@@ -636,7 +675,7 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedResources(
         self,
         objectMask: Optional[str] = None,
@@ -644,6 +683,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_Attachment]':
+
         data = self.client.call(
             self.service,
             'getAttachedResources',
@@ -653,9 +693,9 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.Attachment import Attachment
-        return SL_Attachment(data)
+        return Attachment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -663,6 +703,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getAttachedVirtualGuests',
@@ -672,14 +713,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAwaitingUserResponseFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getAwaitingUserResponseFlag',
@@ -689,12 +731,13 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBnppSupportedFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBnppSupportedFlag',
@@ -704,12 +747,13 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCancellationRequest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Cancellation_Request':
+
         data = self.client.call(
             self.service,
             'getCancellationRequest',
@@ -717,9 +761,9 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEmployeeAttachments(
         self,
         objectMask: Optional[str] = None,
@@ -727,6 +771,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Employee]':
+
         data = self.client.call(
             self.service,
             'getEmployeeAttachments',
@@ -736,14 +781,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEuSupportedFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getEuSupportedFlag',
@@ -753,12 +799,13 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirstAttachedResource(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Attachment':
+
         data = self.client.call(
             self.service,
             'getFirstAttachedResource',
@@ -766,14 +813,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Attachment import Attachment
-        return SL_Attachment(data)
+        return Attachment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirstUpdate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Update':
+
         data = self.client.call(
             self.service,
             'getFirstUpdate',
@@ -781,14 +829,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Update import Update
-        return SL_Update(data)
+        return Update(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFsboaSupportedFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getFsboaSupportedFlag',
@@ -798,12 +847,13 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Group':
+
         data = self.client.call(
             self.service,
             'getGroup',
@@ -811,9 +861,9 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInvoiceItems(
         self,
         objectMask: Optional[str] = None,
@@ -821,6 +871,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice_Item]':
+
         data = self.client.call(
             self.service,
             'getInvoiceItems',
@@ -830,14 +881,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastActivity(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Activity':
+
         data = self.client.call(
             self.service,
             'getLastActivity',
@@ -845,14 +897,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Activity import Activity
-        return SL_Activity(data)
+        return Activity(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastEditor(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Interface':
+
         data = self.client.call(
             self.service,
             'getLastEditor',
@@ -860,14 +913,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Interface import Interface
-        return SL_Interface(data)
+        return Interface(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastUpdate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Update':
+
         data = self.client.call(
             self.service,
             'getLastUpdate',
@@ -875,14 +929,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Update import Update
-        return SL_Update(data)
+        return Update(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -890,14 +945,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNewUpdatesFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getNewUpdatesFlag',
@@ -907,7 +963,7 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getScheduledActions(
         self,
         objectMask: Optional[str] = None,
@@ -915,6 +971,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Provisioning_Version1_Transaction]':
+
         data = self.client.call(
             self.service,
             'getScheduledActions',
@@ -924,14 +981,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServerAdministrationBillingInvoice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice':
+
         data = self.client.call(
             self.service,
             'getServerAdministrationBillingInvoice',
@@ -939,14 +997,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServerAdministrationRefundInvoice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice':
+
         data = self.client.call(
             self.service,
             'getServerAdministrationRefundInvoice',
@@ -954,14 +1013,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceProvider(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Service_Provider':
+
         data = self.client.call(
             self.service,
             'getServiceProvider',
@@ -969,9 +1029,9 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Service.Provider import Provider
-        return SL_Provider(data)
+        return Provider(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getState(
         self,
         objectMask: Optional[str] = None,
@@ -979,6 +1039,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_State]':
+
         data = self.client.call(
             self.service,
             'getState',
@@ -988,14 +1049,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.State import State
-        return SL_State(data)
+        return State(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Status':
+
         data = self.client.call(
             self.service,
             'getStatus',
@@ -1003,14 +1065,15 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Subject':
+
         data = self.client.call(
             self.service,
             'getSubject',
@@ -1018,9 +1081,9 @@ class SoftLayer_Ticket(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Subject import Subject
-        return SL_Subject(data)
+        return Subject(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -1028,6 +1091,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -1037,14 +1101,15 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpdateRatingFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getUpdateRatingFlag',
@@ -1054,7 +1119,7 @@ class SoftLayer_Ticket(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpdates(
         self,
         objectMask: Optional[str] = None,
@@ -1062,6 +1127,7 @@ class SoftLayer_Ticket(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_Update]':
+
         data = self.client.call(
             self.service,
             'getUpdates',
@@ -1071,6 +1137,6 @@ class SoftLayer_Ticket(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.Update import Update
-        return SL_Update(data)
+        return Update(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_Software_Description(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Software_Description'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Software_Description]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -20,27 +21,29 @@ class SoftLayer_Software_Description(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCustomerOwnedLicenseDescriptions(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Software_Description]':
+
         data = self.client.call(
             self.service,
             'getCustomerOwnedLicenseDescriptions',
             mask=objectMask
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Description':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -48,9 +51,9 @@ class SoftLayer_Software_Description(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -58,6 +61,7 @@ class SoftLayer_Software_Description(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Description_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -67,14 +71,15 @@ class SoftLayer_Software_Description(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Description.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAverageInstallationDuration(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getAverageInstallationDuration',
@@ -84,7 +89,7 @@ class SoftLayer_Software_Description(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCompatibleSoftwareDescriptions(
         self,
         objectMask: Optional[str] = None,
@@ -92,6 +97,7 @@ class SoftLayer_Software_Description(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Description]':
+
         data = self.client.call(
             self.service,
             'getCompatibleSoftwareDescriptions',
@@ -101,9 +107,9 @@ class SoftLayer_Software_Description(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFeatures(
         self,
         objectMask: Optional[str] = None,
@@ -111,6 +117,7 @@ class SoftLayer_Software_Description(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Description_Feature]':
+
         data = self.client.call(
             self.service,
             'getFeatures',
@@ -120,9 +127,9 @@ class SoftLayer_Software_Description(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Description.Feature import Feature
-        return SL_Feature(data)
+        return Feature(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLatestVersion(
         self,
         objectMask: Optional[str] = None,
@@ -130,6 +137,7 @@ class SoftLayer_Software_Description(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Description]':
+
         data = self.client.call(
             self.service,
             'getLatestVersion',
@@ -139,9 +147,9 @@ class SoftLayer_Software_Description(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProductItems(
         self,
         objectMask: Optional[str] = None,
@@ -149,6 +157,7 @@ class SoftLayer_Software_Description(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getProductItems',
@@ -158,14 +167,15 @@ class SoftLayer_Software_Description(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProvisionTransactionGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction_Group':
+
         data = self.client.call(
             self.service,
             'getProvisionTransactionGroup',
@@ -173,14 +183,15 @@ class SoftLayer_Software_Description(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReloadTransactionGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction_Group':
+
         data = self.client.call(
             self.service,
             'getReloadTransactionGroup',
@@ -188,14 +199,15 @@ class SoftLayer_Software_Description(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRequiredUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getRequiredUser',
@@ -205,7 +217,7 @@ class SoftLayer_Software_Description(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareLicenses(
         self,
         objectMask: Optional[str] = None,
@@ -213,6 +225,7 @@ class SoftLayer_Software_Description(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_License]':
+
         data = self.client.call(
             self.service,
             'getSoftwareLicenses',
@@ -222,14 +235,15 @@ class SoftLayer_Software_Description(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.License import License
-        return SL_License(data)
+        return License(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeSoftwareDescription(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Description':
+
         data = self.client.call(
             self.service,
             'getUpgradeSoftwareDescription',
@@ -237,14 +251,15 @@ class SoftLayer_Software_Description(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeSwDesc(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Description':
+
         data = self.client.call(
             self.service,
             'getUpgradeSwDesc',
@@ -252,9 +267,9 @@ class SoftLayer_Software_Description(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getValidFilesystemTypes(
         self,
         objectMask: Optional[str] = None,
@@ -262,6 +277,7 @@ class SoftLayer_Software_Description(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Configuration_Storage_Filesystem_Type]':
+
         data = self.client.call(
             self.service,
             'getValidFilesystemTypes',
@@ -271,6 +287,6 @@ class SoftLayer_Software_Description(object):
             offset=offset
         )
         from SoftLayer.datatypes.Configuration.Storage.Filesystem.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

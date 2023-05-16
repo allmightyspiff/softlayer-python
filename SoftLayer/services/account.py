@@ -7,13 +7,14 @@ class SoftLayer_Account(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def activatePartner(
         self,
         accountId: str,
         hashCode: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'activatePartner',
@@ -22,13 +23,14 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addAchInformation(
         self,
         achInformation: SoftLayer_Container_Billing_Info_Ach
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addAchInformation',
@@ -37,11 +39,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addReferralPartnerPaymentOption(
         self,
         paymentOption: SoftLayer_Container_Referral_Partner_Payment_Option
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addReferralPartnerPaymentOption',
@@ -50,11 +53,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def areVdrUpdatesBlockedForBilling(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'areVdrUpdatesBlockedForBilling',
@@ -63,12 +67,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def cancelPayPalTransaction(
         self,
         token: str,
         payerId: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'cancelPayPalTransaction',
@@ -78,12 +83,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def completePayPalTransaction(
         self,
         token: str,
         payerId: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'completePayPalTransaction',
@@ -93,11 +99,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def countHourlyInstances(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'countHourlyInstances',
@@ -106,7 +113,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createUser(
         self,
         templateObject: SoftLayer_User_Customer,
@@ -115,6 +122,7 @@ class SoftLayer_Account(object):
         silentlyCreateFlag: boolean,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'createUser',
@@ -125,13 +133,14 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def disableEuSupport(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'disableEuSupport',
@@ -140,11 +149,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def disableVpnConfigRequiresVpnManageAttribute(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'disableVpnConfigRequiresVpnManageAttribute',
@@ -153,24 +163,26 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editAccount(
         self,
         modifiedAccountInformation: SoftLayer_Account
     ) -> 'SoftLayer_Container_Account_Update_Response':
+
         data = self.client.call(
             self.service,
             'editAccount',
             modifiedAccountInformation
         )
         from SoftLayer.datatypes.Container.Account.Update.Response import Response
-        return SL_Response(data)
+        return Response(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def enableEuSupport(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'enableEuSupport',
@@ -179,11 +191,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def enableVpnConfigRequiresVpnManageAttribute(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'enableVpnConfigRequiresVpnManageAttribute',
@@ -192,13 +205,14 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountBackupHistory(
         self,
         startDate: dateTime,
         endDate: dateTime,
         backupStatus: str
     ) -> 'list[SoftLayer_Container_Network_Storage_Evault_WebCc_JobDetails]':
+
         data = self.client.call(
             self.service,
             'getAccountBackupHistory',
@@ -207,13 +221,14 @@ class SoftLayer_Account(object):
             backupStatus
         )
         from SoftLayer.datatypes.Container.Network.Storage.Evault.WebCc.JobDetails import JobDetails
-        return SL_JobDetails(data)
+        return JobDetails(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountTraitValue(
         self,
         keyName: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAccountTraitValue',
@@ -222,38 +237,41 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveOutletPackages(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getActiveOutletPackages',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActivePackages(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getActivePackages',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActivePackagesByAttribute(
         self,
         attributeKeyName: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getActivePackagesByAttribute',
@@ -261,40 +279,43 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActivePrivateHostedCloudPackages(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getActivePrivateHostedCloudPackages',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAlternateCreditCardData(
         self,
         
     ) -> 'SoftLayer_Container_Account_Payment_Method_CreditCard':
+
         data = self.client.call(
             self.service,
             'getAlternateCreditCardData',
             
         )
         from SoftLayer.datatypes.Container.Account.Payment.Method.CreditCard import CreditCard
-        return SL_CreditCard(data)
+        return CreditCard(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributeByType(
         self,
         attributeType: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Attribute':
+
         data = self.client.call(
             self.service,
             'getAttributeByType',
@@ -302,14 +323,15 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAuxiliaryNotifications(
         self,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Container_Utility_Message]':
+
         data = self.client.call(
             self.service,
             'getAuxiliaryNotifications',
@@ -317,14 +339,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Container.Utility.Message import Message
-        return SL_Message(data)
+        return Message(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAverageArchiveUsageMetricDataByDate(
         self,
         startDateTime: dateTime,
         endDateTime: dateTime
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getAverageArchiveUsageMetricDataByDate',
@@ -334,12 +357,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAveragePublicUsageMetricDataByDate(
         self,
         startDateTime: dateTime,
         endDateTime: dateTime
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getAveragePublicUsageMetricDataByDate',
@@ -349,7 +373,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthList(
         self,
         networkType: str,
@@ -358,6 +382,7 @@ class SoftLayer_Account(object):
         endDate: str,
         serverIds: int
     ) -> 'list[SoftLayer_Container_Bandwidth_Usage]':
+
         data = self.client.call(
             self.service,
             'getBandwidthList',
@@ -368,27 +393,29 @@ class SoftLayer_Account(object):
             serverIds
         )
         from SoftLayer.datatypes.Container.Bandwidth.Usage import Usage
-        return SL_Usage(data)
+        return Usage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrentUser(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCurrentUser',
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDedicatedHostsForImageTemplate(
         self,
         imageTemplateId: int,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Virtual_DedicatedHost]':
+
         data = self.client.call(
             self.service,
             'getDedicatedHostsForImageTemplate',
@@ -396,53 +423,57 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Virtual.DedicatedHost import DedicatedHost
-        return SL_DedicatedHost(data)
+        return DedicatedHost(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFlexibleCreditProgramInfo(
         self,
         forNextBillCycle: boolean
     ) -> 'SoftLayer_Container_Account_Discount_Program':
+
         data = self.client.call(
             self.service,
             'getFlexibleCreditProgramInfo',
             forNextBillCycle
         )
         from SoftLayer.datatypes.Container.Account.Discount.Program import Program
-        return SL_Program(data)
+        return Program(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFlexibleCreditProgramsInfo(
         self,
         nextBillingCycleFlag: boolean
     ) -> 'SoftLayer_Container_Account_Discount_Program_Collection':
+
         data = self.client.call(
             self.service,
             'getFlexibleCreditProgramsInfo',
             nextBillingCycleFlag
         )
         from SoftLayer.datatypes.Container.Account.Discount.Program.Collection import Collection
-        return SL_Collection(data)
+        return Collection(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwarePools(
         self,
         
     ) -> 'list[SoftLayer_Container_Hardware_Pool_Details]':
+
         data = self.client.call(
             self.service,
             'getHardwarePools',
             
         )
         from SoftLayer.datatypes.Container.Hardware.Pool.Details import Details
-        return SL_Details(data)
+        return Details(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLargestAllowedSubnetCidr(
         self,
         numberOfHosts: int,
         locationId: int
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getLargestAllowedSubnetCidr',
@@ -452,11 +483,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetAppActiveAccountLicenseKeys(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getNetAppActiveAccountLicenseKeys',
@@ -465,11 +497,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceExcel(
         self,
         documentCreateDate: dateTime
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceExcel',
@@ -478,11 +511,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoicePdf(
         self,
         documentCreateDate: dateTime
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getNextInvoicePdf',
@@ -491,11 +525,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoicePdfDetailed(
         self,
         documentCreateDate: dateTime
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getNextInvoicePdfDetailed',
@@ -504,25 +539,27 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceZeroFeeItemCounts(
         self,
         
     ) -> 'list[SoftLayer_Container_Product_Item_Category_ZeroFee_Count]':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceZeroFeeItemCounts',
             
         )
         from SoftLayer.datatypes.Container.Product.Item.Category.ZeroFee.Count import Count
-        return SL_Count(data)
+        return Count(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -530,61 +567,65 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingCreditCardChangeRequestData(
         self,
         
     ) -> 'list[SoftLayer_Container_Account_Payment_Method_CreditCard]':
+
         data = self.client.call(
             self.service,
             'getPendingCreditCardChangeRequestData',
             
         )
         from SoftLayer.datatypes.Container.Account.Payment.Method.CreditCard import CreditCard
-        return SL_CreditCard(data)
+        return CreditCard(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReferralPartnerCommissionForecast(
         self,
         
     ) -> 'list[SoftLayer_Container_Referral_Partner_Commission]':
+
         data = self.client.call(
             self.service,
             'getReferralPartnerCommissionForecast',
             
         )
         from SoftLayer.datatypes.Container.Referral.Partner.Commission import Commission
-        return SL_Commission(data)
+        return Commission(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReferralPartnerCommissionHistory(
         self,
         
     ) -> 'list[SoftLayer_Container_Referral_Partner_Commission]':
+
         data = self.client.call(
             self.service,
             'getReferralPartnerCommissionHistory',
             
         )
         from SoftLayer.datatypes.Container.Referral.Partner.Commission import Commission
-        return SL_Commission(data)
+        return Commission(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReferralPartnerCommissionPending(
         self,
         
     ) -> 'list[SoftLayer_Container_Referral_Partner_Commission]':
+
         data = self.client.call(
             self.service,
             'getReferralPartnerCommissionPending',
             
         )
         from SoftLayer.datatypes.Container.Referral.Partner.Commission import Commission
-        return SL_Commission(data)
+        return Commission(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSharedBlockDeviceTemplateGroups(
         self,
         objectMask: Optional[str] = None,
@@ -592,6 +633,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'getSharedBlockDeviceTemplateGroups',
@@ -601,52 +643,56 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTechIncubatorProgramInfo(
         self,
         forNextBillCycle: boolean
     ) -> 'SoftLayer_Container_Account_Discount_Program':
+
         data = self.client.call(
             self.service,
             'getTechIncubatorProgramInfo',
             forNextBillCycle
         )
         from SoftLayer.datatypes.Container.Account.Discount.Program import Program
-        return SL_Program(data)
+        return Program(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getThirdPartyPoliciesAcceptanceStatus(
         self,
         
     ) -> 'list[SoftLayer_Container_Policy_Acceptance]':
+
         data = self.client.call(
             self.service,
             'getThirdPartyPoliciesAcceptanceStatus',
             
         )
         from SoftLayer.datatypes.Container.Policy.Acceptance import Acceptance
-        return SL_Acceptance(data)
+        return Acceptance(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getValidSecurityCertificateEntries(
         self,
         
     ) -> 'list[SoftLayer_Security_Certificate_Entry]':
+
         data = self.client.call(
             self.service,
             'getValidSecurityCertificateEntries',
             
         )
         from SoftLayer.datatypes.Security.Certificate.Entry import Entry
-        return SL_Entry(data)
+        return Entry(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVmWareActiveAccountLicenseKeys(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getVmWareActiveAccountLicenseKeys',
@@ -655,24 +701,26 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getWindowsUpdateStatus(
         self,
         
     ) -> 'list[SoftLayer_Container_Utility_Microsoft_Windows_UpdateServices_Status]':
+
         data = self.client.call(
             self.service,
             'getWindowsUpdateStatus',
             
         )
         from SoftLayer.datatypes.Container.Utility.Microsoft.Windows.UpdateServices.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def hasAttribute(
         self,
         attributeType: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'hasAttribute',
@@ -681,11 +729,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def hourlyInstanceLimit(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'hourlyInstanceLimit',
@@ -694,11 +743,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def hourlyServerLimit(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'hourlyServerLimit',
@@ -707,24 +757,26 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def initiatePayerAuthentication(
         self,
         setupInformation: SoftLayer_Billing_Payment_Card_PayerAuthentication_Setup_Information
     ) -> 'SoftLayer_Billing_Payment_Card_PayerAuthentication_Setup':
+
         data = self.client.call(
             self.service,
             'initiatePayerAuthentication',
             setupInformation
         )
         from SoftLayer.datatypes.Billing.Payment.Card.PayerAuthentication.Setup import Setup
-        return SL_Setup(data)
+        return Setup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isActiveVmwareCustomer(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isActiveVmwareCustomer',
@@ -733,11 +785,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isEligibleForLocalCurrencyProgram(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isEligibleForLocalCurrencyProgram',
@@ -746,11 +799,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isEligibleToLinkWithPaas(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isEligibleToLinkWithPaas',
@@ -759,13 +813,14 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def linkExternalAccount(
         self,
         externalAccountId: str,
         authorizationToken: str,
         externalServiceProviderKey: str
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'linkExternalAccount',
@@ -776,11 +831,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAlternateCreditCard(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAlternateCreditCard',
@@ -789,7 +845,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def requestCreditCardChange(
         self,
         request: SoftLayer_Billing_Payment_Card_ChangeRequest,
@@ -798,6 +854,7 @@ class SoftLayer_Account(object):
         onlyChangeNicknameFlag: boolean,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Billing_Payment_Card_ChangeRequest':
+
         data = self.client.call(
             self.service,
             'requestCreditCardChange',
@@ -808,14 +865,15 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Payment.Card.ChangeRequest import ChangeRequest
-        return SL_ChangeRequest(data)
+        return ChangeRequest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def requestManualPayment(
         self,
         request: SoftLayer_Billing_Payment_Card_ManualPayment,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Billing_Payment_Card_ManualPayment':
+
         data = self.client.call(
             self.service,
             'requestManualPayment',
@@ -823,9 +881,9 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Payment.Card.ManualPayment import ManualPayment
-        return SL_ManualPayment(data)
+        return ManualPayment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def requestManualPaymentUsingCreditCardOnFile(
         self,
         amount: str,
@@ -833,6 +891,7 @@ class SoftLayer_Account(object):
         note: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Billing_Payment_Card_ManualPayment':
+
         data = self.client.call(
             self.service,
             'requestManualPaymentUsingCreditCardOnFile',
@@ -842,13 +901,14 @@ class SoftLayer_Account(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Payment.Card.ManualPayment import ManualPayment
-        return SL_ManualPayment(data)
+        return ManualPayment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def saveInternalCostRecovery(
         self,
         costRecoveryContainer: SoftLayer_Container_Account_Internal_Ibm_CostRecovery
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'saveInternalCostRecovery',
@@ -857,11 +917,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setAbuseEmails(
         self,
         emails: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setAbuseEmails',
@@ -870,13 +931,14 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setManagedPoolQuantity(
         self,
         poolKeyName: str,
         backendRouter: str,
         quantity: int
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'setManagedPoolQuantity',
@@ -887,11 +949,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setVlanSpan(
         self,
         enabled: boolean
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setVlanSpan',
@@ -900,11 +963,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def swapCreditCards(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'swapCreditCards',
@@ -913,11 +977,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def syncCurrentUserPopulationWithPaas(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'syncCurrentUserPopulationWithPaas',
@@ -926,12 +991,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateVpnUsersForResource(
         self,
         objectId: int,
         objectType: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateVpnUsersForResource',
@@ -941,11 +1007,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def validate(
         self,
         account: SoftLayer_Account
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'validate',
@@ -954,11 +1021,12 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def validateManualPaymentAmount(
         self,
         amount: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'validateManualPaymentAmount',
@@ -967,12 +1035,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAbuseEmail(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAbuseEmail',
@@ -982,7 +1051,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAbuseEmails(
         self,
         objectMask: Optional[str] = None,
@@ -990,6 +1059,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_AbuseEmail]':
+
         data = self.client.call(
             self.service,
             'getAbuseEmails',
@@ -999,9 +1069,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.AbuseEmail import AbuseEmail
-        return SL_AbuseEmail(data)
+        return AbuseEmail(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountContacts(
         self,
         objectMask: Optional[str] = None,
@@ -1009,6 +1079,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Contact]':
+
         data = self.client.call(
             self.service,
             'getAccountContacts',
@@ -1018,9 +1089,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Contact import Contact
-        return SL_Contact(data)
+        return Contact(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountLicenses(
         self,
         objectMask: Optional[str] = None,
@@ -1028,6 +1099,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_AccountLicense]':
+
         data = self.client.call(
             self.service,
             'getAccountLicenses',
@@ -1037,9 +1109,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.AccountLicense import AccountLicense
-        return SL_AccountLicense(data)
+        return AccountLicense(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountLinks(
         self,
         objectMask: Optional[str] = None,
@@ -1047,6 +1119,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Link]':
+
         data = self.client.call(
             self.service,
             'getAccountLinks',
@@ -1056,14 +1129,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Link import Link
-        return SL_Link(data)
+        return Link(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Status':
+
         data = self.client.call(
             self.service,
             'getAccountStatus',
@@ -1071,14 +1145,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAccountDiscountBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getActiveAccountDiscountBillingItem',
@@ -1086,9 +1161,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAccountLicenses(
         self,
         objectMask: Optional[str] = None,
@@ -1096,6 +1171,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_AccountLicense]':
+
         data = self.client.call(
             self.service,
             'getActiveAccountLicenses',
@@ -1105,9 +1181,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.AccountLicense import AccountLicense
-        return SL_AccountLicense(data)
+        return AccountLicense(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -1115,6 +1191,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Address]':
+
         data = self.client.call(
             self.service,
             'getActiveAddresses',
@@ -1124,9 +1201,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveAgreements(
         self,
         objectMask: Optional[str] = None,
@@ -1134,6 +1211,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Agreement]':
+
         data = self.client.call(
             self.service,
             'getActiveAgreements',
@@ -1143,9 +1221,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Agreement import Agreement
-        return SL_Agreement(data)
+        return Agreement(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveBillingAgreements(
         self,
         objectMask: Optional[str] = None,
@@ -1153,6 +1231,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Agreement]':
+
         data = self.client.call(
             self.service,
             'getActiveBillingAgreements',
@@ -1162,14 +1241,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Agreement import Agreement
-        return SL_Agreement(data)
+        return Agreement(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveCatalystEnrollment(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Catalyst_Enrollment':
+
         data = self.client.call(
             self.service,
             'getActiveCatalystEnrollment',
@@ -1177,9 +1257,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Catalyst.Enrollment import Enrollment
-        return SL_Enrollment(data)
+        return Enrollment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveColocationContainers(
         self,
         objectMask: Optional[str] = None,
@@ -1187,6 +1267,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveColocationContainers',
@@ -1196,14 +1277,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveFlexibleCreditEnrollment(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_FlexibleCredit_Enrollment':
+
         data = self.client.call(
             self.service,
             'getActiveFlexibleCreditEnrollment',
@@ -1211,9 +1293,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.FlexibleCredit.Enrollment import Enrollment
-        return SL_Enrollment(data)
+        return Enrollment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveFlexibleCreditEnrollments(
         self,
         objectMask: Optional[str] = None,
@@ -1221,6 +1303,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_FlexibleCredit_Enrollment]':
+
         data = self.client.call(
             self.service,
             'getActiveFlexibleCreditEnrollments',
@@ -1230,9 +1313,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.FlexibleCredit.Enrollment import Enrollment
-        return SL_Enrollment(data)
+        return Enrollment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveNotificationSubscribers(
         self,
         objectMask: Optional[str] = None,
@@ -1240,6 +1323,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_Subscriber]':
+
         data = self.client.call(
             self.service,
             'getActiveNotificationSubscribers',
@@ -1249,9 +1333,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.Subscriber import Subscriber
-        return SL_Subscriber(data)
+        return Subscriber(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveQuotes(
         self,
         objectMask: Optional[str] = None,
@@ -1259,6 +1343,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order_Quote]':
+
         data = self.client.call(
             self.service,
             'getActiveQuotes',
@@ -1268,9 +1353,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order.Quote import Quote
-        return SL_Quote(data)
+        return Quote(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveReservedCapacityAgreements(
         self,
         objectMask: Optional[str] = None,
@@ -1278,6 +1363,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Agreement]':
+
         data = self.client.call(
             self.service,
             'getActiveReservedCapacityAgreements',
@@ -1287,9 +1373,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Agreement import Agreement
-        return SL_Agreement(data)
+        return Agreement(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveVirtualLicenses(
         self,
         objectMask: Optional[str] = None,
@@ -1297,6 +1383,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_VirtualLicense]':
+
         data = self.client.call(
             self.service,
             'getActiveVirtualLicenses',
@@ -1306,9 +1393,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.VirtualLicense import VirtualLicense
-        return SL_VirtualLicense(data)
+        return VirtualLicense(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAdcLoadBalancers(
         self,
         objectMask: Optional[str] = None,
@@ -1316,6 +1403,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress]':
+
         data = self.client.call(
             self.service,
             'getAdcLoadBalancers',
@@ -1325,9 +1413,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.VirtualIpAddress import VirtualIpAddress
-        return SL_VirtualIpAddress(data)
+        return VirtualIpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -1335,6 +1423,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Address]':
+
         data = self.client.call(
             self.service,
             'getAddresses',
@@ -1344,14 +1433,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAffiliateId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAffiliateId',
@@ -1361,7 +1451,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -1369,6 +1459,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAllBillingItems',
@@ -1378,9 +1469,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllCommissionBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -1388,6 +1479,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAllCommissionBillingItems',
@@ -1397,9 +1489,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllRecurringTopLevelBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -1407,6 +1499,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAllRecurringTopLevelBillingItems',
@@ -1416,9 +1509,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllRecurringTopLevelBillingItemsUnfiltered(
         self,
         objectMask: Optional[str] = None,
@@ -1426,6 +1519,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAllRecurringTopLevelBillingItemsUnfiltered',
@@ -1435,9 +1529,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllSubnetBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -1445,6 +1539,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAllSubnetBillingItems',
@@ -1454,9 +1549,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllTopLevelBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -1464,6 +1559,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAllTopLevelBillingItems',
@@ -1473,9 +1569,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllTopLevelBillingItemsUnfiltered(
         self,
         objectMask: Optional[str] = None,
@@ -1483,6 +1579,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getAllTopLevelBillingItemsUnfiltered',
@@ -1492,14 +1589,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowIbmIdSilentMigrationFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getAllowIbmIdSilentMigrationFlag',
@@ -1509,12 +1607,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowsBluemixAccountLinkingFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getAllowsBluemixAccountLinkingFlag',
@@ -1524,7 +1623,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getApplicationDeliveryControllers(
         self,
         objectMask: Optional[str] = None,
@@ -1532,6 +1631,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller]':
+
         data = self.client.call(
             self.service,
             'getApplicationDeliveryControllers',
@@ -1541,9 +1641,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller import Controller
-        return SL_Controller(data)
+        return Controller(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -1551,6 +1651,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -1560,9 +1661,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailablePublicNetworkVlans(
         self,
         objectMask: Optional[str] = None,
@@ -1570,6 +1671,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getAvailablePublicNetworkVlans',
@@ -1579,14 +1681,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBalance(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getBalance',
@@ -1596,7 +1699,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthAllotments(
         self,
         objectMask: Optional[str] = None,
@@ -1604,6 +1707,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getBandwidthAllotments',
@@ -1613,9 +1717,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthAllotmentsOverAllocation(
         self,
         objectMask: Optional[str] = None,
@@ -1623,6 +1727,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getBandwidthAllotmentsOverAllocation',
@@ -1632,9 +1737,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthAllotmentsProjectedOverAllocation(
         self,
         objectMask: Optional[str] = None,
@@ -1642,6 +1747,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getBandwidthAllotmentsProjectedOverAllocation',
@@ -1651,9 +1757,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBareMetalInstances(
         self,
         objectMask: Optional[str] = None,
@@ -1661,6 +1767,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getBareMetalInstances',
@@ -1670,9 +1777,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingAgreements(
         self,
         objectMask: Optional[str] = None,
@@ -1680,6 +1787,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Agreement]':
+
         data = self.client.call(
             self.service,
             'getBillingAgreements',
@@ -1689,14 +1797,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Agreement import Agreement
-        return SL_Agreement(data)
+        return Agreement(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingInfo(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Info':
+
         data = self.client.call(
             self.service,
             'getBillingInfo',
@@ -1704,9 +1813,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Info import Info
-        return SL_Info(data)
+        return Info(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBlockDeviceTemplateGroups(
         self,
         objectMask: Optional[str] = None,
@@ -1714,6 +1823,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'getBlockDeviceTemplateGroups',
@@ -1723,14 +1833,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBluemixAccountId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getBluemixAccountId',
@@ -1740,12 +1851,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBluemixAccountLink(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Link_Bluemix':
+
         data = self.client.call(
             self.service,
             'getBluemixAccountLink',
@@ -1753,14 +1865,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Link.Bluemix import Bluemix
-        return SL_Bluemix(data)
+        return Bluemix(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBluemixLinkedFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBluemixLinkedFlag',
@@ -1770,12 +1883,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBrand(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Brand':
+
         data = self.client.call(
             self.service,
             'getBrand',
@@ -1783,14 +1897,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Brand import Brand
-        return SL_Brand(data)
+        return Brand(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBrandAccountFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBrandAccountFlag',
@@ -1800,12 +1915,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBrandKeyName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getBrandKeyName',
@@ -1815,12 +1931,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBusinessPartner(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Business_Partner':
+
         data = self.client.call(
             self.service,
             'getBusinessPartner',
@@ -1828,14 +1945,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Business.Partner import Partner
-        return SL_Partner(data)
+        return Partner(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCanOrderAdditionalVlansFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getCanOrderAdditionalVlansFlag',
@@ -1845,7 +1963,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCarts(
         self,
         objectMask: Optional[str] = None,
@@ -1853,6 +1971,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order_Quote]':
+
         data = self.client.call(
             self.service,
             'getCarts',
@@ -1862,9 +1981,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order.Quote import Quote
-        return SL_Quote(data)
+        return Quote(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCatalystEnrollments(
         self,
         objectMask: Optional[str] = None,
@@ -1872,6 +1991,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Catalyst_Enrollment]':
+
         data = self.client.call(
             self.service,
             'getCatalystEnrollments',
@@ -1881,9 +2001,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Catalyst.Enrollment import Enrollment
-        return SL_Enrollment(data)
+        return Enrollment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getClosedTickets(
         self,
         objectMask: Optional[str] = None,
@@ -1891,6 +2011,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getClosedTickets',
@@ -1900,9 +2021,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacentersWithSubnetAllocations(
         self,
         objectMask: Optional[str] = None,
@@ -1910,6 +2031,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Location]':
+
         data = self.client.call(
             self.service,
             'getDatacentersWithSubnetAllocations',
@@ -1919,9 +2041,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDedicatedHosts(
         self,
         objectMask: Optional[str] = None,
@@ -1929,6 +2051,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_DedicatedHost]':
+
         data = self.client.call(
             self.service,
             'getDedicatedHosts',
@@ -1938,14 +2061,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.DedicatedHost import DedicatedHost
-        return SL_DedicatedHost(data)
+        return DedicatedHost(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDisablePaymentProcessingFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getDisablePaymentProcessingFlag',
@@ -1955,7 +2079,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDisplaySupportRepresentativeAssignments(
         self,
         objectMask: Optional[str] = None,
@@ -1963,6 +2087,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Attachment_Employee]':
+
         data = self.client.call(
             self.service,
             'getDisplaySupportRepresentativeAssignments',
@@ -1972,9 +2097,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Attachment.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDomainRegistrations(
         self,
         objectMask: Optional[str] = None,
@@ -1982,6 +2107,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Dns_Domain_Registration]':
+
         data = self.client.call(
             self.service,
             'getDomainRegistrations',
@@ -1991,9 +2117,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Dns.Domain.Registration import Registration
-        return SL_Registration(data)
+        return Registration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDomains(
         self,
         objectMask: Optional[str] = None,
@@ -2001,6 +2127,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Dns_Domain]':
+
         data = self.client.call(
             self.service,
             'getDomains',
@@ -2010,9 +2137,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Dns.Domain import Domain
-        return SL_Domain(data)
+        return Domain(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDomainsWithoutSecondaryDnsRecords(
         self,
         objectMask: Optional[str] = None,
@@ -2020,6 +2147,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Dns_Domain]':
+
         data = self.client.call(
             self.service,
             'getDomainsWithoutSecondaryDnsRecords',
@@ -2029,14 +2157,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Dns.Domain import Domain
-        return SL_Domain(data)
+        return Domain(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEuSupportedFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getEuSupportedFlag',
@@ -2046,12 +2175,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEvaultCapacityGB(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getEvaultCapacityGB',
@@ -2061,7 +2191,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEvaultMasterUsers(
         self,
         objectMask: Optional[str] = None,
@@ -2069,6 +2199,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Password]':
+
         data = self.client.call(
             self.service,
             'getEvaultMasterUsers',
@@ -2078,9 +2209,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEvaultNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -2088,6 +2219,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getEvaultNetworkStorage',
@@ -2097,9 +2229,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getExpiredSecurityCertificates(
         self,
         objectMask: Optional[str] = None,
@@ -2107,6 +2239,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Certificate]':
+
         data = self.client.call(
             self.service,
             'getExpiredSecurityCertificates',
@@ -2116,9 +2249,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Certificate import Certificate
-        return SL_Certificate(data)
+        return Certificate(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFacilityLogs(
         self,
         objectMask: Optional[str] = None,
@@ -2126,6 +2259,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Access_Facility_Log]':
+
         data = self.client.call(
             self.service,
             'getFacilityLogs',
@@ -2135,14 +2269,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Access.Facility.Log import Log
-        return SL_Log(data)
+        return Log(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFileBlockBetaAccessFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getFileBlockBetaAccessFlag',
@@ -2152,7 +2287,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFlexibleCreditEnrollments(
         self,
         objectMask: Optional[str] = None,
@@ -2160,6 +2295,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_FlexibleCredit_Enrollment]':
+
         data = self.client.call(
             self.service,
             'getFlexibleCreditEnrollments',
@@ -2169,14 +2305,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.FlexibleCredit.Enrollment import Enrollment
-        return SL_Enrollment(data)
+        return Enrollment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getForcePaasAccountLinkDate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getForcePaasAccountLinkDate',
@@ -2186,7 +2323,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIpRecords(
         self,
         objectMask: Optional[str] = None,
@@ -2194,6 +2331,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress_Global]':
+
         data = self.client.call(
             self.service,
             'getGlobalIpRecords',
@@ -2203,9 +2341,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress.Global import Global
-        return SL_Global(data)
+        return Global(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIpv4Records(
         self,
         objectMask: Optional[str] = None,
@@ -2213,6 +2351,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress_Global]':
+
         data = self.client.call(
             self.service,
             'getGlobalIpv4Records',
@@ -2222,9 +2361,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress.Global import Global
-        return SL_Global(data)
+        return Global(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIpv6Records(
         self,
         objectMask: Optional[str] = None,
@@ -2232,6 +2371,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress_Global]':
+
         data = self.client.call(
             self.service,
             'getGlobalIpv6Records',
@@ -2241,9 +2381,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress.Global import Global
-        return SL_Global(data)
+        return Global(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalLoadBalancerAccounts(
         self,
         objectMask: Optional[str] = None,
@@ -2251,6 +2391,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LoadBalancer_Global_Account]':
+
         data = self.client.call(
             self.service,
             'getGlobalLoadBalancerAccounts',
@@ -2260,9 +2401,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LoadBalancer.Global.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardware(
         self,
         objectMask: Optional[str] = None,
@@ -2270,6 +2411,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardware',
@@ -2279,9 +2421,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareOverBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
@@ -2289,6 +2431,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareOverBandwidthAllocation',
@@ -2298,9 +2441,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareProjectedOverBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
@@ -2308,6 +2451,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareProjectedOverBandwidthAllocation',
@@ -2317,9 +2461,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithCpanel(
         self,
         objectMask: Optional[str] = None,
@@ -2327,6 +2471,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithCpanel',
@@ -2336,9 +2481,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithHelm(
         self,
         objectMask: Optional[str] = None,
@@ -2346,6 +2491,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithHelm',
@@ -2355,9 +2501,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithMcafee(
         self,
         objectMask: Optional[str] = None,
@@ -2365,6 +2511,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithMcafee',
@@ -2374,9 +2521,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithMcafeeAntivirusRedhat(
         self,
         objectMask: Optional[str] = None,
@@ -2384,6 +2531,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithMcafeeAntivirusRedhat',
@@ -2393,9 +2541,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithMcafeeAntivirusWindows(
         self,
         objectMask: Optional[str] = None,
@@ -2403,6 +2551,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithMcafeeAntivirusWindows',
@@ -2412,9 +2561,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithMcafeeIntrusionDetectionSystem(
         self,
         objectMask: Optional[str] = None,
@@ -2422,6 +2571,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithMcafeeIntrusionDetectionSystem',
@@ -2431,9 +2581,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithPlesk(
         self,
         objectMask: Optional[str] = None,
@@ -2441,6 +2591,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithPlesk',
@@ -2450,9 +2601,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithQuantastor(
         self,
         objectMask: Optional[str] = None,
@@ -2460,6 +2611,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithQuantastor',
@@ -2469,9 +2621,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithUrchin(
         self,
         objectMask: Optional[str] = None,
@@ -2479,6 +2631,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithUrchin',
@@ -2488,9 +2641,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareWithWindows(
         self,
         objectMask: Optional[str] = None,
@@ -2498,6 +2651,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardwareWithWindows',
@@ -2507,14 +2661,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHasEvaultBareMetalRestorePluginFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHasEvaultBareMetalRestorePluginFlag',
@@ -2524,12 +2679,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHasIderaBareMetalRestorePluginFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHasIderaBareMetalRestorePluginFlag',
@@ -2539,12 +2695,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHasPendingOrder(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getHasPendingOrder',
@@ -2554,12 +2711,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHasR1softBareMetalRestorePluginFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHasR1softBareMetalRestorePluginFlag',
@@ -2569,7 +2727,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyBareMetalInstances(
         self,
         objectMask: Optional[str] = None,
@@ -2577,6 +2735,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHourlyBareMetalInstances',
@@ -2586,9 +2745,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyServiceBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -2596,6 +2755,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getHourlyServiceBillingItems',
@@ -2605,9 +2765,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -2615,6 +2775,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getHourlyVirtualGuests',
@@ -2624,9 +2785,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHubNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -2634,6 +2795,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getHubNetworkStorage',
@@ -2643,14 +2805,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIbmCustomerNumber(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getIbmCustomerNumber',
@@ -2660,12 +2823,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIbmIdAuthenticationRequiredFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIbmIdAuthenticationRequiredFlag',
@@ -2675,12 +2839,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIbmIdMigrationExpirationTimestamp(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getIbmIdMigrationExpirationTimestamp',
@@ -2690,12 +2855,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInProgressExternalAccountSetup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_External_Setup':
+
         data = self.client.call(
             self.service,
             'getInProgressExternalAccountSetup',
@@ -2703,14 +2869,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.External.Setup import Setup
-        return SL_Setup(data)
+        return Setup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInternalCciHostAccountFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getInternalCciHostAccountFlag',
@@ -2720,12 +2887,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInternalImageTemplateCreationFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getInternalImageTemplateCreationFlag',
@@ -2735,7 +2903,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInternalNotes(
         self,
         objectMask: Optional[str] = None,
@@ -2743,6 +2911,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Note]':
+
         data = self.client.call(
             self.service,
             'getInternalNotes',
@@ -2752,14 +2921,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Note import Note
-        return SL_Note(data)
+        return Note(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInternalRestrictionFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getInternalRestrictionFlag',
@@ -2769,7 +2939,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInvoices(
         self,
         objectMask: Optional[str] = None,
@@ -2777,6 +2947,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice]':
+
         data = self.client.call(
             self.service,
             'getInvoices',
@@ -2786,9 +2957,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -2796,6 +2967,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getIpAddresses',
@@ -2805,14 +2977,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIscsiIsolationDisabled(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIscsiIsolationDisabled',
@@ -2822,7 +2995,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIscsiNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -2830,6 +3003,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getIscsiNetworkStorage',
@@ -2839,14 +3013,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastCanceledBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getLastCanceledBillingItem',
@@ -2854,14 +3029,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastCancelledServerBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getLastCancelledServerBillingItem',
@@ -2869,9 +3045,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastFiveClosedAbuseTickets(
         self,
         objectMask: Optional[str] = None,
@@ -2879,6 +3055,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getLastFiveClosedAbuseTickets',
@@ -2888,9 +3065,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastFiveClosedAccountingTickets(
         self,
         objectMask: Optional[str] = None,
@@ -2898,6 +3075,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getLastFiveClosedAccountingTickets',
@@ -2907,9 +3085,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastFiveClosedOtherTickets(
         self,
         objectMask: Optional[str] = None,
@@ -2917,6 +3095,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getLastFiveClosedOtherTickets',
@@ -2926,9 +3105,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastFiveClosedSalesTickets(
         self,
         objectMask: Optional[str] = None,
@@ -2936,6 +3115,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getLastFiveClosedSalesTickets',
@@ -2945,9 +3125,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastFiveClosedSupportTickets(
         self,
         objectMask: Optional[str] = None,
@@ -2955,6 +3135,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getLastFiveClosedSupportTickets',
@@ -2964,9 +3145,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastFiveClosedTickets(
         self,
         objectMask: Optional[str] = None,
@@ -2974,6 +3155,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getLastFiveClosedTickets',
@@ -2983,14 +3165,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLatestBillDate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'dateTime':
+
         data = self.client.call(
             self.service,
             'getLatestBillDate',
@@ -3000,12 +3183,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLatestRecurringInvoice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice':
+
         data = self.client.call(
             self.service,
             'getLatestRecurringInvoice',
@@ -3013,14 +3197,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLatestRecurringPendingInvoice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice':
+
         data = self.client.call(
             self.service,
             'getLatestRecurringPendingInvoice',
@@ -3028,9 +3213,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLegacyBandwidthAllotments(
         self,
         objectMask: Optional[str] = None,
@@ -3038,6 +3223,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getLegacyBandwidthAllotments',
@@ -3047,14 +3233,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLegacyIscsiCapacityGB(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getLegacyIscsiCapacityGB',
@@ -3064,7 +3251,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLoadBalancers(
         self,
         objectMask: Optional[str] = None,
@@ -3072,6 +3259,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LoadBalancer_VirtualIpAddress]':
+
         data = self.client.call(
             self.service,
             'getLoadBalancers',
@@ -3081,14 +3269,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LoadBalancer.VirtualIpAddress import VirtualIpAddress
-        return SL_VirtualIpAddress(data)
+        return VirtualIpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLockboxCapacityGB(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getLockboxCapacityGB',
@@ -3098,7 +3287,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLockboxNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -3106,6 +3295,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getLockboxNetworkStorage',
@@ -3115,9 +3305,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManualPaymentsUnderReview(
         self,
         objectMask: Optional[str] = None,
@@ -3125,6 +3315,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Payment_Card_ManualPayment]':
+
         data = self.client.call(
             self.service,
             'getManualPaymentsUnderReview',
@@ -3134,14 +3325,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Payment.Card.ManualPayment import ManualPayment
-        return SL_ManualPayment(data)
+        return ManualPayment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMasterUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getMasterUser',
@@ -3149,9 +3341,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMediaDataTransferRequests(
         self,
         objectMask: Optional[str] = None,
@@ -3159,6 +3351,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Media_Data_Transfer_Request]':
+
         data = self.client.call(
             self.service,
             'getMediaDataTransferRequests',
@@ -3168,14 +3361,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Media.Data.Transfer.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetricTrackingObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Metric_Tracking_Object':
+
         data = self.client.call(
             self.service,
             'getMetricTrackingObject',
@@ -3183,14 +3377,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Metric.Tracking.Object import Object
-        return SL_Object(data)
+        return Object(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMigratedToIbmCloudPortalFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getMigratedToIbmCloudPortalFlag',
@@ -3200,7 +3395,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMonthlyBareMetalInstances(
         self,
         objectMask: Optional[str] = None,
@@ -3208,6 +3403,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getMonthlyBareMetalInstances',
@@ -3217,9 +3413,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMonthlyVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -3227,6 +3423,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getMonthlyVirtualGuests',
@@ -3236,9 +3433,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNasNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -3246,6 +3443,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getNasNetworkStorage',
@@ -3255,14 +3453,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkCreationFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getNetworkCreationFlag',
@@ -3272,7 +3471,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkGateways(
         self,
         objectMask: Optional[str] = None,
@@ -3280,6 +3479,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Gateway]':
+
         data = self.client.call(
             self.service,
             'getNetworkGateways',
@@ -3289,9 +3489,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Gateway import Gateway
-        return SL_Gateway(data)
+        return Gateway(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkHardware(
         self,
         objectMask: Optional[str] = None,
@@ -3299,6 +3499,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getNetworkHardware',
@@ -3308,9 +3509,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMessageDeliveryAccounts(
         self,
         objectMask: Optional[str] = None,
@@ -3318,6 +3519,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Message_Delivery]':
+
         data = self.client.call(
             self.service,
             'getNetworkMessageDeliveryAccounts',
@@ -3327,9 +3529,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Message.Delivery import Delivery
-        return SL_Delivery(data)
+        return Delivery(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorDownHardware(
         self,
         objectMask: Optional[str] = None,
@@ -3337,6 +3539,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorDownHardware',
@@ -3346,9 +3549,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorDownVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -3356,6 +3559,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorDownVirtualGuests',
@@ -3365,9 +3569,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorRecoveringHardware(
         self,
         objectMask: Optional[str] = None,
@@ -3375,6 +3579,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorRecoveringHardware',
@@ -3384,9 +3589,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorRecoveringVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -3394,6 +3599,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorRecoveringVirtualGuests',
@@ -3403,9 +3609,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorUpHardware(
         self,
         objectMask: Optional[str] = None,
@@ -3413,6 +3619,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorUpHardware',
@@ -3422,9 +3629,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorUpVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -3432,6 +3639,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorUpVirtualGuests',
@@ -3441,9 +3649,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -3451,6 +3659,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getNetworkStorage',
@@ -3460,9 +3669,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkStorageGroups(
         self,
         objectMask: Optional[str] = None,
@@ -3470,6 +3679,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Group]':
+
         data = self.client.call(
             self.service,
             'getNetworkStorageGroups',
@@ -3479,9 +3689,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkTunnelContexts(
         self,
         objectMask: Optional[str] = None,
@@ -3489,6 +3699,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Tunnel_Module_Context]':
+
         data = self.client.call(
             self.service,
             'getNetworkTunnelContexts',
@@ -3498,14 +3709,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Tunnel.Module.Context import Context
-        return SL_Context(data)
+        return Context(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlanSpan(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Network_Vlan_Span':
+
         data = self.client.call(
             self.service,
             'getNetworkVlanSpan',
@@ -3513,9 +3725,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Network.Vlan.Span import Span
-        return SL_Span(data)
+        return Span(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlans(
         self,
         objectMask: Optional[str] = None,
@@ -3523,6 +3735,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getNetworkVlans',
@@ -3532,9 +3745,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextBillingPublicAllotmentHardwareBandwidthDetails(
         self,
         objectMask: Optional[str] = None,
@@ -3542,6 +3755,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getNextBillingPublicAllotmentHardwareBandwidthDetails',
@@ -3551,14 +3765,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceIncubatorExemptTotal(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceIncubatorExemptTotal',
@@ -3568,12 +3783,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceRecurringAmountEligibleForAccountDiscount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceRecurringAmountEligibleForAccountDiscount',
@@ -3583,7 +3799,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTopLevelBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -3591,6 +3807,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTopLevelBillingItems',
@@ -3600,14 +3817,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalAmount',
@@ -3617,12 +3835,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalOneTimeAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalOneTimeAmount',
@@ -3632,12 +3851,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalOneTimeTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalOneTimeTaxAmount',
@@ -3647,12 +3867,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalRecurringAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalRecurringAmount',
@@ -3662,12 +3883,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalRecurringAmountBeforeAccountDiscount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalRecurringAmountBeforeAccountDiscount',
@@ -3677,12 +3899,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalRecurringTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalRecurringTaxAmount',
@@ -3692,12 +3915,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextInvoiceTotalTaxableRecurringAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextInvoiceTotalTaxableRecurringAmount',
@@ -3707,7 +3931,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNotificationSubscribers(
         self,
         objectMask: Optional[str] = None,
@@ -3715,6 +3939,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_Subscriber]':
+
         data = self.client.call(
             self.service,
             'getNotificationSubscribers',
@@ -3724,9 +3949,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.Subscriber import Subscriber
-        return SL_Subscriber(data)
+        return Subscriber(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenAbuseTickets(
         self,
         objectMask: Optional[str] = None,
@@ -3734,6 +3959,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenAbuseTickets',
@@ -3743,9 +3969,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenAccountingTickets(
         self,
         objectMask: Optional[str] = None,
@@ -3753,6 +3979,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenAccountingTickets',
@@ -3762,9 +3989,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenBillingTickets(
         self,
         objectMask: Optional[str] = None,
@@ -3772,6 +3999,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenBillingTickets',
@@ -3781,9 +4009,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenCancellationRequests(
         self,
         objectMask: Optional[str] = None,
@@ -3791,6 +4019,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item_Cancellation_Request]':
+
         data = self.client.call(
             self.service,
             'getOpenCancellationRequests',
@@ -3800,9 +4029,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenOtherTickets(
         self,
         objectMask: Optional[str] = None,
@@ -3810,6 +4039,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenOtherTickets',
@@ -3819,9 +4049,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenRecurringInvoices(
         self,
         objectMask: Optional[str] = None,
@@ -3829,6 +4059,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice]':
+
         data = self.client.call(
             self.service,
             'getOpenRecurringInvoices',
@@ -3838,9 +4069,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenSalesTickets(
         self,
         objectMask: Optional[str] = None,
@@ -3848,6 +4079,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenSalesTickets',
@@ -3857,9 +4089,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenStackAccountLinks(
         self,
         objectMask: Optional[str] = None,
@@ -3867,6 +4099,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Link]':
+
         data = self.client.call(
             self.service,
             'getOpenStackAccountLinks',
@@ -3876,9 +4109,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Link import Link
-        return SL_Link(data)
+        return Link(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenStackObjectStorage(
         self,
         objectMask: Optional[str] = None,
@@ -3886,6 +4119,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getOpenStackObjectStorage',
@@ -3895,9 +4129,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenSupportTickets(
         self,
         objectMask: Optional[str] = None,
@@ -3905,6 +4139,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenSupportTickets',
@@ -3914,9 +4149,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenTickets(
         self,
         objectMask: Optional[str] = None,
@@ -3924,6 +4159,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenTickets',
@@ -3933,9 +4169,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOpenTicketsWaitingOnCustomer(
         self,
         objectMask: Optional[str] = None,
@@ -3943,6 +4179,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getOpenTicketsWaitingOnCustomer',
@@ -3952,9 +4189,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrders(
         self,
         objectMask: Optional[str] = None,
@@ -3962,6 +4199,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order]':
+
         data = self.client.call(
             self.service,
             'getOrders',
@@ -3971,9 +4209,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order import Order
-        return SL_Order(data)
+        return Order(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrphanBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -3981,6 +4219,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getOrphanBillingItems',
@@ -3990,9 +4229,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOwnedBrands(
         self,
         objectMask: Optional[str] = None,
@@ -4000,6 +4239,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Brand]':
+
         data = self.client.call(
             self.service,
             'getOwnedBrands',
@@ -4009,9 +4249,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Brand import Brand
-        return SL_Brand(data)
+        return Brand(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOwnedHardwareGenericComponentModels(
         self,
         objectMask: Optional[str] = None,
@@ -4019,6 +4259,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Model_Generic]':
+
         data = self.client.call(
             self.service,
             'getOwnedHardwareGenericComponentModels',
@@ -4028,9 +4269,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Model.Generic import Generic
-        return SL_Generic(data)
+        return Generic(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPaymentProcessors(
         self,
         objectMask: Optional[str] = None,
@@ -4038,6 +4279,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Payment_Processor]':
+
         data = self.client.call(
             self.service,
             'getPaymentProcessors',
@@ -4047,9 +4289,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Payment.Processor import Processor
-        return SL_Processor(data)
+        return Processor(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingEvents(
         self,
         objectMask: Optional[str] = None,
@@ -4057,6 +4299,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_Occurrence_Event]':
+
         data = self.client.call(
             self.service,
             'getPendingEvents',
@@ -4066,14 +4309,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.Occurrence.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingInvoice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Invoice':
+
         data = self.client.call(
             self.service,
             'getPendingInvoice',
@@ -4081,9 +4325,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Invoice import Invoice
-        return SL_Invoice(data)
+        return Invoice(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingInvoiceTopLevelItems(
         self,
         objectMask: Optional[str] = None,
@@ -4091,6 +4335,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Invoice_Item]':
+
         data = self.client.call(
             self.service,
             'getPendingInvoiceTopLevelItems',
@@ -4100,14 +4345,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Invoice.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingInvoiceTotalAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getPendingInvoiceTotalAmount',
@@ -4117,12 +4363,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingInvoiceTotalOneTimeAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getPendingInvoiceTotalOneTimeAmount',
@@ -4132,12 +4379,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingInvoiceTotalOneTimeTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getPendingInvoiceTotalOneTimeTaxAmount',
@@ -4147,12 +4395,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingInvoiceTotalRecurringAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getPendingInvoiceTotalRecurringAmount',
@@ -4162,12 +4411,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPendingInvoiceTotalRecurringTaxAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getPendingInvoiceTotalRecurringTaxAmount',
@@ -4177,7 +4427,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPermissionGroups(
         self,
         objectMask: Optional[str] = None,
@@ -4185,6 +4435,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Permission_Group]':
+
         data = self.client.call(
             self.service,
             'getPermissionGroups',
@@ -4194,9 +4445,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Permission.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPermissionRoles(
         self,
         objectMask: Optional[str] = None,
@@ -4204,6 +4455,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Permission_Role]':
+
         data = self.client.call(
             self.service,
             'getPermissionRoles',
@@ -4213,9 +4465,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Permission.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPlacementGroups(
         self,
         objectMask: Optional[str] = None,
@@ -4223,6 +4475,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_PlacementGroup]':
+
         data = self.client.call(
             self.service,
             'getPlacementGroups',
@@ -4232,9 +4485,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.PlacementGroup import PlacementGroup
-        return SL_PlacementGroup(data)
+        return PlacementGroup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPortableStorageVolumes(
         self,
         objectMask: Optional[str] = None,
@@ -4242,6 +4495,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Disk_Image]':
+
         data = self.client.call(
             self.service,
             'getPortableStorageVolumes',
@@ -4251,9 +4505,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Disk.Image import Image
-        return SL_Image(data)
+        return Image(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPostProvisioningHooks(
         self,
         objectMask: Optional[str] = None,
@@ -4261,6 +4515,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Provisioning_Hook]':
+
         data = self.client.call(
             self.service,
             'getPostProvisioningHooks',
@@ -4270,14 +4525,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Provisioning.Hook import Hook
-        return SL_Hook(data)
+        return Hook(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPptpVpnAllowedFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPptpVpnAllowedFlag',
@@ -4287,7 +4543,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPptpVpnUsers(
         self,
         objectMask: Optional[str] = None,
@@ -4295,6 +4551,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Customer]':
+
         data = self.client.call(
             self.service,
             'getPptpVpnUsers',
@@ -4304,14 +4561,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPreviousRecurringRevenue(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getPreviousRecurringRevenue',
@@ -4321,7 +4579,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPriceRestrictions(
         self,
         objectMask: Optional[str] = None,
@@ -4329,6 +4587,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Price_Account_Restriction]':
+
         data = self.client.call(
             self.service,
             'getPriceRestrictions',
@@ -4338,9 +4597,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Price.Account.Restriction import Restriction
-        return SL_Restriction(data)
+        return Restriction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPriorityOneTickets(
         self,
         objectMask: Optional[str] = None,
@@ -4348,6 +4607,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getPriorityOneTickets',
@@ -4357,9 +4617,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateAllotmentHardwareBandwidthDetails(
         self,
         objectMask: Optional[str] = None,
@@ -4367,6 +4627,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getPrivateAllotmentHardwareBandwidthDetails',
@@ -4376,9 +4637,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateBlockDeviceTemplateGroups(
         self,
         objectMask: Optional[str] = None,
@@ -4386,6 +4647,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'getPrivateBlockDeviceTemplateGroups',
@@ -4395,9 +4657,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -4405,6 +4667,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getPrivateIpAddresses',
@@ -4414,9 +4677,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateNetworkVlans(
         self,
         objectMask: Optional[str] = None,
@@ -4424,6 +4687,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getPrivateNetworkVlans',
@@ -4433,9 +4697,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -4443,6 +4707,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getPrivateSubnets',
@@ -4452,14 +4717,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProofOfConceptAccountFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getProofOfConceptAccountFlag',
@@ -4469,7 +4735,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicAllotmentHardwareBandwidthDetails(
         self,
         objectMask: Optional[str] = None,
@@ -4477,6 +4743,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getPublicAllotmentHardwareBandwidthDetails',
@@ -4486,9 +4753,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -4496,6 +4763,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getPublicIpAddresses',
@@ -4505,9 +4773,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicNetworkVlans(
         self,
         objectMask: Optional[str] = None,
@@ -4515,6 +4783,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getPublicNetworkVlans',
@@ -4524,9 +4793,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -4534,6 +4803,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getPublicSubnets',
@@ -4543,9 +4813,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getQuotes(
         self,
         objectMask: Optional[str] = None,
@@ -4553,6 +4823,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Order_Quote]':
+
         data = self.client.call(
             self.service,
             'getQuotes',
@@ -4562,9 +4833,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Order.Quote import Quote
-        return SL_Quote(data)
+        return Quote(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRecentEvents(
         self,
         objectMask: Optional[str] = None,
@@ -4572,6 +4843,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_Occurrence_Event]':
+
         data = self.client.call(
             self.service,
             'getRecentEvents',
@@ -4581,14 +4853,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.Occurrence.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReferralPartner(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getReferralPartner',
@@ -4596,14 +4869,15 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReferredAccountFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getReferredAccountFlag',
@@ -4613,7 +4887,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReferredAccounts(
         self,
         objectMask: Optional[str] = None,
@@ -4621,6 +4895,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account]':
+
         data = self.client.call(
             self.service,
             'getReferredAccounts',
@@ -4630,9 +4905,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegulatedWorkloads(
         self,
         objectMask: Optional[str] = None,
@@ -4640,6 +4915,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Legal_RegulatedWorkload]':
+
         data = self.client.call(
             self.service,
             'getRegulatedWorkloads',
@@ -4649,9 +4925,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Legal.RegulatedWorkload import RegulatedWorkload
-        return SL_RegulatedWorkload(data)
+        return RegulatedWorkload(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRemoteManagementCommandRequests(
         self,
         objectMask: Optional[str] = None,
@@ -4659,6 +4935,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_RemoteManagement_Command_Request]':
+
         data = self.client.call(
             self.service,
             'getRemoteManagementCommandRequests',
@@ -4668,9 +4945,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.RemoteManagement.Command.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicationEvents(
         self,
         objectMask: Optional[str] = None,
@@ -4678,6 +4955,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Event]':
+
         data = self.client.call(
             self.service,
             'getReplicationEvents',
@@ -4687,14 +4965,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRequireSilentIBMidUserCreation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getRequireSilentIBMidUserCreation',
@@ -4704,7 +4983,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReservedCapacityAgreements(
         self,
         objectMask: Optional[str] = None,
@@ -4712,6 +4991,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Agreement]':
+
         data = self.client.call(
             self.service,
             'getReservedCapacityAgreements',
@@ -4721,9 +5001,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Agreement import Agreement
-        return SL_Agreement(data)
+        return Agreement(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReservedCapacityGroups(
         self,
         objectMask: Optional[str] = None,
@@ -4731,6 +5011,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_ReservedCapacityGroup]':
+
         data = self.client.call(
             self.service,
             'getReservedCapacityGroups',
@@ -4740,9 +5021,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.ReservedCapacityGroup import ReservedCapacityGroup
-        return SL_ReservedCapacityGroup(data)
+        return ReservedCapacityGroup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRouters(
         self,
         objectMask: Optional[str] = None,
@@ -4750,6 +5031,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getRouters',
@@ -4759,9 +5041,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRwhoisData(
         self,
         objectMask: Optional[str] = None,
@@ -4769,6 +5051,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_Rwhois_Data]':
+
         data = self.client.call(
             self.service,
             'getRwhoisData',
@@ -4778,14 +5061,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.Rwhois.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSamlAuthentication(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Authentication_Saml':
+
         data = self.client.call(
             self.service,
             'getSamlAuthentication',
@@ -4793,9 +5077,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Authentication.Saml import Saml
-        return SL_Saml(data)
+        return Saml(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecondaryDomains(
         self,
         objectMask: Optional[str] = None,
@@ -4803,6 +5087,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Dns_Secondary]':
+
         data = self.client.call(
             self.service,
             'getSecondaryDomains',
@@ -4812,9 +5097,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Dns.Secondary import Secondary
-        return SL_Secondary(data)
+        return Secondary(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecurityCertificates(
         self,
         objectMask: Optional[str] = None,
@@ -4822,6 +5107,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Certificate]':
+
         data = self.client.call(
             self.service,
             'getSecurityCertificates',
@@ -4831,9 +5117,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Certificate import Certificate
-        return SL_Certificate(data)
+        return Certificate(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecurityGroups(
         self,
         objectMask: Optional[str] = None,
@@ -4841,6 +5127,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_SecurityGroup]':
+
         data = self.client.call(
             self.service,
             'getSecurityGroups',
@@ -4850,14 +5137,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.SecurityGroup import SecurityGroup
-        return SL_SecurityGroup(data)
+        return SecurityGroup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecurityLevel(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Security_Level':
+
         data = self.client.call(
             self.service,
             'getSecurityLevel',
@@ -4865,9 +5153,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Security.Level import Level
-        return SL_Level(data)
+        return Level(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecurityScanRequests(
         self,
         objectMask: Optional[str] = None,
@@ -4875,6 +5163,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Security_Scanner_Request]':
+
         data = self.client.call(
             self.service,
             'getSecurityScanRequests',
@@ -4884,9 +5173,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Security.Scanner.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceBillingItems(
         self,
         objectMask: Optional[str] = None,
@@ -4894,6 +5183,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getServiceBillingItems',
@@ -4903,9 +5193,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getShipments(
         self,
         objectMask: Optional[str] = None,
@@ -4913,6 +5203,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Shipment]':
+
         data = self.client.call(
             self.service,
             'getShipments',
@@ -4922,9 +5213,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Shipment import Shipment
-        return SL_Shipment(data)
+        return Shipment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSshKeys(
         self,
         objectMask: Optional[str] = None,
@@ -4932,6 +5223,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Ssh_Key]':
+
         data = self.client.call(
             self.service,
             'getSshKeys',
@@ -4941,9 +5233,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Ssh.Key import Key
-        return SL_Key(data)
+        return Key(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSslVpnUsers(
         self,
         objectMask: Optional[str] = None,
@@ -4951,6 +5243,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Customer]':
+
         data = self.client.call(
             self.service,
             'getSslVpnUsers',
@@ -4960,9 +5253,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStandardPoolVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -4970,6 +5263,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getStandardPoolVirtualGuests',
@@ -4979,9 +5273,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnetRegistrationDetails(
         self,
         objectMask: Optional[str] = None,
@@ -4989,6 +5283,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Regional_Registry_Detail]':
+
         data = self.client.call(
             self.service,
             'getSubnetRegistrationDetails',
@@ -4998,9 +5293,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Regional.Registry.Detail import Detail
-        return SL_Detail(data)
+        return Detail(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnetRegistrations(
         self,
         objectMask: Optional[str] = None,
@@ -5008,6 +5303,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_Registration]':
+
         data = self.client.call(
             self.service,
             'getSubnetRegistrations',
@@ -5017,9 +5313,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.Registration import Registration
-        return SL_Registration(data)
+        return Registration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -5027,6 +5323,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getSubnets',
@@ -5036,9 +5333,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSupportRepresentatives(
         self,
         objectMask: Optional[str] = None,
@@ -5046,6 +5343,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Employee]':
+
         data = self.client.call(
             self.service,
             'getSupportRepresentatives',
@@ -5055,9 +5353,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSupportSubscriptions(
         self,
         objectMask: Optional[str] = None,
@@ -5065,6 +5363,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getSupportSubscriptions',
@@ -5074,14 +5373,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSupportTier(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSupportTier',
@@ -5091,12 +5391,13 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSuppressInvoicesFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getSuppressInvoicesFlag',
@@ -5106,7 +5407,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTags(
         self,
         objectMask: Optional[str] = None,
@@ -5114,6 +5415,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag]':
+
         data = self.client.call(
             self.service,
             'getTags',
@@ -5123,14 +5425,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag import Tag
-        return SL_Tag(data)
+        return Tag(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTestAccountAttributeFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getTestAccountAttributeFlag',
@@ -5140,7 +5443,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTickets(
         self,
         objectMask: Optional[str] = None,
@@ -5148,6 +5451,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getTickets',
@@ -5157,9 +5461,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTicketsClosedInTheLastThreeDays(
         self,
         objectMask: Optional[str] = None,
@@ -5167,6 +5471,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getTicketsClosedInTheLastThreeDays',
@@ -5176,9 +5481,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTicketsClosedToday(
         self,
         objectMask: Optional[str] = None,
@@ -5186,6 +5491,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket]':
+
         data = self.client.call(
             self.service,
             'getTicketsClosedToday',
@@ -5195,9 +5501,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket import Ticket
-        return SL_Ticket(data)
+        return Ticket(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTranscodeAccounts(
         self,
         objectMask: Optional[str] = None,
@@ -5205,6 +5511,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Media_Transcode_Account]':
+
         data = self.client.call(
             self.service,
             'getTranscodeAccounts',
@@ -5214,9 +5521,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Media.Transcode.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeRequests(
         self,
         objectMask: Optional[str] = None,
@@ -5224,6 +5531,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Upgrade_Request]':
+
         data = self.client.call(
             self.service,
             'getUpgradeRequests',
@@ -5233,9 +5541,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Upgrade.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUsers(
         self,
         objectMask: Optional[str] = None,
@@ -5243,6 +5551,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Customer]':
+
         data = self.client.call(
             self.service,
             'getUsers',
@@ -5252,9 +5561,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getValidSecurityCertificates(
         self,
         objectMask: Optional[str] = None,
@@ -5262,6 +5571,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Certificate]':
+
         data = self.client.call(
             self.service,
             'getValidSecurityCertificates',
@@ -5271,14 +5581,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Certificate import Certificate
-        return SL_Certificate(data)
+        return Certificate(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVdrUpdatesInProgressFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getVdrUpdatesInProgressFlag',
@@ -5288,7 +5599,7 @@ class SoftLayer_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualDedicatedRacks(
         self,
         objectMask: Optional[str] = None,
@@ -5296,6 +5607,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Version1_Allotment]':
+
         data = self.client.call(
             self.service,
             'getVirtualDedicatedRacks',
@@ -5305,9 +5617,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualDiskImages(
         self,
         objectMask: Optional[str] = None,
@@ -5315,6 +5627,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Disk_Image]':
+
         data = self.client.call(
             self.service,
             'getVirtualDiskImages',
@@ -5324,9 +5637,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Disk.Image import Image
-        return SL_Image(data)
+        return Image(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -5334,6 +5647,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuests',
@@ -5343,9 +5657,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsOverBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
@@ -5353,6 +5667,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsOverBandwidthAllocation',
@@ -5362,9 +5677,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsProjectedOverBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
@@ -5372,6 +5687,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsProjectedOverBandwidthAllocation',
@@ -5381,9 +5697,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithCpanel(
         self,
         objectMask: Optional[str] = None,
@@ -5391,6 +5707,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithCpanel',
@@ -5400,9 +5717,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithMcafee(
         self,
         objectMask: Optional[str] = None,
@@ -5410,6 +5727,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithMcafee',
@@ -5419,9 +5737,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithMcafeeAntivirusRedhat(
         self,
         objectMask: Optional[str] = None,
@@ -5429,6 +5747,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithMcafeeAntivirusRedhat',
@@ -5438,9 +5757,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithMcafeeAntivirusWindows(
         self,
         objectMask: Optional[str] = None,
@@ -5448,6 +5767,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithMcafeeAntivirusWindows',
@@ -5457,9 +5777,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithMcafeeIntrusionDetectionSystem(
         self,
         objectMask: Optional[str] = None,
@@ -5467,6 +5787,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithMcafeeIntrusionDetectionSystem',
@@ -5476,9 +5797,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithPlesk(
         self,
         objectMask: Optional[str] = None,
@@ -5486,6 +5807,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithPlesk',
@@ -5495,9 +5817,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithQuantastor(
         self,
         objectMask: Optional[str] = None,
@@ -5505,6 +5827,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithQuantastor',
@@ -5514,9 +5837,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuestsWithUrchin(
         self,
         objectMask: Optional[str] = None,
@@ -5524,6 +5847,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuestsWithUrchin',
@@ -5533,14 +5857,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualPrivateRack(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Bandwidth_Version1_Allotment':
+
         data = self.client.call(
             self.service,
             'getVirtualPrivateRack',
@@ -5548,9 +5873,9 @@ class SoftLayer_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualStorageArchiveRepositories(
         self,
         objectMask: Optional[str] = None,
@@ -5558,6 +5883,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Storage_Repository]':
+
         data = self.client.call(
             self.service,
             'getVirtualStorageArchiveRepositories',
@@ -5567,9 +5893,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Storage.Repository import Repository
-        return SL_Repository(data)
+        return Repository(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualStoragePublicRepositories(
         self,
         objectMask: Optional[str] = None,
@@ -5577,6 +5903,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Storage_Repository]':
+
         data = self.client.call(
             self.service,
             'getVirtualStoragePublicRepositories',
@@ -5586,9 +5913,9 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Storage.Repository import Repository
-        return SL_Repository(data)
+        return Repository(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVpcVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -5596,6 +5923,7 @@ class SoftLayer_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVpcVirtualGuests',
@@ -5605,14 +5933,15 @@ class SoftLayer_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVpnConfigRequiresVPNManageFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getVpnConfigRequiresVPNManageFlag',

@@ -7,12 +7,13 @@ class SoftLayer_Hardware_Router(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Hardware_Router'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Router':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,13 +21,14 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Router import Router
-        return SL_Router(data)
+        return Router(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToNetworkStorage(
         self,
         networkStorageTemplateObject: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToNetworkStorage',
@@ -35,11 +37,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToNetworkStorageList(
         self,
         networkStorageTemplateObjects: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToNetworkStorageList',
@@ -48,12 +51,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def captureImage(
         self,
         captureTemplate: SoftLayer_Container_Disk_Image_Capture_Template,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template_Group':
+
         data = self.client.call(
             self.service,
             'captureImage',
@@ -61,14 +65,15 @@ class SoftLayer_Hardware_Router(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Hardware,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -76,13 +81,14 @@ class SoftLayer_Hardware_Router(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -91,11 +97,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteSoftwareComponentPasswords(
         self,
         softwareComponentPasswords: SoftLayer_Software_Component_Password
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteSoftwareComponentPasswords',
@@ -104,11 +111,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteTag(
         self,
         tagName: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteTag',
@@ -117,11 +125,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editSoftwareComponentPasswords(
         self,
         softwareComponentPasswords: SoftLayer_Software_Component_Password
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editSoftwareComponentPasswords',
@@ -130,11 +139,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def executeRemoteScript(
         self,
         uri: str
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'executeRemoteScript',
@@ -143,12 +153,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def findByIpAddress(
         self,
         ipAddress: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'findByIpAddress',
@@ -156,27 +167,29 @@ class SoftLayer_Hardware_Router(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def generateOrderTemplate(
         self,
         templateObject: SoftLayer_Hardware
     ) -> 'SoftLayer_Container_Product_Order':
+
         data = self.client.call(
             self.service,
             'generateOrderTemplate',
             templateObject
         )
         from SoftLayer.datatypes.Container.Product.Order import Order
-        return SL_Order(data)
+        return Order(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedNetworkStorages(
         self,
         nasType: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAttachedNetworkStorages',
@@ -184,27 +197,29 @@ class SoftLayer_Hardware_Router(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableBillingTermChangePrices(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item_Price]':
+
         data = self.client.call(
             self.service,
             'getAvailableBillingTermChangePrices',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableNetworkStorages(
         self,
         nasType: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAvailableNetworkStorages',
@@ -212,14 +227,15 @@ class SoftLayer_Hardware_Router(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendIncomingBandwidth(
         self,
         startDate: dateTime,
         endDate: dateTime
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getBackendIncomingBandwidth',
@@ -229,12 +245,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendOutgoingBandwidth(
         self,
         startDate: dateTime,
         endDate: dateTime
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getBackendOutgoingBandwidth',
@@ -244,11 +261,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getComponentDetailsXML(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getComponentDetailsXML',
@@ -257,37 +275,40 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateObjectOptions(
         self,
         
     ) -> 'SoftLayer_Container_Hardware_Configuration':
+
         data = self.client.call(
             self.service,
             'getCreateObjectOptions',
             
         )
         from SoftLayer.datatypes.Container.Hardware.Configuration import Configuration
-        return SL_Configuration(data)
+        return Configuration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrentBillingDetail(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Billing_Item]':
+
         data = self.client.call(
             self.service,
             'getCurrentBillingDetail',
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrentBillingTotal(
         self,
         
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getCurrentBillingTotal',
@@ -296,12 +317,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDailyAverage(
         self,
         startDate: dateTime,
         endDate: dateTime
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getDailyAverage',
@@ -311,12 +333,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFrontendIncomingBandwidth(
         self,
         startDate: dateTime,
         endDate: dateTime
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getFrontendIncomingBandwidth',
@@ -326,12 +349,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFrontendOutgoingBandwidth(
         self,
         startDate: dateTime,
         endDate: dateTime
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getFrontendOutgoingBandwidth',
@@ -341,12 +365,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyBandwidth(
         self,
         mode: str,
         day: dateTime
     ) -> 'list[SoftLayer_Metric_Tracking_Object_Data]':
+
         data = self.client.call(
             self.service,
             'getHourlyBandwidth',
@@ -354,14 +379,15 @@ class SoftLayer_Hardware_Router(object):
             day
         )
         from SoftLayer.datatypes.Metric.Tracking.Object.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateBandwidthData(
         self,
         startTime: int,
         endTime: int
     ) -> 'list[SoftLayer_Metric_Tracking_Object_Data]':
+
         data = self.client.call(
             self.service,
             'getPrivateBandwidthData',
@@ -369,14 +395,15 @@ class SoftLayer_Hardware_Router(object):
             endTime
         )
         from SoftLayer.datatypes.Metric.Tracking.Object.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicBandwidthData(
         self,
         startTime: int,
         endTime: int
     ) -> 'list[SoftLayer_Metric_Tracking_Object_Data]':
+
         data = self.client.call(
             self.service,
             'getPublicBandwidthData',
@@ -384,52 +411,56 @@ class SoftLayer_Hardware_Router(object):
             endTime
         )
         from SoftLayer.datatypes.Metric.Tracking.Object.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSensorData(
         self,
         
     ) -> 'list[SoftLayer_Container_RemoteManagement_SensorReading]':
+
         data = self.client.call(
             self.service,
             'getSensorData',
             
         )
         from SoftLayer.datatypes.Container.RemoteManagement.SensorReading import SensorReading
-        return SL_SensorReading(data)
+        return SensorReading(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSensorDataWithGraphs(
         self,
         
     ) -> 'SoftLayer_Container_RemoteManagement_SensorReadingsWithGraphs':
+
         data = self.client.call(
             self.service,
             'getSensorDataWithGraphs',
             
         )
         from SoftLayer.datatypes.Container.RemoteManagement.SensorReadingsWithGraphs import SensorReadingsWithGraphs
-        return SL_SensorReadingsWithGraphs(data)
+        return SensorReadingsWithGraphs(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServerFanSpeedGraphs(
         self,
         
     ) -> 'list[SoftLayer_Container_RemoteManagement_Graphs_SensorSpeed]':
+
         data = self.client.call(
             self.service,
             'getServerFanSpeedGraphs',
             
         )
         from SoftLayer.datatypes.Container.RemoteManagement.Graphs.SensorSpeed import SensorSpeed
-        return SL_SensorSpeed(data)
+        return SensorSpeed(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServerPowerState(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getServerPowerState',
@@ -438,26 +469,28 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServerTemperatureGraphs(
         self,
         
     ) -> 'list[SoftLayer_Container_RemoteManagement_Graphs_SensorTemperature]':
+
         data = self.client.call(
             self.service,
             'getServerTemperatureGraphs',
             
         )
         from SoftLayer.datatypes.Container.RemoteManagement.Graphs.SensorTemperature import SensorTemperature
-        return SL_SensorTemperature(data)
+        return SensorTemperature(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTransactionHistory(
         self,
         objectMask: Optional[str] = None,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Provisioning_Version1_Transaction_History]':
+
         data = self.client.call(
             self.service,
             'getTransactionHistory',
@@ -466,39 +499,42 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction.History import History
-        return SL_History(data)
+        return History(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeItemPrices(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item_Price]':
+
         data = self.client.call(
             self.service,
             'getUpgradeItemPrices',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def importVirtualHost(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Virtual_Host':
+
         data = self.client.call(
             self.service,
             'importVirtualHost',
             mask=objectMask
         )
         from SoftLayer.datatypes.Virtual.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isPingable(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isPingable',
@@ -507,11 +543,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def ping(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'ping',
@@ -520,11 +557,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def powerCycle(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'powerCycle',
@@ -533,11 +571,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def powerOff(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'powerOff',
@@ -546,11 +585,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def powerOn(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'powerOn',
@@ -559,11 +599,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def rebootDefault(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'rebootDefault',
@@ -572,11 +613,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def rebootHard(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'rebootHard',
@@ -585,11 +627,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def rebootSoft(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'rebootSoft',
@@ -598,24 +641,26 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def refreshDeviceStatus(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Hardware_State':
+
         data = self.client.call(
             self.service,
             'refreshDeviceStatus',
             mask=objectMask
         )
         from SoftLayer.datatypes.Hardware.State import State
-        return SL_State(data)
+        return State(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToNetworkStorage(
         self,
         networkStorageTemplateObject: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToNetworkStorage',
@@ -624,11 +669,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToNetworkStorageList(
         self,
         networkStorageTemplateObjects: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToNetworkStorageList',
@@ -637,11 +683,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeTags',
@@ -650,11 +697,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setTags',
@@ -663,11 +711,12 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateIpmiPassword(
         self,
         password: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateIpmiPassword',
@@ -676,7 +725,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBoundSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -684,6 +733,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getBoundSubnets',
@@ -693,14 +743,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocalDiskStorageCapabilityFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getLocalDiskStorageCapabilityFlag',
@@ -710,12 +761,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSanStorageCapabilityFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getSanStorageCapabilityFlag',
@@ -725,12 +777,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -738,9 +791,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveComponents(
         self,
         objectMask: Optional[str] = None,
@@ -748,6 +801,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getActiveComponents',
@@ -757,9 +811,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveNetworkMonitorIncident(
         self,
         objectMask: Optional[str] = None,
@@ -767,6 +821,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Monitor_Version1_Incident]':
+
         data = self.client.call(
             self.service,
             'getActiveNetworkMonitorIncident',
@@ -776,9 +831,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Monitor.Version1.Incident import Incident
-        return SL_Incident(data)
+        return Incident(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllPowerComponents(
         self,
         objectMask: Optional[str] = None,
@@ -786,6 +841,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Power_Component]':
+
         data = self.client.call(
             self.service,
             'getAllPowerComponents',
@@ -795,14 +851,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Power.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedHost(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Allowed_Host':
+
         data = self.client.call(
             self.service,
             'getAllowedHost',
@@ -810,9 +867,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -820,6 +877,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAllowedNetworkStorage',
@@ -829,9 +887,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedNetworkStorageReplicas(
         self,
         objectMask: Optional[str] = None,
@@ -839,6 +897,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAllowedNetworkStorageReplicas',
@@ -848,14 +907,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAntivirusSpywareSoftwareComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component':
+
         data = self.client.call(
             self.service,
             'getAntivirusSpywareSoftwareComponent',
@@ -863,9 +923,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -873,6 +933,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -882,14 +943,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAverageDailyPublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getAverageDailyPublicBandwidthUsage',
@@ -899,7 +961,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -907,6 +969,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getBackendNetworkComponents',
@@ -916,9 +979,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendRouters(
         self,
         objectMask: Optional[str] = None,
@@ -926,6 +989,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getBackendRouters',
@@ -935,14 +999,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getBandwidthAllocation',
@@ -952,12 +1017,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthAllotmentDetail(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Bandwidth_Version1_Allotment_Detail':
+
         data = self.client.call(
             self.service,
             'getBandwidthAllotmentDetail',
@@ -965,9 +1031,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment.Detail import Detail
-        return SL_Detail(data)
+        return Detail(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBenchmarkCertifications(
         self,
         objectMask: Optional[str] = None,
@@ -975,6 +1041,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Benchmark_Certification]':
+
         data = self.client.call(
             self.service,
             'getBenchmarkCertifications',
@@ -984,14 +1051,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Benchmark.Certification import Certification
-        return SL_Certification(data)
+        return Certification(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Hardware':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -999,14 +1067,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItemFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBillingItemFlag',
@@ -1016,12 +1085,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBlockCancelBecauseDisconnectedFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBlockCancelBecauseDisconnectedFlag',
@@ -1031,12 +1101,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBusinessContinuanceInsuranceFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBusinessContinuanceInsuranceFlag',
@@ -1046,7 +1117,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildrenHardware(
         self,
         objectMask: Optional[str] = None,
@@ -1054,6 +1125,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getChildrenHardware',
@@ -1063,9 +1135,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getComponents(
         self,
         objectMask: Optional[str] = None,
@@ -1073,6 +1145,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getComponents',
@@ -1082,14 +1155,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getContinuousDataProtectionSoftwareComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component':
+
         data = self.client.call(
             self.service,
             'getContinuousDataProtectionSoftwareComponent',
@@ -1097,14 +1171,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrentBillableBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getCurrentBillableBandwidthUsage',
@@ -1114,12 +1189,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -1127,14 +1203,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenterName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDatacenterName',
@@ -1144,12 +1221,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDaysInSparePool(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getDaysInSparePool',
@@ -1159,7 +1237,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownlinkHardware(
         self,
         objectMask: Optional[str] = None,
@@ -1167,6 +1245,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getDownlinkHardware',
@@ -1176,9 +1255,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownlinkNetworkHardware(
         self,
         objectMask: Optional[str] = None,
@@ -1186,6 +1265,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getDownlinkNetworkHardware',
@@ -1195,9 +1275,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownlinkServers(
         self,
         objectMask: Optional[str] = None,
@@ -1205,6 +1285,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getDownlinkServers',
@@ -1214,9 +1295,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownlinkVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -1224,6 +1305,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getDownlinkVirtualGuests',
@@ -1233,9 +1315,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownstreamHardwareBindings(
         self,
         objectMask: Optional[str] = None,
@@ -1243,6 +1325,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component_Uplink_Hardware]':
+
         data = self.client.call(
             self.service,
             'getDownstreamHardwareBindings',
@@ -1252,9 +1335,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component.Uplink.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownstreamNetworkHardware(
         self,
         objectMask: Optional[str] = None,
@@ -1262,6 +1345,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getDownstreamNetworkHardware',
@@ -1271,9 +1355,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownstreamNetworkHardwareWithIncidents(
         self,
         objectMask: Optional[str] = None,
@@ -1281,6 +1365,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getDownstreamNetworkHardwareWithIncidents',
@@ -1290,9 +1375,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownstreamServers(
         self,
         objectMask: Optional[str] = None,
@@ -1300,6 +1385,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getDownstreamServers',
@@ -1309,9 +1395,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDownstreamVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -1319,6 +1405,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getDownstreamVirtualGuests',
@@ -1328,9 +1415,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDriveControllers(
         self,
         objectMask: Optional[str] = None,
@@ -1338,6 +1425,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getDriveControllers',
@@ -1347,9 +1435,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEvaultNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -1357,6 +1445,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getEvaultNetworkStorage',
@@ -1366,14 +1455,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallServiceComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Component_Firewall':
+
         data = self.client.call(
             self.service,
             'getFirewallServiceComponent',
@@ -1381,14 +1471,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Component.Firewall import Firewall
-        return SL_Firewall(data)
+        return Firewall(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFixedConfigurationPreset(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package_Preset':
+
         data = self.client.call(
             self.service,
             'getFixedConfigurationPreset',
@@ -1396,9 +1487,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package.Preset import Preset
-        return SL_Preset(data)
+        return Preset(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFrontendNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -1406,6 +1497,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getFrontendNetworkComponents',
@@ -1415,9 +1507,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFrontendRouters(
         self,
         objectMask: Optional[str] = None,
@@ -1425,6 +1517,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getFrontendRouters',
@@ -1434,14 +1527,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFutureBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Hardware':
+
         data = self.client.call(
             self.service,
             'getFutureBillingItem',
@@ -1449,14 +1543,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIdentifier(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getGlobalIdentifier',
@@ -1466,7 +1561,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardDrives(
         self,
         objectMask: Optional[str] = None,
@@ -1474,6 +1569,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getHardDrives',
@@ -1483,14 +1579,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareChassis(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Chassis':
+
         data = self.client.call(
             self.service,
             'getHardwareChassis',
@@ -1498,14 +1595,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Chassis import Chassis
-        return SL_Chassis(data)
+        return Chassis(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareFunction(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Function':
+
         data = self.client.call(
             self.service,
             'getHardwareFunction',
@@ -1513,14 +1611,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Function import Function
-        return SL_Function(data)
+        return Function(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareFunctionDescription(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getHardwareFunctionDescription',
@@ -1530,12 +1629,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareState(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_State':
+
         data = self.client.call(
             self.service,
             'getHardwareState',
@@ -1543,14 +1643,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.State import State
-        return SL_State(data)
+        return State(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Status':
+
         data = self.client.call(
             self.service,
             'getHardwareStatus',
@@ -1558,14 +1659,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHasTrustedPlatformModuleBillingItemFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHasTrustedPlatformModuleBillingItemFlag',
@@ -1575,12 +1677,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHostIpsSoftwareComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component':
+
         data = self.client.call(
             self.service,
             'getHostIpsSoftwareComponent',
@@ -1588,14 +1691,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyBillingFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHourlyBillingFlag',
@@ -1605,12 +1709,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInboundBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getInboundBandwidthUsage',
@@ -1620,12 +1725,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInboundPublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getInboundPublicBandwidthUsage',
@@ -1635,12 +1741,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsBillingTermChangeAvailableFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsBillingTermChangeAvailableFlag',
@@ -1650,12 +1757,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastTransaction(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'getLastTransaction',
@@ -1663,14 +1771,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLatestNetworkMonitorIncident(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Monitor_Version1_Incident':
+
         data = self.client.call(
             self.service,
             'getLatestNetworkMonitorIncident',
@@ -1678,14 +1787,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Monitor.Version1.Incident import Incident
-        return SL_Incident(data)
+        return Incident(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -1693,14 +1803,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocationPathString(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getLocationPathString',
@@ -1710,12 +1821,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLockboxNetworkStorage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage':
+
         data = self.client.call(
             self.service,
             'getLockboxNetworkStorage',
@@ -1723,14 +1835,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManagedResourceFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getManagedResourceFlag',
@@ -1740,7 +1853,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMemory(
         self,
         objectMask: Optional[str] = None,
@@ -1748,6 +1861,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getMemory',
@@ -1757,14 +1871,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMemoryCapacity(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getMemoryCapacity',
@@ -1774,12 +1889,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetricTrackingObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Metric_Tracking_Object':
+
         data = self.client.call(
             self.service,
             'getMetricTrackingObject',
@@ -1787,9 +1903,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Metric.Tracking.Object import Object
-        return SL_Object(data)
+        return Object(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModules(
         self,
         objectMask: Optional[str] = None,
@@ -1797,6 +1913,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getModules',
@@ -1806,14 +1923,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMonitoringRobot(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Monitoring_Robot':
+
         data = self.client.call(
             self.service,
             'getMonitoringRobot',
@@ -1821,14 +1939,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Monitoring.Robot import Robot
-        return SL_Robot(data)
+        return Robot(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMonitoringServiceComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Monitor_Version1_Query_Host_Stratum':
+
         data = self.client.call(
             self.service,
             'getMonitoringServiceComponent',
@@ -1836,14 +1955,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Monitor.Version1.Query.Host.Stratum import Stratum
-        return SL_Stratum(data)
+        return Stratum(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMonitoringServiceEligibilityFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getMonitoringServiceEligibilityFlag',
@@ -1853,12 +1973,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMotherboard(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Component':
+
         data = self.client.call(
             self.service,
             'getMotherboard',
@@ -1866,9 +1987,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkCards(
         self,
         objectMask: Optional[str] = None,
@@ -1876,6 +1997,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getNetworkCards',
@@ -1885,9 +2007,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -1895,6 +2017,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getNetworkComponents',
@@ -1904,14 +2027,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkGatewayMember(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Gateway_Member':
+
         data = self.client.call(
             self.service,
             'getNetworkGatewayMember',
@@ -1919,14 +2043,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Gateway.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkGatewayMemberFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getNetworkGatewayMemberFlag',
@@ -1936,12 +2061,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkManagementIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getNetworkManagementIpAddress',
@@ -1951,7 +2077,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorAttachedDownHardware(
         self,
         objectMask: Optional[str] = None,
@@ -1959,6 +2085,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorAttachedDownHardware',
@@ -1968,9 +2095,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorAttachedDownVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -1978,6 +2105,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorAttachedDownVirtualGuests',
@@ -1987,9 +2115,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitorIncidents(
         self,
         objectMask: Optional[str] = None,
@@ -1997,6 +2125,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Monitor_Version1_Incident]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitorIncidents',
@@ -2006,9 +2135,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Monitor.Version1.Incident import Incident
-        return SL_Incident(data)
+        return Incident(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkMonitors(
         self,
         objectMask: Optional[str] = None,
@@ -2016,6 +2145,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Monitor_Version1_Query_Host]':
+
         data = self.client.call(
             self.service,
             'getNetworkMonitors',
@@ -2025,14 +2155,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Monitor.Version1.Query.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getNetworkStatus',
@@ -2042,12 +2173,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkStatusAttribute(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Attribute':
+
         data = self.client.call(
             self.service,
             'getNetworkStatusAttribute',
@@ -2055,9 +2187,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -2065,6 +2197,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getNetworkStorage',
@@ -2074,9 +2207,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlans(
         self,
         objectMask: Optional[str] = None,
@@ -2084,6 +2217,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getNetworkVlans',
@@ -2093,14 +2227,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextBillingCycleBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getNextBillingCycleBandwidthAllocation',
@@ -2110,7 +2245,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNotesHistory(
         self,
         objectMask: Optional[str] = None,
@@ -2118,6 +2253,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Note]':
+
         data = self.client.call(
             self.service,
             'getNotesHistory',
@@ -2127,14 +2263,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Note import Note
-        return SL_Note(data)
+        return Note(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNvRamCapacity(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getNvRamCapacity',
@@ -2144,7 +2281,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNvRamComponentModels(
         self,
         objectMask: Optional[str] = None,
@@ -2152,6 +2289,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Model]':
+
         data = self.client.call(
             self.service,
             'getNvRamComponentModels',
@@ -2161,14 +2299,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Model import Model
-        return SL_Model(data)
+        return Model(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOperatingSystem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component_OperatingSystem':
+
         data = self.client.call(
             self.service,
             'getOperatingSystem',
@@ -2176,14 +2315,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component.OperatingSystem import OperatingSystem
-        return SL_OperatingSystem(data)
+        return OperatingSystem(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOperatingSystemReferenceCode(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getOperatingSystemReferenceCode',
@@ -2193,12 +2333,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOutboundBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getOutboundBandwidthUsage',
@@ -2208,12 +2349,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOutboundPublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getOutboundPublicBandwidthUsage',
@@ -2223,12 +2365,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParentBay(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Blade':
+
         data = self.client.call(
             self.service,
             'getParentBay',
@@ -2236,14 +2379,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Blade import Blade
-        return SL_Blade(data)
+        return Blade(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParentHardware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getParentHardware',
@@ -2251,14 +2395,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPointOfPresenceLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getPointOfPresenceLocation',
@@ -2266,9 +2411,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPowerComponents(
         self,
         objectMask: Optional[str] = None,
@@ -2276,6 +2421,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Power_Component]':
+
         data = self.client.call(
             self.service,
             'getPowerComponents',
@@ -2285,9 +2431,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Power.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPowerSupply(
         self,
         objectMask: Optional[str] = None,
@@ -2295,6 +2441,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getPowerSupply',
@@ -2304,14 +2451,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryBackendIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPrimaryBackendIpAddress',
@@ -2321,12 +2469,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryBackendNetworkComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Component':
+
         data = self.client.call(
             self.service,
             'getPrimaryBackendNetworkComponent',
@@ -2334,14 +2483,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPrimaryIpAddress',
@@ -2351,12 +2501,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryNetworkComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Component':
+
         data = self.client.call(
             self.service,
             'getPrimaryNetworkComponent',
@@ -2364,14 +2515,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateNetworkOnlyFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPrivateNetworkOnlyFlag',
@@ -2381,12 +2533,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProcessorCoreAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getProcessorCoreAmount',
@@ -2396,12 +2549,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProcessorPhysicalCoreAmount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getProcessorPhysicalCoreAmount',
@@ -2411,7 +2565,7 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProcessors(
         self,
         objectMask: Optional[str] = None,
@@ -2419,6 +2573,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getProcessors',
@@ -2428,14 +2583,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRack(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getRack',
@@ -2443,9 +2599,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRaidControllers(
         self,
         objectMask: Optional[str] = None,
@@ -2453,6 +2609,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getRaidControllers',
@@ -2462,9 +2619,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRecentEvents(
         self,
         objectMask: Optional[str] = None,
@@ -2472,6 +2629,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Notification_Occurrence_Event]':
+
         data = self.client.call(
             self.service,
             'getRecentEvents',
@@ -2481,9 +2639,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Notification.Occurrence.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRemoteManagementAccounts(
         self,
         objectMask: Optional[str] = None,
@@ -2491,6 +2649,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_RemoteManagement_User]':
+
         data = self.client.call(
             self.service,
             'getRemoteManagementAccounts',
@@ -2500,14 +2659,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.RemoteManagement.User import User
-        return SL_User(data)
+        return User(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRemoteManagementComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Component':
+
         data = self.client.call(
             self.service,
             'getRemoteManagementComponent',
@@ -2515,9 +2675,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getResourceConfigurations(
         self,
         objectMask: Optional[str] = None,
@@ -2525,6 +2685,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Resource_Configuration]':
+
         data = self.client.call(
             self.service,
             'getResourceConfigurations',
@@ -2534,9 +2695,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Resource.Configuration import Configuration
-        return SL_Configuration(data)
+        return Configuration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getResourceGroupMemberReferences(
         self,
         objectMask: Optional[str] = None,
@@ -2544,6 +2705,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Member]':
+
         data = self.client.call(
             self.service,
             'getResourceGroupMemberReferences',
@@ -2553,9 +2715,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getResourceGroupRoles(
         self,
         objectMask: Optional[str] = None,
@@ -2563,6 +2725,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Role]':
+
         data = self.client.call(
             self.service,
             'getResourceGroupRoles',
@@ -2572,9 +2735,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getResourceGroups(
         self,
         objectMask: Optional[str] = None,
@@ -2582,6 +2745,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group]':
+
         data = self.client.call(
             self.service,
             'getResourceGroups',
@@ -2591,9 +2755,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRouters(
         self,
         objectMask: Optional[str] = None,
@@ -2601,6 +2765,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getRouters',
@@ -2610,9 +2775,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecurityScanRequests(
         self,
         objectMask: Optional[str] = None,
@@ -2620,6 +2785,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Security_Scanner_Request]':
+
         data = self.client.call(
             self.service,
             'getSecurityScanRequests',
@@ -2629,14 +2795,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Security.Scanner.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServerRoom(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getServerRoom',
@@ -2644,14 +2811,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceProvider(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Service_Provider':
+
         data = self.client.call(
             self.service,
             'getServiceProvider',
@@ -2659,9 +2827,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Service.Provider import Provider
-        return SL_Provider(data)
+        return Provider(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareComponents(
         self,
         objectMask: Optional[str] = None,
@@ -2669,6 +2837,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Component]':
+
         data = self.client.call(
             self.service,
             'getSoftwareComponents',
@@ -2678,14 +2847,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSparePoolBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Hardware':
+
         data = self.client.call(
             self.service,
             'getSparePoolBillingItem',
@@ -2693,9 +2863,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSshKeys(
         self,
         objectMask: Optional[str] = None,
@@ -2703,6 +2873,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Ssh_Key]':
+
         data = self.client.call(
             self.service,
             'getSshKeys',
@@ -2712,9 +2883,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Ssh.Key import Key
-        return SL_Key(data)
+        return Key(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageGroups(
         self,
         objectMask: Optional[str] = None,
@@ -2722,6 +2893,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Configuration_Storage_Group]':
+
         data = self.client.call(
             self.service,
             'getStorageGroups',
@@ -2731,9 +2903,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Configuration.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -2741,6 +2913,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getStorageNetworkComponents',
@@ -2750,9 +2923,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -2760,6 +2933,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -2769,14 +2943,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTopLevelLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getTopLevelLocation',
@@ -2784,14 +2959,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeRequest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Upgrade_Request':
+
         data = self.client.call(
             self.service,
             'getUpgradeRequest',
@@ -2799,9 +2975,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Upgrade.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeableActiveComponents(
         self,
         objectMask: Optional[str] = None,
@@ -2809,6 +2985,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getUpgradeableActiveComponents',
@@ -2818,14 +2995,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUplinkHardware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getUplinkHardware',
@@ -2833,9 +3011,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUplinkNetworkComponents(
         self,
         objectMask: Optional[str] = None,
@@ -2843,6 +3021,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Component]':
+
         data = self.client.call(
             self.service,
             'getUplinkNetworkComponents',
@@ -2852,9 +3031,9 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUserData(
         self,
         objectMask: Optional[str] = None,
@@ -2862,6 +3041,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Attribute]':
+
         data = self.client.call(
             self.service,
             'getUserData',
@@ -2871,14 +3051,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualChassis(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Group':
+
         data = self.client.call(
             self.service,
             'getVirtualChassis',
@@ -2886,9 +3067,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualChassisSiblings(
         self,
         objectMask: Optional[str] = None,
@@ -2896,6 +3077,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getVirtualChassisSiblings',
@@ -2905,14 +3087,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualHost(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Host':
+
         data = self.client.call(
             self.service,
             'getVirtualHost',
@@ -2920,9 +3103,9 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualLicenses(
         self,
         objectMask: Optional[str] = None,
@@ -2930,6 +3113,7 @@ class SoftLayer_Hardware_Router(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_VirtualLicense]':
+
         data = self.client.call(
             self.service,
             'getVirtualLicenses',
@@ -2939,14 +3123,15 @@ class SoftLayer_Hardware_Router(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.VirtualLicense import VirtualLicense
-        return SL_VirtualLicense(data)
+        return VirtualLicense(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualRack(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Bandwidth_Version1_Allotment':
+
         data = self.client.call(
             self.service,
             'getVirtualRack',
@@ -2954,14 +3139,15 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualRackId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getVirtualRackId',
@@ -2971,12 +3157,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualRackName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getVirtualRackName',
@@ -2986,12 +3173,13 @@ class SoftLayer_Hardware_Router(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualizationPlatform(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component':
+
         data = self.client.call(
             self.service,
             'getVirtualizationPlatform',
@@ -2999,6 +3187,6 @@ class SoftLayer_Hardware_Router(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
 

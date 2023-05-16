@@ -7,12 +7,13 @@ class SoftLayer_Network_Firewall_Update_Request_Rule(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Firewall_Update_Request_Rule'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Network_Firewall_Update_Request_Rule,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Firewall_Update_Request_Rule':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,14 +21,15 @@ class SoftLayer_Network_Firewall_Update_Request_Rule(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Firewall.Update.Request.Rule import Rule
-        return SL_Rule(data)
+        return Rule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Firewall_Update_Request_Rule':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -35,15 +37,16 @@ class SoftLayer_Network_Firewall_Update_Request_Rule(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Firewall.Update.Request.Rule import Rule
-        return SL_Rule(data)
+        return Rule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def validateRule(
         self,
         rule: SoftLayer_Network_Firewall_Update_Request_Rule,
         applyToComponentId: int,
         applyToAclId: int
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'validateRule',
@@ -54,12 +57,13 @@ class SoftLayer_Network_Firewall_Update_Request_Rule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallUpdateRequest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Firewall_Update_Request':
+
         data = self.client.call(
             self.service,
             'getFirewallUpdateRequest',
@@ -67,6 +71,6 @@ class SoftLayer_Network_Firewall_Update_Request_Rule(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Firewall.Update.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
 

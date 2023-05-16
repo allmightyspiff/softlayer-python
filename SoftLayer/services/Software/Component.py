@@ -7,11 +7,12 @@ class SoftLayer_Software_Component(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Software_Component'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getLicenseFile(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getLicenseFile',
@@ -20,12 +21,13 @@ class SoftLayer_Software_Component(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,13 +35,14 @@ class SoftLayer_Software_Component(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVendorSetUpConfiguration(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getVendorSetUpConfiguration',
@@ -48,12 +51,13 @@ class SoftLayer_Software_Component(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAverageInstallationDuration(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedLong':
+
         data = self.client.call(
             self.service,
             'getAverageInstallationDuration',
@@ -63,12 +67,13 @@ class SoftLayer_Software_Component(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -76,14 +81,15 @@ class SoftLayer_Software_Component(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getHardware',
@@ -91,9 +97,9 @@ class SoftLayer_Software_Component(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPasswordHistory(
         self,
         objectMask: Optional[str] = None,
@@ -101,6 +107,7 @@ class SoftLayer_Software_Component(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Component_Password_History]':
+
         data = self.client.call(
             self.service,
             'getPasswordHistory',
@@ -110,9 +117,9 @@ class SoftLayer_Software_Component(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Component.Password.History import History
-        return SL_History(data)
+        return History(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPasswords(
         self,
         objectMask: Optional[str] = None,
@@ -120,6 +127,7 @@ class SoftLayer_Software_Component(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Component_Password]':
+
         data = self.client.call(
             self.service,
             'getPasswords',
@@ -129,14 +137,15 @@ class SoftLayer_Software_Component(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Component.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareDescription(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Description':
+
         data = self.client.call(
             self.service,
             'getSoftwareDescription',
@@ -144,14 +153,15 @@ class SoftLayer_Software_Component(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareLicense(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_License':
+
         data = self.client.call(
             self.service,
             'getSoftwareLicense',
@@ -159,14 +169,15 @@ class SoftLayer_Software_Component(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.License import License
-        return SL_License(data)
+        return License(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'getVirtualGuest',
@@ -174,6 +185,6 @@ class SoftLayer_Software_Component(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
 

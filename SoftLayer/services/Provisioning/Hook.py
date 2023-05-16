@@ -7,12 +7,13 @@ class SoftLayer_Provisioning_Hook(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Provisioning_Hook'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Provisioning_Hook,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Provisioning_Hook':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Provisioning_Hook(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Hook import Hook
-        return SL_Hook(data)
+        return Hook(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_Provisioning_Hook(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Provisioning_Hook
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,12 +51,13 @@ class SoftLayer_Provisioning_Hook(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Hook':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -61,14 +65,15 @@ class SoftLayer_Provisioning_Hook(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Hook import Hook
-        return SL_Hook(data)
+        return Hook(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -76,14 +81,15 @@ class SoftLayer_Provisioning_Hook(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHookType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Hook_Type':
+
         data = self.client.call(
             self.service,
             'getHookType',
@@ -91,6 +97,6 @@ class SoftLayer_Provisioning_Hook(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Hook.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

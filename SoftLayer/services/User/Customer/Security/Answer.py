@@ -7,12 +7,13 @@ class SoftLayer_User_Customer_Security_Answer(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_User_Customer_Security_Answer'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer_Security_Answer':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_User_Customer_Security_Answer(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer.Security.Answer import Answer
-        return SL_Answer(data)
+        return Answer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getQuestion(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Security_Question':
+
         data = self.client.call(
             self.service,
             'getQuestion',
@@ -35,14 +37,15 @@ class SoftLayer_User_Customer_Security_Answer(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Security.Question import Question
-        return SL_Question(data)
+        return Question(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getUser',
@@ -50,6 +53,6 @@ class SoftLayer_User_Customer_Security_Answer(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
 

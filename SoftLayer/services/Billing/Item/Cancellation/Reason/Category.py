@@ -7,25 +7,27 @@ class SoftLayer_Billing_Item_Cancellation_Reason_Category(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Billing_Item_Cancellation_Reason_Category'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllCancellationReasonCategories(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Billing_Item_Cancellation_Reason_Category]':
+
         data = self.client.call(
             self.service,
             'getAllCancellationReasonCategories',
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Reason.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Cancellation_Reason_Category':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,9 +35,9 @@ class SoftLayer_Billing_Item_Cancellation_Reason_Category(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Reason.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingCancellationReasons(
         self,
         objectMask: Optional[str] = None,
@@ -43,6 +45,7 @@ class SoftLayer_Billing_Item_Cancellation_Reason_Category(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item_Cancellation_Reason]':
+
         data = self.client.call(
             self.service,
             'getBillingCancellationReasons',
@@ -52,6 +55,6 @@ class SoftLayer_Billing_Item_Cancellation_Reason_Category(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item.Cancellation.Reason import Reason
-        return SL_Reason(data)
+        return Reason(data)
 
 

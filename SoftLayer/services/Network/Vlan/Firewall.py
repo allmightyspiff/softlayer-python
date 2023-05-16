@@ -7,11 +7,12 @@ class SoftLayer_Network_Vlan_Firewall(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Vlan_Firewall'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def approveBypassRequest(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'approveBypassRequest',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallFirmwareVersion(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFirewallFirmwareVersion',
@@ -33,12 +35,13 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan_Firewall':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -46,13 +49,14 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan.Firewall import Firewall
-        return SL_Firewall(data)
+        return Firewall(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def hasActiveTransactions(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'hasActiveTransactions',
@@ -61,11 +65,12 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isAccountAllowed(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isAccountAllowed',
@@ -74,11 +79,12 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isHighAvailabilityUpgradeAvailable(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isHighAvailabilityUpgradeAvailable',
@@ -87,11 +93,12 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def rejectBypassRequest(
         self,
         
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'rejectBypassRequest',
@@ -100,24 +107,26 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def restoreDefaults(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'restoreDefaults',
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setTags',
@@ -126,12 +135,13 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateRouteBypass(
         self,
         bypass: boolean,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'updateRouteBypass',
@@ -139,14 +149,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getAccountId',
@@ -156,12 +167,13 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthAllocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getBandwidthAllocation',
@@ -171,7 +183,7 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingCycleBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
@@ -179,6 +191,7 @@ class SoftLayer_Network_Vlan_Firewall(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Bandwidth_Usage]':
+
         data = self.client.call(
             self.service,
             'getBillingCycleBandwidthUsage',
@@ -188,14 +201,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Bandwidth.Usage import Usage
-        return SL_Usage(data)
+        return Usage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingCyclePrivateBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Bandwidth_Usage':
+
         data = self.client.call(
             self.service,
             'getBillingCyclePrivateBandwidthUsage',
@@ -203,14 +217,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Bandwidth.Usage import Usage
-        return SL_Usage(data)
+        return Usage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingCyclePublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Bandwidth_Usage':
+
         data = self.client.call(
             self.service,
             'getBillingCyclePublicBandwidthUsage',
@@ -218,14 +233,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Bandwidth.Usage import Usage
-        return SL_Usage(data)
+        return Usage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -233,14 +249,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBypassRequestStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getBypassRequestStatus',
@@ -250,12 +267,13 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -263,14 +281,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFirewallType',
@@ -280,12 +299,13 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFullyQualifiedDomainName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFullyQualifiedDomainName',
@@ -295,12 +315,13 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManagementCredentials(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component_Password':
+
         data = self.client.call(
             self.service,
             'getManagementCredentials',
@@ -308,14 +329,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetricTrackingObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Metric_Tracking_Object':
+
         data = self.client.call(
             self.service,
             'getMetricTrackingObject',
@@ -323,14 +345,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Metric.Tracking.Object import Object
-        return SL_Object(data)
+        return Object(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetricTrackingObjectId(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getMetricTrackingObjectId',
@@ -340,7 +363,7 @@ class SoftLayer_Network_Vlan_Firewall(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkFirewallUpdateRequests(
         self,
         objectMask: Optional[str] = None,
@@ -348,6 +371,7 @@ class SoftLayer_Network_Vlan_Firewall(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Firewall_Update_Request]':
+
         data = self.client.call(
             self.service,
             'getNetworkFirewallUpdateRequests',
@@ -357,14 +381,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Firewall.Update.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkGateway(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Gateway':
+
         data = self.client.call(
             self.service,
             'getNetworkGateway',
@@ -372,14 +397,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Gateway import Gateway
-        return SL_Gateway(data)
+        return Gateway(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlan(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getNetworkVlan',
@@ -387,9 +413,9 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlans(
         self,
         objectMask: Optional[str] = None,
@@ -397,6 +423,7 @@ class SoftLayer_Network_Vlan_Firewall(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getNetworkVlans',
@@ -406,9 +433,9 @@ class SoftLayer_Network_Vlan_Firewall(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRules(
         self,
         objectMask: Optional[str] = None,
@@ -416,6 +443,7 @@ class SoftLayer_Network_Vlan_Firewall(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan_Firewall_Rule]':
+
         data = self.client.call(
             self.service,
             'getRules',
@@ -425,9 +453,9 @@ class SoftLayer_Network_Vlan_Firewall(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan.Firewall.Rule import Rule
-        return SL_Rule(data)
+        return Rule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -435,6 +463,7 @@ class SoftLayer_Network_Vlan_Firewall(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -444,14 +473,15 @@ class SoftLayer_Network_Vlan_Firewall(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUpgradeRequest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Upgrade_Request':
+
         data = self.client.call(
             self.service,
             'getUpgradeRequest',
@@ -459,6 +489,6 @@ class SoftLayer_Network_Vlan_Firewall(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Upgrade.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
 

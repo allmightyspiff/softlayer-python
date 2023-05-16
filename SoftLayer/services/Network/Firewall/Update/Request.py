@@ -7,12 +7,13 @@ class SoftLayer_Network_Firewall_Update_Request(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Firewall_Update_Request'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Network_Firewall_Update_Request,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Firewall_Update_Request':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,27 +21,29 @@ class SoftLayer_Network_Firewall_Update_Request(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Firewall.Update.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallUpdateRequestRuleAttributes(
         self,
         
     ) -> 'SoftLayer_Container_Utility_Network_Firewall_Rule_Attribute':
+
         data = self.client.call(
             self.service,
             'getFirewallUpdateRequestRuleAttributes',
             
         )
         from SoftLayer.datatypes.Container.Utility.Network.Firewall.Rule.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Firewall_Update_Request':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -48,14 +51,15 @@ class SoftLayer_Network_Firewall_Update_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Firewall.Update.Request import Request
-        return SL_Request(data)
+        return Request(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateRuleNote(
         self,
         fwRule: SoftLayer_Network_Component_Firewall_Rule,
         note: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateRuleNote',
@@ -65,12 +69,13 @@ class SoftLayer_Network_Firewall_Update_Request(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAuthorizingUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Interface':
+
         data = self.client.call(
             self.service,
             'getAuthorizingUser',
@@ -78,14 +83,15 @@ class SoftLayer_Network_Firewall_Update_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Interface import Interface
-        return SL_Interface(data)
+        return Interface(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGuest(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest':
+
         data = self.client.call(
             self.service,
             'getGuest',
@@ -93,14 +99,15 @@ class SoftLayer_Network_Firewall_Update_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware':
+
         data = self.client.call(
             self.service,
             'getHardware',
@@ -108,14 +115,15 @@ class SoftLayer_Network_Firewall_Update_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkComponentFirewall(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Component_Firewall':
+
         data = self.client.call(
             self.service,
             'getNetworkComponentFirewall',
@@ -123,9 +131,9 @@ class SoftLayer_Network_Firewall_Update_Request(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Component.Firewall import Firewall
-        return SL_Firewall(data)
+        return Firewall(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRules(
         self,
         objectMask: Optional[str] = None,
@@ -133,6 +141,7 @@ class SoftLayer_Network_Firewall_Update_Request(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Firewall_Update_Request_Rule]':
+
         data = self.client.call(
             self.service,
             'getRules',
@@ -142,6 +151,6 @@ class SoftLayer_Network_Firewall_Update_Request(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Firewall.Update.Request.Rule import Rule
-        return SL_Rule(data)
+        return Rule(data)
 
 

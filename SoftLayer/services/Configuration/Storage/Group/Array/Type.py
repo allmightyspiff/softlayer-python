@@ -7,12 +7,13 @@ class SoftLayer_Configuration_Storage_Group_Array_Type(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Configuration_Storage_Group_Array_Type'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Configuration_Storage_Group_Array_Type]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -20,14 +21,15 @@ class SoftLayer_Configuration_Storage_Group_Array_Type(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Storage.Group.Array.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Storage_Group_Array_Type':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -35,9 +37,9 @@ class SoftLayer_Configuration_Storage_Group_Array_Type(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Storage.Group.Array.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareComponentModels(
         self,
         objectMask: Optional[str] = None,
@@ -45,6 +47,7 @@ class SoftLayer_Configuration_Storage_Group_Array_Type(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Model]':
+
         data = self.client.call(
             self.service,
             'getHardwareComponentModels',
@@ -54,6 +57,6 @@ class SoftLayer_Configuration_Storage_Group_Array_Type(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Model import Model
-        return SL_Model(data)
+        return Model(data)
 
 

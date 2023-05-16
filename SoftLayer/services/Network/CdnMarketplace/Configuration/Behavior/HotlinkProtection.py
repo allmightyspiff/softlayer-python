@@ -7,12 +7,13 @@ class SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection(
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createHotlinkProtection(
         self,
         input: SoftLayer_Container_Network_CdnMarketplace_Configuration_Input,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection':
+
         data = self.client.call(
             self.service,
             'createHotlinkProtection',
@@ -20,14 +21,15 @@ class SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection(
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.CdnMarketplace.Configuration.Behavior.HotlinkProtection import HotlinkProtection
-        return SL_HotlinkProtection(data)
+        return HotlinkProtection(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteHotlinkProtection(
         self,
         input: SoftLayer_Container_Network_CdnMarketplace_Configuration_Input,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection':
+
         data = self.client.call(
             self.service,
             'deleteHotlinkProtection',
@@ -35,14 +37,15 @@ class SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection(
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.CdnMarketplace.Configuration.Behavior.HotlinkProtection import HotlinkProtection
-        return SL_HotlinkProtection(data)
+        return HotlinkProtection(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHotlinkProtection(
         self,
         input: SoftLayer_Container_Network_CdnMarketplace_Configuration_Input,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection':
+
         data = self.client.call(
             self.service,
             'getHotlinkProtection',
@@ -50,14 +53,15 @@ class SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection(
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.CdnMarketplace.Configuration.Behavior.HotlinkProtection import HotlinkProtection
-        return SL_HotlinkProtection(data)
+        return HotlinkProtection(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -65,14 +69,15 @@ class SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection(
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.CdnMarketplace.Configuration.Behavior.HotlinkProtection import HotlinkProtection
-        return SL_HotlinkProtection(data)
+        return HotlinkProtection(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateHotlinkProtection(
         self,
         input: SoftLayer_Container_Network_CdnMarketplace_Configuration_Input,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection':
+
         data = self.client.call(
             self.service,
             'updateHotlinkProtection',
@@ -80,6 +85,6 @@ class SoftLayer_Network_CdnMarketplace_Configuration_Behavior_HotlinkProtection(
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.CdnMarketplace.Configuration.Behavior.HotlinkProtection import HotlinkProtection
-        return SL_HotlinkProtection(data)
+        return HotlinkProtection(data)
 
 

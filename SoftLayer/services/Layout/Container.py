@@ -7,12 +7,13 @@ class SoftLayer_Layout_Container(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Layout_Container'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Layout_Container]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -20,14 +21,15 @@ class SoftLayer_Layout_Container(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Layout.Container import Container
-        return SL_Container(data)
+        return Container(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Layout_Container':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -35,14 +37,15 @@ class SoftLayer_Layout_Container(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Layout.Container import Container
-        return SL_Container(data)
+        return Container(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLayoutContainerType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Layout_Container_Type':
+
         data = self.client.call(
             self.service,
             'getLayoutContainerType',
@@ -50,9 +53,9 @@ class SoftLayer_Layout_Container(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Layout.Container.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLayoutItems(
         self,
         objectMask: Optional[str] = None,
@@ -60,6 +63,7 @@ class SoftLayer_Layout_Container(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Layout_Item]':
+
         data = self.client.call(
             self.service,
             'getLayoutItems',
@@ -69,6 +73,6 @@ class SoftLayer_Layout_Container(object):
             offset=offset
         )
         from SoftLayer.datatypes.Layout.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
 

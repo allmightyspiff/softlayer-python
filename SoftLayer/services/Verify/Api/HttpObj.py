@@ -7,12 +7,13 @@ class SoftLayer_Verify_Api_HttpObj(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Verify_Api_HttpObj'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Verify_Api_HttpObj,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Verify_Api_HttpObj':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Verify_Api_HttpObj(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Verify.Api.HttpObj import HttpObj
-        return SL_HttpObj(data)
+        return HttpObj(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,7 +37,7 @@ class SoftLayer_Verify_Api_HttpObj(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -43,6 +45,7 @@ class SoftLayer_Verify_Api_HttpObj(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Verify_Api_HttpObj]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -52,14 +55,15 @@ class SoftLayer_Verify_Api_HttpObj(object):
             offset=offset
         )
         from SoftLayer.datatypes.Verify.Api.HttpObj import HttpObj
-        return SL_HttpObj(data)
+        return HttpObj(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Verify_Api_HttpObj':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -67,6 +71,6 @@ class SoftLayer_Verify_Api_HttpObj(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Verify.Api.HttpObj import HttpObj
-        return SL_HttpObj(data)
+        return HttpObj(data)
 
 

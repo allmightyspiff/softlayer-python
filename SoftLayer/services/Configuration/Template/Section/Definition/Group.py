@@ -7,7 +7,7 @@ class SoftLayer_Configuration_Template_Section_Definition_Group(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Configuration_Template_Section_Definition_Group'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllGroups(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Configuration_Template_Section_Definition_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Configuration_Template_Section_Definition_Group]':
+
         data = self.client.call(
             self.service,
             'getAllGroups',
@@ -24,14 +25,15 @@ class SoftLayer_Configuration_Template_Section_Definition_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Template_Section_Definition_Group':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,14 +41,15 @@ class SoftLayer_Configuration_Template_Section_Definition_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Template_Section_Definition_Group':
+
         data = self.client.call(
             self.service,
             'getParent',
@@ -54,6 +57,6 @@ class SoftLayer_Configuration_Template_Section_Definition_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
 

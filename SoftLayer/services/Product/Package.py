@@ -7,12 +7,13 @@ class SoftLayer_Product_Package(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Product_Package'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveItems(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveItems',
@@ -20,14 +21,15 @@ class SoftLayer_Product_Package(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActivePackagesByAttribute(
         self,
         attributeKeyName: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getActivePackagesByAttribute',
@@ -35,28 +37,30 @@ class SoftLayer_Product_Package(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActivePrivateHostedCloudPackages(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getActivePrivateHostedCloudPackages',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveUsageRatePrices(
         self,
         locationId: int,
         categoryCode: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item_Price]':
+
         data = self.client.call(
             self.service,
             'getActiveUsageRatePrices',
@@ -65,9 +69,9 @@ class SoftLayer_Product_Package(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -75,6 +79,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -84,14 +89,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailablePackagesForImageTemplate(
         self,
         imageTemplate: SoftLayer_Virtual_Guest_Block_Device_Template_Group,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getAvailablePackagesForImageTemplate',
@@ -99,27 +105,29 @@ class SoftLayer_Product_Package(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCdnItems(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getCdnItems',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCloudStorageItems(
         self,
         provider: int,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getCloudStorageItems',
@@ -127,22 +135,23 @@ class SoftLayer_Product_Package(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemAvailabilityTypes(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item_Attribute_Type]':
+
         data = self.client.call(
             self.service,
             'getItemAvailabilityTypes',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item.Attribute.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemPricesFromSoftwareDescriptions(
         self,
         softwareDescriptions: SoftLayer_Software_Description,
@@ -150,6 +159,7 @@ class SoftLayer_Product_Package(object):
         returnAllPricesFlag: boolean,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item_Price]':
+
         data = self.client.call(
             self.service,
             'getItemPricesFromSoftwareDescriptions',
@@ -159,14 +169,15 @@ class SoftLayer_Product_Package(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemsFromImageTemplate(
         self,
         imageTemplate: SoftLayer_Virtual_Guest_Block_Device_Template_Group,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getItemsFromImageTemplate',
@@ -174,27 +185,29 @@ class SoftLayer_Product_Package(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMessageQueueItems(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getMessageQueueItems',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -202,14 +215,15 @@ class SoftLayer_Product_Package(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObjectStorageDatacenters(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Container_Product_Order_Network_Storage_Hub_Datacenter]':
+
         data = self.client.call(
             self.service,
             'getObjectStorageDatacenters',
@@ -217,35 +231,37 @@ class SoftLayer_Product_Package(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Container.Product.Order.Network.Storage.Hub.Datacenter import Datacenter
-        return SL_Datacenter(data)
+        return Datacenter(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObjectStorageLocationGroups(
         self,
         
     ) -> 'list[SoftLayer_Container_Product_Order_Network_Storage_ObjectStorage_LocationGroup]':
+
         data = self.client.call(
             self.service,
             'getObjectStorageLocationGroups',
             
         )
         from SoftLayer.datatypes.Container.Product.Order.Network.Storage.ObjectStorage.LocationGroup import LocationGroup
-        return SL_LocationGroup(data)
+        return LocationGroup(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStandardCategories(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Product_Item_Category]':
+
         data = self.client.call(
             self.service,
             'getStandardCategories',
             mask=objectMask
         )
         from SoftLayer.datatypes.Product.Item.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountRestrictedActivePresets(
         self,
         objectMask: Optional[str] = None,
@@ -253,6 +269,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package_Preset]':
+
         data = self.client.call(
             self.service,
             'getAccountRestrictedActivePresets',
@@ -262,9 +279,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package.Preset import Preset
-        return SL_Preset(data)
+        return Preset(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountRestrictedCategories(
         self,
         objectMask: Optional[str] = None,
@@ -272,6 +289,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Category]':
+
         data = self.client.call(
             self.service,
             'getAccountRestrictedCategories',
@@ -281,14 +299,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountRestrictedPricesFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getAccountRestrictedPricesFlag',
@@ -298,7 +317,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActivePresets(
         self,
         objectMask: Optional[str] = None,
@@ -306,6 +325,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package_Preset]':
+
         data = self.client.call(
             self.service,
             'getActivePresets',
@@ -315,9 +335,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package.Preset import Preset
-        return SL_Preset(data)
+        return Preset(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveRamItems(
         self,
         objectMask: Optional[str] = None,
@@ -325,6 +345,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveRamItems',
@@ -334,9 +355,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveServerItems(
         self,
         objectMask: Optional[str] = None,
@@ -344,6 +365,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveServerItems',
@@ -353,9 +375,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveSoftwareItems(
         self,
         objectMask: Optional[str] = None,
@@ -363,6 +385,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getActiveSoftwareItems',
@@ -372,9 +395,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveUsagePrices(
         self,
         objectMask: Optional[str] = None,
@@ -382,6 +405,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Price]':
+
         data = self.client.call(
             self.service,
             'getActiveUsagePrices',
@@ -391,14 +415,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAdditionalServiceFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getAdditionalServiceFlag',
@@ -408,7 +433,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -416,6 +441,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -425,9 +451,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableLocations(
         self,
         objectMask: Optional[str] = None,
@@ -435,6 +461,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package_Locations]':
+
         data = self.client.call(
             self.service,
             'getAvailableLocations',
@@ -444,14 +471,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package.Locations import Locations
-        return SL_Locations(data)
+        return Locations(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableStorageUnits(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getAvailableStorageUnits',
@@ -461,7 +489,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCategories(
         self,
         objectMask: Optional[str] = None,
@@ -469,6 +497,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Category]':
+
         data = self.client.call(
             self.service,
             'getCategories',
@@ -478,9 +507,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getConfiguration(
         self,
         objectMask: Optional[str] = None,
@@ -488,6 +517,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package_Order_Configuration]':
+
         data = self.client.call(
             self.service,
             'getConfiguration',
@@ -497,14 +527,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package.Order.Configuration import Configuration
-        return SL_Configuration(data)
+        return Configuration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDefaultBootCategoryCode(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDefaultBootCategoryCode',
@@ -514,7 +545,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDefaultRamItems(
         self,
         objectMask: Optional[str] = None,
@@ -522,6 +553,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getDefaultRamItems',
@@ -531,14 +563,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDeploymentNodeType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDeploymentNodeType',
@@ -548,7 +581,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDeploymentPackages(
         self,
         objectMask: Optional[str] = None,
@@ -556,6 +589,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getDeploymentPackages',
@@ -565,14 +599,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDeploymentType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDeploymentType',
@@ -582,7 +617,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDeployments(
         self,
         objectMask: Optional[str] = None,
@@ -590,6 +625,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package]':
+
         data = self.client.call(
             self.service,
             'getDeployments',
@@ -599,14 +635,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDisallowCustomDiskPartitions(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getDisallowCustomDiskPartitions',
@@ -616,12 +653,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirstOrderStep(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package_Order_Step':
+
         data = self.client.call(
             self.service,
             'getFirstOrderStep',
@@ -629,14 +667,15 @@ class SoftLayer_Product_Package(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package.Order.Step import Step
-        return SL_Step(data)
+        return Step(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGatewayApplianceFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getGatewayApplianceFlag',
@@ -646,12 +685,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGpuFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getGpuFlag',
@@ -661,12 +701,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyBillingAvailableFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHourlyBillingAvailableFlag',
@@ -676,12 +717,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHourlyOnlyOrders(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHourlyOnlyOrders',
@@ -691,7 +733,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemConflicts(
         self,
         objectMask: Optional[str] = None,
@@ -699,6 +741,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Resource_Conflict]':
+
         data = self.client.call(
             self.service,
             'getItemConflicts',
@@ -708,9 +751,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Resource.Conflict import Conflict
-        return SL_Conflict(data)
+        return Conflict(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemLocationConflicts(
         self,
         objectMask: Optional[str] = None,
@@ -718,6 +761,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Resource_Conflict]':
+
         data = self.client.call(
             self.service,
             'getItemLocationConflicts',
@@ -727,9 +771,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Resource.Conflict import Conflict
-        return SL_Conflict(data)
+        return Conflict(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemPriceReferences(
         self,
         objectMask: Optional[str] = None,
@@ -737,6 +781,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package_Item_Prices]':
+
         data = self.client.call(
             self.service,
             'getItemPriceReferences',
@@ -746,9 +791,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package.Item.Prices import Prices
-        return SL_Prices(data)
+        return Prices(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemPrices(
         self,
         objectMask: Optional[str] = None,
@@ -756,6 +801,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Price]':
+
         data = self.client.call(
             self.service,
             'getItemPrices',
@@ -765,9 +811,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItems(
         self,
         objectMask: Optional[str] = None,
@@ -775,6 +821,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item]':
+
         data = self.client.call(
             self.service,
             'getItems',
@@ -784,9 +831,9 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocations(
         self,
         objectMask: Optional[str] = None,
@@ -794,6 +841,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Location]':
+
         data = self.client.call(
             self.service,
             'getLocations',
@@ -803,14 +851,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLowestServerPrice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Price':
+
         data = self.client.call(
             self.service,
             'getLowestServerPrice',
@@ -818,14 +867,15 @@ class SoftLayer_Product_Package(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMaximumPortSpeed(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getMaximumPortSpeed',
@@ -835,12 +885,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMinimumPortSpeed(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getMinimumPortSpeed',
@@ -850,12 +901,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMongoDbEngineeredFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getMongoDbEngineeredFlag',
@@ -865,12 +917,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNoUpgradesFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getNoUpgradesFlag',
@@ -880,12 +933,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNonEuCompliantFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getNonEuCompliantFlag',
@@ -895,7 +949,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOrderPremiums(
         self,
         objectMask: Optional[str] = None,
@@ -903,6 +957,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Item_Price_Premium]':
+
         data = self.client.call(
             self.service,
             'getOrderPremiums',
@@ -912,14 +967,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Item.Price.Premium import Premium
-        return SL_Premium(data)
+        return Premium(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPopLocationAvailabilityFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPopLocationAvailabilityFlag',
@@ -929,12 +985,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPreconfiguredFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPreconfiguredFlag',
@@ -944,12 +1001,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPresetConfigurationRequiredFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPresetConfigurationRequiredFlag',
@@ -959,12 +1017,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPreventVlanSelectionFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPreventVlanSelectionFlag',
@@ -974,12 +1033,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateHostedCloudPackageFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPrivateHostedCloudPackageFlag',
@@ -989,12 +1049,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateHostedCloudPackageType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPrivateHostedCloudPackageType',
@@ -1004,12 +1065,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrivateNetworkOnlyFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getPrivateNetworkOnlyFlag',
@@ -1019,12 +1081,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getQuantaStorPackageFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getQuantaStorPackageFlag',
@@ -1034,12 +1097,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRaidDiskRestrictionFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getRaidDiskRestrictionFlag',
@@ -1049,12 +1113,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRedundantPowerFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getRedundantPowerFlag',
@@ -1064,7 +1129,7 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegions(
         self,
         objectMask: Optional[str] = None,
@@ -1072,6 +1137,7 @@ class SoftLayer_Product_Package(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Location_Region]':
+
         data = self.client.call(
             self.service,
             'getRegions',
@@ -1081,14 +1147,15 @@ class SoftLayer_Product_Package(object):
             offset=offset
         )
         from SoftLayer.datatypes.Location.Region import Region
-        return SL_Region(data)
+        return Region(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTopLevelItemCategoryCode(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getTopLevelItemCategoryCode',
@@ -1098,12 +1165,13 @@ class SoftLayer_Product_Package(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -1111,6 +1179,6 @@ class SoftLayer_Product_Package(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

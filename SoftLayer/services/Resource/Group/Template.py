@@ -7,7 +7,7 @@ class SoftLayer_Resource_Group_Template(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Resource_Group_Template'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Resource_Group_Template(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Template]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Resource_Group_Template(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Template import Template
-        return SL_Template(data)
+        return Template(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Resource_Group_Template':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,9 +41,9 @@ class SoftLayer_Resource_Group_Template(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Resource.Group.Template import Template
-        return SL_Template(data)
+        return Template(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -49,6 +51,7 @@ class SoftLayer_Resource_Group_Template(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Template]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -58,9 +61,9 @@ class SoftLayer_Resource_Group_Template(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Template import Template
-        return SL_Template(data)
+        return Template(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMembers(
         self,
         objectMask: Optional[str] = None,
@@ -68,6 +71,7 @@ class SoftLayer_Resource_Group_Template(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Resource_Group_Template_Member]':
+
         data = self.client.call(
             self.service,
             'getMembers',
@@ -77,6 +81,6 @@ class SoftLayer_Resource_Group_Template(object):
             offset=offset
         )
         from SoftLayer.datatypes.Resource.Group.Template.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
 

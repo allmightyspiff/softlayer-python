@@ -7,12 +7,13 @@ class SoftLayer_Network_Firewall_Interface(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Firewall_Interface'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Firewall_Interface':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,9 +21,9 @@ class SoftLayer_Network_Firewall_Interface(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Firewall.Interface import Interface
-        return SL_Interface(data)
+        return Interface(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirewallContextAccessControlLists(
         self,
         objectMask: Optional[str] = None,
@@ -30,6 +31,7 @@ class SoftLayer_Network_Firewall_Interface(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Firewall_AccessControlList]':
+
         data = self.client.call(
             self.service,
             'getFirewallContextAccessControlLists',
@@ -39,14 +41,15 @@ class SoftLayer_Network_Firewall_Interface(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Firewall.AccessControlList import AccessControlList
-        return SL_AccessControlList(data)
+        return AccessControlList(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlan(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getNetworkVlan',
@@ -54,6 +57,6 @@ class SoftLayer_Network_Firewall_Interface(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_Product_Promotion(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Product_Promotion'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def findByPromoCode(
         self,
         code: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Container_Product_Promotion':
+
         data = self.client.call(
             self.service,
             'findByPromoCode',
@@ -20,14 +21,15 @@ class SoftLayer_Product_Promotion(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Container.Product.Promotion import Promotion
-        return SL_Promotion(data)
+        return Promotion(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Promotion':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -35,6 +37,6 @@ class SoftLayer_Product_Promotion(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Promotion import Promotion
-        return SL_Promotion(data)
+        return Promotion(data)
 
 

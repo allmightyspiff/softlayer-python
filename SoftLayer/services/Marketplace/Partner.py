@@ -7,7 +7,7 @@ class SoftLayer_Marketplace_Partner(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Marketplace_Partner'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Marketplace_Partner(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Marketplace_Partner]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Marketplace_Partner(object):
             offset=offset
         )
         from SoftLayer.datatypes.Marketplace.Partner import Partner
-        return SL_Partner(data)
+        return Partner(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllPublishedPartners(
         self,
         searchTerm: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Marketplace_Partner]':
+
         data = self.client.call(
             self.service,
             'getAllPublishedPartners',
@@ -39,14 +41,15 @@ class SoftLayer_Marketplace_Partner(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Marketplace.Partner import Partner
-        return SL_Partner(data)
+        return Partner(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFeaturedPartners(
         self,
         non: boolean,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Marketplace_Partner]':
+
         data = self.client.call(
             self.service,
             'getFeaturedPartners',
@@ -54,27 +57,29 @@ class SoftLayer_Marketplace_Partner(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Marketplace.Partner import Partner
-        return SL_Partner(data)
+        return Partner(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFile(
         self,
         name: str
     ) -> 'SoftLayer_Marketplace_Partner_File':
+
         data = self.client.call(
             self.service,
             'getFile',
             name
         )
         from SoftLayer.datatypes.Marketplace.Partner.File import File
-        return SL_File(data)
+        return File(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Marketplace_Partner':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -82,14 +87,15 @@ class SoftLayer_Marketplace_Partner(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Marketplace.Partner import Partner
-        return SL_Partner(data)
+        return Partner(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPartnerByUrlIdentifier(
         self,
         urlIdentifier: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Marketplace_Partner':
+
         data = self.client.call(
             self.service,
             'getPartnerByUrlIdentifier',
@@ -97,9 +103,9 @@ class SoftLayer_Marketplace_Partner(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Marketplace.Partner import Partner
-        return SL_Partner(data)
+        return Partner(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachments(
         self,
         objectMask: Optional[str] = None,
@@ -107,6 +113,7 @@ class SoftLayer_Marketplace_Partner(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Marketplace_Partner_Attachment]':
+
         data = self.client.call(
             self.service,
             'getAttachments',
@@ -116,14 +123,15 @@ class SoftLayer_Marketplace_Partner(object):
             offset=offset
         )
         from SoftLayer.datatypes.Marketplace.Partner.Attachment import Attachment
-        return SL_Attachment(data)
+        return Attachment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLogoMedium(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Marketplace_Partner_Attachment':
+
         data = self.client.call(
             self.service,
             'getLogoMedium',
@@ -131,14 +139,15 @@ class SoftLayer_Marketplace_Partner(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Marketplace.Partner.Attachment import Attachment
-        return SL_Attachment(data)
+        return Attachment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLogoMediumTemp(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Marketplace_Partner_Attachment':
+
         data = self.client.call(
             self.service,
             'getLogoMediumTemp',
@@ -146,14 +155,15 @@ class SoftLayer_Marketplace_Partner(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Marketplace.Partner.Attachment import Attachment
-        return SL_Attachment(data)
+        return Attachment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLogoSmall(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Marketplace_Partner_Attachment':
+
         data = self.client.call(
             self.service,
             'getLogoSmall',
@@ -161,14 +171,15 @@ class SoftLayer_Marketplace_Partner(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Marketplace.Partner.Attachment import Attachment
-        return SL_Attachment(data)
+        return Attachment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLogoSmallTemp(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Marketplace_Partner_Attachment':
+
         data = self.client.call(
             self.service,
             'getLogoSmallTemp',
@@ -176,6 +187,6 @@ class SoftLayer_Marketplace_Partner(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Marketplace.Partner.Attachment import Attachment
-        return SL_Attachment(data)
+        return Attachment(data)
 
 

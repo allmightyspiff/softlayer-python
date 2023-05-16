@@ -7,7 +7,7 @@ class SoftLayer_Ticket_Subject_Category(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Ticket_Subject_Category'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Ticket_Subject_Category(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_Subject_Category]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Ticket_Subject_Category(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.Subject.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Subject_Category':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,9 +41,9 @@ class SoftLayer_Ticket_Subject_Category(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Subject.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubjects(
         self,
         objectMask: Optional[str] = None,
@@ -49,6 +51,7 @@ class SoftLayer_Ticket_Subject_Category(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_Subject]':
+
         data = self.client.call(
             self.service,
             'getSubjects',
@@ -58,6 +61,6 @@ class SoftLayer_Ticket_Subject_Category(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.Subject import Subject
-        return SL_Subject(data)
+        return Subject(data)
 
 

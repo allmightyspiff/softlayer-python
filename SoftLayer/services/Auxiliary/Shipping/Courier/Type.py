@@ -7,12 +7,13 @@ class SoftLayer_Auxiliary_Shipping_Courier_Type(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Auxiliary_Shipping_Courier_Type'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Auxiliary_Shipping_Courier_Type':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_Auxiliary_Shipping_Courier_Type(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Auxiliary.Shipping.Courier.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTypeByKeyName(
         self,
         keyName: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Auxiliary_Shipping_Courier_Type':
+
         data = self.client.call(
             self.service,
             'getTypeByKeyName',
@@ -35,9 +37,9 @@ class SoftLayer_Auxiliary_Shipping_Courier_Type(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Auxiliary.Shipping.Courier.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCourier(
         self,
         objectMask: Optional[str] = None,
@@ -45,6 +47,7 @@ class SoftLayer_Auxiliary_Shipping_Courier_Type(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Auxiliary_Shipping_Courier]':
+
         data = self.client.call(
             self.service,
             'getCourier',
@@ -54,6 +57,6 @@ class SoftLayer_Auxiliary_Shipping_Courier_Type(object):
             offset=offset
         )
         from SoftLayer.datatypes.Auxiliary.Shipping.Courier import Courier
-        return SL_Courier(data)
+        return Courier(data)
 
 

@@ -7,7 +7,7 @@ class SoftLayer_Account_ProofOfConcept_Approver(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_ProofOfConcept_Approver'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Account_ProofOfConcept_Approver(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_ProofOfConcept_Approver]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Account_ProofOfConcept_Approver(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.ProofOfConcept.Approver import Approver
-        return SL_Approver(data)
+        return Approver(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_ProofOfConcept_Approver':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,14 +41,15 @@ class SoftLayer_Account_ProofOfConcept_Approver(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.ProofOfConcept.Approver import Approver
-        return SL_Approver(data)
+        return Approver(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRole(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_ProofOfConcept_Approver_Role':
+
         data = self.client.call(
             self.service,
             'getRole',
@@ -54,14 +57,15 @@ class SoftLayer_Account_ProofOfConcept_Approver(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.ProofOfConcept.Approver.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_ProofOfConcept_Approver_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -69,6 +73,6 @@ class SoftLayer_Account_ProofOfConcept_Approver(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.ProofOfConcept.Approver.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

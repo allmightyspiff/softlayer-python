@@ -7,12 +7,13 @@ class SoftLayer_Software_Component_Password(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Software_Component_Password'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Software_Component_Password,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Software_Component_Password':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Software_Component_Password(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Software.Component.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObjects(
         self,
         templateObjects: SoftLayer_Software_Component_Password
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createObjects',
@@ -35,11 +37,12 @@ class SoftLayer_Software_Component_Password(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -48,11 +51,12 @@ class SoftLayer_Software_Component_Password(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObjects(
         self,
         templateObjects: SoftLayer_Software_Component_Password
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObjects',
@@ -61,11 +65,12 @@ class SoftLayer_Software_Component_Password(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Software_Component_Password
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -74,11 +79,12 @@ class SoftLayer_Software_Component_Password(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObjects(
         self,
         templateObjects: SoftLayer_Software_Component_Password
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObjects',
@@ -87,12 +93,13 @@ class SoftLayer_Software_Component_Password(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component_Password':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -100,14 +107,15 @@ class SoftLayer_Software_Component_Password(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component':
+
         data = self.client.call(
             self.service,
             'getSoftware',
@@ -115,9 +123,9 @@ class SoftLayer_Software_Component_Password(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSshKeys(
         self,
         objectMask: Optional[str] = None,
@@ -125,6 +133,7 @@ class SoftLayer_Software_Component_Password(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Ssh_Key]':
+
         data = self.client.call(
             self.service,
             'getSshKeys',
@@ -134,6 +143,6 @@ class SoftLayer_Software_Component_Password(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Ssh.Key import Key
-        return SL_Key(data)
+        return Key(data)
 
 

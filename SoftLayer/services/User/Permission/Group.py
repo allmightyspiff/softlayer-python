@@ -7,11 +7,12 @@ class SoftLayer_User_Permission_Group(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_User_Permission_Group'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def addAction(
         self,
         action: SoftLayer_User_Permission_Action
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'addAction',
@@ -20,11 +21,12 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addBulkActions(
         self,
         actions: SoftLayer_User_Permission_Action
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'addBulkActions',
@@ -33,12 +35,13 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addBulkResourceObjects(
         self,
         resourceObjects: SoftLayer_Entity,
         resourceTypeKeyName: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addBulkResourceObjects',
@@ -48,12 +51,13 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addResourceObject(
         self,
         resourceObject: SoftLayer_Entity,
         resourceTypeKeyName: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addResourceObject',
@@ -63,12 +67,13 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_User_Permission_Group,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Permission_Group':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -76,13 +81,14 @@ class SoftLayer_User_Permission_Group(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Permission.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -91,12 +97,13 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_User_Permission_Group,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_User_Permission_Group':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -104,14 +111,15 @@ class SoftLayer_User_Permission_Group(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Permission.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Permission_Group':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -119,13 +127,14 @@ class SoftLayer_User_Permission_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Permission.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def linkRole(
         self,
         role: SoftLayer_User_Permission_Role
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'linkRole',
@@ -134,11 +143,12 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAction(
         self,
         action: SoftLayer_User_Permission_Action
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'removeAction',
@@ -147,11 +157,12 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeBulkActions(
         self,
         actions: SoftLayer_User_Permission_Action
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'removeBulkActions',
@@ -160,12 +171,13 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeBulkResourceObjects(
         self,
         resourceObjects: SoftLayer_Entity,
         resourceTypeKeyName: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeBulkResourceObjects',
@@ -175,12 +187,13 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeResourceObject(
         self,
         resourceObject: SoftLayer_Entity,
         resourceTypeKeyName: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeResourceObject',
@@ -190,11 +203,12 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def unlinkRole(
         self,
         role: SoftLayer_User_Permission_Role
     ) -> 'void':
+
         data = self.client.call(
             self.service,
             'unlinkRole',
@@ -203,12 +217,13 @@ class SoftLayer_User_Permission_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -216,9 +231,9 @@ class SoftLayer_User_Permission_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActions(
         self,
         objectMask: Optional[str] = None,
@@ -226,6 +241,7 @@ class SoftLayer_User_Permission_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Permission_Action]':
+
         data = self.client.call(
             self.service,
             'getActions',
@@ -235,9 +251,9 @@ class SoftLayer_User_Permission_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Permission.Action import Action
-        return SL_Action(data)
+        return Action(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRoles(
         self,
         objectMask: Optional[str] = None,
@@ -245,6 +261,7 @@ class SoftLayer_User_Permission_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_User_Permission_Role]':
+
         data = self.client.call(
             self.service,
             'getRoles',
@@ -254,14 +271,15 @@ class SoftLayer_User_Permission_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.User.Permission.Role import Role
-        return SL_Role(data)
+        return Role(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Permission_Group_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -269,6 +287,6 @@ class SoftLayer_User_Permission_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Permission.Group.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

@@ -7,11 +7,12 @@ class SoftLayer_Software_VirtualLicense(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Software_VirtualLicense'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getLicenseFile(
         self,
         
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getLicenseFile',
@@ -20,12 +21,13 @@ class SoftLayer_Software_VirtualLicense(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_VirtualLicense':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,14 +35,15 @@ class SoftLayer_Software_VirtualLicense(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.VirtualLicense import VirtualLicense
-        return SL_VirtualLicense(data)
+        return VirtualLicense(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -48,14 +51,15 @@ class SoftLayer_Software_VirtualLicense(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -63,14 +67,15 @@ class SoftLayer_Software_VirtualLicense(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHostHardware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Server':
+
         data = self.client.call(
             self.service,
             'getHostHardware',
@@ -78,14 +83,15 @@ class SoftLayer_Software_VirtualLicense(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Server import Server
-        return SL_Server(data)
+        return Server(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIpAddressRecord(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress':
+
         data = self.client.call(
             self.service,
             'getIpAddressRecord',
@@ -93,14 +99,15 @@ class SoftLayer_Software_VirtualLicense(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareDescription(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Description':
+
         data = self.client.call(
             self.service,
             'getSoftwareDescription',
@@ -108,14 +115,15 @@ class SoftLayer_Software_VirtualLicense(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnet(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet':
+
         data = self.client.call(
             self.service,
             'getSubnet',
@@ -123,6 +131,6 @@ class SoftLayer_Software_VirtualLicense(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
 

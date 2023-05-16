@@ -7,11 +7,12 @@ class SoftLayer_Layout_Profile(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Layout_Profile'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Layout_Profile
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,11 +21,12 @@ class SoftLayer_Layout_Profile(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -33,11 +35,12 @@ class SoftLayer_Layout_Profile(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Layout_Profile
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -46,12 +49,13 @@ class SoftLayer_Layout_Profile(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Layout_Profile':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -59,14 +63,15 @@ class SoftLayer_Layout_Profile(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Layout.Profile import Profile
-        return SL_Profile(data)
+        return Profile(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def modifyPreference(
         self,
         templateObject: SoftLayer_Layout_Profile_Preference,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Layout_Profile_Preference':
+
         data = self.client.call(
             self.service,
             'modifyPreference',
@@ -74,14 +79,15 @@ class SoftLayer_Layout_Profile(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Layout.Profile.Preference import Preference
-        return SL_Preference(data)
+        return Preference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def modifyPreferences(
         self,
         layoutPreferenceObjects: SoftLayer_Layout_Profile_Preference,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Layout_Profile_Preference]':
+
         data = self.client.call(
             self.service,
             'modifyPreferences',
@@ -89,9 +95,9 @@ class SoftLayer_Layout_Profile(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Layout.Profile.Preference import Preference
-        return SL_Preference(data)
+        return Preference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLayoutContainers(
         self,
         objectMask: Optional[str] = None,
@@ -99,6 +105,7 @@ class SoftLayer_Layout_Profile(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Layout_Container]':
+
         data = self.client.call(
             self.service,
             'getLayoutContainers',
@@ -108,9 +115,9 @@ class SoftLayer_Layout_Profile(object):
             offset=offset
         )
         from SoftLayer.datatypes.Layout.Container import Container
-        return SL_Container(data)
+        return Container(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLayoutPreferences(
         self,
         objectMask: Optional[str] = None,
@@ -118,6 +125,7 @@ class SoftLayer_Layout_Profile(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Layout_Profile_Preference]':
+
         data = self.client.call(
             self.service,
             'getLayoutPreferences',
@@ -127,6 +135,6 @@ class SoftLayer_Layout_Profile(object):
             offset=offset
         )
         from SoftLayer.datatypes.Layout.Profile.Preference import Preference
-        return SL_Preference(data)
+        return Preference(data)
 
 

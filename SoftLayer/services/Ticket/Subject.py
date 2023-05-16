@@ -7,7 +7,7 @@ class SoftLayer_Ticket_Subject(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Ticket_Subject'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Ticket_Subject(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_Subject]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Ticket_Subject(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.Subject import Subject
-        return SL_Subject(data)
+        return Subject(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Subject':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,27 +41,29 @@ class SoftLayer_Ticket_Subject(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Subject import Subject
-        return SL_Subject(data)
+        return Subject(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTopFiveKnowledgeLayerQuestions(
         self,
         
     ) -> 'list[SoftLayer_Container_KnowledgeLayer_QuestionAnswer]':
+
         data = self.client.call(
             self.service,
             'getTopFiveKnowledgeLayerQuestions',
             
         )
         from SoftLayer.datatypes.Container.KnowledgeLayer.QuestionAnswer import QuestionAnswer
-        return SL_QuestionAnswer(data)
+        return QuestionAnswer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCategory(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Subject_Category':
+
         data = self.client.call(
             self.service,
             'getCategory',
@@ -67,9 +71,9 @@ class SoftLayer_Ticket_Subject(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Subject.Category import Category
-        return SL_Category(data)
+        return Category(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -77,6 +81,7 @@ class SoftLayer_Ticket_Subject(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Ticket_Subject]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -86,14 +91,15 @@ class SoftLayer_Ticket_Subject(object):
             offset=offset
         )
         from SoftLayer.datatypes.Ticket.Subject import Subject
-        return SL_Subject(data)
+        return Subject(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Group':
+
         data = self.client.call(
             self.service,
             'getGroup',
@@ -101,14 +107,15 @@ class SoftLayer_Ticket_Subject(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Ticket_Subject':
+
         data = self.client.call(
             self.service,
             'getParent',
@@ -116,6 +123,6 @@ class SoftLayer_Ticket_Subject(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Ticket.Subject import Subject
-        return SL_Subject(data)
+        return Subject(data)
 
 

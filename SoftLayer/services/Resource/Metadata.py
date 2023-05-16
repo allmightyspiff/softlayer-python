@@ -7,11 +7,12 @@ class SoftLayer_Resource_Metadata(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Resource_Metadata'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountId(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getAccountId',
@@ -20,11 +21,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackendMacAddresses(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getBackendMacAddresses',
@@ -33,11 +35,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -46,11 +49,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenterId(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getDatacenterId',
@@ -59,11 +63,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDomain(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDomain',
@@ -72,11 +77,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFrontendMacAddresses(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getFrontendMacAddresses',
@@ -85,11 +91,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFullyQualifiedDomainName(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getFullyQualifiedDomainName',
@@ -98,11 +105,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIdentifier(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getGlobalIdentifier',
@@ -111,11 +119,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHostname(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getHostname',
@@ -124,11 +133,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getId(
         self,
         
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'getId',
@@ -137,11 +147,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryBackendIpAddress(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPrimaryBackendIpAddress',
@@ -150,11 +161,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryIpAddress(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPrimaryIpAddress',
@@ -163,11 +175,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProvisionState(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getProvisionState',
@@ -176,11 +189,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRouter(
         self,
         macAddress: str
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getRouter',
@@ -189,12 +203,13 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceResource(
         self,
         serviceName: str,
         index: int
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getServiceResource',
@@ -204,24 +219,26 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceResources(
         self,
         
     ) -> 'list[SoftLayer_Container_Resource_Metadata_ServiceResource]':
+
         data = self.client.call(
             self.service,
             'getServiceResources',
             
         )
         from SoftLayer.datatypes.Container.Resource.Metadata.ServiceResource import ServiceResource
-        return SL_ServiceResource(data)
+        return ServiceResource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTags(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getTags',
@@ -230,11 +247,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUserMetadata(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getUserMetadata',
@@ -243,11 +261,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVlanIds(
         self,
         macAddress: str
     ) -> 'list[int]':
+
         data = self.client.call(
             self.service,
             'getVlanIds',
@@ -256,11 +275,12 @@ class SoftLayer_Resource_Metadata(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVlans(
         self,
         macAddress: str
     ) -> 'list[int]':
+
         data = self.client.call(
             self.service,
             'getVlans',

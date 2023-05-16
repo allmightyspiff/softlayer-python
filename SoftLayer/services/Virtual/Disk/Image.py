@@ -7,11 +7,12 @@ class SoftLayer_Virtual_Disk_Image(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Virtual_Disk_Image'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Virtual_Disk_Image
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,11 +21,12 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableBootModes(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getAvailableBootModes',
@@ -33,12 +35,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Disk_Image':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -46,15 +49,16 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Disk.Image import Image
-        return SL_Image(data)
+        return Image(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicIsoImages(
         self,
         objectMask: Optional[str] = None,
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Disk_Image]':
+
         data = self.client.call(
             self.service,
             'getPublicIsoImages',
@@ -63,14 +67,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Disk.Image import Image
-        return SL_Image(data)
+        return Image(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Virtual_Disk_Image':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -78,9 +83,9 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Virtual.Disk.Image import Image
-        return SL_Image(data)
+        return Image(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBlockDevices(
         self,
         objectMask: Optional[str] = None,
@@ -88,6 +93,7 @@ class SoftLayer_Virtual_Disk_Image(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device]':
+
         data = self.client.call(
             self.service,
             'getBlockDevices',
@@ -97,14 +103,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device import Device
-        return SL_Device(data)
+        return Device(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBootableVolumeFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBootableVolumeFlag',
@@ -114,12 +121,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCloudInitFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getCloudInitFlag',
@@ -129,7 +137,7 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCoalescedDiskImages(
         self,
         objectMask: Optional[str] = None,
@@ -137,6 +145,7 @@ class SoftLayer_Virtual_Disk_Image(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Disk_Image]':
+
         data = self.client.call(
             self.service,
             'getCoalescedDiskImages',
@@ -146,14 +155,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Disk.Image import Image
-        return SL_Image(data)
+        return Image(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCopyOnWriteFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getCopyOnWriteFlag',
@@ -163,12 +173,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDiskFileExtension(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDiskFileExtension',
@@ -178,12 +189,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDiskImageStorageGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Storage_Group':
+
         data = self.client.call(
             self.service,
             'getDiskImageStorageGroup',
@@ -191,14 +203,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getImportedDiskType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getImportedDiskType',
@@ -208,12 +221,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsEncrypted(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsEncrypted',
@@ -223,12 +237,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocalDiskFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getLocalDiskFlag',
@@ -238,12 +253,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMetadataFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getMetadataFlag',
@@ -253,7 +269,7 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwareReferences(
         self,
         objectMask: Optional[str] = None,
@@ -261,6 +277,7 @@ class SoftLayer_Virtual_Disk_Image(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Disk_Image_Software]':
+
         data = self.client.call(
             self.service,
             'getSoftwareReferences',
@@ -270,14 +287,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Disk.Image.Software import Software
-        return SL_Software(data)
+        return Software(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSourceDiskImage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Disk_Image':
+
         data = self.client.call(
             self.service,
             'getSourceDiskImage',
@@ -285,14 +303,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Disk.Image import Image
-        return SL_Image(data)
+        return Image(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageGroupDetails(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Container_Image_StorageGroupDetails':
+
         data = self.client.call(
             self.service,
             'getStorageGroupDetails',
@@ -300,9 +319,9 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Container.Image.StorageGroupDetails import StorageGroupDetails
-        return SL_StorageGroupDetails(data)
+        return StorageGroupDetails(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageGroups(
         self,
         objectMask: Optional[str] = None,
@@ -310,6 +329,7 @@ class SoftLayer_Virtual_Disk_Image(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Configuration_Storage_Group]':
+
         data = self.client.call(
             self.service,
             'getStorageGroups',
@@ -319,14 +339,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             offset=offset
         )
         from SoftLayer.datatypes.Configuration.Storage.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageRepository(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Storage_Repository':
+
         data = self.client.call(
             self.service,
             'getStorageRepository',
@@ -334,14 +355,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Storage.Repository import Repository
-        return SL_Repository(data)
+        return Repository(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageRepositoryType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Storage_Repository_Type':
+
         data = self.client.call(
             self.service,
             'getStorageRepositoryType',
@@ -349,14 +371,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Storage.Repository.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSupportedHardware(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSupportedHardware',
@@ -366,12 +389,13 @@ class SoftLayer_Virtual_Disk_Image(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTemplateBlockDevice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template':
+
         data = self.client.call(
             self.service,
             'getTemplateBlockDevice',
@@ -379,14 +403,15 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template import Template
-        return SL_Template(data)
+        return Template(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Disk_Image_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -394,6 +419,6 @@ class SoftLayer_Virtual_Disk_Image(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Disk.Image.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

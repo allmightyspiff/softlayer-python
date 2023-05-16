@@ -7,7 +7,7 @@ class SoftLayer_Network_DirectLink_Location(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_DirectLink_Location'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Network_DirectLink_Location(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_DirectLink_Location]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Network_DirectLink_Location(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.DirectLink.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_DirectLink_Location':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,14 +41,15 @@ class SoftLayer_Network_DirectLink_Location(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.DirectLink.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -54,14 +57,15 @@ class SoftLayer_Network_DirectLink_Location(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProvider(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_DirectLink_Provider':
+
         data = self.client.call(
             self.service,
             'getProvider',
@@ -69,14 +73,15 @@ class SoftLayer_Network_DirectLink_Location(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.DirectLink.Provider import Provider
-        return SL_Provider(data)
+        return Provider(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_DirectLink_ServiceType':
+
         data = self.client.call(
             self.service,
             'getServiceType',
@@ -84,6 +89,6 @@ class SoftLayer_Network_DirectLink_Location(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.DirectLink.ServiceType import ServiceType
-        return SL_ServiceType(data)
+        return ServiceType(data)
 
 

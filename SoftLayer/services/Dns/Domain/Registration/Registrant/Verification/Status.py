@@ -7,12 +7,13 @@ class SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'list[SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -20,14 +21,15 @@ class SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Dns.Domain.Registration.Registrant.Verification.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -35,6 +37,6 @@ class SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Dns.Domain.Registration.Registrant.Verification.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
 

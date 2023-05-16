@@ -7,11 +7,12 @@ class SoftLayer_Network_Subnet(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Subnet'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToNetworkStorage(
         self,
         networkStorageTemplateObject: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToNetworkStorage',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def allowAccessToNetworkStorageList(
         self,
         networkStorageTemplateObjects: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'allowAccessToNetworkStorageList',
@@ -33,11 +35,12 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def clearRoute(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'clearRoute',
@@ -46,24 +49,26 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createReverseDomainRecords(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Dns_Domain_Reverse':
+
         data = self.client.call(
             self.service,
             'createReverseDomainRecords',
             mask=objectMask
         )
         from SoftLayer.datatypes.Dns.Domain.Reverse import Reverse
-        return SL_Reverse(data)
+        return Reverse(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createSubnetRouteUpdateTransaction(
         self,
         newEndPointIpAddress: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createSubnetRouteUpdateTransaction',
@@ -72,11 +77,12 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createSwipTransaction(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createSwipTransaction',
@@ -85,11 +91,12 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editNote(
         self,
         note: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editNote',
@@ -98,7 +105,7 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def findAllSubnetsAndActiveSwipTransactionStatus(
         self,
         objectMask: Optional[str] = None,
@@ -106,6 +113,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'findAllSubnetsAndActiveSwipTransactionStatus',
@@ -115,9 +123,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttachedNetworkStorages(
         self,
         nasType: str,
@@ -125,6 +133,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAttachedNetworkStorages',
@@ -134,9 +143,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableNetworkStorages(
         self,
         nasType: str,
@@ -144,6 +153,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAvailableNetworkStorages',
@@ -153,14 +163,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -168,40 +179,43 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReverseDomainRecords(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Dns_Domain]':
+
         data = self.client.call(
             self.service,
             'getReverseDomainRecords',
             mask=objectMask
         )
         from SoftLayer.datatypes.Dns.Domain import Domain
-        return SL_Domain(data)
+        return Domain(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRoutableEndpointIpAddresses(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getRoutableEndpointIpAddresses',
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnetForIpAddress(
         self,
         ipAddress: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Subnet':
+
         data = self.client.call(
             self.service,
             'getSubnetForIpAddress',
@@ -209,13 +223,14 @@ class SoftLayer_Network_Subnet(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeAccessToNetworkStorageList(
         self,
         networkStorageTemplateObjects: SoftLayer_Network_Storage
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeAccessToNetworkStorageList',
@@ -224,12 +239,13 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def route(
         self,
         type: str,
         identifier: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'route',
@@ -239,11 +255,12 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setTags',
@@ -252,12 +269,13 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -265,14 +283,15 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveRegistration(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_Registration':
+
         data = self.client.call(
             self.service,
             'getActiveRegistration',
@@ -280,14 +299,15 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.Registration import Registration
-        return SL_Registration(data)
+        return Registration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveSwipTransaction(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_Swip_Transaction':
+
         data = self.client.call(
             self.service,
             'getActiveSwipTransaction',
@@ -295,14 +315,15 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.Swip.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveTransaction(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'getActiveTransaction',
@@ -310,14 +331,15 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAddressSpace(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getAddressSpace',
@@ -327,12 +349,13 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedHost(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Allowed_Host':
+
         data = self.client.call(
             self.service,
             'getAllowedHost',
@@ -340,9 +363,9 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Allowed.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedNetworkStorage(
         self,
         objectMask: Optional[str] = None,
@@ -350,6 +373,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAllowedNetworkStorage',
@@ -359,9 +383,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllowedNetworkStorageReplicas(
         self,
         objectMask: Optional[str] = None,
@@ -369,6 +393,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getAllowedNetworkStorageReplicas',
@@ -378,14 +403,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -393,9 +419,9 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBoundDescendants(
         self,
         objectMask: Optional[str] = None,
@@ -403,6 +429,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getBoundDescendants',
@@ -412,14 +439,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBoundRouterFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getBoundRouterFlag',
@@ -429,7 +457,7 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBoundRouters(
         self,
         objectMask: Optional[str] = None,
@@ -437,6 +465,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getBoundRouters',
@@ -446,9 +475,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -456,6 +485,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -465,14 +495,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location_Datacenter':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -480,9 +511,9 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location.Datacenter import Datacenter
-        return SL_Datacenter(data)
+        return Datacenter(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDescendants(
         self,
         objectMask: Optional[str] = None,
@@ -490,6 +521,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getDescendants',
@@ -499,14 +531,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDisplayLabel(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDisplayLabel',
@@ -516,12 +549,13 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEndPointIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress':
+
         data = self.client.call(
             self.service,
             'getEndPointIpAddress',
@@ -529,14 +563,15 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIpRecord(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress_Global':
+
         data = self.client.call(
             self.service,
             'getGlobalIpRecord',
@@ -544,9 +579,9 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress.Global import Global
-        return SL_Global(data)
+        return Global(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardware(
         self,
         objectMask: Optional[str] = None,
@@ -554,6 +589,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getHardware',
@@ -563,9 +599,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -573,6 +609,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getIpAddresses',
@@ -582,14 +619,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkComponentFirewall(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Component_Firewall':
+
         data = self.client.call(
             self.service,
             'getNetworkComponentFirewall',
@@ -597,9 +635,9 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Component.Firewall import Firewall
-        return SL_Firewall(data)
+        return Firewall(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkProtectionAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -607,6 +645,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Protection_Address]':
+
         data = self.client.call(
             self.service,
             'getNetworkProtectionAddresses',
@@ -616,9 +655,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Protection.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkTunnelContexts(
         self,
         objectMask: Optional[str] = None,
@@ -626,6 +665,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Tunnel_Module_Context]':
+
         data = self.client.call(
             self.service,
             'getNetworkTunnelContexts',
@@ -635,14 +675,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Tunnel.Module.Context import Context
-        return SL_Context(data)
+        return Context(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlan(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getNetworkVlan',
@@ -650,14 +691,15 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPodName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPodName',
@@ -667,7 +709,7 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProtectedIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -675,6 +717,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_IpAddress]':
+
         data = self.client.call(
             self.service,
             'getProtectedIpAddresses',
@@ -684,14 +727,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegionalInternetRegistry(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Regional_Internet_Registry':
+
         data = self.client.call(
             self.service,
             'getRegionalInternetRegistry',
@@ -699,9 +743,9 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Regional.Internet.Registry import Registry
-        return SL_Registry(data)
+        return Registry(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegistrations(
         self,
         objectMask: Optional[str] = None,
@@ -709,6 +753,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_Registration]':
+
         data = self.client.call(
             self.service,
             'getRegistrations',
@@ -718,14 +763,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.Registration import Registration
-        return SL_Registration(data)
+        return Registration(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReverseDomain(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Dns_Domain':
+
         data = self.client.call(
             self.service,
             'getReverseDomain',
@@ -733,14 +779,15 @@ class SoftLayer_Network_Subnet(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Dns.Domain import Domain
-        return SL_Domain(data)
+        return Domain(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRoleKeyName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getRoleKeyName',
@@ -750,12 +797,13 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRoleName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getRoleName',
@@ -765,12 +813,13 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRoutingTypeKeyName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getRoutingTypeKeyName',
@@ -780,12 +829,13 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRoutingTypeName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getRoutingTypeName',
@@ -795,7 +845,7 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSwipTransaction(
         self,
         objectMask: Optional[str] = None,
@@ -803,6 +853,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_Swip_Transaction]':
+
         data = self.client.call(
             self.service,
             'getSwipTransaction',
@@ -812,9 +863,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.Swip.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -822,6 +873,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -831,9 +883,9 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUnboundDescendants(
         self,
         objectMask: Optional[str] = None,
@@ -841,6 +893,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getUnboundDescendants',
@@ -850,14 +903,15 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getUtilizedIpAddressCount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getUtilizedIpAddressCount',
@@ -867,7 +921,7 @@ class SoftLayer_Network_Subnet(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualGuests(
         self,
         objectMask: Optional[str] = None,
@@ -875,6 +929,7 @@ class SoftLayer_Network_Subnet(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest]':
+
         data = self.client.call(
             self.service,
             'getVirtualGuests',
@@ -884,6 +939,6 @@ class SoftLayer_Network_Subnet(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest import Guest
-        return SL_Guest(data)
+        return Guest(data)
 
 

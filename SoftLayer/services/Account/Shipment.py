@@ -7,11 +7,12 @@ class SoftLayer_Account_Shipment(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Shipment'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Shipment
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,25 +21,27 @@ class SoftLayer_Account_Shipment(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllCouriers(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Auxiliary_Shipping_Courier]':
+
         data = self.client.call(
             self.service,
             'getAllCouriers',
             mask=objectMask
         )
         from SoftLayer.datatypes.Auxiliary.Shipping.Courier import Courier
-        return SL_Courier(data)
+        return Courier(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllCouriersByType(
         self,
         courierTypeKeyName: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Auxiliary_Shipping_Courier]':
+
         data = self.client.call(
             self.service,
             'getAllCouriersByType',
@@ -46,40 +49,43 @@ class SoftLayer_Account_Shipment(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Auxiliary.Shipping.Courier import Courier
-        return SL_Courier(data)
+        return Courier(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllShipmentStatuses(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Account_Shipment_Status]':
+
         data = self.client.call(
             self.service,
             'getAllShipmentStatuses',
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Shipment.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllShipmentTypes(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Account_Shipment_Type]':
+
         data = self.client.call(
             self.service,
             'getAllShipmentTypes',
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Shipment.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Shipment':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -87,14 +93,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Shipment import Shipment
-        return SL_Shipment(data)
+        return Shipment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -102,14 +109,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCourier(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Auxiliary_Shipping_Courier':
+
         data = self.client.call(
             self.service,
             'getCourier',
@@ -117,14 +125,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Auxiliary.Shipping.Courier import Courier
-        return SL_Courier(data)
+        return Courier(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getCreateEmployee',
@@ -132,14 +141,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCreateUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getCreateUser',
@@ -147,14 +157,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrency(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Currency':
+
         data = self.client.call(
             self.service,
             'getCurrency',
@@ -162,14 +173,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Currency import Currency
-        return SL_Currency(data)
+        return Currency(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDestinationAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Address':
+
         data = self.client.call(
             self.service,
             'getDestinationAddress',
@@ -177,14 +189,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMasterTrackingData(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Shipment_Tracking_Data':
+
         data = self.client.call(
             self.service,
             'getMasterTrackingData',
@@ -192,14 +205,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Shipment.Tracking.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyEmployee(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Employee':
+
         data = self.client.call(
             self.service,
             'getModifyEmployee',
@@ -207,14 +221,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Employee import Employee
-        return SL_Employee(data)
+        return Employee(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getModifyUser(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer':
+
         data = self.client.call(
             self.service,
             'getModifyUser',
@@ -222,14 +237,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer import Customer
-        return SL_Customer(data)
+        return Customer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOriginationAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Address':
+
         data = self.client.call(
             self.service,
             'getOriginationAddress',
@@ -237,9 +253,9 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getShipmentItems(
         self,
         objectMask: Optional[str] = None,
@@ -247,6 +263,7 @@ class SoftLayer_Account_Shipment(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Shipment_Item]':
+
         data = self.client.call(
             self.service,
             'getShipmentItems',
@@ -256,14 +273,15 @@ class SoftLayer_Account_Shipment(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Shipment.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Shipment_Status':
+
         data = self.client.call(
             self.service,
             'getStatus',
@@ -271,9 +289,9 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Shipment.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTrackingData(
         self,
         objectMask: Optional[str] = None,
@@ -281,6 +299,7 @@ class SoftLayer_Account_Shipment(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Shipment_Tracking_Data]':
+
         data = self.client.call(
             self.service,
             'getTrackingData',
@@ -290,14 +309,15 @@ class SoftLayer_Account_Shipment(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Shipment.Tracking.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Shipment_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -305,14 +325,15 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Shipment.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getViaAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Address':
+
         data = self.client.call(
             self.service,
             'getViaAddress',
@@ -320,6 +341,6 @@ class SoftLayer_Account_Shipment(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Address import Address
-        return SL_Address(data)
+        return Address(data)
 
 

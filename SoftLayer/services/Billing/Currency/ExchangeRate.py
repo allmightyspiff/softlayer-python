@@ -7,12 +7,13 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Billing_Currency_ExchangeRate'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllCurrencyExchangeRates(
         self,
         stringDate: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Billing_Currency_ExchangeRate]':
+
         data = self.client.call(
             self.service,
             'getAllCurrencyExchangeRates',
@@ -20,22 +21,23 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Currency.ExchangeRate import ExchangeRate
-        return SL_ExchangeRate(data)
+        return ExchangeRate(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrencies(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Billing_Currency]':
+
         data = self.client.call(
             self.service,
             'getCurrencies',
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Currency import Currency
-        return SL_Currency(data)
+        return Currency(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getExchangeRate(
         self,
         to: str,
@@ -43,6 +45,7 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
         effectiveDate: dateTime,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Billing_Currency_ExchangeRate':
+
         data = self.client.call(
             self.service,
             'getExchangeRate',
@@ -52,14 +55,15 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Billing.Currency.ExchangeRate import ExchangeRate
-        return SL_ExchangeRate(data)
+        return ExchangeRate(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Currency_ExchangeRate':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -67,14 +71,15 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Currency.ExchangeRate import ExchangeRate
-        return SL_ExchangeRate(data)
+        return ExchangeRate(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrice(
         self,
         price: float,
         formatOptions: SoftLayer_Container_Billing_Currency_Format
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPrice',
@@ -84,12 +89,13 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFundingCurrency(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Currency':
+
         data = self.client.call(
             self.service,
             'getFundingCurrency',
@@ -97,14 +103,15 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Currency import Currency
-        return SL_Currency(data)
+        return Currency(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocalCurrency(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Currency':
+
         data = self.client.call(
             self.service,
             'getLocalCurrency',
@@ -112,6 +119,6 @@ class SoftLayer_Billing_Currency_ExchangeRate(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Currency import Currency
-        return SL_Currency(data)
+        return Currency(data)
 
 

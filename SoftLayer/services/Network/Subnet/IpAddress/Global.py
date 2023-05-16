@@ -7,12 +7,13 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Subnet_IpAddress_Global'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress_Global':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,13 +21,14 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress.Global import Global
-        return SL_Global(data)
+        return Global(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def route(
         self,
         newEndPointIpAddress: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'route',
@@ -35,11 +37,12 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def unroute(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'unroute',
@@ -48,12 +51,13 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -61,14 +65,15 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getActiveTransaction(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'getActiveTransaction',
@@ -76,14 +81,15 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Network_Subnet_IpAddress_Global':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -91,14 +97,15 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Network.Subnet.IpAddress.Global import Global
-        return SL_Global(data)
+        return Global(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDestinationIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress':
+
         data = self.client.call(
             self.service,
             'getDestinationIpAddress',
@@ -106,14 +113,15 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress':
+
         data = self.client.call(
             self.service,
             'getIpAddress',
@@ -121,6 +129,6 @@ class SoftLayer_Network_Subnet_IpAddress_Global(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
 

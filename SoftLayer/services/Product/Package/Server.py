@@ -7,7 +7,7 @@ class SoftLayer_Product_Package_Server(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Product_Package_Server'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Product_Package_Server(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Product_Package_Server]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
@@ -24,14 +25,15 @@ class SoftLayer_Product_Package_Server(object):
             offset=offset
         )
         from SoftLayer.datatypes.Product.Package.Server import Server
-        return SL_Server(data)
+        return Server(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package_Server':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -39,14 +41,15 @@ class SoftLayer_Product_Package_Server(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package.Server import Server
-        return SL_Server(data)
+        return Server(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCatalog(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Catalog':
+
         data = self.client.call(
             self.service,
             'getCatalog',
@@ -54,14 +57,15 @@ class SoftLayer_Product_Package_Server(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Catalog import Catalog
-        return SL_Catalog(data)
+        return Catalog(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getItem',
@@ -69,14 +73,15 @@ class SoftLayer_Product_Package_Server(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemPrice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Price':
+
         data = self.client.call(
             self.service,
             'getItemPrice',
@@ -84,14 +89,15 @@ class SoftLayer_Product_Package_Server(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPackage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package':
+
         data = self.client.call(
             self.service,
             'getPackage',
@@ -99,14 +105,15 @@ class SoftLayer_Product_Package_Server(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPreset(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package_Preset':
+
         data = self.client.call(
             self.service,
             'getPreset',
@@ -114,6 +121,6 @@ class SoftLayer_Product_Package_Server(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package.Preset import Preset
-        return SL_Preset(data)
+        return Preset(data)
 
 

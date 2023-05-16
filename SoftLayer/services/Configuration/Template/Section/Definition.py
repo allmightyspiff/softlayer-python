@@ -7,12 +7,13 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Configuration_Template_Section_Definition'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Template_Section_Definition':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,9 +21,9 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition import Definition
-        return SL_Definition(data)
+        return Definition(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -30,6 +31,7 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Configuration_Template_Section_Definition_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -39,14 +41,15 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
             offset=offset
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDefaultValue(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Template_Section_Definition_Value':
+
         data = self.client.call(
             self.service,
             'getDefaultValue',
@@ -54,14 +57,15 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition.Value import Value
-        return SL_Value(data)
+        return Value(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Template_Section_Definition_Group':
+
         data = self.client.call(
             self.service,
             'getGroup',
@@ -69,14 +73,15 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMonitoringDataFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getMonitoringDataFlag',
@@ -86,12 +91,13 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSection(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Template_Section':
+
         data = self.client.call(
             self.service,
             'getSection',
@@ -99,14 +105,15 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Template.Section import Section
-        return SL_Section(data)
+        return Section(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getValueType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Configuration_Template_Section_Definition_Type':
+
         data = self.client.call(
             self.service,
             'getValueType',
@@ -114,6 +121,6 @@ class SoftLayer_Configuration_Template_Section_Definition(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Configuration.Template.Section.Definition.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

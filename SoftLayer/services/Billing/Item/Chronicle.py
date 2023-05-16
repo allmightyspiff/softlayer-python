@@ -7,12 +7,13 @@ class SoftLayer_Billing_Item_Chronicle(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Billing_Item_Chronicle'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Chronicle':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,9 +21,9 @@ class SoftLayer_Billing_Item_Chronicle(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Chronicle import Chronicle
-        return SL_Chronicle(data)
+        return Chronicle(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAssociatedChildren(
         self,
         objectMask: Optional[str] = None,
@@ -30,6 +31,7 @@ class SoftLayer_Billing_Item_Chronicle(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Item_Chronicle]':
+
         data = self.client.call(
             self.service,
             'getAssociatedChildren',
@@ -39,14 +41,15 @@ class SoftLayer_Billing_Item_Chronicle(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Item.Chronicle import Chronicle
-        return SL_Chronicle(data)
+        return Chronicle(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProduct(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item':
+
         data = self.client.call(
             self.service,
             'getProduct',
@@ -54,6 +57,6 @@ class SoftLayer_Billing_Item_Chronicle(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_Location_Reservation_Rack(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Location_Reservation_Rack'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location_Reservation_Rack':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_Location_Reservation_Rack(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location.Reservation.Rack import Rack
-        return SL_Rack(data)
+        return Rack(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllotment(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Bandwidth_Version1_Allotment':
+
         data = self.client.call(
             self.service,
             'getAllotment',
@@ -35,9 +37,9 @@ class SoftLayer_Location_Reservation_Rack(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Bandwidth.Version1.Allotment import Allotment
-        return SL_Allotment(data)
+        return Allotment(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -45,6 +47,7 @@ class SoftLayer_Location_Reservation_Rack(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Location_Reservation_Rack_Member]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -54,14 +57,15 @@ class SoftLayer_Location_Reservation_Rack(object):
             offset=offset
         )
         from SoftLayer.datatypes.Location.Reservation.Rack.Member import Member
-        return SL_Member(data)
+        return Member(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -69,14 +73,15 @@ class SoftLayer_Location_Reservation_Rack(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocationReservation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location_Reservation':
+
         data = self.client.call(
             self.service,
             'getLocationReservation',
@@ -84,6 +89,6 @@ class SoftLayer_Location_Reservation_Rack(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location.Reservation import Reservation
-        return SL_Reservation(data)
+        return Reservation(data)
 
 

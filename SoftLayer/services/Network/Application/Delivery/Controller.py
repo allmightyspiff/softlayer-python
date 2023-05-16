@@ -7,11 +7,12 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Application_Delivery_Controller'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createLiveLoadBalancer(
         self,
         loadBalancer: SoftLayer_Network_LoadBalancer_VirtualIpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'createLiveLoadBalancer',
@@ -20,11 +21,12 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteLiveLoadBalancer(
         self,
         loadBalancer: SoftLayer_Network_LoadBalancer_VirtualIpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteLiveLoadBalancer',
@@ -33,11 +35,12 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteLiveLoadBalancerService(
         self,
         service: SoftLayer_Network_LoadBalancer_Service
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteLiveLoadBalancerService',
@@ -46,11 +49,12 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_Application_Delivery_Controller
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -59,13 +63,14 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthDataByDate(
         self,
         startDateTime: dateTime,
         endDateTime: dateTime,
         networkType: str
     ) -> 'list[SoftLayer_Metric_Tracking_Object_Data]':
+
         data = self.client.call(
             self.service,
             'getBandwidthDataByDate',
@@ -74,15 +79,16 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             networkType
         )
         from SoftLayer.datatypes.Metric.Tracking.Object.Data import Data
-        return SL_Data(data)
+        return Data(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBandwidthImageByDate(
         self,
         startDateTime: dateTime,
         endDateTime: dateTime,
         networkType: str
     ) -> 'SoftLayer_Container_Bandwidth_GraphOutputs':
+
         data = self.client.call(
             self.service,
             'getBandwidthImageByDate',
@@ -91,28 +97,30 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             networkType
         )
         from SoftLayer.datatypes.Container.Bandwidth.GraphOutputs import GraphOutputs
-        return SL_GraphOutputs(data)
+        return GraphOutputs(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCustomBandwidthDataByDate(
         self,
         graphData: SoftLayer_Container_Graph
     ) -> 'SoftLayer_Container_Graph':
+
         data = self.client.call(
             self.service,
             'getCustomBandwidthDataByDate',
             graphData
         )
         from SoftLayer.datatypes.Container.Graph import Graph
-        return SL_Graph(data)
+        return Graph(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLiveLoadBalancerServiceGraphImage(
         self,
         service: SoftLayer_Network_LoadBalancer_Service,
         graphType: str,
         metric: str
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getLiveLoadBalancerServiceGraphImage',
@@ -123,12 +131,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -136,13 +145,14 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller import Controller
-        return SL_Controller(data)
+        return Controller(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def restoreBaseConfiguration(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'restoreBaseConfiguration',
@@ -151,11 +161,12 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def restoreConfiguration(
         self,
         configurationHistoryId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'restoreConfiguration',
@@ -164,12 +175,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def saveCurrentConfiguration(
         self,
         notes: str,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller_Configuration_History':
+
         data = self.client.call(
             self.service,
             'saveCurrentConfiguration',
@@ -177,13 +189,14 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.Configuration.History import History
-        return SL_History(data)
+        return History(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateLiveLoadBalancer(
         self,
         loadBalancer: SoftLayer_Network_LoadBalancer_VirtualIpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'updateLiveLoadBalancer',
@@ -192,25 +205,27 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateNetScalerLicense(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'updateNetScalerLicense',
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -218,14 +233,15 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAverageDailyPublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getAverageDailyPublicBandwidthUsage',
@@ -235,12 +251,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Network_Application_Delivery_Controller':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -248,9 +265,9 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Network.Application.Delivery.Controller import Controller
-        return SL_Controller(data)
+        return Controller(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getConfigurationHistory(
         self,
         objectMask: Optional[str] = None,
@@ -258,6 +275,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_Configuration_History]':
+
         data = self.client.call(
             self.service,
             'getConfigurationHistory',
@@ -267,14 +285,15 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.Configuration.History import History
-        return SL_History(data)
+        return History(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -282,14 +301,15 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDescription(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDescription',
@@ -299,12 +319,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInboundPublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getInboundPublicBandwidthUsage',
@@ -314,12 +335,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLicenseExpirationDate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'dateTime':
+
         data = self.client.call(
             self.service,
             'getLicenseExpirationDate',
@@ -329,7 +351,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLoadBalancers(
         self,
         objectMask: Optional[str] = None,
@@ -337,6 +359,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LoadBalancer_VirtualIpAddress]':
+
         data = self.client.call(
             self.service,
             'getLoadBalancers',
@@ -346,14 +369,15 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LoadBalancer.VirtualIpAddress import VirtualIpAddress
-        return SL_VirtualIpAddress(data)
+        return VirtualIpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManagedResourceFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getManagedResourceFlag',
@@ -363,12 +387,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManagementIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getManagementIpAddress',
@@ -378,12 +403,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlan(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Vlan':
+
         data = self.client.call(
             self.service,
             'getNetworkVlan',
@@ -391,9 +417,9 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkVlans(
         self,
         objectMask: Optional[str] = None,
@@ -401,6 +427,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Vlan]':
+
         data = self.client.call(
             self.service,
             'getNetworkVlans',
@@ -410,14 +437,15 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Vlan import Vlan
-        return SL_Vlan(data)
+        return Vlan(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getOutboundPublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'decimal':
+
         data = self.client.call(
             self.service,
             'getOutboundPublicBandwidthUsage',
@@ -427,12 +455,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPassword(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Software_Component_Password':
+
         data = self.client.call(
             self.service,
             'getPassword',
@@ -440,14 +469,15 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Software.Component.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPrimaryIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getPrimaryIpAddress',
@@ -457,12 +487,13 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProjectedPublicBandwidthUsage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getProjectedPublicBandwidthUsage',
@@ -472,7 +503,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSubnets(
         self,
         objectMask: Optional[str] = None,
@@ -480,6 +511,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet]':
+
         data = self.client.call(
             self.service,
             'getSubnets',
@@ -489,9 +521,9 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet import Subnet
-        return SL_Subnet(data)
+        return Subnet(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -499,6 +531,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -508,14 +541,15 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -523,9 +557,9 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualIpAddresses(
         self,
         objectMask: Optional[str] = None,
@@ -533,6 +567,7 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress]':
+
         data = self.client.call(
             self.service,
             'getVirtualIpAddresses',
@@ -542,6 +577,6 @@ class SoftLayer_Network_Application_Delivery_Controller(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.VirtualIpAddress import VirtualIpAddress
-        return SL_VirtualIpAddress(data)
+        return VirtualIpAddress(data)
 
 

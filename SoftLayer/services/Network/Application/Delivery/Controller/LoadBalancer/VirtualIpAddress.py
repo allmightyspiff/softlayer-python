@@ -7,11 +7,12 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -20,38 +21,41 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableSecureTransportCiphers(
         self,
         
     ) -> 'list[SoftLayer_Security_SecureTransportCipher]':
+
         data = self.client.call(
             self.service,
             'getAvailableSecureTransportCiphers',
             
         )
         from SoftLayer.datatypes.Security.SecureTransportCipher import SecureTransportCipher
-        return SL_SecureTransportCipher(data)
+        return SecureTransportCipher(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAvailableSecureTransportProtocols(
         self,
         
     ) -> 'list[SoftLayer_Security_SecureTransportProtocol]':
+
         data = self.client.call(
             self.service,
             'getAvailableSecureTransportProtocols',
             
         )
         from SoftLayer.datatypes.Security.SecureTransportProtocol import SecureTransportProtocol
-        return SL_SecureTransportProtocol(data)
+        return SecureTransportProtocol(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -59,13 +63,14 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.VirtualIpAddress import VirtualIpAddress
-        return SL_VirtualIpAddress(data)
+        return VirtualIpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def startSsl(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'startSsl',
@@ -74,11 +79,12 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def stopSsl(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'stopSsl',
@@ -87,11 +93,12 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def upgradeConnectionLimit(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'upgradeConnectionLimit',
@@ -100,12 +107,13 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -113,14 +121,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getApplicationDeliveryController(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller':
+
         data = self.client.call(
             self.service,
             'getApplicationDeliveryController',
@@ -128,9 +137,9 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller import Controller
-        return SL_Controller(data)
+        return Controller(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getApplicationDeliveryControllers(
         self,
         objectMask: Optional[str] = None,
@@ -138,6 +147,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller]':
+
         data = self.client.call(
             self.service,
             'getApplicationDeliveryControllers',
@@ -147,14 +157,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller import Controller
-        return SL_Controller(data)
+        return Controller(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -162,14 +173,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDedicatedBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item_Network_LoadBalancer':
+
         data = self.client.call(
             self.service,
             'getDedicatedBillingItem',
@@ -177,14 +189,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item.Network.LoadBalancer import LoadBalancer
-        return SL_LoadBalancer(data)
+        return LoadBalancer(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHighAvailabilityFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getHighAvailabilityFlag',
@@ -194,12 +207,13 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress':
+
         data = self.client.call(
             self.service,
             'getIpAddress',
@@ -207,9 +221,9 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLoadBalancerHardware(
         self,
         objectMask: Optional[str] = None,
@@ -217,6 +231,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware]':
+
         data = self.client.call(
             self.service,
             'getLoadBalancerHardware',
@@ -226,14 +241,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             offset=offset
         )
         from SoftLayer.datatypes.Hardware import Hardware
-        return SL_Hardware(data)
+        return Hardware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManagedResourceFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getManagedResourceFlag',
@@ -243,7 +259,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecureTransportCiphers(
         self,
         objectMask: Optional[str] = None,
@@ -251,6 +267,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportCipher]':
+
         data = self.client.call(
             self.service,
             'getSecureTransportCiphers',
@@ -260,9 +277,9 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.VirtualIpAddress.SecureTransportCipher import SecureTransportCipher
-        return SL_SecureTransportCipher(data)
+        return SecureTransportCipher(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecureTransportProtocols(
         self,
         objectMask: Optional[str] = None,
@@ -270,6 +287,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress_SecureTransportProtocol]':
+
         data = self.client.call(
             self.service,
             'getSecureTransportProtocols',
@@ -279,14 +297,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.VirtualIpAddress.SecureTransportProtocol import SecureTransportProtocol
-        return SL_SecureTransportProtocol(data)
+        return SecureTransportProtocol(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecurityCertificate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Security_Certificate':
+
         data = self.client.call(
             self.service,
             'getSecurityCertificate',
@@ -294,14 +313,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Security.Certificate import Certificate
-        return SL_Certificate(data)
+        return Certificate(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecurityCertificateEntry(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Security_Certificate_Entry':
+
         data = self.client.call(
             self.service,
             'getSecurityCertificateEntry',
@@ -309,9 +329,9 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             filter=objectFilter
         )
         from SoftLayer.datatypes.Security.Certificate.Entry import Entry
-        return SL_Entry(data)
+        return Entry(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVirtualServers(
         self,
         objectMask: Optional[str] = None,
@@ -319,6 +339,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer]':
+
         data = self.client.call(
             self.service,
             'getVirtualServers',
@@ -328,6 +349,6 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAd
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.VirtualServer import VirtualServer
-        return SL_VirtualServer(data)
+        return VirtualServer(data)
 
 

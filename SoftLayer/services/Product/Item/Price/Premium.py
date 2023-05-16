@@ -7,12 +7,13 @@ class SoftLayer_Product_Item_Price_Premium(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Product_Item_Price_Premium'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Price_Premium':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_Product_Item_Price_Premium(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Price.Premium import Premium
-        return SL_Premium(data)
+        return Premium(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getItemPrice(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Item_Price':
+
         data = self.client.call(
             self.service,
             'getItemPrice',
@@ -35,14 +37,15 @@ class SoftLayer_Product_Item_Price_Premium(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Item.Price import Price
-        return SL_Price(data)
+        return Price(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -50,14 +53,15 @@ class SoftLayer_Product_Item_Price_Premium(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPackage(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Product_Package':
+
         data = self.client.call(
             self.service,
             'getPackage',
@@ -65,6 +69,6 @@ class SoftLayer_Product_Item_Price_Premium(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Product.Package import Package
-        return SL_Package(data)
+        return Package(data)
 
 

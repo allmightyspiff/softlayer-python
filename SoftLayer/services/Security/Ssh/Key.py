@@ -7,12 +7,13 @@ class SoftLayer_Security_Ssh_Key(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Security_Ssh_Key'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Security_Ssh_Key,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Security_Ssh_Key':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Security_Ssh_Key(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Security.Ssh.Key import Key
-        return SL_Key(data)
+        return Key(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_Security_Ssh_Key(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Security_Ssh_Key
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,12 +51,13 @@ class SoftLayer_Security_Ssh_Key(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Security_Ssh_Key':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -61,14 +65,15 @@ class SoftLayer_Security_Ssh_Key(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Security.Ssh.Key import Key
-        return SL_Key(data)
+        return Key(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -76,9 +81,9 @@ class SoftLayer_Security_Ssh_Key(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBlockDeviceTemplateGroups(
         self,
         objectMask: Optional[str] = None,
@@ -86,6 +91,7 @@ class SoftLayer_Security_Ssh_Key(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'getBlockDeviceTemplateGroups',
@@ -95,9 +101,9 @@ class SoftLayer_Security_Ssh_Key(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSoftwarePasswords(
         self,
         objectMask: Optional[str] = None,
@@ -105,6 +111,7 @@ class SoftLayer_Security_Ssh_Key(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Software_Component_Password]':
+
         data = self.client.call(
             self.service,
             'getSoftwarePasswords',
@@ -114,6 +121,6 @@ class SoftLayer_Security_Ssh_Key(object):
             offset=offset
         )
         from SoftLayer.datatypes.Software.Component.Password import Password
-        return SL_Password(data)
+        return Password(data)
 
 

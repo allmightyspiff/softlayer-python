@@ -7,12 +7,13 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Account_Regional_Registry_Detail'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Account_Regional_Registry_Detail,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Account_Regional_Registry_Detail':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Account.Regional.Registry.Detail import Detail
-        return SL_Detail(data)
+        return Detail(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Account_Regional_Registry_Detail
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,12 +51,13 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Regional_Registry_Detail':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -61,40 +65,43 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Regional.Registry.Detail import Detail
-        return SL_Detail(data)
+        return Detail(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def updateReferencedRegistrations(
         self,
         
     ) -> 'SoftLayer_Container_Network_Subnet_Registration_TransactionDetails':
+
         data = self.client.call(
             self.service,
             'updateReferencedRegistrations',
             
         )
         from SoftLayer.datatypes.Container.Network.Subnet.Registration.TransactionDetails import TransactionDetails
-        return SL_TransactionDetails(data)
+        return TransactionDetails(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def validatePersonForAllRegistrars(
         self,
         
     ) -> 'list[SoftLayer_Container_Message]':
+
         data = self.client.call(
             self.service,
             'validatePersonForAllRegistrars',
             
         )
         from SoftLayer.datatypes.Container.Message import Message
-        return SL_Message(data)
+        return Message(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -102,14 +109,15 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDetailType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Regional_Registry_Detail_Type':
+
         data = self.client.call(
             self.service,
             'getDetailType',
@@ -117,9 +125,9 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Regional.Registry.Detail.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDetails(
         self,
         objectMask: Optional[str] = None,
@@ -127,6 +135,7 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Subnet_Registration_Details]':
+
         data = self.client.call(
             self.service,
             'getDetails',
@@ -136,9 +145,9 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Subnet.Registration.Details import Details
-        return SL_Details(data)
+        return Details(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProperties(
         self,
         objectMask: Optional[str] = None,
@@ -146,6 +155,7 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Regional_Registry_Detail_Property]':
+
         data = self.client.call(
             self.service,
             'getProperties',
@@ -155,14 +165,15 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Regional.Registry.Detail.Property import Property
-        return SL_Property(data)
+        return Property(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegionalInternetRegistryHandle(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account_Rwhois_Handle':
+
         data = self.client.call(
             self.service,
             'getRegionalInternetRegistryHandle',
@@ -170,6 +181,6 @@ class SoftLayer_Account_Regional_Registry_Detail(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account.Rwhois.Handle import Handle
-        return SL_Handle(data)
+        return Handle(data)
 
 

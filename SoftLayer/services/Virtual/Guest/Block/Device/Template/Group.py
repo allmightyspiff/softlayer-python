@@ -7,11 +7,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Virtual_Guest_Block_Device_Template_Group'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def addByolAttribute(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addByolAttribute',
@@ -20,11 +21,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addCloudInitAttribute(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addCloudInitAttribute',
@@ -33,11 +35,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addLocations(
         self,
         locations: SoftLayer_Location
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addLocations',
@@ -46,11 +49,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def addSupportedBootMode(
         self,
         bootMode: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addSupportedBootMode',
@@ -59,11 +63,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def copyToExternalSource(
         self,
         configuration: SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'copyToExternalSource',
@@ -72,11 +77,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def copyToIcos(
         self,
         configuration: SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'copyToIcos',
@@ -85,12 +91,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createFromExternalSource(
         self,
         configuration: SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template_Group':
+
         data = self.client.call(
             self.service,
             'createFromExternalSource',
@@ -98,14 +105,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createFromIcos(
         self,
         configuration: SoftLayer_Container_Virtual_Guest_Block_Device_Template_Configuration,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template_Group':
+
         data = self.client.call(
             self.service,
             'createFromIcos',
@@ -113,9 +121,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def createPublicArchiveTransaction(
         self,
         groupName: str,
@@ -123,6 +131,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         note: str,
         locations: SoftLayer_Location
     ) -> 'int':
+
         data = self.client.call(
             self.service,
             'createPublicArchiveTransaction',
@@ -134,11 +143,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteByolAttribute(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteByolAttribute',
@@ -147,11 +157,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteCloudInitAttribute(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteCloudInitAttribute',
@@ -160,24 +171,26 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'deleteObject',
             mask=objectMask
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def denySharingAccess(
         self,
         accountId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'denySharingAccess',
@@ -186,11 +199,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Virtual_Guest_Block_Device_Template_Group
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -199,13 +213,14 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def findGcImagesByCurrentUser(
         self,
         dataCenters: str,
         regions: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'findGcImagesByCurrentUser',
@@ -214,13 +229,14 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllAvailableCompatiblePlatformNames(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getAllAvailableCompatiblePlatformNames',
@@ -229,11 +245,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBootMode(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getBootMode',
@@ -242,11 +259,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrentCompatiblePlatformNames(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getCurrentCompatiblePlatformNames',
@@ -255,11 +273,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDefaultBootMode(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDefaultBootMode',
@@ -268,11 +287,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEncryptionAttributes(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getEncryptionAttributes',
@@ -281,12 +301,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template_Group':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -294,9 +315,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicCustomerOwnedImages(
         self,
         objectMask: Optional[str] = None,
@@ -304,6 +325,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'getPublicCustomerOwnedImages',
@@ -313,9 +335,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPublicImages(
         self,
         objectMask: Optional[str] = None,
@@ -323,6 +345,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'getPublicImages',
@@ -332,39 +355,42 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRiasAccount(
         self,
         secret: str
     ) -> 'SoftLayer_Container_Virtual_Guest_Block_Device_Template_Group_RiasAccount':
+
         data = self.client.call(
             self.service,
             'getRiasAccount',
             secret
         )
         from SoftLayer.datatypes.Container.Virtual.Guest.Block.Device.Template.Group.RiasAccount import RiasAccount
-        return SL_RiasAccount(data)
+        return RiasAccount(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageLocations(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Location]':
+
         data = self.client.call(
             self.service,
             'getStorageLocations',
             mask=objectMask
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSupportedBootModes(
         self,
         
     ) -> 'list[string]':
+
         data = self.client.call(
             self.service,
             'getSupportedBootModes',
@@ -373,11 +399,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTemplateDataCenterName(
         self,
         
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getTemplateDataCenterName',
@@ -386,24 +413,26 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVhdImportSoftwareDescriptions(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Software_Description]':
+
         data = self.client.call(
             self.service,
             'getVhdImportSoftwareDescriptions',
             mask=objectMask
         )
         from SoftLayer.datatypes.Software.Description import Description
-        return SL_Description(data)
+        return Description(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isByol(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isByol',
@@ -412,11 +441,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isByolCapableOperatingSystem(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isByolCapableOperatingSystem',
@@ -425,11 +455,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isByolOnlyOperatingSystem(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isByolOnlyOperatingSystem',
@@ -438,11 +469,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isCloudInit(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isCloudInit',
@@ -451,11 +483,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isCloudInitOnlyOperatingSystem(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isCloudInitOnlyOperatingSystem',
@@ -464,11 +497,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def isEncrypted(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'isEncrypted',
@@ -477,11 +511,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def permitSharingAccess(
         self,
         accountId: int
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'permitSharingAccess',
@@ -490,11 +525,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeCompatiblePlatforms(
         self,
         platformNames: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeCompatiblePlatforms',
@@ -503,11 +539,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeLocations(
         self,
         locations: SoftLayer_Location
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeLocations',
@@ -516,11 +553,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeSupportedBootMode(
         self,
         bootMode: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeSupportedBootMode',
@@ -529,11 +567,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setAvailableLocations(
         self,
         locations: SoftLayer_Location
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setAvailableLocations',
@@ -542,11 +581,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setBootMode(
         self,
         newBootMode: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setBootMode',
@@ -555,11 +595,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setCompatiblePlatforms(
         self,
         platformNames: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setCompatiblePlatforms',
@@ -568,11 +609,12 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def setTags(
         self,
         tags: str
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'setTags',
@@ -581,12 +623,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -594,9 +637,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountContacts(
         self,
         objectMask: Optional[str] = None,
@@ -604,6 +647,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Account_Contact]':
+
         data = self.client.call(
             self.service,
             'getAccountContacts',
@@ -613,9 +657,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Account.Contact import Contact
-        return SL_Contact(data)
+        return Contact(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccountReferences(
         self,
         objectMask: Optional[str] = None,
@@ -623,6 +667,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group_Accounts]':
+
         data = self.client.call(
             self.service,
             'getAccountReferences',
@@ -632,9 +677,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group.Accounts import Accounts
-        return SL_Accounts(data)
+        return Accounts(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBlockDevices(
         self,
         objectMask: Optional[str] = None,
@@ -642,6 +687,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template]':
+
         data = self.client.call(
             self.service,
             'getBlockDevices',
@@ -651,14 +697,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template import Template
-        return SL_Template(data)
+        return Template(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBlockDevicesDiskSpaceTotal(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'float':
+
         data = self.client.call(
             self.service,
             'getBlockDevicesDiskSpaceTotal',
@@ -668,12 +715,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getByolFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getByolFlag',
@@ -683,7 +731,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getChildren(
         self,
         objectMask: Optional[str] = None,
@@ -691,6 +739,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Virtual_Guest_Block_Device_Template_Group]':
+
         data = self.client.call(
             self.service,
             'getChildren',
@@ -700,14 +749,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenter(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getDatacenter',
@@ -715,9 +765,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDatacenters(
         self,
         objectMask: Optional[str] = None,
@@ -725,6 +775,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Location]':
+
         data = self.client.call(
             self.service,
             'getDatacenters',
@@ -734,14 +785,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirstChild(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template_Group':
+
         data = self.client.call(
             self.service,
             'getFirstChild',
@@ -749,14 +801,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFlexImageFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getFlexImageFlag',
@@ -766,12 +819,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGlobalIdentifier(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getGlobalIdentifier',
@@ -781,12 +835,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getImageType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Disk_Image_Type':
+
         data = self.client.call(
             self.service,
             'getImageType',
@@ -794,14 +849,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Disk.Image.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getImageTypeKeyName(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getImageTypeKeyName',
@@ -811,12 +867,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextGenFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getNextGenFlag',
@@ -826,12 +883,13 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getParent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template_Group':
+
         data = self.client.call(
             self.service,
             'getParent',
@@ -839,14 +897,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegion(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Service_Resource':
+
         data = self.client.call(
             self.service,
             'getRegion',
@@ -854,9 +913,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Service.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRegions(
         self,
         objectMask: Optional[str] = None,
@@ -864,6 +923,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Service_Resource]':
+
         data = self.client.call(
             self.service,
             'getRegions',
@@ -873,9 +933,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Service.Resource import Resource
-        return SL_Resource(data)
+        return Resource(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSshKeys(
         self,
         objectMask: Optional[str] = None,
@@ -883,6 +943,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Security_Ssh_Key]':
+
         data = self.client.call(
             self.service,
             'getSshKeys',
@@ -892,14 +953,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Security.Ssh.Key import Key
-        return SL_Key(data)
+        return Key(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStatus(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Guest_Block_Device_Template_Group_Status':
+
         data = self.client.call(
             self.service,
             'getStatus',
@@ -907,14 +969,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Guest.Block.Device.Template.Group.Status import Status
-        return SL_Status(data)
+        return Status(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getStorageRepository(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Virtual_Storage_Repository':
+
         data = self.client.call(
             self.service,
             'getStorageRepository',
@@ -922,9 +985,9 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Virtual.Storage.Repository import Repository
-        return SL_Repository(data)
+        return Repository(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTagReferences(
         self,
         objectMask: Optional[str] = None,
@@ -932,6 +995,7 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Tag_Reference]':
+
         data = self.client.call(
             self.service,
             'getTagReferences',
@@ -941,14 +1005,15 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             offset=offset
         )
         from SoftLayer.datatypes.Tag.Reference import Reference
-        return SL_Reference(data)
+        return Reference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getTransaction(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Provisioning_Version1_Transaction':
+
         data = self.client.call(
             self.service,
             'getTransaction',
@@ -956,6 +1021,6 @@ class SoftLayer_Virtual_Guest_Block_Device_Template_Group(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Provisioning.Version1.Transaction import Transaction
-        return SL_Transaction(data)
+        return Transaction(data)
 
 

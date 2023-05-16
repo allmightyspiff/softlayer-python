@@ -7,7 +7,7 @@ class SoftLayer_Network_Backbone(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Backbone'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllBackbones(
         self,
         objectMask: Optional[str] = None,
@@ -15,6 +15,7 @@ class SoftLayer_Network_Backbone(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Backbone]':
+
         data = self.client.call(
             self.service,
             'getAllBackbones',
@@ -24,14 +25,15 @@ class SoftLayer_Network_Backbone(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Backbone import Backbone
-        return SL_Backbone(data)
+        return Backbone(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBackbonesForLocationName(
         self,
         locationName: str,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_Network_Backbone]':
+
         data = self.client.call(
             self.service,
             'getBackbonesForLocationName',
@@ -39,13 +41,14 @@ class SoftLayer_Network_Backbone(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Backbone import Backbone
-        return SL_Backbone(data)
+        return Backbone(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGraphImage(
         self,
         
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getGraphImage',
@@ -54,12 +57,13 @@ class SoftLayer_Network_Backbone(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Backbone':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -67,14 +71,15 @@ class SoftLayer_Network_Backbone(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Backbone import Backbone
-        return SL_Backbone(data)
+        return Backbone(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHealth(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getHealth',
@@ -84,12 +89,13 @@ class SoftLayer_Network_Backbone(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLocation(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Location':
+
         data = self.client.call(
             self.service,
             'getLocation',
@@ -97,14 +103,15 @@ class SoftLayer_Network_Backbone(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Location import Location
-        return SL_Location(data)
+        return Location(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNetworkComponent(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Component':
+
         data = self.client.call(
             self.service,
             'getNetworkComponent',
@@ -112,6 +119,6 @@ class SoftLayer_Network_Backbone(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
 

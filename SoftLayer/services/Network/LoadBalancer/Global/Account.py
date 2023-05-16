@@ -7,11 +7,12 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_LoadBalancer_Global_Account'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def addNsRecord(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'addNsRecord',
@@ -20,11 +21,12 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_LoadBalancer_Global_Account
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -33,12 +35,13 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_LoadBalancer_Global_Account':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -46,13 +49,14 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.LoadBalancer.Global.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def removeNsRecord(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'removeNsRecord',
@@ -61,12 +65,13 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -74,14 +79,15 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getBillingItem(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Item':
+
         data = self.client.call(
             self.service,
             'getBillingItem',
@@ -89,9 +95,9 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Item import Item
-        return SL_Item(data)
+        return Item(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHosts(
         self,
         objectMask: Optional[str] = None,
@@ -99,6 +105,7 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_LoadBalancer_Global_Host]':
+
         data = self.client.call(
             self.service,
             'getHosts',
@@ -108,14 +115,15 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.LoadBalancer.Global.Host import Host
-        return SL_Host(data)
+        return Host(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLoadBalanceType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_LoadBalancer_Global_Type':
+
         data = self.client.call(
             self.service,
             'getLoadBalanceType',
@@ -123,14 +131,15 @@ class SoftLayer_Network_LoadBalancer_Global_Account(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.LoadBalancer.Global.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getManagedResourceFlag(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getManagedResourceFlag',

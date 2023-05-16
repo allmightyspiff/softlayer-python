@@ -7,12 +7,13 @@ class SoftLayer_Billing_Info(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Billing_Info'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Info':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_Billing_Info(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Info import Info
-        return SL_Info(data)
+        return Info(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAccount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Account':
+
         data = self.client.call(
             self.service,
             'getAccount',
@@ -35,9 +37,9 @@ class SoftLayer_Billing_Info(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Account import Account
-        return SL_Account(data)
+        return Account(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAchInformation(
         self,
         objectMask: Optional[str] = None,
@@ -45,6 +47,7 @@ class SoftLayer_Billing_Info(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Billing_Info_Ach]':
+
         data = self.client.call(
             self.service,
             'getAchInformation',
@@ -54,14 +57,15 @@ class SoftLayer_Billing_Info(object):
             offset=offset
         )
         from SoftLayer.datatypes.Billing.Info.Ach import Ach
-        return SL_Ach(data)
+        return Ach(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrency(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Currency':
+
         data = self.client.call(
             self.service,
             'getCurrency',
@@ -69,14 +73,15 @@ class SoftLayer_Billing_Info(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Currency import Currency
-        return SL_Currency(data)
+        return Currency(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCurrentBillingCycle(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Billing_Info_Cycle':
+
         data = self.client.call(
             self.service,
             'getCurrentBillingCycle',
@@ -84,14 +89,15 @@ class SoftLayer_Billing_Info(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Billing.Info.Cycle import Cycle
-        return SL_Cycle(data)
+        return Cycle(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getLastBillDate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'dateTime':
+
         data = self.client.call(
             self.service,
             'getLastBillDate',
@@ -101,12 +107,13 @@ class SoftLayer_Billing_Info(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getNextBillDate(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'dateTime':
+
         data = self.client.call(
             self.service,
             'getNextBillDate',

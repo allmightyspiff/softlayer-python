@@ -7,12 +7,13 @@ class SoftLayer_Hardware_Component_Model(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Hardware_Component_Model'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Component_Model':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -20,14 +21,15 @@ class SoftLayer_Hardware_Component_Model(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Component.Model import Model
-        return SL_Model(data)
+        return Model(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getArchitectureType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Component_Model_Architecture_Type':
+
         data = self.client.call(
             self.service,
             'getArchitectureType',
@@ -35,9 +37,9 @@ class SoftLayer_Hardware_Component_Model(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Component.Model.Architecture.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getAttributes(
         self,
         objectMask: Optional[str] = None,
@@ -45,6 +47,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Model_Attribute]':
+
         data = self.client.call(
             self.service,
             'getAttributes',
@@ -54,9 +57,9 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Model.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCompatibleArrayTypes(
         self,
         objectMask: Optional[str] = None,
@@ -64,6 +67,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Configuration_Storage_Group_Array_Type]':
+
         data = self.client.call(
             self.service,
             'getCompatibleArrayTypes',
@@ -73,9 +77,9 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Configuration.Storage.Group.Array.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCompatibleChildComponentModels(
         self,
         objectMask: Optional[str] = None,
@@ -83,6 +87,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Model]':
+
         data = self.client.call(
             self.service,
             'getCompatibleChildComponentModels',
@@ -92,9 +97,9 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Model import Model
-        return SL_Model(data)
+        return Model(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getCompatibleParentComponentModels(
         self,
         objectMask: Optional[str] = None,
@@ -102,6 +107,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Model]':
+
         data = self.client.call(
             self.service,
             'getCompatibleParentComponentModels',
@@ -111,14 +117,15 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Model import Model
-        return SL_Model(data)
+        return Model(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirmwareQuantity(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'unsignedInt':
+
         data = self.client.call(
             self.service,
             'getFirmwareQuantity',
@@ -128,7 +135,7 @@ class SoftLayer_Hardware_Component_Model(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getFirmwares(
         self,
         objectMask: Optional[str] = None,
@@ -136,6 +143,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Firmware]':
+
         data = self.client.call(
             self.service,
             'getFirmwares',
@@ -145,9 +153,9 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Firmware import Firmware
-        return SL_Firmware(data)
+        return Firmware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareComponents(
         self,
         objectMask: Optional[str] = None,
@@ -155,6 +163,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component]':
+
         data = self.client.call(
             self.service,
             'getHardwareComponents',
@@ -164,14 +173,15 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component import Component
-        return SL_Component(data)
+        return Component(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHardwareGenericComponentModel(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Component_Model_Generic':
+
         data = self.client.call(
             self.service,
             'getHardwareGenericComponentModel',
@@ -179,14 +189,15 @@ class SoftLayer_Hardware_Component_Model(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Component.Model.Generic import Generic
-        return SL_Generic(data)
+        return Generic(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getInfinibandCompatibleAttribute(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Component_Model_Attribute':
+
         data = self.client.call(
             self.service,
             'getInfinibandCompatibleAttribute',
@@ -194,14 +205,15 @@ class SoftLayer_Hardware_Component_Model(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Component.Model.Attribute import Attribute
-        return SL_Attribute(data)
+        return Attribute(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsFlexSkuCompatible(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsFlexSkuCompatible',
@@ -211,12 +223,13 @@ class SoftLayer_Hardware_Component_Model(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIsInfinibandCompatible(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'getIsInfinibandCompatible',
@@ -226,7 +239,7 @@ class SoftLayer_Hardware_Component_Model(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getQualifiedFirmwares(
         self,
         objectMask: Optional[str] = None,
@@ -234,6 +247,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Firmware]':
+
         data = self.client.call(
             self.service,
             'getQualifiedFirmwares',
@@ -243,14 +257,15 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Firmware import Firmware
-        return SL_Firmware(data)
+        return Firmware(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRebootTime(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Hardware_Component_Motherboard_Reboot_Time':
+
         data = self.client.call(
             self.service,
             'getRebootTime',
@@ -258,14 +273,15 @@ class SoftLayer_Hardware_Component_Model(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Hardware.Component.Motherboard.Reboot.Time import Time
-        return SL_Time(data)
+        return Time(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -275,7 +291,7 @@ class SoftLayer_Hardware_Component_Model(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getValidAttributeTypes(
         self,
         objectMask: Optional[str] = None,
@@ -283,6 +299,7 @@ class SoftLayer_Hardware_Component_Model(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Hardware_Component_Model_Attribute_Type]':
+
         data = self.client.call(
             self.service,
             'getValidAttributeTypes',
@@ -292,6 +309,6 @@ class SoftLayer_Hardware_Component_Model(object):
             offset=offset
         )
         from SoftLayer.datatypes.Hardware.Component.Model.Attribute.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
 

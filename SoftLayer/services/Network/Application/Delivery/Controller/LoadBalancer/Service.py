@@ -7,11 +7,12 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -20,12 +21,13 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGraphImage(
         self,
         graphType: str,
         metric: str
     ) -> 'base64Binary':
+
         data = self.client.call(
             self.service,
             'getGraphImage',
@@ -35,12 +37,13 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -48,13 +51,14 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Service import Service
-        return SL_Service(data)
+        return Service(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def toggleStatus(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'toggleStatus',
@@ -63,7 +67,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGroupReferences(
         self,
         objectMask: Optional[str] = None,
@@ -71,6 +75,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group_CrossReference]':
+
         data = self.client.call(
             self.service,
             'getGroupReferences',
@@ -80,9 +85,9 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Service.Group.CrossReference import CrossReference
-        return SL_CrossReference(data)
+        return CrossReference(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getGroups(
         self,
         objectMask: Optional[str] = None,
@@ -90,6 +95,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group]':
+
         data = self.client.call(
             self.service,
             'getGroups',
@@ -99,14 +105,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Service.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHealthCheck(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check':
+
         data = self.client.call(
             self.service,
             'getHealthCheck',
@@ -114,9 +121,9 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Health.Check import Check
-        return SL_Check(data)
+        return Check(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHealthChecks(
         self,
         objectMask: Optional[str] = None,
@@ -124,6 +131,7 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check]':
+
         data = self.client.call(
             self.service,
             'getHealthChecks',
@@ -133,14 +141,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
             offset=offset
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Health.Check import Check
-        return SL_Check(data)
+        return Check(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getIpAddress(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Subnet_IpAddress':
+
         data = self.client.call(
             self.service,
             'getIpAddress',
@@ -148,14 +157,15 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Subnet.IpAddress import IpAddress
-        return SL_IpAddress(data)
+        return IpAddress(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getServiceGroup(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group':
+
         data = self.client.call(
             self.service,
             'getServiceGroup',
@@ -163,6 +173,6 @@ class SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service(obj
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Application.Delivery.Controller.LoadBalancer.Service.Group import Group
-        return SL_Group(data)
+        return Group(data)
 
 

@@ -7,12 +7,13 @@ class SoftLayer_Network_Storage_Schedule(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_Network_Storage_Schedule'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def createObject(
         self,
         templateObject: SoftLayer_Network_Storage_Schedule,
         objectMask: Optional[str] = None
     ) -> 'SoftLayer_Network_Storage_Schedule':
+
         data = self.client.call(
             self.service,
             'createObject',
@@ -20,13 +21,14 @@ class SoftLayer_Network_Storage_Schedule(object):
             mask=objectMask
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def deleteObject(
         self,
         
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'deleteObject',
@@ -35,11 +37,12 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def editObject(
         self,
         templateObject: SoftLayer_Network_Storage_Schedule
     ) -> 'boolean':
+
         data = self.client.call(
             self.service,
             'editObject',
@@ -48,12 +51,13 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Schedule':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -61,14 +65,15 @@ class SoftLayer_Network_Storage_Schedule(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Schedule import Schedule
-        return SL_Schedule(data)
+        return Schedule(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDay(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDay',
@@ -78,12 +83,13 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDayOfMonth(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDayOfMonth',
@@ -93,12 +99,13 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getDayOfWeek(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getDayOfWeek',
@@ -108,7 +115,7 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getEvents(
         self,
         objectMask: Optional[str] = None,
@@ -116,6 +123,7 @@ class SoftLayer_Network_Storage_Schedule(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Event]':
+
         data = self.client.call(
             self.service,
             'getEvents',
@@ -125,14 +133,15 @@ class SoftLayer_Network_Storage_Schedule(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Event import Event
-        return SL_Event(data)
+        return Event(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getHour(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getHour',
@@ -142,12 +151,13 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMinute(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getMinute',
@@ -157,12 +167,13 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getMonthOfYear(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getMonthOfYear',
@@ -172,12 +183,13 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getPartnership(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Partnership':
+
         data = self.client.call(
             self.service,
             'getPartnership',
@@ -185,9 +197,9 @@ class SoftLayer_Network_Storage_Schedule(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Partnership import Partnership
-        return SL_Partnership(data)
+        return Partnership(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getProperties(
         self,
         objectMask: Optional[str] = None,
@@ -195,6 +207,7 @@ class SoftLayer_Network_Storage_Schedule(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage_Schedule_Property]':
+
         data = self.client.call(
             self.service,
             'getProperties',
@@ -204,9 +217,9 @@ class SoftLayer_Network_Storage_Schedule(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage.Schedule.Property import Property
-        return SL_Property(data)
+        return Property(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getReplicaSnapshots(
         self,
         objectMask: Optional[str] = None,
@@ -214,6 +227,7 @@ class SoftLayer_Network_Storage_Schedule(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getReplicaSnapshots',
@@ -223,14 +237,15 @@ class SoftLayer_Network_Storage_Schedule(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getRetentionCount(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getRetentionCount',
@@ -240,12 +255,13 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSecond(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'string':
+
         data = self.client.call(
             self.service,
             'getSecond',
@@ -255,7 +271,7 @@ class SoftLayer_Network_Storage_Schedule(object):
         
         return data
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getSnapshots(
         self,
         objectMask: Optional[str] = None,
@@ -263,6 +279,7 @@ class SoftLayer_Network_Storage_Schedule(object):
         limit: Optional[int] = None,
         offset: Optional[int] = None
     ) -> 'list[SoftLayer_Network_Storage]':
+
         data = self.client.call(
             self.service,
             'getSnapshots',
@@ -272,14 +289,15 @@ class SoftLayer_Network_Storage_Schedule(object):
             offset=offset
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getType(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage_Schedule_Type':
+
         data = self.client.call(
             self.service,
             'getType',
@@ -287,14 +305,15 @@ class SoftLayer_Network_Storage_Schedule(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage.Schedule.Type import Type
-        return SL_Type(data)
+        return Type(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getVolume(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_Network_Storage':
+
         data = self.client.call(
             self.service,
             'getVolume',
@@ -302,6 +321,6 @@ class SoftLayer_Network_Storage_Schedule(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.Network.Storage import Storage
-        return SL_Storage(data)
+        return Storage(data)
 
 

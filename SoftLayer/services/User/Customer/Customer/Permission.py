@@ -7,25 +7,27 @@ class SoftLayer_User_Customer_CustomerPermission_Permission(object):
     def __init__(self, client: Client) -> None:
         self.service = 'SoftLayer_User_Customer_CustomerPermission_Permission'
         self.client = client
-# This file was automatically generated with tools/generateTypes.py
+
     def getAllObjects(
         self,
         objectMask: Optional[str] = None
     ) -> 'list[SoftLayer_User_Customer_CustomerPermission_Permission]':
+
         data = self.client.call(
             self.service,
             'getAllObjects',
             mask=objectMask
         )
         from SoftLayer.datatypes.User.Customer.CustomerPermission.Permission import Permission
-        return SL_Permission(data)
+        return Permission(data)
 
-# This file was automatically generated with tools/generateTypes.py
+
     def getObject(
         self,
         objectMask: Optional[str] = None,
         objectFilter: Optional[dict] = None
     ) -> 'SoftLayer_User_Customer_CustomerPermission_Permission':
+
         data = self.client.call(
             self.service,
             'getObject',
@@ -33,6 +35,6 @@ class SoftLayer_User_Customer_CustomerPermission_Permission(object):
             filter=objectFilter
         )
         from SoftLayer.datatypes.User.Customer.CustomerPermission.Permission import Permission
-        return SL_Permission(data)
+        return Permission(data)
 
 
