@@ -16,8 +16,9 @@ BASE_DIR = 'softlayer-python'
 SERVICEDEF = """# This file was automatically generated with tools/generateTypes.py
 from SoftLayer import Client
 from typing import Optional
+$extraImports
 
-class $serviceName(object):
+class $serviceName($baseClass):
 
     def __init__(self, client: Client) -> None:
         self.service = '$serviceName'
@@ -42,8 +43,13 @@ METHODDEF = """
 """
 
 DATATYPEDEF = """# This file was automatically generated with tools/generateTypes.py
+class $dataType($baseClass):
+    pass
+"""
+
+SOFTLAYER_ENTITY = """# This file was automatically generated with tools/generateTypes.py
 from collections import UserDict
-class $dataType(UserDict):
+class SoftLayer_Entity(UserDict):
     pass
 """
 
@@ -54,10 +60,8 @@ class SLDNgenerator():
         if not cwd.endswith(BASE_DIR):
             raise Exception(f"Working Directory should be {BASE_DIR}, is currently {cwd}")
         # Make sure required directories exist
-        if not os.path.isdir(f'{cwd}/datatypes'):
-            os.mkdir(f'{cwd}/datatypes')
-        if not os.path.isdir(f'{cwd}/services'):
-            os.mkdir(f'{cwd}/services')
+        if not os.path.isdir(f'{cwd}/sltypes'):
+            os.mkdir(f'{cwd}/sltypes')
         self.metajson = None
 
     def getMetadata(self, url):
@@ -80,14 +84,22 @@ class SLDNgenerator():
             json.dump(self.metajson, f, indent=4)
 
 
+    def finalTouches(self):
+        # SoftLayer_Entity needs a special modification
+        with open(f"SoftLayer/sltypes/Entity/__init__.py", "w", encoding="utf-8") as f:
+            f.write(SOFTLAYER_ENTITY)
+
     def generateMarkdown(self):
         for serviceName, service in self.metajson.items():
             print(f"Working on: {serviceName}")
             # noservice means datatype only.
-            if service.get('noservice', False) == False:
+            if service.get('noservice', False):
+                self.writeDatatypeMarkdown(service)
+            else:
                 self.writeServiceMarkdown(service)
+        self.finalTouches()
 
-            self.writeDatatypeMarkdown(service)
+            
 
     def addInORMMethods(self):
         for serviceName, service in self.metajson.items():
@@ -136,14 +148,14 @@ class SLDNgenerator():
         service_name = serviceJson.get('name')
         # Split out each part like ['SoftLayer', 'Virtual', 'Guest']
         service_parts = service_name.split('_')
-        # Will become ./services/SoftLayer_Virtual_Guest
-        service_dir = f"./SoftLayer/services/{service_name}"
-        # Remove SoftLayer Prefix -> ./services/Virtual_Guest
+        # Will become ./sltypes/SoftLayer_Virtual_Guest
+        service_dir = f"./SoftLayer/sltypes/{service_name}"
+        # Remove SoftLayer Prefix -> ./sltypes/Virtual_Guest
         service_dir = service_dir.replace("SoftLayer_", "")
-        # Replace _ with / -> ./services/Virtual/Guest
+        # Replace _ with / -> ./sltypes/Virtual/Guest
         service_dir = service_dir.replace("_", "/")
         
-        # Remove the very last part -> ./services/Virtual/  
+        # Remove the very last part -> ./sltypes/Virtual/  
         # service_dir = service_dir.replace(service_parts[-1], "")
 
 
@@ -161,7 +173,8 @@ class SLDNgenerator():
             'serviceType': service_parts[1],
             'layoutType' : 'service',
             'mainService': serviceJson.get('name'),
-            'methods': '\n'.join(method_definitions)
+            'methods': '\n'.join(method_definitions),
+            'baseClass': serviceJson.get('base', 'SoftLayer_Entity')
         }
         with open(f"{service_dir}/__init__.py", "w", encoding="utf-8") as f:
             f.write(template.substitute(substitions))
@@ -173,11 +186,11 @@ class SLDNgenerator():
         service_name = serviceJson.get('name')
         # Split out each part like ['SoftLayer', 'Virtual', 'Guest']
         service_parts = service_name.split('_')
-        # Will become ./datatypes/SoftLayer_Virtual_Guest
-        service_dir = f"./SoftLayer/datatypes/{service_name}"
-        # Remove SoftLayer Prefix -> ./datatypes/Virtual_Guest
+        # Will become ./sltypes/SoftLayer_Virtual_Guest
+        service_dir = f"./SoftLayer/sltypes/{service_name}"
+        # Remove SoftLayer Prefix -> ./sltypes/Virtual_Guest
         service_dir = service_dir.replace("SoftLayer_", "")
-        # Replace _ with / -> ./datatypes/Virtual/Guest
+        # Replace _ with / -> ./sltypes/Virtual/Guest
         service_dir = service_dir.replace("_", "/")
         # service_dir = service_dir.lower()
 
@@ -187,6 +200,7 @@ class SLDNgenerator():
 
         substitions = {
             'dataType': service_parts[-1],
+            'baseClass': serviceJson.get('base', 'SoftLayer_Entity')
         }
         with open(f"{service_dir}/__init__.py", "w", encoding="utf-8") as f:
             f.write(template.substitute(substitions))
@@ -242,7 +256,7 @@ class SLDNgenerator():
         import_path = returnType.replace('SoftLayer_', '')
         import_path = import_path.replace('_', '.')
         class_name = returnType.split('_')
-        return f"from SoftLayer.datatypes.{import_path} import {class_name[-1]}"
+        return f"from SoftLayer.sltypes.{import_path} import {class_name[-1]}"
 
     @staticmethod
     def typeCheck(sl_type: str) -> str:
@@ -261,20 +275,18 @@ class SLDNgenerator():
 
 @click.command()
 @click.option('--download', default=False, is_flag=True)
-@click.option('--clean', default=False, is_flag=True, help="Removes the services and datatypes directories so they can be built from scratch")
+@click.option('--clean', default=False, is_flag=True, help="Removes the sltypes so they can be built from scratch")
 def main(download, clean):
     cwd = os.getcwd()
     if not cwd.endswith(BASE_DIR):
         raise Exception(f"Working Directory should be {BASE_DIR}, is currently {cwd}")
 
     if clean:
-        dirs = ['datatypes', 'services']
-        for directory in dirs:
-            print(f"Removing {cwd}/SoftLayer/{directory}")
-            try:
-                shutil.rmtree(f'{cwd}/SoftLayer/{directory}')
-            except FileNotFoundError:
-                print("Directory doesnt exist...")
+        print(f"Removing {cwd}/SoftLayer/sltypes")
+        try:
+            shutil.rmtree(f'{cwd}/SoftLayer/sltypes')
+        except FileNotFoundError:
+            print("Directory doesnt exist...")
 
     generator = SLDNgenerator()
     if download:
@@ -287,12 +299,10 @@ def main(download, clean):
             print("========== ERROR ==========")
     else:
         metajson = generator.getLocalMetadata()
-
-    # fix mediaWiki links. So far its easiest just to regex the whole JSON string
     jsonString = json.dumps(metajson)
     # print(jsonString)
     generator.metajson = json.loads(jsonString)
-    generator.addInChildMethods()
+    # generator.addInChildMethods()
     generator.addInORMMethods()
     generator.saveMetadata()
     print("Generating Markdown....")
