@@ -9,6 +9,7 @@ from SoftLayer.CLI.command import SLCommand as SLCommand
 from SoftLayer.CLI import environment
 from SoftLayer.CLI import formatting
 from SoftLayer.CLI import helpers
+from SoftLayer import utils
 
 # pylint: disable=unnecessary-lambda
 
@@ -30,6 +31,10 @@ COLUMNS = [
         'tags',
         lambda server: formatting.tags(server.get('tagReferences')),
         mask="tagReferences.tag.name"),
+    column_helper.Column(
+        'createDate',
+        lambda guest: utils.clean_time(guest.get('createDate'),
+                                       in_format='%Y-%m-%dT%H:%M:%S', out_format='%Y-%m-%d %H:%M'), mask="createDate"),
 ]
 
 DEFAULT_COLUMNS = [
@@ -54,6 +59,7 @@ DEFAULT_COLUMNS = [
 @click.option('--network', '-n', help='Network port speed in Mbps')
 @click.option('--hourly', is_flag=True, help='Show only hourly instances')
 @click.option('--monthly', is_flag=True, help='Show only monthly instances')
+@click.option('--tag', '-t', help='list of tags')
 @click.option('--transient', help='Filter by transient instances', type=click.BOOL)
 @click.option('--search', is_flag=False, flag_value="", default=None,
               help="Use the more flexible Search API to list instances. See `slcli search --types` for list " +
