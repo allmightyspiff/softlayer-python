@@ -21,7 +21,6 @@ type may be associated to a registration object."""
         """Create a new association between a [[SoftLayer_Network_Subnet_Registration]] object and a
 [[SoftLayer_Account_Regional_Registry_Detail]] object."""
         data = self.client.call('SoftLayer_Network_Subnet_Registration_Details', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Subnet_Registration_Details import Network_Subnet_Registration_Details
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -33,7 +32,6 @@ type may be associated to a registration object."""
     def getObject(self, identifier: int) -> 'Network_Subnet_Registration_Details':
         """Retrieve a SoftLayer_Network_Subnet_Registration_Details record."""
         data = self.client.call('SoftLayer_Network_Subnet_Registration_Details', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet_Registration_Details import Network_Subnet_Registration_Details
         return data
 
     def getDetail(self, identifier: int) -> 'Account_Regional_Registry_Detail':

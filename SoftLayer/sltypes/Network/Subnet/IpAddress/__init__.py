@@ -40,7 +40,6 @@ IPv4 address."""
     def findByIpv4Address(self, ipAddress: str) -> 'Network_Subnet_IpAddress':
         """Search for an IP address record by IPv4 address."""
         data = self.client.call('SoftLayer_Network_Subnet_IpAddress', 'findByIpv4Address', ipAddress)
-        from SoftLayer.sltypes.Network_Subnet_IpAddress import Network_Subnet_IpAddress
         return data
 
     def getAttachedNetworkStorages(self, identifier: int, nasType: str) -> list['Network_Storage']:
@@ -58,13 +57,11 @@ IPv4 address."""
     def getByIpAddress(self, ipAddress: str) -> 'Network_Subnet_IpAddress':
         """Search for an IP address record."""
         data = self.client.call('SoftLayer_Network_Subnet_IpAddress', 'getByIpAddress', ipAddress)
-        from SoftLayer.sltypes.Network_Subnet_IpAddress import Network_Subnet_IpAddress
         return data
 
     def getObject(self, identifier: int) -> 'Network_Subnet_IpAddress':
         """Retrieve a SoftLayer_Network_Subnet_IpAddress record."""
         data = self.client.call('SoftLayer_Network_Subnet_IpAddress', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet_IpAddress import Network_Subnet_IpAddress
         return data
 
     def removeAccessToNetworkStorageList(self, identifier: int, networkStorageTemplateObjects: 'Network_Storage') -> bool:

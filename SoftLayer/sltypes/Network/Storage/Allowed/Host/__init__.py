@@ -23,13 +23,11 @@ class Network_Storage_Allowed_Host(Entity):
 
     def getAllObjects(self) -> list['Network_Storage_Allowed_Host']:
         data = self.client.call('SoftLayer_Network_Storage_Allowed_Host', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Storage_Allowed_Host import Network_Storage_Allowed_Host
         return data
 
     def getObject(self, identifier: int) -> 'Network_Storage_Allowed_Host':
         """Retrieve a SoftLayer_Network_Storage_Allowed_Host record."""
         data = self.client.call('SoftLayer_Network_Storage_Allowed_Host', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Allowed_Host import Network_Storage_Allowed_Host
         return data
 
     def removeSubnetsFromAcl(self, identifier: int, subnetIds: int) -> list[int]:

@@ -23,19 +23,16 @@ the SoftLayer customer base. It is used to provide information regarding outages
     def getAllObjects(self) -> list['Auxiliary_Notification_Emergency']:
         """Retrieve all notification events."""
         data = self.client.call('SoftLayer_Auxiliary_Notification_Emergency', 'getAllObjects')
-        from SoftLayer.sltypes.Auxiliary_Notification_Emergency import Auxiliary_Notification_Emergency
         return data
 
     def getCurrentNotifications(self) -> list['Auxiliary_Notification_Emergency']:
         """Retrieve current notification events."""
         data = self.client.call('SoftLayer_Auxiliary_Notification_Emergency', 'getCurrentNotifications')
-        from SoftLayer.sltypes.Auxiliary_Notification_Emergency import Auxiliary_Notification_Emergency
         return data
 
     def getObject(self, identifier: int) -> 'Auxiliary_Notification_Emergency':
         """Retrieve a SoftLayer_Auxiliary_Notification_Emergency record."""
         data = self.client.call('SoftLayer_Auxiliary_Notification_Emergency', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Auxiliary_Notification_Emergency import Auxiliary_Notification_Emergency
         return data
 
     def getSignature(self, identifier: int) -> 'Auxiliary_Notification_Emergency_Signature':

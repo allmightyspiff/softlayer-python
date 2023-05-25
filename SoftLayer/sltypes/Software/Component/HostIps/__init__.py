@@ -18,7 +18,6 @@ class Software_Component_HostIps(Software_Component):
     def getObject(self, identifier: int) -> 'Software_Component_HostIps':
         """Retrieve a SoftLayer_Software_Component_HostIps record."""
         data = self.client.call('SoftLayer_Software_Component_HostIps', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_Component_HostIps import Software_Component_HostIps
         return data
 
     def updateHipsPolicies(self, identifier: int, newIpsMode: str, newIpsProtection: str, newFirewallMode: str, newFirewallRuleset: str, newApplicationMode: str, newApplicationRuleset: str, newEnforcementPolicy: str) -> bool:

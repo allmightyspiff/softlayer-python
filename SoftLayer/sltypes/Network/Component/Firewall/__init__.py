@@ -19,7 +19,6 @@ request."""
     def getObject(self, identifier: int) -> 'Network_Component_Firewall':
         """Retrieve a SoftLayer_Network_Component_Firewall record."""
         data = self.client.call('SoftLayer_Network_Component_Firewall', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Component_Firewall import Network_Component_Firewall
         return data
 
     def hasActiveTransactions(self, identifier: int) -> bool:

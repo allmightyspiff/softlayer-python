@@ -42,7 +42,6 @@ enabled."""
     def getObject(self, identifier: int) -> 'Network_LoadBalancer_Service':
         """Retrieve a SoftLayer_Network_LoadBalancer_Service record."""
         data = self.client.call('SoftLayer_Network_LoadBalancer_Service', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LoadBalancer_Service import Network_LoadBalancer_Service
         return data
 
     def getStatus(self, identifier: int) -> list['Container_Network_LoadBalancer_StatusEntry']:

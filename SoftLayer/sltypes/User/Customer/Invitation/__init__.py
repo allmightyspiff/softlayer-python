@@ -25,7 +25,6 @@ class User_Customer_Invitation(Entity):
     def getObject(self, identifier: int) -> 'User_Customer_Invitation':
         """Retrieve a SoftLayer_User_Customer_Invitation record."""
         data = self.client.call('SoftLayer_User_Customer_Invitation', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_Invitation import User_Customer_Invitation
         return data
 
     def getUser(self, identifier: int) -> 'User_Customer':

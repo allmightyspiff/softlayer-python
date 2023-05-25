@@ -141,7 +141,6 @@ network tunnel can also be retrieved."""
     def getObject(self, identifier: int) -> 'Network_Tunnel_Module_Context':
         """Retrieve a SoftLayer_Network_Tunnel_Module_Context record."""
         data = self.client.call('SoftLayer_Network_Tunnel_Module_Context', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Tunnel_Module_Context import Network_Tunnel_Module_Context
         return data
 
     def getParameterConfigurationsForCustomerView(self, identifier: int) -> str:

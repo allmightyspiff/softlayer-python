@@ -27,7 +27,6 @@ and BB share the same healthmonitor HM_tcp3456"""
     def getObject(self, identifier: int) -> 'Network_LBaaS_HealthMonitor':
         """Retrieve a SoftLayer_Network_LBaaS_HealthMonitor record."""
         data = self.client.call('SoftLayer_Network_LBaaS_HealthMonitor', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_HealthMonitor import Network_LBaaS_HealthMonitor
         return data
 
     def updateLoadBalancerHealthMonitors(self, loadBalancerUuid: str, healthMonitorConfigurations: 'Network_LBaaS_LoadBalancerHealthMonitorConfiguration') -> 'Network_LBaaS_LoadBalancer':

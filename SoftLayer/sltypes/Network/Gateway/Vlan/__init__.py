@@ -19,13 +19,11 @@ class Network_Gateway_Vlan(Entity):
     def createObject(self, templateObject: 'Network_Gateway_Vlan') -> 'Network_Gateway_Vlan':
         """Attach a VLAN to a gateway"""
         data = self.client.call('SoftLayer_Network_Gateway_Vlan', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Gateway_Vlan import Network_Gateway_Vlan
         return data
 
     def createObjects(self, templateObjects: 'Network_Gateway_Vlan') -> list['Network_Gateway_Vlan']:
         """Attach a VLAN to a gateway"""
         data = self.client.call('SoftLayer_Network_Gateway_Vlan', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Network_Gateway_Vlan import Network_Gateway_Vlan
         return data
 
     def deleteObject(self, identifier: int) -> None:
@@ -41,7 +39,6 @@ class Network_Gateway_Vlan(Entity):
     def getObject(self, identifier: int) -> 'Network_Gateway_Vlan':
         """Retrieve a SoftLayer_Network_Gateway_Vlan record."""
         data = self.client.call('SoftLayer_Network_Gateway_Vlan', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Gateway_Vlan import Network_Gateway_Vlan
         return data
 
     def unbypass(self, identifier: int) -> None:

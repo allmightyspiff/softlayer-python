@@ -12,7 +12,6 @@ class Network_Firewall_Module_Context_Interface(Entity):
     def getObject(self, identifier: int) -> 'Network_Firewall_Module_Context_Interface':
         """Retrieve a SoftLayer_Network_Firewall_Module_Context_Interface record."""
         data = self.client.call('SoftLayer_Network_Firewall_Module_Context_Interface', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Firewall_Module_Context_Interface import Network_Firewall_Module_Context_Interface
         return data
 
     def getFirewallContextAccessControlLists(self, identifier: int) -> list['Network_Firewall_AccessControlList']:

@@ -22,11 +22,9 @@ SoftLayer_User_Permission_Group's include the action."""
     def getAllObjects(self) -> list['User_Permission_Action']:
         """Retrieve all customer permission actions in IMS."""
         data = self.client.call('SoftLayer_User_Permission_Action', 'getAllObjects')
-        from SoftLayer.sltypes.User_Permission_Action import User_Permission_Action
         return data
 
     def getObject(self, identifier: int) -> 'User_Permission_Action':
         """Retrieve a SoftLayer_User_Permission_Action record."""
         data = self.client.call('SoftLayer_User_Permission_Action', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Permission_Action import User_Permission_Action
         return data

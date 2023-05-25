@@ -36,7 +36,6 @@ class Event_Log(Entity):
     def getAllObjects(self) -> list['Event_Log']:
         """Return the event log data"""
         data = self.client.call('SoftLayer_Event_Log', 'getAllObjects')
-        from SoftLayer.sltypes.Event_Log import Event_Log
         return data
 
     def getAllUserTypes(self) -> list[str]:

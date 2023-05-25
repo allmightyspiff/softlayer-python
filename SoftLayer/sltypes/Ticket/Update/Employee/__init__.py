@@ -18,5 +18,4 @@ class Ticket_Update_Employee(Ticket_Update):
     def getObject(self, identifier: int) -> 'Ticket_Update_Employee':
         """Retrieve a SoftLayer_Ticket_Update_Employee record."""
         data = self.client.call('SoftLayer_Ticket_Update_Employee', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Ticket_Update_Employee import Ticket_Update_Employee
         return data

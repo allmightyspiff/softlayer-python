@@ -13,12 +13,10 @@ class Network_Gateway_VersionUpgrade(Entity):
 
     def getAllByUpgradePkgUrlId(self, upgradePkgUrlId: int) -> list['Network_Gateway_VersionUpgrade']:
         data = self.client.call('SoftLayer_Network_Gateway_VersionUpgrade', 'getAllByUpgradePkgUrlId', upgradePkgUrlId)
-        from SoftLayer.sltypes.Network_Gateway_VersionUpgrade import Network_Gateway_VersionUpgrade
         return data
 
     def getAllUpgradesByGatewayId(self, gatewayId: int) -> list['Network_Gateway_VersionUpgrade']:
         data = self.client.call('SoftLayer_Network_Gateway_VersionUpgrade', 'getAllUpgradesByGatewayId', gatewayId)
-        from SoftLayer.sltypes.Network_Gateway_VersionUpgrade import Network_Gateway_VersionUpgrade
         return data
 
     def getGwOrdersAllowedLicenses(self, accountId: int, manufacturer: str) -> str:
@@ -33,7 +31,6 @@ class Network_Gateway_VersionUpgrade(Entity):
     def getObject(self, identifier: int) -> 'Network_Gateway_VersionUpgrade':
         """Retrieve a SoftLayer_Network_Gateway_VersionUpgrade record."""
         data = self.client.call('SoftLayer_Network_Gateway_VersionUpgrade', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Gateway_VersionUpgrade import Network_Gateway_VersionUpgrade
         return data
 
     def getVsrxOrdersAllowedOS(self, accountId: int, validate: bool) -> list['Product_Package_Item_Prices']:

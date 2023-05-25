@@ -15,13 +15,11 @@ class Network_Gateway_Member(Entity):
     def createObject(self, templateObject: 'Network_Gateway_Member') -> 'Network_Gateway_Member':
         """Add a member to a gateway"""
         data = self.client.call('SoftLayer_Network_Gateway_Member', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Gateway_Member import Network_Gateway_Member
         return data
 
     def createObjects(self, templateObjects: 'Network_Gateway_Member') -> list['Network_Gateway_Member']:
         """Add a member to a gateway"""
         data = self.client.call('SoftLayer_Network_Gateway_Member', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Network_Gateway_Member import Network_Gateway_Member
         return data
 
     def editObject(self, identifier: int, templateObject: 'Network_Gateway_Member') -> bool:
@@ -32,7 +30,6 @@ class Network_Gateway_Member(Entity):
     def getObject(self, identifier: int) -> 'Network_Gateway_Member':
         """Retrieve a SoftLayer_Network_Gateway_Member record."""
         data = self.client.call('SoftLayer_Network_Gateway_Member', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Gateway_Member import Network_Gateway_Member
         return data
 
     def getAttributes(self, identifier: int) -> 'Network_Gateway_Member_Attribute':

@@ -30,13 +30,11 @@ Firewall Template]] service to pull SoftLayer recommended rule set templates."""
     def createObject(self, templateObject: 'Network_Firewall_Update_Request_Rule') -> 'Network_Firewall_Update_Request_Rule':
         """Create a new firewall update request rule."""
         data = self.client.call('SoftLayer_Network_Firewall_Update_Request_Rule', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Firewall_Update_Request_Rule import Network_Firewall_Update_Request_Rule
         return data
 
     def getObject(self, identifier: int) -> 'Network_Firewall_Update_Request_Rule':
         """Retrieve a SoftLayer_Network_Firewall_Update_Request_Rule record."""
         data = self.client.call('SoftLayer_Network_Firewall_Update_Request_Rule', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Firewall_Update_Request_Rule import Network_Firewall_Update_Request_Rule
         return data
 
     def validateRule(self, rule: 'Network_Firewall_Update_Request_Rule', applyToComponentId: int, applyToAclId: int) -> None:

@@ -13,7 +13,6 @@ class Provisioning_Version1_Transaction_OrderTracking(Entity):
     def getObject(self, identifier: int) -> 'Provisioning_Version1_Transaction_OrderTracking':
         """Retrieve a SoftLayer_Provisioning_Version1_Transaction_OrderTracking record."""
         data = self.client.call('SoftLayer_Provisioning_Version1_Transaction_OrderTracking', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Version1_Transaction_OrderTracking import Provisioning_Version1_Transaction_OrderTracking
         return data
 
     def getInvoiceId(self, identifier: int) -> int:

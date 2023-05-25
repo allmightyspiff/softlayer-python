@@ -13,11 +13,9 @@ class Provisioning_Hook_Type(Entity):
 
     def getAllHookTypes(self) -> list['Provisioning_Hook_Type']:
         data = self.client.call('SoftLayer_Provisioning_Hook_Type', 'getAllHookTypes')
-        from SoftLayer.sltypes.Provisioning_Hook_Type import Provisioning_Hook_Type
         return data
 
     def getObject(self, identifier: int) -> 'Provisioning_Hook_Type':
         """Retrieve a SoftLayer_Provisioning_Hook_Type record."""
         data = self.client.call('SoftLayer_Provisioning_Hook_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Hook_Type import Provisioning_Hook_Type
         return data

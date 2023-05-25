@@ -55,7 +55,6 @@ class Network_Interconnect_Tenant(Entity):
 
     def getAllObjects(self) -> list['Network_Interconnect_Tenant']:
         data = self.client.call('SoftLayer_Network_Interconnect_Tenant', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Interconnect_Tenant import Network_Interconnect_Tenant
         return data
 
     def getAllPortLabelsWithCurrentUsage(self, directLinkLocationId: int) -> list[str]:
@@ -81,7 +80,6 @@ class Network_Interconnect_Tenant(Entity):
     def getObject(self, identifier: int) -> 'Network_Interconnect_Tenant':
         """Retrieve a SoftLayer_Network_Interconnect_Tenant record."""
         data = self.client.call('SoftLayer_Network_Interconnect_Tenant', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Interconnect_Tenant import Network_Interconnect_Tenant
         return data
 
     def getPorts(self, provider: str) -> str:

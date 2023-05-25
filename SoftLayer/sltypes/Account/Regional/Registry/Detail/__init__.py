@@ -17,7 +17,6 @@ class Account_Regional_Registry_Detail(Entity):
     def createObject(self, templateObject: 'Account_Regional_Registry_Detail') -> 'Account_Regional_Registry_Detail':
         """Create a new detail object"""
         data = self.client.call('SoftLayer_Account_Regional_Registry_Detail', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Regional_Registry_Detail import Account_Regional_Registry_Detail
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -33,7 +32,6 @@ class Account_Regional_Registry_Detail(Entity):
     def getObject(self, identifier: int) -> 'Account_Regional_Registry_Detail':
         """Retrieve a SoftLayer_Account_Regional_Registry_Detail record."""
         data = self.client.call('SoftLayer_Account_Regional_Registry_Detail', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Regional_Registry_Detail import Account_Regional_Registry_Detail
         return data
 
     def updateReferencedRegistrations(self, identifier: int) -> 'Container_Network_Subnet_Registration_TransactionDetails':

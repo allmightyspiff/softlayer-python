@@ -22,7 +22,6 @@ class Virtual_ReservedCapacityGroup(Entity):
     def getObject(self, identifier: int) -> 'Virtual_ReservedCapacityGroup':
         """Retrieve a SoftLayer_Virtual_ReservedCapacityGroup record."""
         data = self.client.call('SoftLayer_Virtual_ReservedCapacityGroup', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_ReservedCapacityGroup import Virtual_ReservedCapacityGroup
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

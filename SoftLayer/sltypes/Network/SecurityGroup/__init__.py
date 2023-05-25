@@ -34,13 +34,11 @@ virtual server instance and a set of [[SoftLayer_Virtual_Network_SecurityGroup_N
     def createObject(self, templateObject: 'Network_SecurityGroup') -> 'Network_SecurityGroup':
         """Create a new security group."""
         data = self.client.call('SoftLayer_Network_SecurityGroup', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_SecurityGroup import Network_SecurityGroup
         return data
 
     def createObjects(self, templateObjects: 'Network_SecurityGroup') -> list['Network_SecurityGroup']:
         """Create new security groups."""
         data = self.client.call('SoftLayer_Network_SecurityGroup', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Network_SecurityGroup import Network_SecurityGroup
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -78,7 +76,6 @@ virtual server instance and a set of [[SoftLayer_Virtual_Network_SecurityGroup_N
     def getAllObjects(self) -> list['Network_SecurityGroup']:
         """Get all security groups."""
         data = self.client.call('SoftLayer_Network_SecurityGroup', 'getAllObjects')
-        from SoftLayer.sltypes.Network_SecurityGroup import Network_SecurityGroup
         return data
 
     def getLimits(self) -> list['Container_Network_SecurityGroup_Limit']:
@@ -90,7 +87,6 @@ virtual server instance and a set of [[SoftLayer_Virtual_Network_SecurityGroup_N
     def getObject(self, identifier: int) -> 'Network_SecurityGroup':
         """Retrieve a SoftLayer_Network_SecurityGroup record."""
         data = self.client.call('SoftLayer_Network_SecurityGroup', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_SecurityGroup import Network_SecurityGroup
         return data
 
     def getSupportedDataCenters(self) -> list['Location']:

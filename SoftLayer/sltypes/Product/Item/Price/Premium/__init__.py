@@ -15,7 +15,6 @@ class Product_Item_Price_Premium(Entity):
     def getObject(self, identifier: int) -> 'Product_Item_Price_Premium':
         """Retrieve a SoftLayer_Product_Item_Price_Premium record."""
         data = self.client.call('SoftLayer_Product_Item_Price_Premium', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Item_Price_Premium import Product_Item_Price_Premium
         return data
 
     def getItemPrice(self, identifier: int) -> 'Product_Item_Price':

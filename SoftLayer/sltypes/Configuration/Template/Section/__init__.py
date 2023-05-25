@@ -23,7 +23,6 @@ Configuration can contain sub-sections."""
     def getObject(self, identifier: int) -> 'Configuration_Template_Section':
         """Retrieve a SoftLayer_Configuration_Template_Section record."""
         data = self.client.call('SoftLayer_Configuration_Template_Section', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section import Configuration_Template_Section
         return data
 
     def hasSubSections(self, identifier: int) -> bool:
@@ -74,7 +73,6 @@ Configuration can contain sub-sections."""
     def getSubSections(self, identifier: int) -> list['Configuration_Template_Section']:
         """"""
         data = self.client.call('SoftLayer_Configuration_Template_Section', 'getSubSections', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section import Configuration_Template_Section
         return data
 
     def getTemplate(self, identifier: int) -> 'Configuration_Template':

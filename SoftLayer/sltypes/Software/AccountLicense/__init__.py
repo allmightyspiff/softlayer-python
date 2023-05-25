@@ -16,13 +16,11 @@ customer's account and not to any particular hardware, IP address, etc."""
     def getAllObjects(self) -> list['Software_AccountLicense']:
         """Return all account licenses"""
         data = self.client.call('SoftLayer_Software_AccountLicense', 'getAllObjects')
-        from SoftLayer.sltypes.Software_AccountLicense import Software_AccountLicense
         return data
 
     def getObject(self, identifier: int) -> 'Software_AccountLicense':
         """Retrieve a SoftLayer_Software_AccountLicense record."""
         data = self.client.call('SoftLayer_Software_AccountLicense', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_AccountLicense import Software_AccountLicense
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

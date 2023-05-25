@@ -41,7 +41,6 @@ class Network_Gateway(Entity):
     def createObject(self, templateObject: 'Network_Gateway') -> 'Network_Gateway':
         """Create a new server gateway"""
         data = self.client.call('SoftLayer_Network_Gateway', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Gateway import Network_Gateway
         return data
 
     def editObject(self, identifier: int, templateObject: 'Network_Gateway') -> bool:
@@ -79,7 +78,6 @@ class Network_Gateway(Entity):
     def getObject(self, identifier: int) -> 'Network_Gateway':
         """Retrieve a SoftLayer_Network_Gateway record."""
         data = self.client.call('SoftLayer_Network_Gateway', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Gateway import Network_Gateway
         return data
 
     def getPossibleInsideVlans(self, identifier: int) -> list['Network_Vlan']:

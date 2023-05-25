@@ -16,11 +16,9 @@ class Network_Storage_Schedule_Property_Type(Entity):
     def getAllObjects(self) -> list['Network_Storage_Schedule_Property_Type']:
         """Returns all network storage schedule property types"""
         data = self.client.call('SoftLayer_Network_Storage_Schedule_Property_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Storage_Schedule_Property_Type import Network_Storage_Schedule_Property_Type
         return data
 
     def getObject(self, identifier: int) -> 'Network_Storage_Schedule_Property_Type':
         """Retrieve a SoftLayer_Network_Storage_Schedule_Property_Type record."""
         data = self.client.call('SoftLayer_Network_Storage_Schedule_Property_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Schedule_Property_Type import Network_Storage_Schedule_Property_Type
         return data

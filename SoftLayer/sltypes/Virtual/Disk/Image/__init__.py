@@ -34,13 +34,11 @@ Virtual block devices are assigned to disk images."""
     def getObject(self, identifier: int) -> 'Virtual_Disk_Image':
         """Retrieve a SoftLayer_Virtual_Disk_Image record."""
         data = self.client.call('SoftLayer_Virtual_Disk_Image', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Disk_Image import Virtual_Disk_Image
         return data
 
     def getPublicIsoImages(self) -> list['Virtual_Disk_Image']:
         """Retrieves images from the public ISO repository."""
         data = self.client.call('SoftLayer_Virtual_Disk_Image', 'getPublicIsoImages')
-        from SoftLayer.sltypes.Virtual_Disk_Image import Virtual_Disk_Image
         return data
 
     def getBillingItem(self, identifier: int) -> 'Billing_Item_Virtual_Disk_Image':
@@ -68,7 +66,6 @@ Virtual block devices are assigned to disk images."""
     def getCoalescedDiskImages(self, identifier: int) -> list['Virtual_Disk_Image']:
         """"""
         data = self.client.call('SoftLayer_Virtual_Disk_Image', 'getCoalescedDiskImages', id=identifier)
-        from SoftLayer.sltypes.Virtual_Disk_Image import Virtual_Disk_Image
         return data
 
     def getCopyOnWriteFlag(self, identifier: int) -> bool:
@@ -116,7 +113,6 @@ Virtual block devices are assigned to disk images."""
     def getSourceDiskImage(self, identifier: int) -> 'Virtual_Disk_Image':
         """"""
         data = self.client.call('SoftLayer_Virtual_Disk_Image', 'getSourceDiskImage', id=identifier)
-        from SoftLayer.sltypes.Virtual_Disk_Image import Virtual_Disk_Image
         return data
 
     def getStorageGroupDetails(self, identifier: int) -> 'Container_Image_StorageGroupDetails':

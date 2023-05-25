@@ -16,13 +16,11 @@ Great Britain."""
 
     def getAllObjects(self) -> list['Brand_Restriction_Location_CustomerCountry']:
         data = self.client.call('SoftLayer_Brand_Restriction_Location_CustomerCountry', 'getAllObjects')
-        from SoftLayer.sltypes.Brand_Restriction_Location_CustomerCountry import Brand_Restriction_Location_CustomerCountry
         return data
 
     def getObject(self, identifier: int) -> 'Brand_Restriction_Location_CustomerCountry':
         """Retrieve a SoftLayer_Brand_Restriction_Location_CustomerCountry record."""
         data = self.client.call('SoftLayer_Brand_Restriction_Location_CustomerCountry', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Brand_Restriction_Location_CustomerCountry import Brand_Restriction_Location_CustomerCountry
         return data
 
     def getBrand(self, identifier: int) -> 'Brand':

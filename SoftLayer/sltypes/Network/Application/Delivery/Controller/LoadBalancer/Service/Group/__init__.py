@@ -21,7 +21,6 @@ class Network_Application_Delivery_Controller_LoadBalancer_Service_Group(Entity)
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_LoadBalancer_Service_Group':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Service_Group import Network_Application_Delivery_Controller_LoadBalancer_Service_Group
         return data
 
     def kickAllConnections(self, identifier: int) -> bool:

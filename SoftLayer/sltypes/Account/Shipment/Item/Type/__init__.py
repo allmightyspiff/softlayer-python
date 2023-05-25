@@ -15,5 +15,4 @@ class Account_Shipment_Item_Type(Entity):
     def getObject(self, identifier: int) -> 'Account_Shipment_Item_Type':
         """Retrieve a SoftLayer_Account_Shipment_Item_Type record."""
         data = self.client.call('SoftLayer_Account_Shipment_Item_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Shipment_Item_Type import Account_Shipment_Item_Type
         return data

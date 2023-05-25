@@ -32,7 +32,6 @@ response types are available through getAllQueryTypes and getAllResponseTypes, r
     def getObject(self, identifier: int) -> 'Network_Monitor_Version1_Query_Host_Stratum':
         """Retrieve a SoftLayer_Network_Monitor_Version1_Query_Host_Stratum record."""
         data = self.client.call('SoftLayer_Network_Monitor_Version1_Query_Host_Stratum', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Monitor_Version1_Query_Host_Stratum import Network_Monitor_Version1_Query_Host_Stratum
         return data
 
     def getHardware(self, identifier: int) -> 'Hardware':

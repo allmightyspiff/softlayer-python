@@ -16,7 +16,6 @@ SoftLayer_User_Permission_Group objects must be linked to one of these types.   
     def getObject(self, identifier: int) -> 'User_Permission_Group_Type':
         """Retrieve a SoftLayer_User_Permission_Group_Type record."""
         data = self.client.call('SoftLayer_User_Permission_Group_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Permission_Group_Type import User_Permission_Group_Type
         return data
 
     def getGroups(self, identifier: int) -> list['User_Permission_Group']:

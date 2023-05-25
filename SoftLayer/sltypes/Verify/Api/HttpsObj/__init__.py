@@ -14,7 +14,6 @@ class Verify_Api_HttpsObj(Entity):
 
     def createObject(self, templateObject: 'Verify_Api_HttpsObj') -> 'Verify_Api_HttpsObj':
         data = self.client.call('SoftLayer_Verify_Api_HttpsObj', 'createObject', templateObject)
-        from SoftLayer.sltypes.Verify_Api_HttpsObj import Verify_Api_HttpsObj
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -23,11 +22,9 @@ class Verify_Api_HttpsObj(Entity):
 
     def getAllObjects(self) -> list['Verify_Api_HttpsObj']:
         data = self.client.call('SoftLayer_Verify_Api_HttpsObj', 'getAllObjects')
-        from SoftLayer.sltypes.Verify_Api_HttpsObj import Verify_Api_HttpsObj
         return data
 
     def getObject(self, identifier: int) -> 'Verify_Api_HttpsObj':
         """Retrieve a SoftLayer_Verify_Api_HttpsObj record."""
         data = self.client.call('SoftLayer_Verify_Api_HttpsObj', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Verify_Api_HttpsObj import Verify_Api_HttpsObj
         return data

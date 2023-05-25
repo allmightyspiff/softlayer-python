@@ -12,7 +12,6 @@ class Network_Storage_Allowed_Host_VirtualGuest(Network_Storage_Allowed_Host):
     def getObject(self, identifier: int) -> 'Network_Storage_Allowed_Host_VirtualGuest':
         """Retrieve a SoftLayer_Network_Storage_Allowed_Host_VirtualGuest record."""
         data = self.client.call('SoftLayer_Network_Storage_Allowed_Host_VirtualGuest', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Allowed_Host_VirtualGuest import Network_Storage_Allowed_Host_VirtualGuest
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

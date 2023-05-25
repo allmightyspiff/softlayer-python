@@ -47,7 +47,6 @@ Billing Items with a null parent item do not have an associated parent item."""
     def getObject(self, identifier: int) -> 'Billing_Order_Item':
         """Retrieve a SoftLayer_Billing_Order_Item record."""
         data = self.client.call('SoftLayer_Billing_Order_Item', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Item import Billing_Order_Item
         return data
 
     def getBillingItem(self, identifier: int) -> 'Billing_Item':
@@ -59,7 +58,6 @@ Billing Items with a null parent item do not have an associated parent item."""
     def getBundledItems(self, identifier: int) -> list['Billing_Order_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Order_Item', 'getBundledItems', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Item import Billing_Order_Item
         return data
 
     def getCategory(self, identifier: int) -> 'Product_Item_Category':
@@ -71,7 +69,6 @@ Billing Items with a null parent item do not have an associated parent item."""
     def getChildren(self, identifier: int) -> list['Billing_Order_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Order_Item', 'getChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Item import Billing_Order_Item
         return data
 
     def getGlobalIdentifier(self, identifier: int) -> str:
@@ -112,7 +109,6 @@ Billing Items with a null parent item do not have an associated parent item."""
     def getNextOrderChildren(self, identifier: int) -> list['Billing_Order_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Order_Item', 'getNextOrderChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Item import Billing_Order_Item
         return data
 
     def getOldBillingItem(self, identifier: int) -> 'Billing_Item':
@@ -141,7 +137,6 @@ Billing Items with a null parent item do not have an associated parent item."""
     def getParent(self, identifier: int) -> 'Billing_Order_Item':
         """"""
         data = self.client.call('SoftLayer_Billing_Order_Item', 'getParent', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Item import Billing_Order_Item
         return data
 
     def getPreset(self, identifier: int) -> 'Product_Package_Preset':

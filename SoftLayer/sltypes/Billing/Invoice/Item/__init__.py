@@ -49,19 +49,16 @@ invoice."""
     def getObject(self, identifier: int) -> 'Billing_Invoice_Item':
         """Retrieve a SoftLayer_Billing_Invoice_Item record."""
         data = self.client.call('SoftLayer_Billing_Invoice_Item', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Item import Billing_Invoice_Item
         return data
 
     def getAssociatedChildren(self, identifier: int) -> list['Billing_Invoice_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Invoice_Item', 'getAssociatedChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Item import Billing_Invoice_Item
         return data
 
     def getAssociatedInvoiceItem(self, identifier: int) -> 'Billing_Invoice_Item':
         """"""
         data = self.client.call('SoftLayer_Billing_Invoice_Item', 'getAssociatedInvoiceItem', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Item import Billing_Invoice_Item
         return data
 
     def getBillingItem(self, identifier: int) -> 'Billing_Item':
@@ -79,7 +76,6 @@ invoice."""
     def getChildren(self, identifier: int) -> list['Billing_Invoice_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Invoice_Item', 'getChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Item import Billing_Invoice_Item
         return data
 
     def getDPart(self, identifier: int) -> str:
@@ -90,7 +86,6 @@ invoice."""
     def getFilteredAssociatedChildren(self, identifier: int) -> list['Billing_Invoice_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Invoice_Item', 'getFilteredAssociatedChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Item import Billing_Invoice_Item
         return data
 
     def getHourlyFlag(self, identifier: int) -> bool:
@@ -113,13 +108,11 @@ invoice."""
     def getNonZeroAssociatedChildren(self, identifier: int) -> list['Billing_Invoice_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Invoice_Item', 'getNonZeroAssociatedChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Item import Billing_Invoice_Item
         return data
 
     def getParent(self, identifier: int) -> 'Billing_Invoice_Item':
         """"""
         data = self.client.call('SoftLayer_Billing_Invoice_Item', 'getParent', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Item import Billing_Invoice_Item
         return data
 
     def getProduct(self, identifier: int) -> 'Product_Item':

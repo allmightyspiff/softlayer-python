@@ -28,5 +28,4 @@ SoftLayer users with an active external binding will be prohibited from using th
     def getObject(self, identifier: int) -> 'User_Customer_External_Binding_Totp':
         """Retrieve a SoftLayer_User_Customer_External_Binding_Totp record."""
         data = self.client.call('SoftLayer_User_Customer_External_Binding_Totp', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_External_Binding_Totp import User_Customer_External_Binding_Totp
         return data

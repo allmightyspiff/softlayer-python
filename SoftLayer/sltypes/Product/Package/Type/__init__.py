@@ -17,13 +17,11 @@ CPU, filter on '''BARE_METAL_CORE''' or '''BARE_METAL_CPU''', respectively."""
     def getAllObjects(self) -> list['Product_Package_Type']:
         """Get all the package types."""
         data = self.client.call('SoftLayer_Product_Package_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Product_Package_Type import Product_Package_Type
         return data
 
     def getObject(self, identifier: int) -> 'Product_Package_Type':
         """Retrieve a SoftLayer_Product_Package_Type record."""
         data = self.client.call('SoftLayer_Product_Package_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Package_Type import Product_Package_Type
         return data
 
     def getPackages(self, identifier: int) -> list['Product_Package']:

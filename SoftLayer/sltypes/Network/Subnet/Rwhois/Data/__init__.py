@@ -38,7 +38,6 @@ address1"""
     def getObject(self, identifier: int) -> 'Network_Subnet_Rwhois_Data':
         """Retrieve a SoftLayer_Network_Subnet_Rwhois_Data record."""
         data = self.client.call('SoftLayer_Network_Subnet_Rwhois_Data', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet_Rwhois_Data import Network_Subnet_Rwhois_Data
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

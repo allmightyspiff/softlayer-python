@@ -46,13 +46,11 @@ class User_Customer_Prospect_ServiceProvider_EnrollRequest(Entity):
     def enroll(self, templateObject: 'User_Customer_Prospect_ServiceProvider_EnrollRequest') -> 'User_Customer_Prospect_ServiceProvider_EnrollRequest':
         """Creates a new Service Provider Enrollment"""
         data = self.client.call('SoftLayer_User_Customer_Prospect_ServiceProvider_EnrollRequest', 'enroll', templateObject)
-        from SoftLayer.sltypes.User_Customer_Prospect_ServiceProvider_EnrollRequest import User_Customer_Prospect_ServiceProvider_EnrollRequest
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_Prospect_ServiceProvider_EnrollRequest':
         """Retrieve a SoftLayer_User_Customer_Prospect_ServiceProvider_EnrollRequest record."""
         data = self.client.call('SoftLayer_User_Customer_Prospect_ServiceProvider_EnrollRequest', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_Prospect_ServiceProvider_EnrollRequest import User_Customer_Prospect_ServiceProvider_EnrollRequest
         return data
 
     def getCompanyType(self, identifier: int) -> 'Catalyst_Company_Type':

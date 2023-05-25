@@ -12,11 +12,9 @@ class Network_Application_Delivery_Controller_LoadBalancer_Routing_Type(Entity):
 
     def getAllObjects(self) -> list['Network_Application_Delivery_Controller_LoadBalancer_Routing_Type']:
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Routing_Type import Network_Application_Delivery_Controller_LoadBalancer_Routing_Type
         return data
 
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_LoadBalancer_Routing_Type':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Routing_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Routing_Type import Network_Application_Delivery_Controller_LoadBalancer_Routing_Type
         return data

@@ -19,7 +19,6 @@ purge information for future use."""
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Cache_Purge':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Cache_Purge record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Cache_Purge', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Cache_Purge import Network_CdnMarketplace_Configuration_Cache_Purge
         return data
 
     def getPurgeHistoryPerMapping(self, uniqueId: str, saved: int) -> list['Container_Network_CdnMarketplace_Configuration_Cache_Purge']:

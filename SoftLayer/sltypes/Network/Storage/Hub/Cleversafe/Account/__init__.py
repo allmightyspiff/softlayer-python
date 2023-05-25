@@ -22,7 +22,6 @@ class Network_Storage_Hub_Cleversafe_Account(Entity):
 
     def getAllObjects(self) -> list['Network_Storage_Hub_Cleversafe_Account']:
         data = self.client.call('SoftLayer_Network_Storage_Hub_Cleversafe_Account', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Storage_Hub_Cleversafe_Account import Network_Storage_Hub_Cleversafe_Account
         return data
 
     def getBuckets(self, identifier: int) -> list['Container_Network_Storage_Hub_ObjectStorage_Bucket']:
@@ -55,7 +54,6 @@ class Network_Storage_Hub_Cleversafe_Account(Entity):
     def getObject(self, identifier: int) -> 'Network_Storage_Hub_Cleversafe_Account':
         """Retrieve a SoftLayer_Network_Storage_Hub_Cleversafe_Account record."""
         data = self.client.call('SoftLayer_Network_Storage_Hub_Cleversafe_Account', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Hub_Cleversafe_Account import Network_Storage_Hub_Cleversafe_Account
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

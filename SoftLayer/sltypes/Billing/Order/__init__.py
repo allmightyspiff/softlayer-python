@@ -31,13 +31,11 @@ generated for existing SoftLayer customer."""
     def getAllObjects(self) -> list['Billing_Order']:
         """Get all billing orders for your account"""
         data = self.client.call('SoftLayer_Billing_Order', 'getAllObjects')
-        from SoftLayer.sltypes.Billing_Order import Billing_Order
         return data
 
     def getObject(self, identifier: int) -> 'Billing_Order':
         """Retrieve a SoftLayer_Billing_Order record."""
         data = self.client.call('SoftLayer_Billing_Order', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Order import Billing_Order
         return data
 
     def getOrderStatuses(self) -> list['Container_Billing_Order_Status']:

@@ -19,7 +19,6 @@ SoftLayer_Configuration_Template_Section_Profile help you keep track of custom c
     def getObject(self, identifier: int) -> 'Configuration_Template_Section_Profile':
         """Retrieve a SoftLayer_Configuration_Template_Section_Profile record."""
         data = self.client.call('SoftLayer_Configuration_Template_Section_Profile', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section_Profile import Configuration_Template_Section_Profile
         return data
 
     def getConfigurationSection(self, identifier: int) -> 'Configuration_Template_Section':

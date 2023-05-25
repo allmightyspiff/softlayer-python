@@ -16,7 +16,6 @@ ID, Segment ID and Reseller Level."""
     def getObject(self, identifier: int) -> 'Account_Business_Partner':
         """Retrieve a SoftLayer_Account_Business_Partner record."""
         data = self.client.call('SoftLayer_Account_Business_Partner', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Business_Partner import Account_Business_Partner
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

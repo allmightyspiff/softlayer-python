@@ -19,7 +19,6 @@ product is subject to the terms defined in the document content of the policy.""
     def getObject(self, identifier: int) -> 'Product_Item_Policy_Assignment':
         """Retrieve a SoftLayer_Product_Item_Policy_Assignment record."""
         data = self.client.call('SoftLayer_Product_Item_Policy_Assignment', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Item_Policy_Assignment import Product_Item_Policy_Assignment
         return data
 
     def getPolicyDocumentContents(self, identifier: int) -> str:

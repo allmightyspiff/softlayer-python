@@ -20,11 +20,9 @@ object."""
 
     def getAllObjects(self) -> list['Account_Regional_Registry_Detail_Property_Type']:
         data = self.client.call('SoftLayer_Account_Regional_Registry_Detail_Property_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Account_Regional_Registry_Detail_Property_Type import Account_Regional_Registry_Detail_Property_Type
         return data
 
     def getObject(self, identifier: int) -> 'Account_Regional_Registry_Detail_Property_Type':
         """Retrieve a SoftLayer_Account_Regional_Registry_Detail_Property_Type record."""
         data = self.client.call('SoftLayer_Account_Regional_Registry_Detail_Property_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Regional_Registry_Detail_Property_Type import Account_Regional_Registry_Detail_Property_Type
         return data

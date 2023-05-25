@@ -20,7 +20,6 @@ are initiated by this object."""
     def getObject(self, identifier: int) -> 'Software_Component_Trellix':
         """Retrieve a SoftLayer_Software_Component_Trellix record."""
         data = self.client.call('SoftLayer_Software_Component_Trellix', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_Component_Trellix import Software_Component_Trellix
         return data
 
     def updateAntivirusSpywarePolicy(self, identifier: int, newPolicy: str, enforce: bool) -> bool:

@@ -14,7 +14,6 @@ class Network_Application_Delivery_Controller_LoadBalancer_Health_Check(Entity):
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_LoadBalancer_Health_Check':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Health_Check import Network_Application_Delivery_Controller_LoadBalancer_Health_Check
         return data
 
     def getAttributes(self, identifier: int) -> list['Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute']:

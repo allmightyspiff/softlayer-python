@@ -12,13 +12,11 @@ class Billing_Currency(Entity):
 
     def getAllObjects(self) -> list['Billing_Currency']:
         data = self.client.call('SoftLayer_Billing_Currency', 'getAllObjects')
-        from SoftLayer.sltypes.Billing_Currency import Billing_Currency
         return data
 
     def getObject(self, identifier: int) -> 'Billing_Currency':
         """Retrieve a SoftLayer_Billing_Currency record."""
         data = self.client.call('SoftLayer_Billing_Currency', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Currency import Billing_Currency
         return data
 
     def getPrice(self, identifier: int, price: float, formatOptions: 'Container_Billing_Currency_Format') -> str:

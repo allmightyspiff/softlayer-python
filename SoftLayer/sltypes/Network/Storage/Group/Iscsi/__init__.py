@@ -22,7 +22,6 @@ class Network_Storage_Group_Iscsi(Network_Storage_Group):
     def getObject(self, identifier: int) -> 'Network_Storage_Group_Iscsi':
         """Retrieve a SoftLayer_Network_Storage_Group_Iscsi record."""
         data = self.client.call('SoftLayer_Network_Storage_Group_Iscsi', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Group_Iscsi import Network_Storage_Group_Iscsi
         return data
 
     def removeAllowedHost(self, identifier: int, allowedHost: 'Network_Storage_Allowed_Host') -> bool:

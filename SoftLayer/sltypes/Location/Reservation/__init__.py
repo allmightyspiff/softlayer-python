@@ -14,13 +14,11 @@ class Location_Reservation(Entity):
 
     def getAccountReservations(self) -> list['Location_Reservation']:
         data = self.client.call('SoftLayer_Location_Reservation', 'getAccountReservations')
-        from SoftLayer.sltypes.Location_Reservation import Location_Reservation
         return data
 
     def getObject(self, identifier: int) -> 'Location_Reservation':
         """Retrieve a SoftLayer_Location_Reservation record."""
         data = self.client.call('SoftLayer_Location_Reservation', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Location_Reservation import Location_Reservation
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

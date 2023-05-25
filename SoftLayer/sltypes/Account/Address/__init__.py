@@ -24,7 +24,6 @@ account."""
     def createObject(self, templateObject: 'Account_Address') -> 'Account_Address':
         """Create a new address record."""
         data = self.client.call('SoftLayer_Account_Address', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Address import Account_Address
         return data
 
     def editObject(self, identifier: int, templateObject: 'Account_Address') -> bool:
@@ -35,19 +34,16 @@ account."""
     def getAllDataCenters(self) -> list['Account_Address']:
         """Retrieve a list of SoftLayer datacenter addresses."""
         data = self.client.call('SoftLayer_Account_Address', 'getAllDataCenters')
-        from SoftLayer.sltypes.Account_Address import Account_Address
         return data
 
     def getNetworkAddress(self, name: str) -> list['Account_Address']:
         """Retrieve a list of SoftLayer datacenter addresses."""
         data = self.client.call('SoftLayer_Account_Address', 'getNetworkAddress', name)
-        from SoftLayer.sltypes.Account_Address import Account_Address
         return data
 
     def getObject(self, identifier: int) -> 'Account_Address':
         """Retrieve a SoftLayer_Account_Address record."""
         data = self.client.call('SoftLayer_Account_Address', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Address import Account_Address
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

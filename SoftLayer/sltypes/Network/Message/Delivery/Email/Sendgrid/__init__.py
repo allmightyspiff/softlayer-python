@@ -38,7 +38,6 @@ class Network_Message_Delivery_Email_Sendgrid(Network_Message_Delivery):
     def getObject(self, identifier: int) -> 'Network_Message_Delivery_Email_Sendgrid':
         """Retrieve a SoftLayer_Network_Message_Delivery_Email_Sendgrid record."""
         data = self.client.call('SoftLayer_Network_Message_Delivery_Email_Sendgrid', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Message_Delivery_Email_Sendgrid import Network_Message_Delivery_Email_Sendgrid
         return data
 
     def getOfferingsList(self, identifier: int) -> list['Container_Network_Message_Delivery_Email_Sendgrid_Catalog_Item']:

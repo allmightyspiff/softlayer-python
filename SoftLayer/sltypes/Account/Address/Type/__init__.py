@@ -15,5 +15,4 @@ class Account_Address_Type(Entity):
     def getObject(self, identifier: int) -> 'Account_Address_Type':
         """Retrieve a SoftLayer_Account_Address_Type record."""
         data = self.client.call('SoftLayer_Account_Address_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Address_Type import Account_Address_Type
         return data

@@ -51,7 +51,6 @@ phone numbers are taken from the account's contact information at the time the i
     def getObject(self, identifier: int) -> 'Billing_Invoice':
         """Retrieve a SoftLayer_Billing_Invoice record."""
         data = self.client.call('SoftLayer_Billing_Invoice', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice import Billing_Invoice
         return data
 
     def getPdf(self, identifier: int) -> str:

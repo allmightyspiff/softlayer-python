@@ -12,7 +12,6 @@ class Account_Link_Bluemix(Account_Link):
     def getObject(self, identifier: int) -> 'Account_Link_Bluemix':
         """Retrieve a SoftLayer_Account_Link_Bluemix record."""
         data = self.client.call('SoftLayer_Account_Link_Bluemix', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Link_Bluemix import Account_Link_Bluemix
         return data
 
     def getSupportTierType(self, identifier: int) -> str:

@@ -22,7 +22,6 @@ class Network_Storage_Group_Nfs(Network_Storage_Group):
     def getObject(self, identifier: int) -> 'Network_Storage_Group_Nfs':
         """Retrieve a SoftLayer_Network_Storage_Group_Nfs record."""
         data = self.client.call('SoftLayer_Network_Storage_Group_Nfs', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Group_Nfs import Network_Storage_Group_Nfs
         return data
 
     def removeAllowedHost(self, identifier: int, allowedHost: 'Network_Storage_Allowed_Host') -> bool:

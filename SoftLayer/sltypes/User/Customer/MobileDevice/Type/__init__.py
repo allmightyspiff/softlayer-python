@@ -17,11 +17,9 @@ consumer electronic devices, the two most prominent examples being mobile phones
 
     def getAllObjects(self) -> list['User_Customer_MobileDevice_Type']:
         data = self.client.call('SoftLayer_User_Customer_MobileDevice_Type', 'getAllObjects')
-        from SoftLayer.sltypes.User_Customer_MobileDevice_Type import User_Customer_MobileDevice_Type
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_MobileDevice_Type':
         """Retrieve a SoftLayer_User_Customer_MobileDevice_Type record."""
         data = self.client.call('SoftLayer_User_Customer_MobileDevice_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_MobileDevice_Type import User_Customer_MobileDevice_Type
         return data

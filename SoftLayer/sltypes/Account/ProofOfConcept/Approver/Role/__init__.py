@@ -16,5 +16,4 @@ approvers."""
     def getObject(self, identifier: int) -> 'Account_ProofOfConcept_Approver_Role':
         """Retrieve a SoftLayer_Account_ProofOfConcept_Approver_Role record."""
         data = self.client.call('SoftLayer_Account_ProofOfConcept_Approver_Role', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_ProofOfConcept_Approver_Role import Account_ProofOfConcept_Approver_Role
         return data

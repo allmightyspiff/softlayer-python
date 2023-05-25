@@ -14,11 +14,9 @@ class Security_Certificate_Request_Status(Entity):
     def getObject(self, identifier: int) -> 'Security_Certificate_Request_Status':
         """Retrieve a SoftLayer_Security_Certificate_Request_Status record."""
         data = self.client.call('SoftLayer_Security_Certificate_Request_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Security_Certificate_Request_Status import Security_Certificate_Request_Status
         return data
 
     def getSslRequestStatuses(self) -> list['Security_Certificate_Request_Status']:
         """Returns all SSL certificate request status objects"""
         data = self.client.call('SoftLayer_Security_Certificate_Request_Status', 'getSslRequestStatuses')
-        from SoftLayer.sltypes.Security_Certificate_Request_Status import Security_Certificate_Request_Status
         return data

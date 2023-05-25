@@ -12,13 +12,11 @@ class Network_Backbone_Location_Dependent(Entity):
 
     def getAllObjects(self) -> list['Network_Backbone_Location_Dependent']:
         data = self.client.call('SoftLayer_Network_Backbone_Location_Dependent', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Backbone_Location_Dependent import Network_Backbone_Location_Dependent
         return data
 
     def getObject(self, identifier: int) -> 'Network_Backbone_Location_Dependent':
         """Retrieve a SoftLayer_Network_Backbone_Location_Dependent record."""
         data = self.client.call('SoftLayer_Network_Backbone_Location_Dependent', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Backbone_Location_Dependent import Network_Backbone_Location_Dependent
         return data
 
     def getSourceDependentsByName(self, locationName: str) -> 'Location':

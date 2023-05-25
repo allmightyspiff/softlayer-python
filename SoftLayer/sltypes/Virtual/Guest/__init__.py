@@ -101,13 +101,11 @@ use. This method generates a transaction to perform an archive of the provided b
     def createObject(self, templateObject: 'Virtual_Guest') -> 'Virtual_Guest':
         """Create a new computing instance"""
         data = self.client.call('SoftLayer_Virtual_Guest', 'createObject', templateObject)
-        from SoftLayer.sltypes.Virtual_Guest import Virtual_Guest
         return data
 
     def createObjects(self, templateObjects: 'Virtual_Guest') -> list['Virtual_Guest']:
         """Create new computing instances"""
         data = self.client.call('SoftLayer_Virtual_Guest', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Virtual_Guest import Virtual_Guest
         return data
 
     def createPostSoftwareInstallTransaction(self, identifier: int, data: str, returnBoolean: bool) -> bool:
@@ -162,13 +160,11 @@ download."""
 
     def findByHostname(self, hostname: str) -> list['Virtual_Guest']:
         data = self.client.call('SoftLayer_Virtual_Guest', 'findByHostname', hostname)
-        from SoftLayer.sltypes.Virtual_Guest import Virtual_Guest
         return data
 
     def findByIpAddress(self, ipAddress: str) -> 'Virtual_Guest':
         """Find CCI by its primary public or private IP (ipv4) address."""
         data = self.client.call('SoftLayer_Virtual_Guest', 'findByIpAddress', ipAddress)
-        from SoftLayer.sltypes.Virtual_Guest import Virtual_Guest
         return data
 
     def generateOrderTemplate(self, templateObject: 'Virtual_Guest') -> 'Container_Product_Order':
@@ -361,7 +357,6 @@ component firewall."""
     def getObject(self, identifier: int) -> 'Virtual_Guest':
         """Retrieve a SoftLayer_Virtual_Guest record."""
         data = self.client.call('SoftLayer_Virtual_Guest', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest import Virtual_Guest
         return data
 
     def getOrderTemplate(self, identifier: int, billingType: str, orderPrices: 'Product_Item_Price') -> 'Container_Product_Order':

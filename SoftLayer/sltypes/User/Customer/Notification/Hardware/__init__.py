@@ -17,13 +17,11 @@ order for the users linked to that hardware object to be notified on failure."""
     def createObject(self, templateObject: 'User_Customer_Notification_Hardware') -> 'User_Customer_Notification_Hardware':
         """Create a user hardware notification entry"""
         data = self.client.call('SoftLayer_User_Customer_Notification_Hardware', 'createObject', templateObject)
-        from SoftLayer.sltypes.User_Customer_Notification_Hardware import User_Customer_Notification_Hardware
         return data
 
     def createObjects(self, templateObjects: 'User_Customer_Notification_Hardware') -> list['User_Customer_Notification_Hardware']:
         """Create multiple user hardware notification entries at once"""
         data = self.client.call('SoftLayer_User_Customer_Notification_Hardware', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.User_Customer_Notification_Hardware import User_Customer_Notification_Hardware
         return data
 
     def deleteObjects(self, templateObjects: 'User_Customer_Notification_Hardware') -> bool:
@@ -34,13 +32,11 @@ order for the users linked to that hardware object to be notified on failure."""
     def findByHardwareId(self, hardwareId: int) -> list['User_Customer_Notification_Hardware']:
         """Return all hardware notifications associated with the passed hardware ID"""
         data = self.client.call('SoftLayer_User_Customer_Notification_Hardware', 'findByHardwareId', hardwareId)
-        from SoftLayer.sltypes.User_Customer_Notification_Hardware import User_Customer_Notification_Hardware
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_Notification_Hardware':
         """Retrieve a SoftLayer_User_Customer_Notification_Hardware record."""
         data = self.client.call('SoftLayer_User_Customer_Notification_Hardware', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_Notification_Hardware import User_Customer_Notification_Hardware
         return data
 
     def getHardware(self, identifier: int) -> 'Hardware':

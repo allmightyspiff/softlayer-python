@@ -12,7 +12,6 @@ deleted after 15 days. The possible purge status of each history can be 'SUCCESS
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Cache_PurgeHistory':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Cache_PurgeHistory record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Cache_PurgeHistory', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Cache_PurgeHistory import Network_CdnMarketplace_Configuration_Cache_PurgeHistory
         return data
 
     def listPurgeGroupHistory(self, uniqueId: str) -> list['Container_Network_CdnMarketplace_Configuration_Cache_PurgeGroupHistory']:

@@ -29,13 +29,11 @@ output format, user id and so on."""
     def createObject(self, templateObject: 'Network_Media_Transcode_Job') -> 'Network_Media_Transcode_Job':
         """Creates a transcode job"""
         data = self.client.call('SoftLayer_Network_Media_Transcode_Job', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Media_Transcode_Job import Network_Media_Transcode_Job
         return data
 
     def getObject(self, identifier: int) -> 'Network_Media_Transcode_Job':
         """Retrieve a SoftLayer_Network_Media_Transcode_Job record."""
         data = self.client.call('SoftLayer_Network_Media_Transcode_Job', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Media_Transcode_Job import Network_Media_Transcode_Job
         return data
 
     def getHistory(self, identifier: int) -> list['Network_Media_Transcode_Job_History']:

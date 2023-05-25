@@ -25,23 +25,19 @@ class Account_Reports_Request(Entity):
 
     def createRequest(self, recipientContact: 'Account_Contact', reason: str, reportType: str, requestorContact: 'Account_Contact') -> 'Account_Reports_Request':
         data = self.client.call('SoftLayer_Account_Reports_Request', 'createRequest', recipientContact, reason, reportType, requestorContact)
-        from SoftLayer.sltypes.Account_Reports_Request import Account_Reports_Request
         return data
 
     def getAllObjects(self) -> 'Account_Reports_Request':
         data = self.client.call('SoftLayer_Account_Reports_Request', 'getAllObjects')
-        from SoftLayer.sltypes.Account_Reports_Request import Account_Reports_Request
         return data
 
     def getObject(self, identifier: int) -> 'Account_Reports_Request':
         """Retrieve a SoftLayer_Account_Reports_Request record."""
         data = self.client.call('SoftLayer_Account_Reports_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Reports_Request import Account_Reports_Request
         return data
 
     def getRequestByRequestKey(self, requestKey: str) -> 'Account_Reports_Request':
         data = self.client.call('SoftLayer_Account_Reports_Request', 'getRequestByRequestKey', requestKey)
-        from SoftLayer.sltypes.Account_Reports_Request import Account_Reports_Request
         return data
 
     def sendReportEmail(self, request: 'Account_Reports_Request') -> bool:

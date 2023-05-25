@@ -30,7 +30,6 @@ called frontend."""
     def getObject(self, identifier: int) -> 'Network_LBaaS_Listener':
         """Retrieve a SoftLayer_Network_LBaaS_Listener record."""
         data = self.client.call('SoftLayer_Network_LBaaS_Listener', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_Listener import Network_LBaaS_Listener
         return data
 
     def updateLoadBalancerProtocols(self, loadBalancerUuid: str, protocolConfigurations: 'Network_LBaaS_LoadBalancerProtocolConfiguration') -> 'Network_LBaaS_LoadBalancer':

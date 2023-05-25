@@ -29,14 +29,12 @@ availability, and pricing."""
 order a server, service or software filtered by an attribute type
 ([[SoftLayer_Product_Package_Attribute_Type]]) on the package."""
         data = self.client.call('SoftLayer_Product_Package', 'getActivePackagesByAttribute', attributeKeyName)
-        from SoftLayer.sltypes.Product_Package import Product_Package
         return data
 
     def getActivePrivateHostedCloudPackages(self) -> list['Product_Package']:
         """[DEPRECATED] Get the Active SoftLayer_Product_Packages from which one can order private hosted cloud
 configurations."""
         data = self.client.call('SoftLayer_Product_Package', 'getActivePrivateHostedCloudPackages')
-        from SoftLayer.sltypes.Product_Package import Product_Package
         return data
 
     def getActiveUsageRatePrices(self, identifier: int, locationId: int, categoryCode: str) -> list['Product_Item_Price']:
@@ -48,12 +46,10 @@ configurations."""
     def getAllObjects(self) -> list['Product_Package']:
         """Get the Active SoftLayer_Product_Packages"""
         data = self.client.call('SoftLayer_Product_Package', 'getAllObjects')
-        from SoftLayer.sltypes.Product_Package import Product_Package
         return data
 
     def getAvailablePackagesForImageTemplate(self, imageTemplate: 'Virtual_Guest_Block_Device_Template_Group') -> list['Product_Package']:
         data = self.client.call('SoftLayer_Product_Package', 'getAvailablePackagesForImageTemplate', imageTemplate)
-        from SoftLayer.sltypes.Product_Package import Product_Package
         return data
 
     def getCdnItems(self, identifier: int) -> list['Product_Item']:
@@ -94,7 +90,6 @@ are available for the service offering (package)."""
     def getObject(self, identifier: int) -> 'Product_Package':
         """Retrieve a SoftLayer_Product_Package record."""
         data = self.client.call('SoftLayer_Product_Package', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Package import Product_Package
         return data
 
     def getObjectStorageDatacenters(self, identifier: int) -> list['Container_Product_Order_Network_Storage_Hub_Datacenter']:
@@ -218,7 +213,6 @@ include account-restricted pricing. Not all accounts have restricted pricing."""
     def getDeploymentPackages(self, identifier: int) -> list['Product_Package']:
         """"""
         data = self.client.call('SoftLayer_Product_Package', 'getDeploymentPackages', id=identifier)
-        from SoftLayer.sltypes.Product_Package import Product_Package
         return data
 
     def getDeploymentType(self, identifier: int) -> str:
@@ -229,7 +223,6 @@ include account-restricted pricing. Not all accounts have restricted pricing."""
     def getDeployments(self, identifier: int) -> list['Product_Package']:
         """"""
         data = self.client.call('SoftLayer_Product_Package', 'getDeployments', id=identifier)
-        from SoftLayer.sltypes.Product_Package import Product_Package
         return data
 
     def getDisallowCustomDiskPartitions(self, identifier: int) -> bool:

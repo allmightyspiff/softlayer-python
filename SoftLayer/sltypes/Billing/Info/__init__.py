@@ -33,7 +33,6 @@ billing inquiries."""
     def getObject(self, identifier: int) -> 'Billing_Info':
         """Retrieve a SoftLayer_Billing_Info record."""
         data = self.client.call('SoftLayer_Billing_Info', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Info import Billing_Info
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

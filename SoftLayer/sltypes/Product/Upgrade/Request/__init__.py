@@ -32,7 +32,6 @@ server, or service upgrade. It also relates a [[SoftLayer_Billing_Order]] to a [
     def getObject(self, identifier: int) -> 'Product_Upgrade_Request':
         """Retrieve a SoftLayer_Product_Upgrade_Request record."""
         data = self.client.call('SoftLayer_Product_Upgrade_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Upgrade_Request import Product_Upgrade_Request
         return data
 
     def updateMaintenanceWindow(self, identifier: int, maintenanceStartTime: datetime, maintenanceWindowId: int) -> bool:

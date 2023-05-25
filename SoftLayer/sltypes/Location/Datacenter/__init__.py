@@ -12,7 +12,6 @@ properties."""
     def getObject(self, identifier: int) -> 'Location_Datacenter':
         """Retrieve a SoftLayer_Location_Datacenter record."""
         data = self.client.call('SoftLayer_Location_Datacenter', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Location_Datacenter import Location_Datacenter
         return data
 
     def getStatisticsGraphImage(self, identifier: int) -> str:

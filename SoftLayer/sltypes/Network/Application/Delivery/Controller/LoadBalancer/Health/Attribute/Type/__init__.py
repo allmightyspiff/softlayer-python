@@ -14,11 +14,9 @@ class Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type
 
     def getAllObjects(self) -> list['Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type']:
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type import Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type
         return data
 
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type import Network_Application_Delivery_Controller_LoadBalancer_Health_Attribute_Type
         return data

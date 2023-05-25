@@ -33,13 +33,11 @@ class Account_Lockdown_Request(Entity):
     def getAccountHistory(self, accountId: int) -> list['Account_Lockdown_Request']:
         """Provides a history of an account's lockdown requests and their status."""
         data = self.client.call('SoftLayer_Account_Lockdown_Request', 'getAccountHistory', accountId)
-        from SoftLayer.sltypes.Account_Lockdown_Request import Account_Lockdown_Request
         return data
 
     def getObject(self, identifier: int) -> 'Account_Lockdown_Request':
         """Retrieve a SoftLayer_Account_Lockdown_Request record."""
         data = self.client.call('SoftLayer_Account_Lockdown_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Lockdown_Request import Account_Lockdown_Request
         return data
 
     def reconnectCompute(self, identifier: int, reconnectDate: str) -> int:

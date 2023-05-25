@@ -21,7 +21,6 @@ work with an array of hardware objects associated with a single Bandwidth Poolin
     def createObject(self, templateObject: 'Network_Bandwidth_Version1_Allotment') -> 'Network_Bandwidth_Version1_Allotment':
         """create a new allotment by passing in a allotment object."""
         data = self.client.call('SoftLayer_Network_Bandwidth_Version1_Allotment', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Bandwidth_Version1_Allotment import Network_Bandwidth_Version1_Allotment
         return data
 
     def editObject(self, identifier: int, templateObject: 'Network_Bandwidth_Version1_Allotment') -> bool:
@@ -50,7 +49,6 @@ work with an array of hardware objects associated with a single Bandwidth Poolin
     def getObject(self, identifier: int) -> 'Network_Bandwidth_Version1_Allotment':
         """Retrieve a SoftLayer_Network_Bandwidth_Version1_Allotment record."""
         data = self.client.call('SoftLayer_Network_Bandwidth_Version1_Allotment', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Bandwidth_Version1_Allotment import Network_Bandwidth_Version1_Allotment
         return data
 
     def getVdrMemberRecurringFee(self, identifier: int) -> float:

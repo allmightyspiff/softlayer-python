@@ -47,7 +47,6 @@ management interfaces."""
     def getObject(self, identifier: int) -> 'Network_Component':
         """Retrieve a SoftLayer_Network_Component record."""
         data = self.client.call('SoftLayer_Network_Component', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Component import Network_Component
         return data
 
     def getPortStatistics(self, identifier: int) -> 'Container_Network_Port_Statistic':
@@ -71,7 +70,6 @@ management interfaces."""
     def getDownlinkComponent(self, identifier: int) -> 'Network_Component':
         """"""
         data = self.client.call('SoftLayer_Network_Component', 'getDownlinkComponent', id=identifier)
-        from SoftLayer.sltypes.Network_Component import Network_Component
         return data
 
     def getDuplexMode(self, identifier: int) -> 'Network_Component_Duplex_Mode':
@@ -211,7 +209,6 @@ management interfaces."""
     def getUplinkComponent(self, identifier: int) -> 'Network_Component':
         """"""
         data = self.client.call('SoftLayer_Network_Component', 'getUplinkComponent', id=identifier)
-        from SoftLayer.sltypes.Network_Component import Network_Component
         return data
 
     def getUplinkDuplexMode(self, identifier: int) -> 'Network_Component_Duplex_Mode':

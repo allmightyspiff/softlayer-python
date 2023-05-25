@@ -27,13 +27,11 @@ SoftLayer portal or API."""
     def createObject(self, templateObject: 'Dns_Secondary') -> 'Dns_Secondary':
         """Create a secondary DNS record."""
         data = self.client.call('SoftLayer_Dns_Secondary', 'createObject', templateObject)
-        from SoftLayer.sltypes.Dns_Secondary import Dns_Secondary
         return data
 
     def createObjects(self, templateObjects: 'Dns_Secondary') -> list['Dns_Secondary']:
         """Create multiple secondary DNS records."""
         data = self.client.call('SoftLayer_Dns_Secondary', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Dns_Secondary import Dns_Secondary
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -49,13 +47,11 @@ SoftLayer portal or API."""
     def getByDomainName(self, name: str) -> list['Dns_Secondary']:
         """Search for secondary domains by name."""
         data = self.client.call('SoftLayer_Dns_Secondary', 'getByDomainName', name)
-        from SoftLayer.sltypes.Dns_Secondary import Dns_Secondary
         return data
 
     def getObject(self, identifier: int) -> 'Dns_Secondary':
         """Retrieve a SoftLayer_Dns_Secondary record."""
         data = self.client.call('SoftLayer_Dns_Secondary', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Dns_Secondary import Dns_Secondary
         return data
 
     def transferNow(self, identifier: int) -> bool:

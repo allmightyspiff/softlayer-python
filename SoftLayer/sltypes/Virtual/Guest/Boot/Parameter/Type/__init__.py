@@ -20,11 +20,9 @@ cloud computing instances such as single user mode and boot into bash."""
 
     def getAllObjects(self) -> list['Virtual_Guest_Boot_Parameter_Type']:
         data = self.client.call('SoftLayer_Virtual_Guest_Boot_Parameter_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Virtual_Guest_Boot_Parameter_Type import Virtual_Guest_Boot_Parameter_Type
         return data
 
     def getObject(self, identifier: int) -> 'Virtual_Guest_Boot_Parameter_Type':
         """Retrieve a SoftLayer_Virtual_Guest_Boot_Parameter_Type record."""
         data = self.client.call('SoftLayer_Virtual_Guest_Boot_Parameter_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest_Boot_Parameter_Type import Virtual_Guest_Boot_Parameter_Type
         return data

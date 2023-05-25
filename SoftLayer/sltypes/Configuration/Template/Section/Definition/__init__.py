@@ -29,7 +29,6 @@ values."""
     def getObject(self, identifier: int) -> 'Configuration_Template_Section_Definition':
         """Retrieve a SoftLayer_Configuration_Template_Section_Definition record."""
         data = self.client.call('SoftLayer_Configuration_Template_Section_Definition', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section_Definition import Configuration_Template_Section_Definition
         return data
 
     def getAttributes(self, identifier: int) -> list['Configuration_Template_Section_Definition_Attribute']:

@@ -20,13 +20,11 @@ of those connections."""
     def getAllBackbones(self) -> list['Network_Backbone']:
         """Retrieve a list of all SoftLayer Backbones"""
         data = self.client.call('SoftLayer_Network_Backbone', 'getAllBackbones')
-        from SoftLayer.sltypes.Network_Backbone import Network_Backbone
         return data
 
     def getBackbonesForLocationName(self, locationName: str) -> list['Network_Backbone']:
         """Retrieve a list of all SoftLayer Backbones for a location name"""
         data = self.client.call('SoftLayer_Network_Backbone', 'getBackbonesForLocationName', locationName)
-        from SoftLayer.sltypes.Network_Backbone import Network_Backbone
         return data
 
     def getGraphImage(self, identifier: int) -> str:
@@ -37,7 +35,6 @@ of those connections."""
     def getObject(self, identifier: int) -> 'Network_Backbone':
         """Retrieve a SoftLayer_Network_Backbone record."""
         data = self.client.call('SoftLayer_Network_Backbone', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Backbone import Network_Backbone
         return data
 
     def getHealth(self, identifier: int) -> str:

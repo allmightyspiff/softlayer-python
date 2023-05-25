@@ -32,7 +32,6 @@ virtual server or a bare metal machine."""
     def getObject(self, identifier: int) -> 'Network_LBaaS_Member':
         """Retrieve a SoftLayer_Network_LBaaS_Member record."""
         data = self.client.call('SoftLayer_Network_LBaaS_Member', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_Member import Network_LBaaS_Member
         return data
 
     def updateLoadBalancerMembers(self, loadBalancerUuid: str, members: 'Network_LBaaS_Member') -> 'Network_LBaaS_LoadBalancer':

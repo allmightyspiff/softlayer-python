@@ -12,7 +12,6 @@ class Location_Reservation_Rack_Member(Entity):
     def getObject(self, identifier: int) -> 'Location_Reservation_Rack_Member':
         """Retrieve a SoftLayer_Location_Reservation_Rack_Member record."""
         data = self.client.call('SoftLayer_Location_Reservation_Rack_Member', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Location_Reservation_Rack_Member import Location_Reservation_Rack_Member
         return data
 
     def getLocation(self, identifier: int) -> 'Location':

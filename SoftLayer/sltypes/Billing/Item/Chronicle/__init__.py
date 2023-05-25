@@ -45,13 +45,11 @@ class Billing_Item_Chronicle(Entity):
     def getObject(self, identifier: int) -> 'Billing_Item_Chronicle':
         """Retrieve a SoftLayer_Billing_Item_Chronicle record."""
         data = self.client.call('SoftLayer_Billing_Item_Chronicle', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Item_Chronicle import Billing_Item_Chronicle
         return data
 
     def getAssociatedChildren(self, identifier: int) -> list['Billing_Item_Chronicle']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item_Chronicle', 'getAssociatedChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item_Chronicle import Billing_Item_Chronicle
         return data
 
     def getProduct(self, identifier: int) -> 'Product_Item':

@@ -15,7 +15,6 @@ class Provisioning_Maintenance_Ticket(Entity):
     def getObject(self, identifier: int) -> 'Provisioning_Maintenance_Ticket':
         """Retrieve a SoftLayer_Provisioning_Maintenance_Ticket record."""
         data = self.client.call('SoftLayer_Provisioning_Maintenance_Ticket', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Maintenance_Ticket import Provisioning_Maintenance_Ticket
         return data
 
     def getAvailableSlots(self, identifier: int) -> 'Provisioning_Maintenance_Slots':

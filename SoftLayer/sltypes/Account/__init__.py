@@ -45,7 +45,6 @@ portal and our account management staff will assist you."""
         """This service enables a partner account that has been created but is currently inactive. This restricted
 service is only available for certain accounts. Please contact support for questions."""
         data = self.client.call('SoftLayer_Account', 'activatePartner', accountId, hashCode)
-        from SoftLayer.sltypes.Account import Account
         return data
 
     def addAchInformation(self, achInformation: 'Container_Billing_Info_Ach') -> bool:
@@ -249,7 +248,6 @@ add, remove, change billing items on your account."""
     def getObject(self) -> 'Account':
         """Retrieve a SoftLayer_Account record."""
         data = self.client.call('SoftLayer_Account', 'getObject')
-        from SoftLayer.sltypes.Account import Account
         return data
 
     def getPendingCreditCardChangeRequestData(self) -> list['Container_Account_Payment_Method_CreditCard']:
@@ -1595,7 +1593,6 @@ linked account pair. "Manually" means "independent of an account link operation"
     def getReferralPartner(self, identifier: int) -> 'Account':
         """"""
         data = self.client.call('SoftLayer_Account', 'getReferralPartner', id=identifier)
-        from SoftLayer.sltypes.Account import Account
         return data
 
     def getReferredAccountFlag(self, identifier: int) -> bool:
@@ -1606,7 +1603,6 @@ linked account pair. "Manually" means "independent of an account link operation"
     def getReferredAccounts(self, identifier: int) -> list['Account']:
         """"""
         data = self.client.call('SoftLayer_Account', 'getReferredAccounts', id=identifier)
-        from SoftLayer.sltypes.Account import Account
         return data
 
     def getRegulatedWorkloads(self, identifier: int) -> list['Legal_RegulatedWorkload']:

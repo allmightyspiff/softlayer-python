@@ -24,7 +24,6 @@ class Network_Message_Delivery(Entity):
     def getObject(self, identifier: int) -> 'Network_Message_Delivery':
         """Retrieve a SoftLayer_Network_Message_Delivery record."""
         data = self.client.call('SoftLayer_Network_Message_Delivery', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Message_Delivery import Network_Message_Delivery
         return data
 
     def getUpgradeItemPrices(self, identifier: int) -> list['Product_Item_Price']:

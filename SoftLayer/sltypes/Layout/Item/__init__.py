@@ -15,7 +15,6 @@ class Layout_Item(Entity):
     def getObject(self, identifier: int) -> 'Layout_Item':
         """Retrieve a SoftLayer_Layout_Item record."""
         data = self.client.call('SoftLayer_Layout_Item', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Layout_Item import Layout_Item
         return data
 
     def getLayoutItemPreferences(self, identifier: int) -> list['Layout_Preference']:

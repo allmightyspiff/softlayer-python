@@ -27,7 +27,6 @@ VLAN firewall. This is the object which ties the running rules to a specific dow
     def getObject(self, identifier: int) -> 'Network_Vlan_Firewall':
         """Retrieve a SoftLayer_Network_Vlan_Firewall record."""
         data = self.client.call('SoftLayer_Network_Vlan_Firewall', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Vlan_Firewall import Network_Vlan_Firewall
         return data
 
     def hasActiveTransactions(self, identifier: int) -> bool:

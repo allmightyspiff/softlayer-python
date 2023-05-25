@@ -22,7 +22,6 @@ Every piece of hardware on a server will have a specific hardware component mode
     def getObject(self, identifier: int) -> 'Hardware_Component_Model':
         """Retrieve a SoftLayer_Hardware_Component_Model record."""
         data = self.client.call('SoftLayer_Hardware_Component_Model', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Hardware_Component_Model import Hardware_Component_Model
         return data
 
     def getArchitectureType(self, identifier: int) -> 'Hardware_Component_Model_Architecture_Type':
@@ -46,13 +45,11 @@ Every piece of hardware on a server will have a specific hardware component mode
     def getCompatibleChildComponentModels(self, identifier: int) -> list['Hardware_Component_Model']:
         """"""
         data = self.client.call('SoftLayer_Hardware_Component_Model', 'getCompatibleChildComponentModels', id=identifier)
-        from SoftLayer.sltypes.Hardware_Component_Model import Hardware_Component_Model
         return data
 
     def getCompatibleParentComponentModels(self, identifier: int) -> list['Hardware_Component_Model']:
         """"""
         data = self.client.call('SoftLayer_Hardware_Component_Model', 'getCompatibleParentComponentModels', id=identifier)
-        from SoftLayer.sltypes.Hardware_Component_Model import Hardware_Component_Model
         return data
 
     def getFirmwareQuantity(self, identifier: int) -> int:

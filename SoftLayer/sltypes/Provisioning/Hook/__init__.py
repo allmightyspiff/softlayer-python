@@ -19,7 +19,6 @@ provision and os reload."""
 
     def createObject(self, templateObject: 'Provisioning_Hook') -> 'Provisioning_Hook':
         data = self.client.call('SoftLayer_Provisioning_Hook', 'createObject', templateObject)
-        from SoftLayer.sltypes.Provisioning_Hook import Provisioning_Hook
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -33,7 +32,6 @@ provision and os reload."""
     def getObject(self, identifier: int) -> 'Provisioning_Hook':
         """Retrieve a SoftLayer_Provisioning_Hook record."""
         data = self.client.call('SoftLayer_Provisioning_Hook', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Hook import Provisioning_Hook
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

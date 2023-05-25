@@ -32,7 +32,6 @@ Portal."""
     def getObject(self, identifier: int) -> 'Account_Media_Data_Transfer_Request':
         """Retrieve a SoftLayer_Account_Media_Data_Transfer_Request record."""
         data = self.client.call('SoftLayer_Account_Media_Data_Transfer_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Media_Data_Transfer_Request import Account_Media_Data_Transfer_Request
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

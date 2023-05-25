@@ -21,7 +21,6 @@ class Account_Agreement(Entity):
     def getObject(self, identifier: int) -> 'Account_Agreement':
         """Retrieve a SoftLayer_Account_Agreement record."""
         data = self.client.call('SoftLayer_Account_Agreement', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Agreement import Account_Agreement
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

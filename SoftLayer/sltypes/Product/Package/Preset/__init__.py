@@ -23,13 +23,11 @@ price for the same product item."""
     def getAllObjects(self) -> list['Product_Package_Preset']:
         """Get all active package presets"""
         data = self.client.call('SoftLayer_Product_Package_Preset', 'getAllObjects')
-        from SoftLayer.sltypes.Product_Package_Preset import Product_Package_Preset
         return data
 
     def getObject(self, identifier: int) -> 'Product_Package_Preset':
         """Retrieve a SoftLayer_Product_Package_Preset record."""
         data = self.client.call('SoftLayer_Product_Package_Preset', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Package_Preset import Product_Package_Preset
         return data
 
     def getAvailableStorageUnits(self, identifier: int) -> int:

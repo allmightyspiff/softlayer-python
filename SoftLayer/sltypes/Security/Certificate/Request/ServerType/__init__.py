@@ -15,11 +15,9 @@ class Security_Certificate_Request_ServerType(Entity):
     def getAllObjects(self) -> list['Security_Certificate_Request_ServerType']:
         """Returns all SSL certificate server types"""
         data = self.client.call('SoftLayer_Security_Certificate_Request_ServerType', 'getAllObjects')
-        from SoftLayer.sltypes.Security_Certificate_Request_ServerType import Security_Certificate_Request_ServerType
         return data
 
     def getObject(self, identifier: int) -> 'Security_Certificate_Request_ServerType':
         """Retrieve a SoftLayer_Security_Certificate_Request_ServerType record."""
         data = self.client.call('SoftLayer_Security_Certificate_Request_ServerType', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Security_Certificate_Request_ServerType import Security_Certificate_Request_ServerType
         return data

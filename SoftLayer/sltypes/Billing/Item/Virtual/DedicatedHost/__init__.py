@@ -12,7 +12,6 @@ class Billing_Item_Virtual_DedicatedHost(Billing_Item):
     def getObject(self, identifier: int) -> 'Billing_Item_Virtual_DedicatedHost':
         """Retrieve a SoftLayer_Billing_Item_Virtual_DedicatedHost record."""
         data = self.client.call('SoftLayer_Billing_Item_Virtual_DedicatedHost', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Item_Virtual_DedicatedHost import Billing_Item_Virtual_DedicatedHost
         return data
 
     def getResource(self, identifier: int) -> 'Virtual_DedicatedHost':

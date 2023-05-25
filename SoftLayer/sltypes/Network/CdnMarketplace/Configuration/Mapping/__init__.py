@@ -27,7 +27,6 @@ and the protocol to be used for caching."""
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Mapping':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Mapping record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Mapping', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Mapping import Network_CdnMarketplace_Configuration_Mapping
         return data
 
     def listDomainMappingByUniqueId(self, uniqueId: str) -> list['Container_Network_CdnMarketplace_Configuration_Mapping']:

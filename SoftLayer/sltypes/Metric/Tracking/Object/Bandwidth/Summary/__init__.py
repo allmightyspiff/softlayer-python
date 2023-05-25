@@ -21,5 +21,4 @@ class Metric_Tracking_Object_Bandwidth_Summary(Entity):
     def getObject(self, identifier: int) -> 'Metric_Tracking_Object_Bandwidth_Summary':
         """Retrieve a SoftLayer_Metric_Tracking_Object_Bandwidth_Summary record."""
         data = self.client.call('SoftLayer_Metric_Tracking_Object_Bandwidth_Summary', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Metric_Tracking_Object_Bandwidth_Summary import Metric_Tracking_Object_Bandwidth_Summary
         return data

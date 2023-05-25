@@ -19,7 +19,6 @@ class Network_Storage_DedicatedCluster(Entity):
     def getObject(self, identifier: int) -> 'Network_Storage_DedicatedCluster':
         """Retrieve a SoftLayer_Network_Storage_DedicatedCluster record."""
         data = self.client.call('SoftLayer_Network_Storage_DedicatedCluster', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_DedicatedCluster import Network_Storage_DedicatedCluster
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

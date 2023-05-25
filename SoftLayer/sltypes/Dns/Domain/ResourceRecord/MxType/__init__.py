@@ -19,7 +19,6 @@ accompanying A or AAAA resource records. They may not point mail towards a host 
     def createObject(self, templateObject: 'Dns_Domain_ResourceRecord_MxType') -> 'Dns_Domain_ResourceRecord_MxType':
         """Create an MX record."""
         data = self.client.call('SoftLayer_Dns_Domain_ResourceRecord_MxType', 'createObject', templateObject)
-        from SoftLayer.sltypes.Dns_Domain_ResourceRecord_MxType import Dns_Domain_ResourceRecord_MxType
         return data
 
     def createObjects(self, templateObjects: 'Dns_Domain_ResourceRecord') -> list['Dns_Domain_ResourceRecord']:
@@ -51,5 +50,4 @@ accompanying A or AAAA resource records. They may not point mail towards a host 
     def getObject(self, identifier: int) -> 'Dns_Domain_ResourceRecord_MxType':
         """Retrieve a SoftLayer_Dns_Domain_ResourceRecord_MxType record."""
         data = self.client.call('SoftLayer_Dns_Domain_ResourceRecord_MxType', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Dns_Domain_ResourceRecord_MxType import Dns_Domain_ResourceRecord_MxType
         return data

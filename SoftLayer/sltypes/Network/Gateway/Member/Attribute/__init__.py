@@ -23,7 +23,6 @@ class Network_Gateway_Member_Attribute(Entity):
     def getObject(self, identifier: int) -> 'Network_Gateway_Member_Attribute':
         """Retrieve a SoftLayer_Network_Gateway_Member_Attribute record."""
         data = self.client.call('SoftLayer_Network_Gateway_Member_Attribute', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Gateway_Member_Attribute import Network_Gateway_Member_Attribute
         return data
 
     def getGatewayMember(self, identifier: int) -> 'Network_Gateway_Member':

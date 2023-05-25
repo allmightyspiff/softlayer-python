@@ -29,17 +29,14 @@ class Marketplace_Partner(Entity):
 
     def getAllObjects(self) -> list['Marketplace_Partner']:
         data = self.client.call('SoftLayer_Marketplace_Partner', 'getAllObjects')
-        from SoftLayer.sltypes.Marketplace_Partner import Marketplace_Partner
         return data
 
     def getAllPublishedPartners(self, searchTerm: str) -> list['Marketplace_Partner']:
         data = self.client.call('SoftLayer_Marketplace_Partner', 'getAllPublishedPartners', searchTerm)
-        from SoftLayer.sltypes.Marketplace_Partner import Marketplace_Partner
         return data
 
     def getFeaturedPartners(self, non: bool) -> list['Marketplace_Partner']:
         data = self.client.call('SoftLayer_Marketplace_Partner', 'getFeaturedPartners', non)
-        from SoftLayer.sltypes.Marketplace_Partner import Marketplace_Partner
         return data
 
     def getFile(self, identifier: int, name: str) -> 'Marketplace_Partner_File':
@@ -50,12 +47,10 @@ class Marketplace_Partner(Entity):
     def getObject(self, identifier: int) -> 'Marketplace_Partner':
         """Retrieve a SoftLayer_Marketplace_Partner record."""
         data = self.client.call('SoftLayer_Marketplace_Partner', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Marketplace_Partner import Marketplace_Partner
         return data
 
     def getPartnerByUrlIdentifier(self, urlIdentifier: str) -> 'Marketplace_Partner':
         data = self.client.call('SoftLayer_Marketplace_Partner', 'getPartnerByUrlIdentifier', urlIdentifier)
-        from SoftLayer.sltypes.Marketplace_Partner import Marketplace_Partner
         return data
 
     def getAttachments(self, identifier: int) -> list['Marketplace_Partner_Attachment']:

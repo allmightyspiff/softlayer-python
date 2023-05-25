@@ -33,7 +33,6 @@ class Network_LBaaS_L7Rule(Entity):
     def getObject(self, identifier: int) -> 'Network_LBaaS_L7Rule':
         """Retrieve a SoftLayer_Network_LBaaS_L7Rule record."""
         data = self.client.call('SoftLayer_Network_LBaaS_L7Rule', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_L7Rule import Network_LBaaS_L7Rule
         return data
 
     def updateL7Rules(self, policyUuid: str, rules: 'Network_LBaaS_L7Rule') -> 'Network_LBaaS_LoadBalancer':

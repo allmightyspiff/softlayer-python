@@ -22,13 +22,11 @@ class Email_Subscription(Entity):
 
     def getAllObjects(self) -> list['Email_Subscription']:
         data = self.client.call('SoftLayer_Email_Subscription', 'getAllObjects')
-        from SoftLayer.sltypes.Email_Subscription import Email_Subscription
         return data
 
     def getObject(self, identifier: int) -> 'Email_Subscription':
         """Retrieve a SoftLayer_Email_Subscription record."""
         data = self.client.call('SoftLayer_Email_Subscription', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Email_Subscription import Email_Subscription
         return data
 
     def getEnabled(self, identifier: int) -> bool:

@@ -17,13 +17,11 @@ order for the users linked to that Virtual Guest object to be notified on failur
     def createObject(self, templateObject: 'User_Customer_Notification_Virtual_Guest') -> 'User_Customer_Notification_Virtual_Guest':
         """Create a user virtual guest notification entry"""
         data = self.client.call('SoftLayer_User_Customer_Notification_Virtual_Guest', 'createObject', templateObject)
-        from SoftLayer.sltypes.User_Customer_Notification_Virtual_Guest import User_Customer_Notification_Virtual_Guest
         return data
 
     def createObjects(self, templateObjects: 'User_Customer_Notification_Virtual_Guest') -> list['User_Customer_Notification_Virtual_Guest']:
         """Create multiple user Virtual Guest notification entries at once"""
         data = self.client.call('SoftLayer_User_Customer_Notification_Virtual_Guest', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.User_Customer_Notification_Virtual_Guest import User_Customer_Notification_Virtual_Guest
         return data
 
     def deleteObjects(self, templateObjects: 'User_Customer_Notification_Virtual_Guest') -> bool:
@@ -34,13 +32,11 @@ order for the users linked to that Virtual Guest object to be notified on failur
     def findByGuestId(self, id_: int) -> list['User_Customer_Notification_Virtual_Guest']:
         """Return all CloudLayer computing instance notifications associated with the passed ID"""
         data = self.client.call('SoftLayer_User_Customer_Notification_Virtual_Guest', 'findByGuestId', id)
-        from SoftLayer.sltypes.User_Customer_Notification_Virtual_Guest import User_Customer_Notification_Virtual_Guest
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_Notification_Virtual_Guest':
         """Retrieve a SoftLayer_User_Customer_Notification_Virtual_Guest record."""
         data = self.client.call('SoftLayer_User_Customer_Notification_Virtual_Guest', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_Notification_Virtual_Guest import User_Customer_Notification_Virtual_Guest
         return data
 
     def getGuest(self, identifier: int) -> 'Virtual_Guest':

@@ -20,7 +20,6 @@ class Layout_Profile_Preference(Entity):
     def getObject(self, identifier: int) -> 'Layout_Profile_Preference':
         """Retrieve a SoftLayer_Layout_Profile_Preference record."""
         data = self.client.call('SoftLayer_Layout_Profile_Preference', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Layout_Profile_Preference import Layout_Profile_Preference
         return data
 
     def getLayoutContainer(self, identifier: int) -> 'Layout_Container':

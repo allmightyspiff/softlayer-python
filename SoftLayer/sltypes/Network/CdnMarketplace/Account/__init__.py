@@ -13,7 +13,6 @@ the vendor, and a CDN account's status."""
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Account':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Account record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Account', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Account import Network_CdnMarketplace_Account
         return data
 
     def verifyCdnAccountExists(self, vendorName: str) -> bool:

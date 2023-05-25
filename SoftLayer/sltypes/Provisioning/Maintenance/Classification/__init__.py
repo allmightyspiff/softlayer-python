@@ -15,7 +15,6 @@ maintenance desired."""
     def getMaintenanceClassification(self, maintenanceClassificationId: int) -> list['Provisioning_Maintenance_Classification']:
         """Retrieve a maintenance classification."""
         data = self.client.call('SoftLayer_Provisioning_Maintenance_Classification', 'getMaintenanceClassification', maintenanceClassificationId)
-        from SoftLayer.sltypes.Provisioning_Maintenance_Classification import Provisioning_Maintenance_Classification
         return data
 
     def getMaintenanceClassificationsByItemCategory(self) -> list['Provisioning_Maintenance_Classification_Item_Category']:
@@ -27,7 +26,6 @@ maintenance desired."""
     def getObject(self, identifier: int) -> 'Provisioning_Maintenance_Classification':
         """Retrieve a SoftLayer_Provisioning_Maintenance_Classification record."""
         data = self.client.call('SoftLayer_Provisioning_Maintenance_Classification', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Maintenance_Classification import Provisioning_Maintenance_Classification
         return data
 
     def getItemCategories(self, identifier: int) -> list['Provisioning_Maintenance_Classification_Item_Category']:

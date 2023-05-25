@@ -22,13 +22,11 @@ class Resource_Group(Entity):
     def getObject(self, identifier: int) -> 'Resource_Group':
         """Retrieve a SoftLayer_Resource_Group record."""
         data = self.client.call('SoftLayer_Resource_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Resource_Group import Resource_Group
         return data
 
     def getAncestorGroups(self, identifier: int) -> list['Resource_Group']:
         """"""
         data = self.client.call('SoftLayer_Resource_Group', 'getAncestorGroups', id=identifier)
-        from SoftLayer.sltypes.Resource_Group import Resource_Group
         return data
 
     def getAttributes(self, identifier: int) -> list['Resource_Group_Attribute']:
@@ -52,7 +50,6 @@ class Resource_Group(Entity):
     def getRootResourceGroup(self, identifier: int) -> 'Resource_Group':
         """"""
         data = self.client.call('SoftLayer_Resource_Group', 'getRootResourceGroup', id=identifier)
-        from SoftLayer.sltypes.Resource_Group import Resource_Group
         return data
 
     def getSubnetMembers(self, identifier: int) -> list['Resource_Group_Member']:

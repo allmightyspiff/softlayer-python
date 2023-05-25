@@ -18,7 +18,6 @@ class Hardware_Blade(Entity):
     def getObject(self, identifier: int) -> 'Hardware_Blade':
         """Retrieve a SoftLayer_Hardware_Blade record."""
         data = self.client.call('SoftLayer_Hardware_Blade', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Hardware_Blade import Hardware_Blade
         return data
 
     def getHardwareChild(self, identifier: int) -> 'Hardware':

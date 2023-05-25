@@ -21,7 +21,6 @@ for key contact at customer location who will handle Mass Data Migration."""
     def getObject(self, identifier: int) -> 'Network_Storage_MassDataMigration_Request_KeyContact':
         """Retrieve a SoftLayer_Network_Storage_MassDataMigration_Request_KeyContact record."""
         data = self.client.call('SoftLayer_Network_Storage_MassDataMigration_Request_KeyContact', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_MassDataMigration_Request_KeyContact import Network_Storage_MassDataMigration_Request_KeyContact
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

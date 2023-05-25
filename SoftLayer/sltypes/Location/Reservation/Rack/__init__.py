@@ -18,7 +18,6 @@ class Location_Reservation_Rack(Entity):
     def getObject(self, identifier: int) -> 'Location_Reservation_Rack':
         """Retrieve a SoftLayer_Location_Reservation_Rack record."""
         data = self.client.call('SoftLayer_Location_Reservation_Rack', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Location_Reservation_Rack import Location_Reservation_Rack
         return data
 
     def getAllotment(self, identifier: int) -> 'Network_Bandwidth_Version1_Allotment':

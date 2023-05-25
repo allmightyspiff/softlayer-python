@@ -24,7 +24,6 @@ and Memory allocations that runs in the Control Domain."""
     def getObject(self, identifier: int) -> 'Virtual_Host':
         """Retrieve a SoftLayer_Virtual_Host record."""
         data = self.client.call('SoftLayer_Virtual_Host', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Host import Virtual_Host
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

@@ -38,7 +38,6 @@ distinguish a dedicated host and associate an account to it."""
     def getObject(self, identifier: int) -> 'Virtual_DedicatedHost':
         """Retrieve a SoftLayer_Virtual_DedicatedHost record."""
         data = self.client.call('SoftLayer_Virtual_DedicatedHost', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_DedicatedHost import Virtual_DedicatedHost
         return data
 
     def setTags(self, identifier: int, tags: str) -> bool:

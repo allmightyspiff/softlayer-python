@@ -40,7 +40,6 @@ class Network_LBaaS_L7Policy(Entity):
     def getObject(self, identifier: int) -> 'Network_LBaaS_L7Policy':
         """Retrieve a SoftLayer_Network_LBaaS_L7Policy record."""
         data = self.client.call('SoftLayer_Network_LBaaS_L7Policy', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_L7Policy import Network_LBaaS_L7Policy
         return data
 
     def getL7Rules(self, identifier: int) -> list['Network_LBaaS_L7Rule']:

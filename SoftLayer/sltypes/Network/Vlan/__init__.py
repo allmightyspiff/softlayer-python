@@ -47,25 +47,21 @@ at Wikipedia](https://en.wikipedia.org/wiki/VLAN)"""
     def getObject(self, identifier: int) -> 'Network_Vlan':
         """Retrieve a SoftLayer_Network_Vlan record."""
         data = self.client.call('SoftLayer_Network_Vlan', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Vlan import Network_Vlan
         return data
 
     def getPrivateVlan(self, identifier: int) -> 'Network_Vlan':
         """[DEPRECATED] Retrieve a private VLAN connected to one or more hosts also connected to this public VLAN."""
         data = self.client.call('SoftLayer_Network_Vlan', 'getPrivateVlan', id=identifier)
-        from SoftLayer.sltypes.Network_Vlan import Network_Vlan
         return data
 
     def getPrivateVlanByIpAddress(self, ipAddress: str) -> 'Network_Vlan':
         """[DEPRECATED] Retrieve the private network VLAN associated with an IP address."""
         data = self.client.call('SoftLayer_Network_Vlan', 'getPrivateVlanByIpAddress', ipAddress)
-        from SoftLayer.sltypes.Network_Vlan import Network_Vlan
         return data
 
     def getPublicVlanByFqdn(self, fqdn: str) -> 'Network_Vlan':
         """[DEPRECATED] Retrieve a public VLAN by an associated host's fully-qualified domain name"""
         data = self.client.call('SoftLayer_Network_Vlan', 'getPublicVlanByFqdn', fqdn)
-        from SoftLayer.sltypes.Network_Vlan import Network_Vlan
         return data
 
     def getReverseDomainRecords(self, identifier: int) -> list['Dns_Domain']:
@@ -77,7 +73,6 @@ at Wikipedia](https://en.wikipedia.org/wiki/VLAN)"""
     def getVlanForIpAddress(self, ipAddress: str) -> 'Network_Vlan':
         """The VLAN on which the given IP address is routed."""
         data = self.client.call('SoftLayer_Network_Vlan', 'getVlanForIpAddress', ipAddress)
-        from SoftLayer.sltypes.Network_Vlan import Network_Vlan
         return data
 
     def setTags(self, identifier: int, tags: str) -> bool:

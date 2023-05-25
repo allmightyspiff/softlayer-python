@@ -15,11 +15,9 @@ class User_Security_Question(Entity):
     def getAllObjects(self) -> list['User_Security_Question']:
         """Retrieve all viewable security questions."""
         data = self.client.call('SoftLayer_User_Security_Question', 'getAllObjects')
-        from SoftLayer.sltypes.User_Security_Question import User_Security_Question
         return data
 
     def getObject(self, identifier: int) -> 'User_Security_Question':
         """Retrieve a SoftLayer_User_Security_Question record."""
         data = self.client.call('SoftLayer_User_Security_Question', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Security_Question import User_Security_Question
         return data

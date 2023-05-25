@@ -21,5 +21,4 @@ robot."""
     def getObject(self, identifier: int) -> 'Monitoring_Robot':
         """Retrieve a SoftLayer_Monitoring_Robot record."""
         data = self.client.call('SoftLayer_Monitoring_Robot', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Monitoring_Robot import Monitoring_Robot
         return data

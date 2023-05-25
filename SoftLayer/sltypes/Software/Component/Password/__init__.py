@@ -21,7 +21,6 @@ instance."""
     def createObject(self, templateObject: 'Software_Component_Password') -> 'Software_Component_Password':
         """Create a password for a software component."""
         data = self.client.call('SoftLayer_Software_Component_Password', 'createObject', templateObject)
-        from SoftLayer.sltypes.Software_Component_Password import Software_Component_Password
         return data
 
     def createObjects(self, templateObjects: 'Software_Component_Password') -> bool:
@@ -52,7 +51,6 @@ instance."""
     def getObject(self, identifier: int) -> 'Software_Component_Password':
         """Retrieve a SoftLayer_Software_Component_Password record."""
         data = self.client.call('SoftLayer_Software_Component_Password', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_Component_Password import Software_Component_Password
         return data
 
     def getSoftware(self, identifier: int) -> 'Software_Component':

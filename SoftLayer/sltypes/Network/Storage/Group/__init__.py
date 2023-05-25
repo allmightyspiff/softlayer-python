@@ -41,7 +41,6 @@ class Network_Storage_Group(Entity):
     def getAllObjects(self) -> list['Network_Storage_Group']:
         """Returns all network storage groups"""
         data = self.client.call('SoftLayer_Network_Storage_Group', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Storage_Group import Network_Storage_Group
         return data
 
     def getNetworkConnectionDetails(self, identifier: int) -> 'Container_Network_Storage_NetworkConnectionInformation':
@@ -54,7 +53,6 @@ Network Storage Volumes within this group"""
     def getObject(self, identifier: int) -> 'Network_Storage_Group':
         """Retrieve a SoftLayer_Network_Storage_Group record."""
         data = self.client.call('SoftLayer_Network_Storage_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Group import Network_Storage_Group
         return data
 
     def removeAllowedHost(self, identifier: int, allowedHost: 'Network_Storage_Allowed_Host') -> bool:

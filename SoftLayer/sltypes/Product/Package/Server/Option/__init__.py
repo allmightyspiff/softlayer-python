@@ -17,17 +17,14 @@ package servers that can be used in selection criteria."""
     def getAllOptions(self) -> list['Product_Package_Server_Option']:
         """Get all the package server options"""
         data = self.client.call('SoftLayer_Product_Package_Server_Option', 'getAllOptions')
-        from SoftLayer.sltypes.Product_Package_Server_Option import Product_Package_Server_Option
         return data
 
     def getObject(self, identifier: int) -> 'Product_Package_Server_Option':
         """Retrieve a SoftLayer_Product_Package_Server_Option record."""
         data = self.client.call('SoftLayer_Product_Package_Server_Option', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Package_Server_Option import Product_Package_Server_Option
         return data
 
     def getOptions(self, type_: str) -> list['Product_Package_Server_Option']:
         """Get all the package server options of a particular type"""
         data = self.client.call('SoftLayer_Product_Package_Server_Option', 'getOptions', type)
-        from SoftLayer.sltypes.Product_Package_Server_Option import Product_Package_Server_Option
         return data

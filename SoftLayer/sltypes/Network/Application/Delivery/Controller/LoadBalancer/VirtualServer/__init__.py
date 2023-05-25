@@ -21,7 +21,6 @@ class Network_Application_Delivery_Controller_LoadBalancer_VirtualServer(Entity)
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_LoadBalancer_VirtualServer':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualServer', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_VirtualServer import Network_Application_Delivery_Controller_LoadBalancer_VirtualServer
         return data
 
     def startSsl(self, identifier: int) -> bool:

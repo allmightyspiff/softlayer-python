@@ -23,5 +23,4 @@ countries."""
     def getObject(self, identifier: int) -> 'Billing_Currency_Country':
         """Retrieve a SoftLayer_Billing_Currency_Country record."""
         data = self.client.call('SoftLayer_Billing_Currency_Country', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Currency_Country import Billing_Currency_Country
         return data

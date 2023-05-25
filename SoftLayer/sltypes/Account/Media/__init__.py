@@ -28,7 +28,6 @@ Transfer Service request."""
     def getObject(self, identifier: int) -> 'Account_Media':
         """Retrieve a SoftLayer_Account_Media record."""
         data = self.client.call('SoftLayer_Account_Media', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Media import Account_Media
         return data
 
     def removeMediaFromList(self, mediaTemplate: 'Account_Media') -> int:

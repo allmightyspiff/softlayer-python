@@ -23,7 +23,6 @@ order to restore them later if needed."""
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_Configuration_History':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_Configuration_History record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_Configuration_History', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_Configuration_History import Network_Application_Delivery_Controller_Configuration_History
         return data
 
     def getController(self, identifier: int) -> 'Network_Application_Delivery_Controller':

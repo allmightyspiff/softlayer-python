@@ -22,7 +22,6 @@ class Account_External_Setup(Entity):
     def getObject(self, identifier: int) -> 'Account_External_Setup':
         """Retrieve a SoftLayer_Account_External_Setup record."""
         data = self.client.call('SoftLayer_Account_External_Setup', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_External_Setup import Account_External_Setup
         return data
 
     def getVerifyCardTransaction(self, identifier: int) -> 'Billing_Payment_Card_Transaction':

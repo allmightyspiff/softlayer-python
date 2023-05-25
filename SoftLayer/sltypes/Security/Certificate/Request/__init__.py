@@ -37,7 +37,6 @@ order. This contains data that is required by a Certificate Authority to place a
     def getObject(self, identifier: int) -> 'Security_Certificate_Request':
         """Retrieve a SoftLayer_Security_Certificate_Request record."""
         data = self.client.call('SoftLayer_Security_Certificate_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Security_Certificate_Request import Security_Certificate_Request
         return data
 
     def getPreviousOrderData(self, identifier: int) -> 'Container_Product_Order_Security_Certificate':
@@ -49,7 +48,6 @@ order. This contains data that is required by a Certificate Authority to place a
     def getSslCertificateRequests(self, accountId: int) -> list['Security_Certificate_Request']:
         """Returns all the SSL certificate requests"""
         data = self.client.call('SoftLayer_Security_Certificate_Request', 'getSslCertificateRequests', accountId)
-        from SoftLayer.sltypes.Security_Certificate_Request import Security_Certificate_Request
         return data
 
     def resendEmail(self, identifier: int, emailType: str) -> bool:

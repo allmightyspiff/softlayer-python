@@ -13,5 +13,4 @@ class Business_Partner_Channel(Entity):
     def getObject(self, identifier: int) -> 'Business_Partner_Channel':
         """Retrieve a SoftLayer_Business_Partner_Channel record."""
         data = self.client.call('SoftLayer_Business_Partner_Channel', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Business_Partner_Channel import Business_Partner_Channel
         return data

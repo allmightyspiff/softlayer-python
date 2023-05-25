@@ -15,7 +15,6 @@ class User_Customer_Security_Answer(Entity):
     def getObject(self, identifier: int) -> 'User_Customer_Security_Answer':
         """Retrieve a SoftLayer_User_Customer_Security_Answer record."""
         data = self.client.call('SoftLayer_User_Customer_Security_Answer', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_Security_Answer import User_Customer_Security_Answer
         return data
 
     def getQuestion(self, identifier: int) -> 'User_Security_Question':

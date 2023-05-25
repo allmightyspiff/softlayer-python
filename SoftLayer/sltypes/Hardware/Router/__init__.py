@@ -12,7 +12,6 @@ class Hardware_Router(Hardware_Switch):
     def getObject(self, identifier: int) -> 'Hardware_Router':
         """Retrieve a SoftLayer_Hardware_Router record."""
         data = self.client.call('SoftLayer_Hardware_Router', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Hardware_Router import Hardware_Router
         return data
 
     def getBoundSubnets(self, identifier: int) -> list['Network_Subnet']:

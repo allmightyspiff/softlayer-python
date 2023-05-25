@@ -16,13 +16,11 @@ class Account_Partner_Referral_Prospect(User_Customer_Prospect):
     def createProspect(self, templateObject: 'Container_Referral_Partner_Prospect', commit: bool) -> 'Account_Partner_Referral_Prospect':
         """Creates a new Referral Partner Prospect"""
         data = self.client.call('SoftLayer_Account_Partner_Referral_Prospect', 'createProspect', templateObject, commit)
-        from SoftLayer.sltypes.Account_Partner_Referral_Prospect import Account_Partner_Referral_Prospect
         return data
 
     def getObject(self, identifier: int) -> 'Account_Partner_Referral_Prospect':
         """Retrieve a SoftLayer_Account_Partner_Referral_Prospect record."""
         data = self.client.call('SoftLayer_Account_Partner_Referral_Prospect', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Partner_Referral_Prospect import Account_Partner_Referral_Prospect
         return data
 
     def getSurveyQuestions(self) -> list['Survey_Question']:

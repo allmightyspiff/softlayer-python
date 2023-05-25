@@ -27,7 +27,6 @@ software which can be installed onto hardware in accordance with it's license ag
     def getObject(self, identifier: int) -> 'Software_Component':
         """Retrieve a SoftLayer_Software_Component record."""
         data = self.client.call('SoftLayer_Software_Component', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_Component import Software_Component
         return data
 
     def getVendorSetUpConfiguration(self, identifier: int) -> str:

@@ -13,5 +13,4 @@ class Product_Item_Category_Group(Entity):
     def getObject(self, identifier: int) -> 'Product_Item_Category_Group':
         """Retrieve a SoftLayer_Product_Item_Category_Group record."""
         data = self.client.call('SoftLayer_Product_Item_Category_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Item_Category_Group import Product_Item_Category_Group
         return data

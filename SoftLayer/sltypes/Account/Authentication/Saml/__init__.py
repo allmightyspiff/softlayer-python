@@ -25,7 +25,6 @@ class Account_Authentication_Saml(Entity):
 
     def createObject(self, templateObject: 'Account_Authentication_Saml') -> 'Account_Authentication_Saml':
         data = self.client.call('SoftLayer_Account_Authentication_Saml', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Authentication_Saml import Account_Authentication_Saml
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -45,7 +44,6 @@ class Account_Authentication_Saml(Entity):
     def getObject(self, identifier: int) -> 'Account_Authentication_Saml':
         """Retrieve a SoftLayer_Account_Authentication_Saml record."""
         data = self.client.call('SoftLayer_Account_Authentication_Saml', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Authentication_Saml import Account_Authentication_Saml
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

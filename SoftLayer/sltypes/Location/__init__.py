@@ -18,48 +18,40 @@ are tied to datacenters only, not to a room, rack, or slot."""
     def getAvailableObjectStorageDatacenters(self) -> list['Location']:
         """Get the datacenters where object storage is available"""
         data = self.client.call('SoftLayer_Location', 'getAvailableObjectStorageDatacenters')
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getDatacenters(self) -> list['Location']:
         """Retrieve all datacenter locations"""
         data = self.client.call('SoftLayer_Location', 'getDatacenters')
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getDatacentersWithVirtualImageStoreServiceResourceRecord(self) -> list['Location']:
         data = self.client.call('SoftLayer_Location', 'getDatacentersWithVirtualImageStoreServiceResourceRecord')
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getObject(self, identifier: int) -> 'Location':
         """Retrieve a SoftLayer_Location record."""
         data = self.client.call('SoftLayer_Location', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getViewableDatacenters(self) -> list['Location']:
         """Retrieve all datacenter locations"""
         data = self.client.call('SoftLayer_Location', 'getViewableDatacenters')
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getViewablePopsAndDataCenters(self) -> list['Location']:
         """Retrieve viewable pops and datacenters in a combined list."""
         data = self.client.call('SoftLayer_Location', 'getViewablePopsAndDataCenters')
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getViewablepointOfPresence(self) -> list['Location']:
         """Retrieve viewable network locations"""
         data = self.client.call('SoftLayer_Location', 'getViewablepointOfPresence')
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getpointOfPresence(self) -> list['Location']:
         """Retrieve all points of presence locations"""
         data = self.client.call('SoftLayer_Location', 'getpointOfPresence')
-        from SoftLayer.sltypes.Location import Location
         return data
 
     def getActivePresaleEvents(self, identifier: int) -> list['Sales_Presale_Event']:

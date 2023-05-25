@@ -28,7 +28,6 @@ attached to a ticket."""
     def getObject(self, identifier: int) -> 'Ticket_Attachment_File':
         """Retrieve a SoftLayer_Ticket_Attachment_File record."""
         data = self.client.call('SoftLayer_Ticket_Attachment_File', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Ticket_Attachment_File import Ticket_Attachment_File
         return data
 
     def getTicket(self, identifier: int) -> 'Ticket':

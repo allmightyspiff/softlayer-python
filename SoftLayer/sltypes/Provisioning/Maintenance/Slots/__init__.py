@@ -13,5 +13,4 @@ a SoftLayer data center."""
     def getObject(self, identifier: int) -> 'Provisioning_Maintenance_Slots':
         """Retrieve a SoftLayer_Provisioning_Maintenance_Slots record."""
         data = self.client.call('SoftLayer_Provisioning_Maintenance_Slots', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Maintenance_Slots import Provisioning_Maintenance_Slots
         return data

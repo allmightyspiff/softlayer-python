@@ -13,13 +13,11 @@ class Ticket_Subject_Category(Entity):
     def getAllObjects(self) -> list['Ticket_Subject_Category']:
         """Retrieve all ticket subject categories."""
         data = self.client.call('SoftLayer_Ticket_Subject_Category', 'getAllObjects')
-        from SoftLayer.sltypes.Ticket_Subject_Category import Ticket_Subject_Category
         return data
 
     def getObject(self, identifier: int) -> 'Ticket_Subject_Category':
         """Retrieve a SoftLayer_Ticket_Subject_Category record."""
         data = self.client.call('SoftLayer_Ticket_Subject_Category', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Ticket_Subject_Category import Ticket_Subject_Category
         return data
 
     def getSubjects(self, identifier: int) -> list['Ticket_Subject']:

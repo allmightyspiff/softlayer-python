@@ -27,7 +27,6 @@ authenticate against the 3rd party service."""
     def getObject(self, identifier: int) -> 'User_External_Binding':
         """Retrieve a SoftLayer_User_External_Binding record."""
         data = self.client.call('SoftLayer_User_External_Binding', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_External_Binding import User_External_Binding
         return data
 
     def updateNote(self, identifier: int, text: str) -> bool:

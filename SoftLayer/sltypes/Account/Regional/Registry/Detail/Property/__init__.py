@@ -22,13 +22,11 @@ formats."""
     def createObject(self, templateObject: 'Account_Regional_Registry_Detail_Property') -> 'Account_Regional_Registry_Detail_Property':
         """Create a new property object"""
         data = self.client.call('SoftLayer_Account_Regional_Registry_Detail_Property', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Regional_Registry_Detail_Property import Account_Regional_Registry_Detail_Property
         return data
 
     def createObjects(self, templateObjects: 'Account_Regional_Registry_Detail_Property') -> list['Account_Regional_Registry_Detail_Property']:
         """Create multiple property objects."""
         data = self.client.call('SoftLayer_Account_Regional_Registry_Detail_Property', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Account_Regional_Registry_Detail_Property import Account_Regional_Registry_Detail_Property
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -49,7 +47,6 @@ formats."""
     def getObject(self, identifier: int) -> 'Account_Regional_Registry_Detail_Property':
         """Retrieve a SoftLayer_Account_Regional_Registry_Detail_Property record."""
         data = self.client.call('SoftLayer_Account_Regional_Registry_Detail_Property', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Regional_Registry_Detail_Property import Account_Regional_Registry_Detail_Property
         return data
 
     def getDetail(self, identifier: int) -> 'Account_Regional_Registry_Detail':

@@ -22,11 +22,9 @@ Indicates that the registration object has been abruptly removed is no longer va
 
     def getAllObjects(self) -> list['Network_Subnet_Registration_Status']:
         data = self.client.call('SoftLayer_Network_Subnet_Registration_Status', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Subnet_Registration_Status import Network_Subnet_Registration_Status
         return data
 
     def getObject(self, identifier: int) -> 'Network_Subnet_Registration_Status':
         """Retrieve a SoftLayer_Network_Subnet_Registration_Status record."""
         data = self.client.call('SoftLayer_Network_Subnet_Registration_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet_Registration_Status import Network_Subnet_Registration_Status
         return data

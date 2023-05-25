@@ -12,19 +12,16 @@ class Resource_Group_Template(Entity):
 
     def getAllObjects(self) -> list['Resource_Group_Template']:
         data = self.client.call('SoftLayer_Resource_Group_Template', 'getAllObjects')
-        from SoftLayer.sltypes.Resource_Group_Template import Resource_Group_Template
         return data
 
     def getObject(self, identifier: int) -> 'Resource_Group_Template':
         """Retrieve a SoftLayer_Resource_Group_Template record."""
         data = self.client.call('SoftLayer_Resource_Group_Template', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Resource_Group_Template import Resource_Group_Template
         return data
 
     def getChildren(self, identifier: int) -> list['Resource_Group_Template']:
         """"""
         data = self.client.call('SoftLayer_Resource_Group_Template', 'getChildren', id=identifier)
-        from SoftLayer.sltypes.Resource_Group_Template import Resource_Group_Template
         return data
 
     def getMembers(self, identifier: int) -> list['Resource_Group_Template_Member']:

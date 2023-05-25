@@ -29,7 +29,6 @@ the SoftLayer_User_Customer objects assigned to the role."""
     def createObject(self, templateObject: 'User_Permission_Role') -> 'User_Permission_Role':
         """Create a new customer permission role"""
         data = self.client.call('SoftLayer_User_Permission_Role', 'createObject', templateObject)
-        from SoftLayer.sltypes.User_Permission_Role import User_Permission_Role
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -40,13 +39,11 @@ the SoftLayer_User_Customer objects assigned to the role."""
     def editObject(self, identifier: int, templateObject: 'User_Permission_Role') -> 'User_Permission_Role':
         """Edit an existing customer permission role"""
         data = self.client.call('SoftLayer_User_Permission_Role', 'editObject', templateObject, id=identifier)
-        from SoftLayer.sltypes.User_Permission_Role import User_Permission_Role
         return data
 
     def getObject(self, identifier: int) -> 'User_Permission_Role':
         """Retrieve a SoftLayer_User_Permission_Role record."""
         data = self.client.call('SoftLayer_User_Permission_Role', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Permission_Role import User_Permission_Role
         return data
 
     def linkGroup(self, identifier: int, group: 'User_Permission_Group') -> None:

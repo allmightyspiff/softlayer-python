@@ -20,13 +20,11 @@ class Billing_Item_Cancellation_Request(Entity):
     def createObject(self, templateObject: 'Billing_Item_Cancellation_Request') -> 'Billing_Item_Cancellation_Request':
         """Creates a cancellation request."""
         data = self.client.call('SoftLayer_Billing_Item_Cancellation_Request', 'createObject', templateObject)
-        from SoftLayer.sltypes.Billing_Item_Cancellation_Request import Billing_Item_Cancellation_Request
         return data
 
     def getAllCancellationRequests(self) -> list['Billing_Item_Cancellation_Request']:
         """Returns all service cancellation requests"""
         data = self.client.call('SoftLayer_Billing_Item_Cancellation_Request', 'getAllCancellationRequests')
-        from SoftLayer.sltypes.Billing_Item_Cancellation_Request import Billing_Item_Cancellation_Request
         return data
 
     def getCancellationCutoffDate(self, accountId: int, categoryCode: str) -> datetime:
@@ -37,7 +35,6 @@ class Billing_Item_Cancellation_Request(Entity):
     def getObject(self, identifier: int) -> 'Billing_Item_Cancellation_Request':
         """Retrieve a SoftLayer_Billing_Item_Cancellation_Request record."""
         data = self.client.call('SoftLayer_Billing_Item_Cancellation_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Item_Cancellation_Request import Billing_Item_Cancellation_Request
         return data
 
     def removeCancellationItem(self, identifier: int, itemId: int) -> bool:

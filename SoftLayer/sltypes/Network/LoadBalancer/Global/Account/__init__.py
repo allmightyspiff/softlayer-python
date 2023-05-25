@@ -29,7 +29,6 @@ class Network_LoadBalancer_Global_Account(Entity):
     def getObject(self, identifier: int) -> 'Network_LoadBalancer_Global_Account':
         """Retrieve a SoftLayer_Network_LoadBalancer_Global_Account record."""
         data = self.client.call('SoftLayer_Network_LoadBalancer_Global_Account', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LoadBalancer_Global_Account import Network_LoadBalancer_Global_Account
         return data
 
     def removeNsRecord(self, identifier: int) -> bool:

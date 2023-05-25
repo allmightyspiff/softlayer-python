@@ -23,7 +23,6 @@ IBM Cloud Infrastructure customers are unable to change their brand information 
     def createObject(self, templateObject: 'Brand') -> 'Brand':
         """Create a new brand."""
         data = self.client.call('SoftLayer_Brand', 'createObject', templateObject)
-        from SoftLayer.sltypes.Brand import Brand
         return data
 
     def disableAccount(self, identifier: int, accountId: int) -> None:
@@ -60,7 +59,6 @@ IBM Cloud Infrastructure customers are unable to change their brand information 
     def getObject(self, identifier: int) -> 'Brand':
         """Retrieve a SoftLayer_Brand record."""
         data = self.client.call('SoftLayer_Brand', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Brand import Brand
         return data
 
     def getToken(self, identifier: int, userId: int) -> str:
@@ -155,7 +153,6 @@ IBM Cloud Infrastructure customers are unable to change their brand information 
     def getDistributor(self, identifier: int) -> 'Brand':
         """"""
         data = self.client.call('SoftLayer_Brand', 'getDistributor', id=identifier)
-        from SoftLayer.sltypes.Brand import Brand
         return data
 
     def getDistributorChildFlag(self, identifier: int) -> bool:

@@ -23,7 +23,6 @@ external applications such the Webcc interface for the EVault Storage service.""
     def getObject(self, identifier: int) -> 'Account_Password':
         """Retrieve a SoftLayer_Account_Password record."""
         data = self.client.call('SoftLayer_Account_Password', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Password import Account_Password
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

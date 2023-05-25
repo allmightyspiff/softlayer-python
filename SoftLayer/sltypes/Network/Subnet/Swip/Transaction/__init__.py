@@ -25,13 +25,11 @@ time."""
     def findMyTransactions(self) -> list['Network_Subnet_Swip_Transaction']:
         """returns SWIP transaction objects that are currently in transaction with ARIN."""
         data = self.client.call('SoftLayer_Network_Subnet_Swip_Transaction', 'findMyTransactions')
-        from SoftLayer.sltypes.Network_Subnet_Swip_Transaction import Network_Subnet_Swip_Transaction
         return data
 
     def getObject(self, identifier: int) -> 'Network_Subnet_Swip_Transaction':
         """Retrieve a SoftLayer_Network_Subnet_Swip_Transaction record."""
         data = self.client.call('SoftLayer_Network_Subnet_Swip_Transaction', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet_Swip_Transaction import Network_Subnet_Swip_Transaction
         return data
 
     def removeAllSubnetSwips(self) -> int:

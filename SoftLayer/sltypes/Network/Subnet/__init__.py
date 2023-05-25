@@ -70,7 +70,6 @@ Procedure](http://datatracker.ietf.org/doc/html/rfc950)"""
     def findAllSubnetsAndActiveSwipTransactionStatus(self) -> list['Network_Subnet']:
         """Retrieve a list of subnets along with their SWIP transaction statuses."""
         data = self.client.call('SoftLayer_Network_Subnet', 'findAllSubnetsAndActiveSwipTransactionStatus')
-        from SoftLayer.sltypes.Network_Subnet import Network_Subnet
         return data
 
     def getAttachedNetworkStorages(self, identifier: int, nasType: str) -> list['Network_Storage']:
@@ -89,7 +88,6 @@ same datacenter as this subnet will be returned."""
     def getObject(self, identifier: int) -> 'Network_Subnet':
         """Retrieve a SoftLayer_Network_Subnet record."""
         data = self.client.call('SoftLayer_Network_Subnet', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet import Network_Subnet
         return data
 
     def getReverseDomainRecords(self, identifier: int) -> list['Dns_Domain']:
@@ -107,7 +105,6 @@ same datacenter as this subnet will be returned."""
     def getSubnetForIpAddress(self, ipAddress: str) -> 'Network_Subnet':
         """Retrieve an IP addresses's associated subnet."""
         data = self.client.call('SoftLayer_Network_Subnet', 'getSubnetForIpAddress', ipAddress)
-        from SoftLayer.sltypes.Network_Subnet import Network_Subnet
         return data
 
     def removeAccessToNetworkStorageList(self, identifier: int, networkStorageTemplateObjects: 'Network_Storage') -> bool:
@@ -179,7 +176,6 @@ same datacenter as this subnet will be returned."""
     def getBoundDescendants(self, identifier: int) -> list['Network_Subnet']:
         """"""
         data = self.client.call('SoftLayer_Network_Subnet', 'getBoundDescendants', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet import Network_Subnet
         return data
 
     def getBoundRouterFlag(self, identifier: int) -> bool:
@@ -196,7 +192,6 @@ same datacenter as this subnet will be returned."""
     def getChildren(self, identifier: int) -> list['Network_Subnet']:
         """"""
         data = self.client.call('SoftLayer_Network_Subnet', 'getChildren', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet import Network_Subnet
         return data
 
     def getDatacenter(self, identifier: int) -> 'Location_Datacenter':
@@ -208,7 +203,6 @@ same datacenter as this subnet will be returned."""
     def getDescendants(self, identifier: int) -> list['Network_Subnet']:
         """"""
         data = self.client.call('SoftLayer_Network_Subnet', 'getDescendants', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet import Network_Subnet
         return data
 
     def getDisplayLabel(self, identifier: int) -> str:
@@ -328,7 +322,6 @@ same datacenter as this subnet will be returned."""
     def getUnboundDescendants(self, identifier: int) -> list['Network_Subnet']:
         """"""
         data = self.client.call('SoftLayer_Network_Subnet', 'getUnboundDescendants', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet import Network_Subnet
         return data
 
     def getUtilizedIpAddressCount(self, identifier: int) -> int:

@@ -21,19 +21,16 @@ Deployment ID, resource's Billing Item ID, Order ID and Role of the resource in 
     def createObject(self, templateObject: 'Workload_Citrix_Deployment_Resource') -> 'Workload_Citrix_Deployment_Resource':
         """Add the resource into CVAD deployment resources."""
         data = self.client.call('SoftLayer_Workload_Citrix_Deployment_Resource', 'createObject', templateObject)
-        from SoftLayer.sltypes.Workload_Citrix_Deployment_Resource import Workload_Citrix_Deployment_Resource
         return data
 
     def getAllObjects(self) -> list['Workload_Citrix_Deployment_Resource']:
         """Get all the Citrix deployment resources."""
         data = self.client.call('SoftLayer_Workload_Citrix_Deployment_Resource', 'getAllObjects')
-        from SoftLayer.sltypes.Workload_Citrix_Deployment_Resource import Workload_Citrix_Deployment_Resource
         return data
 
     def getObject(self, identifier: int) -> 'Workload_Citrix_Deployment_Resource':
         """Retrieve a SoftLayer_Workload_Citrix_Deployment_Resource record."""
         data = self.client.call('SoftLayer_Workload_Citrix_Deployment_Resource', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Workload_Citrix_Deployment_Resource import Workload_Citrix_Deployment_Resource
         return data
 
     def getBillingItem(self, identifier: int) -> 'Billing_Item':

@@ -17,5 +17,4 @@ notifications which can be subscribed to and received on a mobile device."""
     def getObject(self, identifier: int) -> 'Notification_Mobile':
         """Retrieve a SoftLayer_Notification_Mobile record."""
         data = self.client.call('SoftLayer_Notification_Mobile', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification_Mobile import Notification_Mobile
         return data

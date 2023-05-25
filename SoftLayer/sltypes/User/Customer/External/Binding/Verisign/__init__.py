@@ -38,7 +38,6 @@ security reasons."""
     def getObject(self, identifier: int) -> 'User_Customer_External_Binding_Verisign':
         """Retrieve a SoftLayer_User_Customer_External_Binding_Verisign record."""
         data = self.client.call('SoftLayer_User_Customer_External_Binding_Verisign', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_External_Binding_Verisign import User_Customer_External_Binding_Verisign
         return data
 
     def unlock(self, identifier: int, securityCode: str) -> bool:

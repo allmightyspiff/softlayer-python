@@ -42,7 +42,6 @@ explained more fully in the SoftLayer_Network_LoadBalancer_Service documentation
     def getObject(self, identifier: int) -> 'Network_LoadBalancer_VirtualIpAddress':
         """Retrieve a SoftLayer_Network_LoadBalancer_VirtualIpAddress record."""
         data = self.client.call('SoftLayer_Network_LoadBalancer_VirtualIpAddress', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LoadBalancer_VirtualIpAddress import Network_LoadBalancer_VirtualIpAddress
         return data
 
     def kickAllConnections(self, identifier: int) -> bool:

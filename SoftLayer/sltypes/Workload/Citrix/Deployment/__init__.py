@@ -22,12 +22,10 @@ class Workload_Citrix_Deployment(Entity):
 
     def createObject(self, templateObject: 'Workload_Citrix_Deployment') -> 'Workload_Citrix_Deployment':
         data = self.client.call('SoftLayer_Workload_Citrix_Deployment', 'createObject', templateObject)
-        from SoftLayer.sltypes.Workload_Citrix_Deployment import Workload_Citrix_Deployment
         return data
 
     def getAllObjects(self) -> list['Workload_Citrix_Deployment']:
         data = self.client.call('SoftLayer_Workload_Citrix_Deployment', 'getAllObjects')
-        from SoftLayer.sltypes.Workload_Citrix_Deployment import Workload_Citrix_Deployment
         return data
 
     def getDeployment(self, deploymentId: int) -> 'Workload_Citrix_Deployment_Response':
@@ -38,7 +36,6 @@ class Workload_Citrix_Deployment(Entity):
     def getObject(self, identifier: int) -> 'Workload_Citrix_Deployment':
         """Retrieve a SoftLayer_Workload_Citrix_Deployment record."""
         data = self.client.call('SoftLayer_Workload_Citrix_Deployment', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Workload_Citrix_Deployment import Workload_Citrix_Deployment
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

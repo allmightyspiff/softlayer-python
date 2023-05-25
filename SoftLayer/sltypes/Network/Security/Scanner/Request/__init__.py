@@ -23,13 +23,11 @@ are as follows:  *Scan Pending *Scan Processing *Scan Complete *Scan Cancelled *
     def createObject(self, templateObject: 'Network_Security_Scanner_Request') -> 'Network_Security_Scanner_Request':
         """Create a new vulnerability scan request."""
         data = self.client.call('SoftLayer_Network_Security_Scanner_Request', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Security_Scanner_Request import Network_Security_Scanner_Request
         return data
 
     def getObject(self, identifier: int) -> 'Network_Security_Scanner_Request':
         """Retrieve a SoftLayer_Network_Security_Scanner_Request record."""
         data = self.client.call('SoftLayer_Network_Security_Scanner_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Security_Scanner_Request import Network_Security_Scanner_Request
         return data
 
     def getReport(self, identifier: int) -> str:

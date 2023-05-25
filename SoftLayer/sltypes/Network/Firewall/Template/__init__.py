@@ -19,13 +19,11 @@ service to submit a firewall update request."""
     def getAllObjects(self) -> list['Network_Firewall_Template']:
         """Get all available firewall template objects."""
         data = self.client.call('SoftLayer_Network_Firewall_Template', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Firewall_Template import Network_Firewall_Template
         return data
 
     def getObject(self, identifier: int) -> 'Network_Firewall_Template':
         """Retrieve a SoftLayer_Network_Firewall_Template record."""
         data = self.client.call('SoftLayer_Network_Firewall_Template', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Firewall_Template import Network_Firewall_Template
         return data
 
     def getRules(self, identifier: int) -> list['Network_Firewall_Template_Rule']:

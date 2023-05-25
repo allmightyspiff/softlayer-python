@@ -18,13 +18,11 @@ subnet (remote)."""
     def createObject(self, templateObject: 'Network_Customer_Subnet') -> 'Network_Customer_Subnet':
         """*"""
         data = self.client.call('SoftLayer_Network_Customer_Subnet', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Customer_Subnet import Network_Customer_Subnet
         return data
 
     def getObject(self, identifier: int) -> 'Network_Customer_Subnet':
         """Retrieve a SoftLayer_Network_Customer_Subnet record."""
         data = self.client.call('SoftLayer_Network_Customer_Subnet', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Customer_Subnet import Network_Customer_Subnet
         return data
 
     def getIpAddresses(self, identifier: int) -> list['Network_Customer_Subnet_IpAddress']:

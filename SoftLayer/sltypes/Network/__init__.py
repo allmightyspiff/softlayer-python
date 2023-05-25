@@ -21,7 +21,6 @@ class Network(Entity):
     def getObject(self, identifier: int) -> 'Network':
         """Retrieve a SoftLayer_Network record."""
         data = self.client.call('SoftLayer_Network', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network import Network
         return data
 
     def isConnectedToPrivateEndpointService(self) -> bool:

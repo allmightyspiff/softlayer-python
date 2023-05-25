@@ -19,7 +19,6 @@ class Network_Pod(Entity):
     def getAllObjects(self) -> list['Network_Pod']:
         """Retrieve a list of Pods; optionally filtered via datacenter and/or capabilities."""
         data = self.client.call('SoftLayer_Network_Pod', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Pod import Network_Pod
         return data
 
     def getCapabilities(self, identifier: int) -> list[str]:
@@ -30,7 +29,6 @@ class Network_Pod(Entity):
     def getObject(self, identifier: int) -> 'Network_Pod':
         """Retrieve a Pod by name."""
         data = self.client.call('SoftLayer_Network_Pod', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Pod import Network_Pod
         return data
 
     def listCapabilities(self) -> list[str]:

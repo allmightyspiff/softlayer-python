@@ -23,13 +23,11 @@ monitor ever fails."""
     def createObject(self, templateObject: 'Network_Monitor_Version1_Query_Host') -> 'Network_Monitor_Version1_Query_Host':
         """Create a monitoring entry"""
         data = self.client.call('SoftLayer_Network_Monitor_Version1_Query_Host', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Monitor_Version1_Query_Host import Network_Monitor_Version1_Query_Host
         return data
 
     def createObjects(self, templateObjects: 'Network_Monitor_Version1_Query_Host') -> list['Network_Monitor_Version1_Query_Host']:
         """Create multiple monitoring entries at once"""
         data = self.client.call('SoftLayer_Network_Monitor_Version1_Query_Host', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Network_Monitor_Version1_Query_Host import Network_Monitor_Version1_Query_Host
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -55,13 +53,11 @@ monitor ever fails."""
     def findByHardwareId(self, hardwareId: int) -> list['Network_Monitor_Version1_Query_Host']:
         """Return all monitoring instances associated with the passed hardware ID"""
         data = self.client.call('SoftLayer_Network_Monitor_Version1_Query_Host', 'findByHardwareId', hardwareId)
-        from SoftLayer.sltypes.Network_Monitor_Version1_Query_Host import Network_Monitor_Version1_Query_Host
         return data
 
     def getObject(self, identifier: int) -> 'Network_Monitor_Version1_Query_Host':
         """Retrieve a SoftLayer_Network_Monitor_Version1_Query_Host record."""
         data = self.client.call('SoftLayer_Network_Monitor_Version1_Query_Host', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Monitor_Version1_Query_Host import Network_Monitor_Version1_Query_Host
         return data
 
     def getHardware(self, identifier: int) -> 'Hardware':

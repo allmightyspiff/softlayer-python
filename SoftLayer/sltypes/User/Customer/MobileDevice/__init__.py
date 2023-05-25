@@ -26,7 +26,6 @@ enable push notifications through non-softlayer entities (Google, Apple, RIM).""
     def createObject(self, templateObject: 'User_Customer_MobileDevice') -> 'User_Customer_MobileDevice':
         """Create a new mobile device association for a user."""
         data = self.client.call('SoftLayer_User_Customer_MobileDevice', 'createObject', templateObject)
-        from SoftLayer.sltypes.User_Customer_MobileDevice import User_Customer_MobileDevice
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -42,7 +41,6 @@ enable push notifications through non-softlayer entities (Google, Apple, RIM).""
     def getObject(self, identifier: int) -> 'User_Customer_MobileDevice':
         """Retrieve a SoftLayer_User_Customer_MobileDevice record."""
         data = self.client.call('SoftLayer_User_Customer_MobileDevice', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_MobileDevice import User_Customer_MobileDevice
         return data
 
     def getAvailablePushNotificationSubscriptions(self, identifier: int) -> list['Notification']:

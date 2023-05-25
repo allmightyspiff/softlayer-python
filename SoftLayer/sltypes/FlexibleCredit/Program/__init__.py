@@ -24,7 +24,6 @@ class FlexibleCredit_Program(Entity):
     def getObject(self, identifier: int) -> 'FlexibleCredit_Program':
         """Retrieve a SoftLayer_FlexibleCredit_Program record."""
         data = self.client.call('SoftLayer_FlexibleCredit_Program', 'getObject', id=identifier)
-        from SoftLayer.sltypes.FlexibleCredit_Program import FlexibleCredit_Program
         return data
 
     def selfEnrollNewAccount(self, identifier: int, accountTemplate: 'Account') -> 'Account':

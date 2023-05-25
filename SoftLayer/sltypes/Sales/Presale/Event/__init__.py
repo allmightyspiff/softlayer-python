@@ -22,13 +22,11 @@ provisioned."""
 
     def getAllObjects(self) -> list['Sales_Presale_Event']:
         data = self.client.call('SoftLayer_Sales_Presale_Event', 'getAllObjects')
-        from SoftLayer.sltypes.Sales_Presale_Event import Sales_Presale_Event
         return data
 
     def getObject(self, identifier: int) -> 'Sales_Presale_Event':
         """Retrieve a SoftLayer_Sales_Presale_Event record."""
         data = self.client.call('SoftLayer_Sales_Presale_Event', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Sales_Presale_Event import Sales_Presale_Event
         return data
 
     def getActiveFlag(self, identifier: int) -> bool:

@@ -37,7 +37,6 @@ class Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress(Enti
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress import Network_Application_Delivery_Controller_LoadBalancer_VirtualIpAddress
         return data
 
     def startSsl(self, identifier: int) -> bool:

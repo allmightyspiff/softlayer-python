@@ -38,13 +38,11 @@ appropriate type."""
     def createObject(self, templateObject: 'Dns_Domain_ResourceRecord') -> 'Dns_Domain_ResourceRecord':
         """Create a domain's resource record."""
         data = self.client.call('SoftLayer_Dns_Domain_ResourceRecord', 'createObject', templateObject)
-        from SoftLayer.sltypes.Dns_Domain_ResourceRecord import Dns_Domain_ResourceRecord
         return data
 
     def createObjects(self, templateObjects: 'Dns_Domain_ResourceRecord') -> list['Dns_Domain_ResourceRecord']:
         """Create multiple domain resource records."""
         data = self.client.call('SoftLayer_Dns_Domain_ResourceRecord', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Dns_Domain_ResourceRecord import Dns_Domain_ResourceRecord
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -70,7 +68,6 @@ appropriate type."""
     def getObject(self, identifier: int) -> 'Dns_Domain_ResourceRecord':
         """Retrieve a SoftLayer_Dns_Domain_ResourceRecord record."""
         data = self.client.call('SoftLayer_Dns_Domain_ResourceRecord', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Dns_Domain_ResourceRecord import Dns_Domain_ResourceRecord
         return data
 
     def getDomain(self, identifier: int) -> 'Dns_Domain':

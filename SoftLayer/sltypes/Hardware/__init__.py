@@ -42,7 +42,6 @@ class Hardware(Entity):
     def createObject(self, templateObject: 'Hardware') -> 'Hardware':
         """Create a new server"""
         data = self.client.call('SoftLayer_Hardware', 'createObject', templateObject)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -74,7 +73,6 @@ download."""
     def findByIpAddress(self, ipAddress: str) -> 'Hardware':
         """Find hardware by its primary public or private IP (ipv4) address."""
         data = self.client.call('SoftLayer_Hardware', 'findByIpAddress', ipAddress)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def generateOrderTemplate(self, templateObject: 'Hardware') -> 'Container_Product_Order':
@@ -156,7 +154,6 @@ download."""
     def getObject(self, identifier: int) -> 'Hardware':
         """Retrieve a SoftLayer_Hardware record."""
         data = self.client.call('SoftLayer_Hardware', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getPrivateBandwidthData(self, identifier: int, startTime: int, endTime: int) -> list['Metric_Tracking_Object_Data']:
@@ -355,7 +352,6 @@ download."""
     def getBackendRouters(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getBackendRouters', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getBandwidthAllocation(self, identifier: int) -> float:
@@ -399,7 +395,6 @@ download."""
     def getChildrenHardware(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getChildrenHardware', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getComponents(self, identifier: int) -> list['Hardware_Component']:
@@ -438,19 +433,16 @@ download."""
     def getDownlinkHardware(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getDownlinkHardware', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getDownlinkNetworkHardware(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getDownlinkNetworkHardware', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getDownlinkServers(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getDownlinkServers', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getDownlinkVirtualGuests(self, identifier: int) -> list['Virtual_Guest']:
@@ -468,19 +460,16 @@ download."""
     def getDownstreamNetworkHardware(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getDownstreamNetworkHardware', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getDownstreamNetworkHardwareWithIncidents(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getDownstreamNetworkHardwareWithIncidents', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getDownstreamServers(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getDownstreamServers', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getDownstreamVirtualGuests(self, identifier: int) -> list['Virtual_Guest']:
@@ -522,7 +511,6 @@ download."""
     def getFrontendRouters(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getFrontendRouters', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getFutureBillingItem(self, identifier: int) -> 'Billing_Item_Hardware':
@@ -713,7 +701,6 @@ download."""
     def getNetworkMonitorAttachedDownHardware(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getNetworkMonitorAttachedDownHardware', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getNetworkMonitorAttachedDownVirtualGuests(self, identifier: int) -> list['Virtual_Guest']:
@@ -809,7 +796,6 @@ download."""
     def getParentHardware(self, identifier: int) -> 'Hardware':
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getParentHardware', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getPointOfPresenceLocation(self, identifier: int) -> 'Location':
@@ -930,7 +916,6 @@ download."""
     def getRouters(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getRouters', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getSecurityScanRequests(self, identifier: int) -> list['Network_Security_Scanner_Request']:
@@ -1008,7 +993,6 @@ download."""
     def getUplinkHardware(self, identifier: int) -> 'Hardware':
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getUplinkHardware', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getUplinkNetworkComponents(self, identifier: int) -> list['Network_Component']:
@@ -1032,7 +1016,6 @@ download."""
     def getVirtualChassisSiblings(self, identifier: int) -> list['Hardware']:
         """"""
         data = self.client.call('SoftLayer_Hardware', 'getVirtualChassisSiblings', id=identifier)
-        from SoftLayer.sltypes.Hardware import Hardware
         return data
 
     def getVirtualHost(self, identifier: int) -> 'Virtual_Host':

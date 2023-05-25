@@ -22,7 +22,6 @@ Customer Portal."""
 
     def getAllObjects(self) -> list['Network_Storage_MassDataMigration_Request']:
         data = self.client.call('SoftLayer_Network_Storage_MassDataMigration_Request', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Storage_MassDataMigration_Request import Network_Storage_MassDataMigration_Request
         return data
 
     def getAllRequestStatuses(self) -> list['Network_Storage_MassDataMigration_Request_Status']:
@@ -34,13 +33,11 @@ Customer Portal."""
     def getObject(self, identifier: int) -> 'Network_Storage_MassDataMigration_Request':
         """Retrieve a SoftLayer_Network_Storage_MassDataMigration_Request record."""
         data = self.client.call('SoftLayer_Network_Storage_MassDataMigration_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_MassDataMigration_Request import Network_Storage_MassDataMigration_Request
         return data
 
     def getPendingRequests(self) -> list['Network_Storage_MassDataMigration_Request']:
         """Returns placeholder MDMS requests for any MDMS order pending approval."""
         data = self.client.call('SoftLayer_Network_Storage_MassDataMigration_Request', 'getPendingRequests')
-        from SoftLayer.sltypes.Network_Storage_MassDataMigration_Request import Network_Storage_MassDataMigration_Request
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

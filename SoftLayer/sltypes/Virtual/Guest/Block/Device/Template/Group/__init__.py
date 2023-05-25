@@ -57,14 +57,12 @@ create transaction(s) to add available locations to an archive image template.""
         """This method generates a transaction to import a disk image from an external source and create a standard
 image template."""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'createFromExternalSource', configuration)
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def createFromIcos(self, configuration: 'Container_Virtual_Guest_Block_Device_Template_Configuration') -> 'Virtual_Guest_Block_Device_Template_Group':
         """This method generates a process instance to import a disk image from ICOS and create a standard image
 template."""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'createFromIcos', configuration)
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def createPublicArchiveTransaction(self, identifier: int, groupName: str, summary: str, note: str, locations: 'Location') -> int:
@@ -104,7 +102,6 @@ not the child."""
     def findGcImagesByCurrentUser(self, dataCenters: str, regions: str) -> list['Virtual_Guest_Block_Device_Template_Group']:
         """Fetch a sorted collection of GC enabled cloudinit images for the account of the current active customer user."""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'findGcImagesByCurrentUser', dataCenters, regions)
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def getAllAvailableCompatiblePlatformNames(self) -> list[str]:
@@ -130,19 +127,16 @@ not the child."""
     def getObject(self, identifier: int) -> 'Virtual_Guest_Block_Device_Template_Group':
         """Retrieve a SoftLayer_Virtual_Guest_Block_Device_Template_Group record."""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def getPublicCustomerOwnedImages(self) -> list['Virtual_Guest_Block_Device_Template_Group']:
         """Gets all public customer owned image templates that the user is allowed to see."""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'getPublicCustomerOwnedImages')
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def getPublicImages(self) -> list['Virtual_Guest_Block_Device_Template_Group']:
         """Gets all public image templates that the user is allowed to see."""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'getPublicImages')
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def getRiasAccount(self, secret: str) -> 'Container_Virtual_Guest_Block_Device_Template_Group_RiasAccount':
@@ -269,7 +263,6 @@ create transaction(s) to remove available locations from an archive image templa
     def getChildren(self, identifier: int) -> list['Virtual_Guest_Block_Device_Template_Group']:
         """"""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'getChildren', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def getDatacenter(self, identifier: int) -> 'Location':
@@ -287,7 +280,6 @@ create transaction(s) to remove available locations from an archive image templa
     def getFirstChild(self, identifier: int) -> 'Virtual_Guest_Block_Device_Template_Group':
         """"""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'getFirstChild', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def getFlexImageFlag(self, identifier: int) -> bool:
@@ -319,7 +311,6 @@ create transaction(s) to remove available locations from an archive image templa
     def getParent(self, identifier: int) -> 'Virtual_Guest_Block_Device_Template_Group':
         """"""
         data = self.client.call('SoftLayer_Virtual_Guest_Block_Device_Template_Group', 'getParent', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest_Block_Device_Template_Group import Virtual_Guest_Block_Device_Template_Group
         return data
 
     def getRegion(self, identifier: int) -> 'Network_Service_Resource':

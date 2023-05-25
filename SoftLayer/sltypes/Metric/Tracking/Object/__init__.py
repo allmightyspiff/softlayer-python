@@ -69,7 +69,6 @@ object."""
     def getObject(self, identifier: int) -> 'Metric_Tracking_Object':
         """Retrieve a SoftLayer_Metric_Tracking_Object record."""
         data = self.client.call('SoftLayer_Metric_Tracking_Object', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Metric_Tracking_Object import Metric_Tracking_Object
         return data
 
     def getSummary(self, identifier: int, graphType: str) -> 'Container_Metric_Tracking_Object_Summary':

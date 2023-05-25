@@ -31,7 +31,6 @@ portal VPN user may access."""
     def getObject(self, identifier: int) -> 'Network_Service_Vpn_Overrides':
         """Retrieve a SoftLayer_Network_Service_Vpn_Overrides record."""
         data = self.client.call('SoftLayer_Network_Service_Vpn_Overrides', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Service_Vpn_Overrides import Network_Service_Vpn_Overrides
         return data
 
     def getSubnet(self, identifier: int) -> 'Network_Subnet':

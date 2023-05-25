@@ -26,7 +26,6 @@ accessible with this data type."""
     def getObject(self, identifier: int) -> 'Account_Shipment_Item':
         """Retrieve a SoftLayer_Account_Shipment_Item record."""
         data = self.client.call('SoftLayer_Account_Shipment_Item', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Shipment_Item import Account_Shipment_Item
         return data
 
     def getShipment(self, identifier: int) -> 'Account_Shipment':

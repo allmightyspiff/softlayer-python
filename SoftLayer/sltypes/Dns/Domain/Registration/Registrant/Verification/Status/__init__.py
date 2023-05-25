@@ -20,11 +20,9 @@ been inititated."""
 
     def getAllObjects(self) -> list['Dns_Domain_Registration_Registrant_Verification_Status']:
         data = self.client.call('SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status', 'getAllObjects')
-        from SoftLayer.sltypes.Dns_Domain_Registration_Registrant_Verification_Status import Dns_Domain_Registration_Registrant_Verification_Status
         return data
 
     def getObject(self, identifier: int) -> 'Dns_Domain_Registration_Registrant_Verification_Status':
         """Retrieve a SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status record."""
         data = self.client.call('SoftLayer_Dns_Domain_Registration_Registrant_Verification_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Dns_Domain_Registration_Registrant_Verification_Status import Dns_Domain_Registration_Registrant_Verification_Status
         return data

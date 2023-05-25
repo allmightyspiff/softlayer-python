@@ -28,7 +28,6 @@ Also, there are some subscriptions that are required."""
     def getObject(self, identifier: int) -> 'Notification_User_Subscriber':
         """Retrieve a SoftLayer_Notification_User_Subscriber record."""
         data = self.client.call('SoftLayer_Notification_User_Subscriber', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification_User_Subscriber import Notification_User_Subscriber
         return data
 
     def getDeliveryMethods(self, identifier: int) -> list['Notification_Delivery_Method']:

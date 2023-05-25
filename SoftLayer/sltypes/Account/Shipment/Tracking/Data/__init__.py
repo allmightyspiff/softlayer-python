@@ -20,13 +20,11 @@ tracked through the shipping courier."""
     def createObject(self, templateObject: 'Account_Shipment_Tracking_Data') -> 'Account_Shipment_Tracking_Data':
         """Create a new shipment tracking data."""
         data = self.client.call('SoftLayer_Account_Shipment_Tracking_Data', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Shipment_Tracking_Data import Account_Shipment_Tracking_Data
         return data
 
     def createObjects(self, templateObjects: 'Account_Shipment_Tracking_Data') -> list['Account_Shipment_Tracking_Data']:
         """Create multiple tracking data records."""
         data = self.client.call('SoftLayer_Account_Shipment_Tracking_Data', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Account_Shipment_Tracking_Data import Account_Shipment_Tracking_Data
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -42,7 +40,6 @@ tracked through the shipping courier."""
     def getObject(self, identifier: int) -> 'Account_Shipment_Tracking_Data':
         """Retrieve a SoftLayer_Account_Shipment_Tracking_Data record."""
         data = self.client.call('SoftLayer_Account_Shipment_Tracking_Data', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Shipment_Tracking_Data import Account_Shipment_Tracking_Data
         return data
 
     def getCreateEmployee(self, identifier: int) -> 'User_Employee':

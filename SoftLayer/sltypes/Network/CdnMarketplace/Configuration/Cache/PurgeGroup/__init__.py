@@ -22,7 +22,6 @@ paths in the group."""
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Cache_PurgeGroup':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Cache_PurgeGroup record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Cache_PurgeGroup', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Cache_PurgeGroup import Network_CdnMarketplace_Configuration_Cache_PurgeGroup
         return data
 
     def getPurgeGroupByGroupId(self, uniqueId: str, groupUniqueId: str) -> 'Container_Network_CdnMarketplace_Configuration_Cache_PurgeGroup':

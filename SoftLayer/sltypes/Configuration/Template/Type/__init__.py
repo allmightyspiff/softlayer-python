@@ -16,5 +16,4 @@ class Configuration_Template_Type(Entity):
     def getObject(self, identifier: int) -> 'Configuration_Template_Type':
         """Retrieve a SoftLayer_Configuration_Template_Type record."""
         data = self.client.call('SoftLayer_Configuration_Template_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Type import Configuration_Template_Type
         return data

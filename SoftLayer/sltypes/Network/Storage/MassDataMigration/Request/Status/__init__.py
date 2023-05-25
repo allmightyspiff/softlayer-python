@@ -16,5 +16,4 @@ relating to the statuses to which a Mass Data Migration Request may be set."""
     def getObject(self, identifier: int) -> 'Network_Storage_MassDataMigration_Request_Status':
         """Retrieve a SoftLayer_Network_Storage_MassDataMigration_Request_Status record."""
         data = self.client.call('SoftLayer_Network_Storage_MassDataMigration_Request_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_MassDataMigration_Request_Status import Network_Storage_MassDataMigration_Request_Status
         return data

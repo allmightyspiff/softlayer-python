@@ -17,7 +17,6 @@ class Account_Affiliation(Entity):
     def createObject(self, templateObject: 'Account_Affiliation') -> 'Account_Affiliation':
         """Create a new affiliation."""
         data = self.client.call('SoftLayer_Account_Affiliation', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Affiliation import Account_Affiliation
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -33,13 +32,11 @@ class Account_Affiliation(Entity):
     def getAccountAffiliationsByAffiliateId(self, affiliateId: str) -> list['Account_Affiliation']:
         """Get account affiliation information associated with affiliate id."""
         data = self.client.call('SoftLayer_Account_Affiliation', 'getAccountAffiliationsByAffiliateId', affiliateId)
-        from SoftLayer.sltypes.Account_Affiliation import Account_Affiliation
         return data
 
     def getObject(self, identifier: int) -> 'Account_Affiliation':
         """Retrieve a SoftLayer_Account_Affiliation record."""
         data = self.client.call('SoftLayer_Account_Affiliation', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Affiliation import Account_Affiliation
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

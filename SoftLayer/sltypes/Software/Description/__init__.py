@@ -31,18 +31,15 @@ SoftLayer_Software_Component_Swsoft_Plesk object."""
 
     def getAllObjects(self) -> list['Software_Description']:
         data = self.client.call('SoftLayer_Software_Description', 'getAllObjects')
-        from SoftLayer.sltypes.Software_Description import Software_Description
         return data
 
     def getCustomerOwnedLicenseDescriptions(self) -> list['Software_Description']:
         data = self.client.call('SoftLayer_Software_Description', 'getCustomerOwnedLicenseDescriptions')
-        from SoftLayer.sltypes.Software_Description import Software_Description
         return data
 
     def getObject(self, identifier: int) -> 'Software_Description':
         """Retrieve a SoftLayer_Software_Description record."""
         data = self.client.call('SoftLayer_Software_Description', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_Description import Software_Description
         return data
 
     def getAttributes(self, identifier: int) -> list['Software_Description_Attribute']:
@@ -59,7 +56,6 @@ SoftLayer_Software_Component_Swsoft_Plesk object."""
     def getCompatibleSoftwareDescriptions(self, identifier: int) -> list['Software_Description']:
         """"""
         data = self.client.call('SoftLayer_Software_Description', 'getCompatibleSoftwareDescriptions', id=identifier)
-        from SoftLayer.sltypes.Software_Description import Software_Description
         return data
 
     def getFeatures(self, identifier: int) -> list['Software_Description_Feature']:
@@ -71,7 +67,6 @@ SoftLayer_Software_Component_Swsoft_Plesk object."""
     def getLatestVersion(self, identifier: int) -> list['Software_Description']:
         """"""
         data = self.client.call('SoftLayer_Software_Description', 'getLatestVersion', id=identifier)
-        from SoftLayer.sltypes.Software_Description import Software_Description
         return data
 
     def getProductItems(self, identifier: int) -> list['Product_Item']:
@@ -106,13 +101,11 @@ SoftLayer_Software_Component_Swsoft_Plesk object."""
     def getUpgradeSoftwareDescription(self, identifier: int) -> 'Software_Description':
         """"""
         data = self.client.call('SoftLayer_Software_Description', 'getUpgradeSoftwareDescription', id=identifier)
-        from SoftLayer.sltypes.Software_Description import Software_Description
         return data
 
     def getUpgradeSwDesc(self, identifier: int) -> 'Software_Description':
         """"""
         data = self.client.call('SoftLayer_Software_Description', 'getUpgradeSwDesc', id=identifier)
-        from SoftLayer.sltypes.Software_Description import Software_Description
         return data
 
     def getValidFilesystemTypes(self, identifier: int) -> list['Configuration_Storage_Filesystem_Type']:

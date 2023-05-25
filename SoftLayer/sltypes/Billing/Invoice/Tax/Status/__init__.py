@@ -17,11 +17,9 @@ integration with a third-party tax calculation service."""
 
     def getAllObjects(self) -> list['Billing_Invoice_Tax_Status']:
         data = self.client.call('SoftLayer_Billing_Invoice_Tax_Status', 'getAllObjects')
-        from SoftLayer.sltypes.Billing_Invoice_Tax_Status import Billing_Invoice_Tax_Status
         return data
 
     def getObject(self, identifier: int) -> 'Billing_Invoice_Tax_Status':
         """Retrieve a SoftLayer_Billing_Invoice_Tax_Status record."""
         data = self.client.call('SoftLayer_Billing_Invoice_Tax_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Invoice_Tax_Status import Billing_Invoice_Tax_Status
         return data

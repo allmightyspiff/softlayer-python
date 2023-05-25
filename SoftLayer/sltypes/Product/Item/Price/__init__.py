@@ -34,13 +34,11 @@ this price is sold. All prices are returned in floating point values measured in
     def getObject(self, identifier: int) -> 'Product_Item_Price':
         """Retrieve a SoftLayer_Product_Item_Price record."""
         data = self.client.call('SoftLayer_Product_Item_Price', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Item_Price import Product_Item_Price
         return data
 
     def getUsageRatePrices(self, location: 'Location', items: 'Product_Item') -> list['Product_Item_Price']:
         """Get all the rate-based prices for the location and items specified."""
         data = self.client.call('SoftLayer_Product_Item_Price', 'getUsageRatePrices', location, items)
-        from SoftLayer.sltypes.Product_Item_Price import Product_Item_Price
         return data
 
     def getAccountRestrictions(self, identifier: int) -> list['Product_Item_Price_Account_Restriction']:

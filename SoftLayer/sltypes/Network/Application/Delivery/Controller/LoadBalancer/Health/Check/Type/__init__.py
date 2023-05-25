@@ -12,11 +12,9 @@ class Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type(Ent
 
     def getAllObjects(self) -> list['Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type']:
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type import Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type
         return data
 
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type import Network_Application_Delivery_Controller_LoadBalancer_Health_Check_Type
         return data

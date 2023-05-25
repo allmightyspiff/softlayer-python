@@ -22,5 +22,4 @@ SoftLayer customer account authentication."""
     def getObject(self, identifier: int) -> 'Account_Authentication_Attribute_Type':
         """Retrieve a SoftLayer_Account_Authentication_Attribute_Type record."""
         data = self.client.call('SoftLayer_Account_Authentication_Attribute_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Authentication_Attribute_Type import Account_Authentication_Attribute_Type
         return data

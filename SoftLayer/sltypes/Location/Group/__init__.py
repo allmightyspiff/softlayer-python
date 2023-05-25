@@ -14,13 +14,11 @@ class Location_Group(Entity):
 
     def getAllObjects(self) -> list['Location_Group']:
         data = self.client.call('SoftLayer_Location_Group', 'getAllObjects')
-        from SoftLayer.sltypes.Location_Group import Location_Group
         return data
 
     def getObject(self, identifier: int) -> 'Location_Group':
         """Retrieve a SoftLayer_Location_Group record."""
         data = self.client.call('SoftLayer_Location_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Location_Group import Location_Group
         return data
 
     def getLocationGroupType(self, identifier: int) -> 'Location_Group_Type':

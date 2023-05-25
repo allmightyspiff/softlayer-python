@@ -12,5 +12,4 @@ class Ticket_Attachment_File_ServiceNow(Ticket_Attachment_File):
     def getObject(self, identifier: int) -> 'Ticket_Attachment_File_ServiceNow':
         """Retrieve a SoftLayer_Ticket_Attachment_File_ServiceNow record."""
         data = self.client.call('SoftLayer_Ticket_Attachment_File_ServiceNow', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Ticket_Attachment_File_ServiceNow import Ticket_Attachment_File_ServiceNow
         return data

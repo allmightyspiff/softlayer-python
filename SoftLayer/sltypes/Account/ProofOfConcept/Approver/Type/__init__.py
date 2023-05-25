@@ -15,7 +15,6 @@ class Account_ProofOfConcept_Approver_Type(Entity):
     def getObject(self, identifier: int) -> 'Account_ProofOfConcept_Approver_Type':
         """Retrieve a SoftLayer_Account_ProofOfConcept_Approver_Type record."""
         data = self.client.call('SoftLayer_Account_ProofOfConcept_Approver_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_ProofOfConcept_Approver_Type import Account_ProofOfConcept_Approver_Type
         return data
 
     def getApprovers(self, identifier: int) -> list['Account_ProofOfConcept_Approver']:

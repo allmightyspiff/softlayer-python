@@ -15,13 +15,11 @@ class Network_Gateway_Precheck(Entity):
     def getObject(self, identifier: int) -> 'Network_Gateway_Precheck':
         """Retrieve a SoftLayer_Network_Gateway_Precheck record."""
         data = self.client.call('SoftLayer_Network_Gateway_Precheck', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Gateway_Precheck import Network_Gateway_Precheck
         return data
 
     def getPrecheckStatus(self, gatewayId: int, getRollbackPrecheck: bool) -> list['Network_Gateway_Precheck']:
         """Get Precheck status for Gateway"""
         data = self.client.call('SoftLayer_Network_Gateway_Precheck', 'getPrecheckStatus', gatewayId, getRollbackPrecheck)
-        from SoftLayer.sltypes.Network_Gateway_Precheck import Network_Gateway_Precheck
         return data
 
     def licenseManagementPrecheck(self, gatewayId: int) -> bool:

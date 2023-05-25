@@ -25,7 +25,6 @@ will be paginated having 25 items on each page."""
     def getObject(self, identifier: int) -> 'Network_Storage_Backup_Evault':
         """Retrieve a SoftLayer_Network_Storage_Backup_Evault record."""
         data = self.client.call('SoftLayer_Network_Storage_Backup_Evault', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Backup_Evault import Network_Storage_Backup_Evault
         return data
 
     def getWebCCAuthenticationDetails(self) -> 'Container_Network_Storage_Backup_Evault_WebCc_Authentication_Details':

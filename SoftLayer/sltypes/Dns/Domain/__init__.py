@@ -49,13 +49,11 @@ A, AAAA, CTYPE, and MX records are stored in the domain's associated [[SoftLayer
     def createObject(self, templateObject: 'Dns_Domain') -> 'Dns_Domain':
         """Create a new domain."""
         data = self.client.call('SoftLayer_Dns_Domain', 'createObject', templateObject)
-        from SoftLayer.sltypes.Dns_Domain import Dns_Domain
         return data
 
     def createObjects(self, templateObjects: 'Dns_Domain') -> list['Dns_Domain']:
         """Create multiple domains at once."""
         data = self.client.call('SoftLayer_Dns_Domain', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Dns_Domain import Dns_Domain
         return data
 
     def createPtrRecord(self, ipAddress: str, ptrRecord: str, ttl: int) -> 'Dns_Domain_ResourceRecord':
@@ -84,13 +82,11 @@ A, AAAA, CTYPE, and MX records are stored in the domain's associated [[SoftLayer
     def getByDomainName(self, name: str) -> list['Dns_Domain']:
         """Search for domains by name."""
         data = self.client.call('SoftLayer_Dns_Domain', 'getByDomainName', name)
-        from SoftLayer.sltypes.Dns_Domain import Dns_Domain
         return data
 
     def getObject(self, identifier: int) -> 'Dns_Domain':
         """Retrieve a SoftLayer_Dns_Domain record."""
         data = self.client.call('SoftLayer_Dns_Domain', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Dns_Domain import Dns_Domain
         return data
 
     def getZoneFileContents(self, identifier: int) -> str:

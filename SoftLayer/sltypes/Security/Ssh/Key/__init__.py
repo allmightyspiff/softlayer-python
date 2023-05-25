@@ -17,7 +17,6 @@ class Security_Ssh_Key(Entity):
 
     def createObject(self, templateObject: 'Security_Ssh_Key') -> 'Security_Ssh_Key':
         data = self.client.call('SoftLayer_Security_Ssh_Key', 'createObject', templateObject)
-        from SoftLayer.sltypes.Security_Ssh_Key import Security_Ssh_Key
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -31,7 +30,6 @@ class Security_Ssh_Key(Entity):
     def getObject(self, identifier: int) -> 'Security_Ssh_Key':
         """Retrieve a SoftLayer_Security_Ssh_Key record."""
         data = self.client.call('SoftLayer_Security_Ssh_Key', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Security_Ssh_Key import Security_Ssh_Key
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

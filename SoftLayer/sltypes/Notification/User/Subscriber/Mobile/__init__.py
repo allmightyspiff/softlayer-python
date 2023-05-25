@@ -19,7 +19,6 @@ Also, there are some subscriptions that are required."""
     def getObject(self, identifier: int) -> 'Notification_User_Subscriber_Mobile':
         """Retrieve a SoftLayer_Notification_User_Subscriber_Mobile record."""
         data = self.client.call('SoftLayer_Notification_User_Subscriber_Mobile', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification_User_Subscriber_Mobile import Notification_User_Subscriber_Mobile
         return data
 
     def setSnoozeTimer(self, identifier: int, start: int, end: int) -> bool:

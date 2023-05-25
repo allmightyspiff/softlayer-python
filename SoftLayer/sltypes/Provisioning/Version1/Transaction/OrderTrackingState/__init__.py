@@ -14,5 +14,4 @@ class Provisioning_Version1_Transaction_OrderTrackingState(Entity):
     def getObject(self, identifier: int) -> 'Provisioning_Version1_Transaction_OrderTrackingState':
         """Retrieve a SoftLayer_Provisioning_Version1_Transaction_OrderTrackingState record."""
         data = self.client.call('SoftLayer_Provisioning_Version1_Transaction_OrderTrackingState', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Version1_Transaction_OrderTrackingState import Provisioning_Version1_Transaction_OrderTrackingState
         return data

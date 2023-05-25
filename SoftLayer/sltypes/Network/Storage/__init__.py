@@ -162,7 +162,6 @@ objects."""
     def createSnapshot(self, identifier: int, notes: str) -> 'Network_Storage':
         """Manually create a new snapshot of a storage volume."""
         data = self.client.call('SoftLayer_Network_Storage', 'createSnapshot', notes, id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def deleteAllFiles(self, identifier: int) -> bool:
@@ -275,7 +274,6 @@ objects."""
     def getByUsername(self, username: str, type_: str) -> list['Network_Storage']:
         """Retrieve network storage accounts by username."""
         data = self.client.call('SoftLayer_Network_Storage', 'getByUsername', username, type)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getCdnUrls(self, identifier: int) -> list['Container_Network_Storage_Hub_ObjectStorage_ContentDeliveryUrl']:
@@ -365,7 +363,6 @@ Storage Volumes with Encryption at Rest may be ordered."""
     def getObject(self, identifier: int) -> 'Network_Storage':
         """Retrieve a SoftLayer_Network_Storage record."""
         data = self.client.call('SoftLayer_Network_Storage', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getObjectStorageConnectionInformation(self) -> list['Container_Network_Service_Resource_ObjectStorage_ConnectionInformation']:
@@ -377,7 +374,6 @@ Storage Volumes with Encryption at Rest may be ordered."""
     def getObjectsByCredential(self, credentialObject: 'Network_Storage_Credential') -> list['Network_Storage']:
         """Retrieve network storage accounts by SoftLayer_Network_Storage_Credential object."""
         data = self.client.call('SoftLayer_Network_Storage', 'getObjectsByCredential', credentialObject)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getRecycleBinFileByIdentifier(self, identifier: int, fileId: str) -> 'Container_Utility_File_Entity':
@@ -405,7 +401,6 @@ Storage accounts at moment but may expanded to other Storage types in the future
     def getSnapshotsForVolume(self, identifier: int) -> list['Network_Storage']:
         """Retrieves a list oƒf snapshots for a given volume."""
         data = self.client.call('SoftLayer_Network_Storage', 'getSnapshotsForVolume', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getStorageGroupsNetworkConnectionDetails(self, identifier: int) -> list['Container_Network_Storage_NetworkConnectionInformation']:
@@ -723,7 +718,6 @@ objects."""
     def getDependentDuplicates(self, identifier: int) -> list['Network_Storage']:
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getDependentDuplicates', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getEvents(self, identifier: int) -> list['Network_Storage_Event']:
@@ -818,13 +812,11 @@ objects."""
     def getIscsiLuns(self, identifier: int) -> list['Network_Storage']:
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getIscsiLuns', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getIscsiReplicatingVolume(self, identifier: int) -> 'Network_Storage':
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getIscsiReplicatingVolume', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getIscsiTargetIpAddresses(self, identifier: int) -> list[str]:
@@ -840,7 +832,6 @@ objects."""
     def getManualSnapshots(self, identifier: int) -> list['Network_Storage']:
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getManualSnapshots', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getMetricTrackingObject(self, identifier: int) -> 'Metric_Tracking_Object':
@@ -910,7 +901,6 @@ objects."""
     def getParentVolume(self, identifier: int) -> 'Network_Storage':
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getParentVolume', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getPartnerships(self, identifier: int) -> list['Network_Storage_Partnership']:
@@ -939,13 +929,11 @@ objects."""
     def getReplicatingLuns(self, identifier: int) -> list['Network_Storage']:
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getReplicatingLuns', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getReplicatingVolume(self, identifier: int) -> 'Network_Storage':
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getReplicatingVolume', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getReplicationEvents(self, identifier: int) -> list['Network_Storage_Event']:
@@ -957,7 +945,6 @@ objects."""
     def getReplicationPartners(self, identifier: int) -> list['Network_Storage']:
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getReplicationPartners', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getReplicationSchedule(self, identifier: int) -> 'Network_Storage_Schedule':
@@ -1026,7 +1013,6 @@ objects."""
     def getSnapshots(self, identifier: int) -> list['Network_Storage']:
         """"""
         data = self.client.call('SoftLayer_Network_Storage', 'getSnapshots', id=identifier)
-        from SoftLayer.sltypes.Network_Storage import Network_Storage
         return data
 
     def getStaasVersion(self, identifier: int) -> str:

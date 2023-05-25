@@ -20,13 +20,11 @@ class Account_ProofOfConcept_Approver(Entity):
     def getAllObjects(self) -> list['Account_ProofOfConcept_Approver']:
         """Retrieves a list of reviewers"""
         data = self.client.call('SoftLayer_Account_ProofOfConcept_Approver', 'getAllObjects')
-        from SoftLayer.sltypes.Account_ProofOfConcept_Approver import Account_ProofOfConcept_Approver
         return data
 
     def getObject(self, identifier: int) -> 'Account_ProofOfConcept_Approver':
         """Retrieve a SoftLayer_Account_ProofOfConcept_Approver record."""
         data = self.client.call('SoftLayer_Account_ProofOfConcept_Approver', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_ProofOfConcept_Approver import Account_ProofOfConcept_Approver
         return data
 
     def getRole(self, identifier: int) -> 'Account_ProofOfConcept_Approver_Role':

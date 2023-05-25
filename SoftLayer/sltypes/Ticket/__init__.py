@@ -102,37 +102,31 @@ service. To create an upgrade ticket for the SoftLayer sales group execute the
     def createAdministrativeTicket(self, templateObject: 'Ticket', contents: str, attachmentId: int, rootPassword: str, controlPanelPassword: str, accessPort: str, attachedFiles: 'Container_Utility_File_Attachment', attachmentType: str) -> 'Ticket':
         """Create an administrative support ticket."""
         data = self.client.call('SoftLayer_Ticket', 'createAdministrativeTicket', templateObject, contents, attachmentId, rootPassword, controlPanelPassword, accessPort, attachedFiles, attachmentType)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def createCancelServerTicket(self, attachmentId: int, reason: str, content: str, cancelAssociatedItems: bool, attachmentType: str) -> 'Ticket':
         """Create a sales cancel server ticket to be cancelled on next bill date."""
         data = self.client.call('SoftLayer_Ticket', 'createCancelServerTicket', attachmentId, reason, content, cancelAssociatedItems, attachmentType)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def createCancelServiceTicket(self, attachmentId: int, reason: str, content: str, attachmentType: str) -> 'Ticket':
         """Create a sales cancel service ticket."""
         data = self.client.call('SoftLayer_Ticket', 'createCancelServiceTicket', attachmentId, reason, content, attachmentType)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def createStandardTicket(self, templateObject: 'Ticket', contents: str, attachmentId: int, rootPassword: str, controlPanelPassword: str, accessPort: str, attachedFiles: 'Container_Utility_File_Attachment', attachmentType: str) -> 'Ticket':
         """Create a standard support ticket."""
         data = self.client.call('SoftLayer_Ticket', 'createStandardTicket', templateObject, contents, attachmentId, rootPassword, controlPanelPassword, accessPort, attachedFiles, attachmentType)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def createUpgradeTicket(self, attachmentId: int, genericUpgrade: str, upgradeMaintenanceWindow: str, details: str, attachmentType: str, title: str) -> 'Ticket':
         """Create an upgrade request ticket for the SoftLayer sales team."""
         data = self.client.call('SoftLayer_Ticket', 'createUpgradeTicket', attachmentId, genericUpgrade, upgradeMaintenanceWindow, details, attachmentType, title)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def edit(self, identifier: int, templateObject: 'Ticket', contents: str, attachedFiles: 'Container_Utility_File_Attachment') -> 'Ticket':
         """Edit or update a SoftLayer ticket."""
         data = self.client.call('SoftLayer_Ticket', 'edit', templateObject, contents, attachedFiles, id=identifier)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def getAllTicketGroups(self) -> list['Ticket_Group']:
@@ -155,13 +149,11 @@ service. To create an upgrade ticket for the SoftLayer sales group execute the
     def getObject(self, identifier: int) -> 'Ticket':
         """Retrieve a SoftLayer_Ticket record."""
         data = self.client.call('SoftLayer_Ticket', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def getTicketsClosedSinceDate(self, closeDate: datetime) -> list['Ticket']:
         """Retrieve tickets closed since a given date."""
         data = self.client.call('SoftLayer_Ticket', 'getTicketsClosedSinceDate', closeDate)
-        from SoftLayer.sltypes.Ticket import Ticket
         return data
 
     def markAsViewed(self, identifier: int) -> None:

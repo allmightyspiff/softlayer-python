@@ -18,13 +18,11 @@ class Configuration_Storage_Group_Array_Type(Entity):
 
     def getAllObjects(self) -> list['Configuration_Storage_Group_Array_Type']:
         data = self.client.call('SoftLayer_Configuration_Storage_Group_Array_Type', 'getAllObjects')
-        from SoftLayer.sltypes.Configuration_Storage_Group_Array_Type import Configuration_Storage_Group_Array_Type
         return data
 
     def getObject(self, identifier: int) -> 'Configuration_Storage_Group_Array_Type':
         """Retrieve a SoftLayer_Configuration_Storage_Group_Array_Type record."""
         data = self.client.call('SoftLayer_Configuration_Storage_Group_Array_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Storage_Group_Array_Type import Configuration_Storage_Group_Array_Type
         return data
 
     def getHardwareComponentModels(self, identifier: int) -> list['Hardware_Component_Model']:

@@ -16,11 +16,9 @@ unique internal identifier that can be used when creating a new external binding
     def getAllObjects(self) -> list['User_External_Binding_Vendor']:
         """Get a list of all available external binding vendors that SoftLayer supports."""
         data = self.client.call('SoftLayer_User_External_Binding_Vendor', 'getAllObjects')
-        from SoftLayer.sltypes.User_External_Binding_Vendor import User_External_Binding_Vendor
         return data
 
     def getObject(self, identifier: int) -> 'User_External_Binding_Vendor':
         """Retrieve a SoftLayer_User_External_Binding_Vendor record."""
         data = self.client.call('SoftLayer_User_External_Binding_Vendor', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_External_Binding_Vendor import User_External_Binding_Vendor
         return data

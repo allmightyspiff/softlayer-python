@@ -64,14 +64,12 @@ Billing Items with a null parent item do not have an associated parent item."""
     def getObject(self, identifier: int) -> 'Billing_Item':
         """Retrieve a SoftLayer_Billing_Item record."""
         data = self.client.call('SoftLayer_Billing_Item', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getServiceBillingItemsByCategory(self, categoryCode: str, includeZeroRecurringFee: bool) -> list['Billing_Item']:
         """Returns billing item in a given category code. Use this method to retrieve service billing items that you
 wish to cancel."""
         data = self.client.call('SoftLayer_Billing_Item', 'getServiceBillingItemsByCategory', categoryCode, includeZeroRecurringFee)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def removeAssociationId(self, identifier: int) -> bool:
@@ -110,19 +108,16 @@ wish to cancel."""
     def getActiveAssociatedChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getActiveAssociatedChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getActiveAssociatedGuestDiskBillingItems(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getActiveAssociatedGuestDiskBillingItems', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getActiveBundledItems(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getActiveBundledItems', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getActiveCancellationItem(self, identifier: int) -> 'Billing_Item_Cancellation_Request_Item':
@@ -134,7 +129,6 @@ wish to cancel."""
     def getActiveChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getActiveChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getActiveFlag(self, identifier: int) -> bool:
@@ -145,19 +139,16 @@ wish to cancel."""
     def getActiveSparePoolAssociatedGuestDiskBillingItems(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getActiveSparePoolAssociatedGuestDiskBillingItems', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getActiveSparePoolBundledItems(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getActiveSparePoolBundledItems', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getAssociatedBillingItem(self, identifier: int) -> 'Billing_Item':
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getAssociatedBillingItem', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getAssociatedBillingItemHistory(self, identifier: int) -> list['Billing_Item_Association_History']:
@@ -169,13 +160,11 @@ wish to cancel."""
     def getAssociatedChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getAssociatedChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getAssociatedParent(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getAssociatedParent', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getAvailableMatchingVlans(self, identifier: int) -> list['Network_Vlan']:
@@ -193,19 +182,16 @@ wish to cancel."""
     def getBillableChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getBillableChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getBundledItems(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getBundledItems', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getCanceledChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getCanceledChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getCancellationReason(self, identifier: int) -> 'Billing_Item_Cancellation_Reason':
@@ -229,13 +215,11 @@ wish to cancel."""
     def getChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getChildrenWithActiveAgreement(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getChildrenWithActiveAgreement', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getDowngradeItems(self, identifier: int) -> list['Product_Item']:
@@ -247,7 +231,6 @@ wish to cancel."""
     def getFilteredNextInvoiceChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getFilteredNextInvoiceChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getHourlyFlag(self, identifier: int) -> bool:
@@ -282,7 +265,6 @@ wish to cancel."""
     def getNextInvoiceChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getNextInvoiceChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getNextInvoiceTotalOneTimeAmount(self, identifier: int) -> float:
@@ -308,7 +290,6 @@ wish to cancel."""
     def getNonZeroNextInvoiceChildren(self, identifier: int) -> list['Billing_Item']:
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getNonZeroNextInvoiceChildren', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getOrderItem(self, identifier: int) -> 'Billing_Order_Item':
@@ -332,7 +313,6 @@ wish to cancel."""
     def getParent(self, identifier: int) -> 'Billing_Item':
         """"""
         data = self.client.call('SoftLayer_Billing_Item', 'getParent', id=identifier)
-        from SoftLayer.sltypes.Billing_Item import Billing_Item
         return data
 
     def getParentVirtualGuestBillingItem(self, identifier: int) -> 'Billing_Item_Virtual_Guest':

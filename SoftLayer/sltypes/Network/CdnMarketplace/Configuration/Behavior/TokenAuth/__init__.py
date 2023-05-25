@@ -22,7 +22,6 @@ class Network_CdnMarketplace_Configuration_Behavior_TokenAuth(Entity):
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Behavior_TokenAuth':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Behavior_TokenAuth record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Behavior_TokenAuth', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Behavior_TokenAuth import Network_CdnMarketplace_Configuration_Behavior_TokenAuth
         return data
 
     def listTokenAuthPath(self, uniqueId: str) -> list['Container_Network_CdnMarketplace_Configuration_Behavior_TokenAuth']:

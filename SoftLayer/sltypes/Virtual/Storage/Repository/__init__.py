@@ -34,7 +34,6 @@ many types of devices, interfaces, and other resources."""
     def getObject(self, identifier: int) -> 'Virtual_Storage_Repository':
         """Retrieve a SoftLayer_Virtual_Storage_Repository record."""
         data = self.client.call('SoftLayer_Virtual_Storage_Repository', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Storage_Repository import Virtual_Storage_Repository
         return data
 
     def getPublicImageDiskUsageRatePerGb(self, identifier: int) -> float:

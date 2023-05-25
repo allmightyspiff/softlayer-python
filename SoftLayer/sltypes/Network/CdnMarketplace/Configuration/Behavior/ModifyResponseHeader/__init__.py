@@ -22,7 +22,6 @@ class Network_CdnMarketplace_Configuration_Behavior_ModifyResponseHeader(Entity)
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Behavior_ModifyResponseHeader':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Behavior_ModifyResponseHeader record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Behavior_ModifyResponseHeader', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Behavior_ModifyResponseHeader import Network_CdnMarketplace_Configuration_Behavior_ModifyResponseHeader
         return data
 
     def listModifyResponseHeader(self, uniqueId: str) -> list['Container_Network_CdnMarketplace_Configuration_Behavior_ModifyResponseHeader']:

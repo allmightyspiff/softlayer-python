@@ -15,13 +15,11 @@ class Billing_Item_Cancellation_Reason(Entity):
     def getAllCancellationReasons(self) -> list['Billing_Item_Cancellation_Reason']:
         """Retrieve all available cancellation reasons."""
         data = self.client.call('SoftLayer_Billing_Item_Cancellation_Reason', 'getAllCancellationReasons')
-        from SoftLayer.sltypes.Billing_Item_Cancellation_Reason import Billing_Item_Cancellation_Reason
         return data
 
     def getObject(self, identifier: int) -> 'Billing_Item_Cancellation_Reason':
         """Retrieve a SoftLayer_Billing_Item_Cancellation_Reason record."""
         data = self.client.call('SoftLayer_Billing_Item_Cancellation_Reason', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Item_Cancellation_Reason import Billing_Item_Cancellation_Reason
         return data
 
     def getBillingCancellationReasonCategory(self, identifier: int) -> 'Billing_Item_Cancellation_Reason_Category':

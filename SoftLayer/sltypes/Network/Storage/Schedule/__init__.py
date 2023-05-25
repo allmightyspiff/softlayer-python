@@ -21,7 +21,6 @@ various tasks such as scheduling snapshots or synchronizing replicants."""
     def createObject(self, templateObject: 'Network_Storage_Schedule') -> 'Network_Storage_Schedule':
         """Create a nas volume schedule"""
         data = self.client.call('SoftLayer_Network_Storage_Schedule', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Storage_Schedule import Network_Storage_Schedule
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -37,7 +36,6 @@ various tasks such as scheduling snapshots or synchronizing replicants."""
     def getObject(self, identifier: int) -> 'Network_Storage_Schedule':
         """Retrieve a SoftLayer_Network_Storage_Schedule record."""
         data = self.client.call('SoftLayer_Network_Storage_Schedule', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Schedule import Network_Storage_Schedule
         return data
 
     def getDay(self, identifier: int) -> str:

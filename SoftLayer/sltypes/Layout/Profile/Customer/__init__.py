@@ -12,7 +12,6 @@ class Layout_Profile_Customer(Layout_Profile):
     def getObject(self, identifier: int) -> 'Layout_Profile_Customer':
         """Retrieve a SoftLayer_Layout_Profile_Customer record."""
         data = self.client.call('SoftLayer_Layout_Profile_Customer', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Layout_Profile_Customer import Layout_Profile_Customer
         return data
 
     def getUserRecord(self, identifier: int) -> 'User_Customer':

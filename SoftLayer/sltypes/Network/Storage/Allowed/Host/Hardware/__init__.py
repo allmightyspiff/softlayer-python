@@ -12,7 +12,6 @@ class Network_Storage_Allowed_Host_Hardware(Network_Storage_Allowed_Host):
     def getObject(self, identifier: int) -> 'Network_Storage_Allowed_Host_Hardware':
         """Retrieve a SoftLayer_Network_Storage_Allowed_Host_Hardware record."""
         data = self.client.call('SoftLayer_Network_Storage_Allowed_Host_Hardware', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Allowed_Host_Hardware import Network_Storage_Allowed_Host_Hardware
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

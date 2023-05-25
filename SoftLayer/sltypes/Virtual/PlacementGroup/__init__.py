@@ -19,7 +19,6 @@ properties to the virtual guest placement group rule class."""
 
     def createObject(self, templateObject: 'Virtual_PlacementGroup') -> 'Virtual_PlacementGroup':
         data = self.client.call('SoftLayer_Virtual_PlacementGroup', 'createObject', templateObject)
-        from SoftLayer.sltypes.Virtual_PlacementGroup import Virtual_PlacementGroup
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -38,7 +37,6 @@ properties to the virtual guest placement group rule class."""
     def getObject(self, identifier: int) -> 'Virtual_PlacementGroup':
         """Retrieve a SoftLayer_Virtual_PlacementGroup record."""
         data = self.client.call('SoftLayer_Virtual_PlacementGroup', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_PlacementGroup import Virtual_PlacementGroup
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

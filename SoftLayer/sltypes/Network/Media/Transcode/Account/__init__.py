@@ -44,7 +44,6 @@ class Network_Media_Transcode_Account(Entity):
     def getObject(self, identifier: int) -> 'Network_Media_Transcode_Account':
         """Retrieve a SoftLayer_Network_Media_Transcode_Account record."""
         data = self.client.call('SoftLayer_Network_Media_Transcode_Account', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Media_Transcode_Account import Network_Media_Transcode_Account
         return data
 
     def getPresetDetail(self, identifier: int, guid: str) -> list['Container_Network_Media_Transcode_Preset_Element']:

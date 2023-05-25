@@ -21,7 +21,6 @@ class Account_Brand_Migration_Request(Entity):
     def getObject(self, identifier: int) -> 'Account_Brand_Migration_Request':
         """Retrieve a SoftLayer_Account_Brand_Migration_Request record."""
         data = self.client.call('SoftLayer_Account_Brand_Migration_Request', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Brand_Migration_Request import Account_Brand_Migration_Request
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

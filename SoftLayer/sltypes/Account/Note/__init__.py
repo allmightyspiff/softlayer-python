@@ -17,7 +17,6 @@ class Account_Note(Entity):
 
     def createObject(self, templateObject: 'Account_Note') -> 'Account_Note':
         data = self.client.call('SoftLayer_Account_Note', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Note import Account_Note
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -31,7 +30,6 @@ class Account_Note(Entity):
     def getObject(self, identifier: int) -> 'Account_Note':
         """Retrieve a SoftLayer_Account_Note record."""
         data = self.client.call('SoftLayer_Account_Note', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Note import Account_Note
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

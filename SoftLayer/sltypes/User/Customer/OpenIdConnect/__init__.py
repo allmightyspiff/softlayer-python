@@ -23,7 +23,6 @@ token"""
     def createObject(self, templateObject: 'User_Customer_OpenIdConnect', password: str, vpnPassword: str) -> 'User_Customer_OpenIdConnect':
         """Create a new user record."""
         data = self.client.call('SoftLayer_User_Customer_OpenIdConnect', 'createObject', templateObject, password, vpnPassword)
-        from SoftLayer.sltypes.User_Customer_OpenIdConnect import User_Customer_OpenIdConnect
         return data
 
     def createOpenIdConnectUserAndCompleteInvitation(self, providerType: str, user: 'User_Customer', password: str, registrationCode: str) -> None:
@@ -58,7 +57,6 @@ user identity."""
     def getObject(self, identifier: int) -> 'User_Customer_OpenIdConnect':
         """Retrieve a SoftLayer_User_Customer_OpenIdConnect record."""
         data = self.client.call('SoftLayer_User_Customer_OpenIdConnect', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_OpenIdConnect import User_Customer_OpenIdConnect
         return data
 
     def getOpenIdRegistrationInfoFromCode(self, providerType: str, registrationCode: str) -> 'Account_Authentication_OpenIdConnect_RegistrationInformation':
@@ -82,7 +80,6 @@ user identity."""
     def getUserForUnifiedInvitation(self, openIdConnectUserId: str, uniqueIdentifier: str, searchInvitationsNotLinksFlag: str, accountId: str) -> 'User_Customer_OpenIdConnect':
         """Get the IMS User Object for the provided OpenIdConnect User ID, or (Optional) IBMid Unique Identifier."""
         data = self.client.call('SoftLayer_User_Customer_OpenIdConnect', 'getUserForUnifiedInvitation', openIdConnectUserId, uniqueIdentifier, searchInvitationsNotLinksFlag, accountId)
-        from SoftLayer.sltypes.User_Customer_OpenIdConnect import User_Customer_OpenIdConnect
         return data
 
     def getUserIdForPasswordSet(self, key: str) -> int:

@@ -40,7 +40,6 @@ the L7 policy and is different from the default pool"""
     def getObject(self, identifier: int) -> 'Network_LBaaS_L7Pool':
         """Retrieve a SoftLayer_Network_LBaaS_L7Pool record."""
         data = self.client.call('SoftLayer_Network_LBaaS_L7Pool', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_L7Pool import Network_LBaaS_L7Pool
         return data
 
     def updateL7Pool(self, l7PoolUuid: str, l7Pool: 'Network_LBaaS_L7Pool', l7HealthMonitor: 'Network_LBaaS_L7HealthMonitor', l7SessionAffinity: 'Network_LBaaS_L7SessionAffinity') -> 'Network_LBaaS_LoadBalancer':

@@ -26,12 +26,10 @@ execute the purge on, the result of the purge, and the time interval after which
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Cache_TimeToLive':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Cache_TimeToLive record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Cache_TimeToLive', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Cache_TimeToLive import Network_CdnMarketplace_Configuration_Cache_TimeToLive
         return data
 
     def listTimeToLive(self, uniqueId: str) -> list['Network_CdnMarketplace_Configuration_Cache_TimeToLive']:
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Cache_TimeToLive', 'listTimeToLive', uniqueId)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Cache_TimeToLive import Network_CdnMarketplace_Configuration_Cache_TimeToLive
         return data
 
     def updateTimeToLive(self, uniqueId: str, oldPath: str, newPath: str, oldTtl: str, newTtl: str) -> str:

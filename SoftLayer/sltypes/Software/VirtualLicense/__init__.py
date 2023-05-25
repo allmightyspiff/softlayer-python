@@ -26,7 +26,6 @@ machines and therefore are assigned to an IP Address.  Not all software packages
     def getObject(self, identifier: int) -> 'Software_VirtualLicense':
         """Retrieve a SoftLayer_Software_VirtualLicense record."""
         data = self.client.call('SoftLayer_Software_VirtualLicense', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_VirtualLicense import Software_VirtualLicense
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

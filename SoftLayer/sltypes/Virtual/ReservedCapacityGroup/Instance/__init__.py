@@ -17,7 +17,6 @@ class Virtual_ReservedCapacityGroup_Instance(Entity):
     def getObject(self, identifier: int) -> 'Virtual_ReservedCapacityGroup_Instance':
         """Retrieve a SoftLayer_Virtual_ReservedCapacityGroup_Instance record."""
         data = self.client.call('SoftLayer_Virtual_ReservedCapacityGroup_Instance', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_ReservedCapacityGroup_Instance import Virtual_ReservedCapacityGroup_Instance
         return data
 
     def getAvailableFlag(self, identifier: int) -> bool:

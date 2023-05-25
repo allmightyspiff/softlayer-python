@@ -14,5 +14,4 @@ class Workload_Citrix_Deployment_Type(Entity):
     def getObject(self, identifier: int) -> 'Workload_Citrix_Deployment_Type':
         """Retrieve a SoftLayer_Workload_Citrix_Deployment_Type record."""
         data = self.client.call('SoftLayer_Workload_Citrix_Deployment_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Workload_Citrix_Deployment_Type import Workload_Citrix_Deployment_Type
         return data

@@ -15,5 +15,4 @@ class Account_Shipment_Status(Entity):
     def getObject(self, identifier: int) -> 'Account_Shipment_Status':
         """Retrieve a SoftLayer_Account_Shipment_Status record."""
         data = self.client.call('SoftLayer_Account_Shipment_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Shipment_Status import Account_Shipment_Status
         return data

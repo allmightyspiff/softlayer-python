@@ -66,7 +66,6 @@ for an application delivery controller."""
     def getObject(self, identifier: int) -> 'Network_Application_Delivery_Controller':
         """Retrieve a SoftLayer_Network_Application_Delivery_Controller record."""
         data = self.client.call('SoftLayer_Network_Application_Delivery_Controller', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Application_Delivery_Controller import Network_Application_Delivery_Controller
         return data
 
     def restoreBaseConfiguration(self, identifier: int) -> bool:

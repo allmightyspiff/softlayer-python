@@ -16,7 +16,6 @@ employee to set these settings."""
     def getObject(self, identifier: int) -> 'Account_Authentication_Attribute':
         """Retrieve a SoftLayer_Account_Authentication_Attribute record."""
         data = self.client.call('SoftLayer_Account_Authentication_Attribute', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Authentication_Attribute import Account_Authentication_Attribute
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

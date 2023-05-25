@@ -16,7 +16,6 @@ class Layout_Profile_Containers(Entity):
     def createObject(self, templateObject: 'Layout_Profile_Containers') -> 'Layout_Profile_Containers':
         """Associate a layout container with a profile"""
         data = self.client.call('SoftLayer_Layout_Profile_Containers', 'createObject', templateObject)
-        from SoftLayer.sltypes.Layout_Profile_Containers import Layout_Profile_Containers
         return data
 
     def editObject(self, identifier: int, templateObject: 'Layout_Profile_Containers') -> bool:
@@ -27,7 +26,6 @@ class Layout_Profile_Containers(Entity):
     def getObject(self, identifier: int) -> 'Layout_Profile_Containers':
         """Retrieve a SoftLayer_Layout_Profile_Containers record."""
         data = self.client.call('SoftLayer_Layout_Profile_Containers', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Layout_Profile_Containers import Layout_Profile_Containers
         return data
 
     def getLayoutContainerType(self, identifier: int) -> 'Layout_Container':

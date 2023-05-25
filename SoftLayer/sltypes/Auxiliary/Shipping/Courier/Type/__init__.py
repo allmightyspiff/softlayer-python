@@ -14,12 +14,10 @@ class Auxiliary_Shipping_Courier_Type(Entity):
     def getObject(self, identifier: int) -> 'Auxiliary_Shipping_Courier_Type':
         """Retrieve a SoftLayer_Auxiliary_Shipping_Courier_Type record."""
         data = self.client.call('SoftLayer_Auxiliary_Shipping_Courier_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Auxiliary_Shipping_Courier_Type import Auxiliary_Shipping_Courier_Type
         return data
 
     def getTypeByKeyName(self, keyName: str) -> 'Auxiliary_Shipping_Courier_Type':
         data = self.client.call('SoftLayer_Auxiliary_Shipping_Courier_Type', 'getTypeByKeyName', keyName)
-        from SoftLayer.sltypes.Auxiliary_Shipping_Courier_Type import Auxiliary_Shipping_Courier_Type
         return data
 
     def getCourier(self, identifier: int) -> list['Auxiliary_Shipping_Courier']:

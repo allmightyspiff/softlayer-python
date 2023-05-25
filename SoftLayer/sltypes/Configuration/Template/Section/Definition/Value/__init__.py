@@ -17,7 +17,6 @@ class Configuration_Template_Section_Definition_Value(Entity):
     def getObject(self, identifier: int) -> 'Configuration_Template_Section_Definition_Value':
         """Retrieve a SoftLayer_Configuration_Template_Section_Definition_Value record."""
         data = self.client.call('SoftLayer_Configuration_Template_Section_Definition_Value', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section_Definition_Value import Configuration_Template_Section_Definition_Value
         return data
 
     def getDefinition(self, identifier: int) -> 'Configuration_Template_Section_Definition':

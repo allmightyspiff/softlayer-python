@@ -22,7 +22,6 @@ class Network_CdnMarketplace_Configuration_Mapping_Path(Entity):
     def getObject(self, identifier: int) -> 'Network_CdnMarketplace_Configuration_Mapping_Path':
         """Retrieve a SoftLayer_Network_CdnMarketplace_Configuration_Mapping_Path record."""
         data = self.client.call('SoftLayer_Network_CdnMarketplace_Configuration_Mapping_Path', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_CdnMarketplace_Configuration_Mapping_Path import Network_CdnMarketplace_Configuration_Mapping_Path
         return data
 
     def listOriginPath(self, uniqueId: str) -> list['Container_Network_CdnMarketplace_Configuration_Mapping_Path']:

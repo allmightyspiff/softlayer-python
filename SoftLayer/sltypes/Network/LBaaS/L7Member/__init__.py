@@ -33,7 +33,6 @@ server or a bare metal machine."""
     def getObject(self, identifier: int) -> 'Network_LBaaS_L7Member':
         """Retrieve a SoftLayer_Network_LBaaS_L7Member record."""
         data = self.client.call('SoftLayer_Network_LBaaS_L7Member', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_L7Member import Network_LBaaS_L7Member
         return data
 
     def updateL7PoolMembers(self, l7PoolUuid: str, members: 'Network_LBaaS_L7Member') -> 'Network_LBaaS_LoadBalancer':

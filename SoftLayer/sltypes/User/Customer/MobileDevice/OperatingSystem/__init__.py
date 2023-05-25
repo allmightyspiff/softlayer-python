@@ -20,11 +20,9 @@ us when determining the how to get a push notification to the user."""
 
     def getAllObjects(self) -> list['User_Customer_MobileDevice_OperatingSystem']:
         data = self.client.call('SoftLayer_User_Customer_MobileDevice_OperatingSystem', 'getAllObjects')
-        from SoftLayer.sltypes.User_Customer_MobileDevice_OperatingSystem import User_Customer_MobileDevice_OperatingSystem
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_MobileDevice_OperatingSystem':
         """Retrieve a SoftLayer_User_Customer_MobileDevice_OperatingSystem record."""
         data = self.client.call('SoftLayer_User_Customer_MobileDevice_OperatingSystem', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_MobileDevice_OperatingSystem import User_Customer_MobileDevice_OperatingSystem
         return data

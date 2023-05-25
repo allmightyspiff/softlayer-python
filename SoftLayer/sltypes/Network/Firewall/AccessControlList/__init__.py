@@ -17,7 +17,6 @@ templates. Use the [[SoftLayer Network Firewall Update Request]] service to subm
     def getObject(self, identifier: int) -> 'Network_Firewall_AccessControlList':
         """Retrieve a SoftLayer_Network_Firewall_AccessControlList record."""
         data = self.client.call('SoftLayer_Network_Firewall_AccessControlList', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Firewall_AccessControlList import Network_Firewall_AccessControlList
         return data
 
     def getNetworkFirewallUpdateRequests(self, identifier: int) -> list['Network_Firewall_Update_Request']:

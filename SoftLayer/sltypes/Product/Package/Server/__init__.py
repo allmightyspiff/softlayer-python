@@ -52,13 +52,11 @@ regarding pricing, processor stats, and feature sets."""
     def getAllObjects(self) -> list['Product_Package_Server']:
         """Get the package servers"""
         data = self.client.call('SoftLayer_Product_Package_Server', 'getAllObjects')
-        from SoftLayer.sltypes.Product_Package_Server import Product_Package_Server
         return data
 
     def getObject(self, identifier: int) -> 'Product_Package_Server':
         """Retrieve a SoftLayer_Product_Package_Server record."""
         data = self.client.call('SoftLayer_Product_Package_Server', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Package_Server import Product_Package_Server
         return data
 
     def getCatalog(self, identifier: int) -> 'Product_Catalog':

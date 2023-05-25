@@ -24,7 +24,6 @@ class Security_Certificate(Entity):
 
     def createObject(self, templateObject: 'Security_Certificate') -> 'Security_Certificate':
         data = self.client.call('SoftLayer_Security_Certificate', 'createObject', templateObject)
-        from SoftLayer.sltypes.Security_Certificate import Security_Certificate
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -37,13 +36,11 @@ class Security_Certificate(Entity):
 
     def findByCommonName(self, commonName: str) -> list['Security_Certificate']:
         data = self.client.call('SoftLayer_Security_Certificate', 'findByCommonName', commonName)
-        from SoftLayer.sltypes.Security_Certificate import Security_Certificate
         return data
 
     def getObject(self, identifier: int) -> 'Security_Certificate':
         """Retrieve a SoftLayer_Security_Certificate record."""
         data = self.client.call('SoftLayer_Security_Certificate', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Security_Certificate import Security_Certificate
         return data
 
     def getPemFormat(self, identifier: int) -> str:

@@ -16,13 +16,11 @@ belong to. A basic support ticket's title matches it's corresponding subject's n
     def getAllObjects(self) -> list['Ticket_Subject']:
         """Retrieve all ticket subjects."""
         data = self.client.call('SoftLayer_Ticket_Subject', 'getAllObjects')
-        from SoftLayer.sltypes.Ticket_Subject import Ticket_Subject
         return data
 
     def getObject(self, identifier: int) -> 'Ticket_Subject':
         """Retrieve a SoftLayer_Ticket_Subject record."""
         data = self.client.call('SoftLayer_Ticket_Subject', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Ticket_Subject import Ticket_Subject
         return data
 
     def getTopFiveKnowledgeLayerQuestions(self, identifier: int) -> list['Container_KnowledgeLayer_QuestionAnswer']:
@@ -40,7 +38,6 @@ belong to. A basic support ticket's title matches it's corresponding subject's n
     def getChildren(self, identifier: int) -> list['Ticket_Subject']:
         """"""
         data = self.client.call('SoftLayer_Ticket_Subject', 'getChildren', id=identifier)
-        from SoftLayer.sltypes.Ticket_Subject import Ticket_Subject
         return data
 
     def getGroup(self, identifier: int) -> 'Ticket_Group':
@@ -52,5 +49,4 @@ belong to. A basic support ticket's title matches it's corresponding subject's n
     def getParent(self, identifier: int) -> 'Ticket_Subject':
         """"""
         data = self.client.call('SoftLayer_Ticket_Subject', 'getParent', id=identifier)
-        from SoftLayer.sltypes.Ticket_Subject import Ticket_Subject
         return data

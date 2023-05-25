@@ -45,7 +45,6 @@ class Catalyst_Enrollment(Entity):
     def getObject(self, identifier: int) -> 'Catalyst_Enrollment':
         """Retrieve a SoftLayer_Catalyst_Enrollment record."""
         data = self.client.call('SoftLayer_Catalyst_Enrollment', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Catalyst_Enrollment import Catalyst_Enrollment
         return data
 
     def requestManualEnrollment(self, request: 'Container_Catalyst_ManualEnrollmentRequest') -> None:

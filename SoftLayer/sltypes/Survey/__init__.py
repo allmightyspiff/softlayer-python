@@ -18,13 +18,11 @@ class Survey(Entity):
     def getActiveSurveyByType(self, type_: str) -> 'Survey':
         """Provides survey details for the given type"""
         data = self.client.call('SoftLayer_Survey', 'getActiveSurveyByType', type)
-        from SoftLayer.sltypes.Survey import Survey
         return data
 
     def getObject(self, identifier: int) -> 'Survey':
         """Retrieve a SoftLayer_Survey record."""
         data = self.client.call('SoftLayer_Survey', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Survey import Survey
         return data
 
     def takeSurvey(self, identifier: int, responses: 'Survey_Response') -> bool:

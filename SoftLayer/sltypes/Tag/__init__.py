@@ -17,7 +17,6 @@ internal or not."""
     def autoComplete(self, tag: str) -> list['Tag']:
         """Autocomplete tag inputted by a user."""
         data = self.client.call('SoftLayer_Tag', 'autoComplete', tag)
-        from SoftLayer.sltypes.Tag import Tag
         return data
 
     def deleteTag(self, tagName: str) -> bool:
@@ -34,25 +33,21 @@ internal or not."""
     def getAttachedTagsForCurrentUser(self) -> list['Tag']:
         """Get the tags attached to references."""
         data = self.client.call('SoftLayer_Tag', 'getAttachedTagsForCurrentUser')
-        from SoftLayer.sltypes.Tag import Tag
         return data
 
     def getObject(self, identifier: int) -> 'Tag':
         """Retrieve a SoftLayer_Tag record."""
         data = self.client.call('SoftLayer_Tag', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Tag import Tag
         return data
 
     def getTagByTagName(self, tagList: str) -> list['Tag']:
         """Get the tag object based on what the user inputs."""
         data = self.client.call('SoftLayer_Tag', 'getTagByTagName', tagList)
-        from SoftLayer.sltypes.Tag import Tag
         return data
 
     def getUnattachedTagsForCurrentUser(self) -> list['Tag']:
         """Get the tags not attached to references."""
         data = self.client.call('SoftLayer_Tag', 'getUnattachedTagsForCurrentUser')
-        from SoftLayer.sltypes.Tag import Tag
         return data
 
     def setTags(self, tags: str, keyName: str, resourceTableId: int) -> bool:

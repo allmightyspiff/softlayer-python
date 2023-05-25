@@ -12,7 +12,6 @@ class Network_Storage_Allowed_Host_IpAddress(Network_Storage_Allowed_Host):
     def getObject(self, identifier: int) -> 'Network_Storage_Allowed_Host_IpAddress':
         """Retrieve a SoftLayer_Network_Storage_Allowed_Host_IpAddress record."""
         data = self.client.call('SoftLayer_Network_Storage_Allowed_Host_IpAddress', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Allowed_Host_IpAddress import Network_Storage_Allowed_Host_IpAddress
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

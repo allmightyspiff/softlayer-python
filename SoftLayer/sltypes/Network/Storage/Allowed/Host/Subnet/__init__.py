@@ -12,7 +12,6 @@ class Network_Storage_Allowed_Host_Subnet(Network_Storage_Allowed_Host):
     def getObject(self, identifier: int) -> 'Network_Storage_Allowed_Host_Subnet':
         """Retrieve a SoftLayer_Network_Storage_Allowed_Host_Subnet record."""
         data = self.client.call('SoftLayer_Network_Storage_Allowed_Host_Subnet', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Allowed_Host_Subnet import Network_Storage_Allowed_Host_Subnet
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

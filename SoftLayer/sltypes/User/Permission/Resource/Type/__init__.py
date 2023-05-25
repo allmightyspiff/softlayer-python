@@ -16,11 +16,9 @@ types of resources which can be linked to [[SoftLayer_User_Permission_Group]].""
     def getAllObjects(self) -> list['User_Permission_Resource_Type']:
         """Retrieve an array of SoftLayer_User_Permission_Resource_Type objects."""
         data = self.client.call('SoftLayer_User_Permission_Resource_Type', 'getAllObjects')
-        from SoftLayer.sltypes.User_Permission_Resource_Type import User_Permission_Resource_Type
         return data
 
     def getObject(self, identifier: int) -> 'User_Permission_Resource_Type':
         """Retrieve a SoftLayer_User_Permission_Resource_Type record."""
         data = self.client.call('SoftLayer_User_Permission_Resource_Type', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Permission_Resource_Type import User_Permission_Resource_Type
         return data

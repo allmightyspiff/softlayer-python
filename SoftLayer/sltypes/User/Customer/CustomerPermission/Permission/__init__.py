@@ -17,11 +17,9 @@ globally to the portal while user permissions are applied to specific portal fun
     def getAllObjects(self) -> list['User_Customer_CustomerPermission_Permission']:
         """Retrieve all available permissions."""
         data = self.client.call('SoftLayer_User_Customer_CustomerPermission_Permission', 'getAllObjects')
-        from SoftLayer.sltypes.User_Customer_CustomerPermission_Permission import User_Customer_CustomerPermission_Permission
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_CustomerPermission_Permission':
         """Retrieve a SoftLayer_User_Customer_CustomerPermission_Permission record."""
         data = self.client.call('SoftLayer_User_Customer_CustomerPermission_Permission', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_CustomerPermission_Permission import User_Customer_CustomerPermission_Permission
         return data

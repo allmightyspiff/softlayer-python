@@ -53,7 +53,6 @@ capacity limit and replication partners."""
     def getObject(self, identifier: int) -> 'Network_Storage_Iscsi':
         """Retrieve a SoftLayer_Network_Storage_Iscsi record."""
         data = self.client.call('SoftLayer_Network_Storage_Iscsi', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Storage_Iscsi import Network_Storage_Iscsi
         return data
 
     def getSnapshotsForVolume(self, identifier: int) -> list['Network_Storage']:

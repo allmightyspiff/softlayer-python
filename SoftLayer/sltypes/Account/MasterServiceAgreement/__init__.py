@@ -20,7 +20,6 @@ class Account_MasterServiceAgreement(Entity):
     def getObject(self, identifier: int) -> 'Account_MasterServiceAgreement':
         """Retrieve a SoftLayer_Account_MasterServiceAgreement record."""
         data = self.client.call('SoftLayer_Account_MasterServiceAgreement', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_MasterServiceAgreement import Account_MasterServiceAgreement
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

@@ -25,11 +25,9 @@ account linking are used."""
     def getAllObjects(self) -> list['User_Customer_Status']:
         """Retrieve all user status objects."""
         data = self.client.call('SoftLayer_User_Customer_Status', 'getAllObjects')
-        from SoftLayer.sltypes.User_Customer_Status import User_Customer_Status
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_Status':
         """Retrieve a SoftLayer_User_Customer_Status record."""
         data = self.client.call('SoftLayer_User_Customer_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_Status import User_Customer_Status
         return data

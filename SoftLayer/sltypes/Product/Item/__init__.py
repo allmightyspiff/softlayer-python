@@ -21,7 +21,6 @@ class Product_Item(Entity):
     def getObject(self, identifier: int) -> 'Product_Item':
         """Retrieve a SoftLayer_Product_Item record."""
         data = self.client.call('SoftLayer_Product_Item', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Item import Product_Item
         return data
 
     def getActivePresaleEvents(self, identifier: int) -> list['Sales_Presale_Event']:
@@ -62,7 +61,6 @@ class Product_Item(Entity):
     def getBundleItems(self, identifier: int) -> list['Product_Item']:
         """"""
         data = self.client.call('SoftLayer_Product_Item', 'getBundleItems', id=identifier)
-        from SoftLayer.sltypes.Product_Item import Product_Item
         return data
 
     def getCapacityMaximum(self, identifier: int) -> str:
@@ -106,13 +104,11 @@ class Product_Item(Entity):
     def getDowngradeItem(self, identifier: int) -> 'Product_Item':
         """"""
         data = self.client.call('SoftLayer_Product_Item', 'getDowngradeItem', id=identifier)
-        from SoftLayer.sltypes.Product_Item import Product_Item
         return data
 
     def getDowngradeItems(self, identifier: int) -> list['Product_Item']:
         """"""
         data = self.client.call('SoftLayer_Product_Item', 'getDowngradeItems', id=identifier)
-        from SoftLayer.sltypes.Product_Item import Product_Item
         return data
 
     def getGlobalCategoryConflicts(self, identifier: int) -> list['Product_Item_Resource_Conflict']:
@@ -276,11 +272,9 @@ class Product_Item(Entity):
     def getUpgradeItem(self, identifier: int) -> 'Product_Item':
         """"""
         data = self.client.call('SoftLayer_Product_Item', 'getUpgradeItem', id=identifier)
-        from SoftLayer.sltypes.Product_Item import Product_Item
         return data
 
     def getUpgradeItems(self, identifier: int) -> list['Product_Item']:
         """"""
         data = self.client.call('SoftLayer_Product_Item', 'getUpgradeItems', id=identifier)
-        from SoftLayer.sltypes.Product_Item import Product_Item
         return data

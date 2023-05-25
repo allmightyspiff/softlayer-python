@@ -22,13 +22,11 @@ class Billing_Order_Cart(Billing_Order_Quote):
     def getCartByCartKey(self, cartKey: str) -> 'Billing_Order_Cart':
         """Retrieve a cart."""
         data = self.client.call('SoftLayer_Billing_Order_Cart', 'getCartByCartKey', cartKey)
-        from SoftLayer.sltypes.Billing_Order_Cart import Billing_Order_Cart
         return data
 
     def getObject(self, identifier: int) -> 'Billing_Order_Cart':
         """Retrieve a SoftLayer_Billing_Order_Cart record."""
         data = self.client.call('SoftLayer_Billing_Order_Cart', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Cart import Billing_Order_Cart
         return data
 
     def getPdf(self, identifier: int) -> str:

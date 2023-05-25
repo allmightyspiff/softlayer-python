@@ -37,7 +37,6 @@ a virtual host."""
     def getObject(self, identifier: int) -> 'Virtual_Guest_Network_Component':
         """Retrieve a SoftLayer_Virtual_Guest_Network_Component record."""
         data = self.client.call('SoftLayer_Virtual_Guest_Network_Component', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest_Network_Component import Virtual_Guest_Network_Component
         return data
 
     def isPingable(self, identifier: int) -> bool:

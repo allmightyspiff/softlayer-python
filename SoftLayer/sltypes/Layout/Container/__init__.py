@@ -15,13 +15,11 @@ class Layout_Container(Entity):
     def getAllObjects(self) -> list['Layout_Container']:
         """Returns customizable layout containers"""
         data = self.client.call('SoftLayer_Layout_Container', 'getAllObjects')
-        from SoftLayer.sltypes.Layout_Container import Layout_Container
         return data
 
     def getObject(self, identifier: int) -> 'Layout_Container':
         """Retrieve a SoftLayer_Layout_Container record."""
         data = self.client.call('SoftLayer_Layout_Container', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Layout_Container import Layout_Container
         return data
 
     def getLayoutContainerType(self, identifier: int) -> 'Layout_Container_Type':

@@ -42,7 +42,6 @@ class Hardware_Server(Hardware):
     def createObject(self, templateObject: 'Hardware_Server') -> 'Hardware_Server':
         """Create a new server"""
         data = self.client.call('SoftLayer_Hardware_Server', 'createObject', templateObject)
-        from SoftLayer.sltypes.Hardware_Server import Hardware_Server
         return data
 
     def createPostSoftwareInstallTransaction(self, identifier: int, installCodes: str, returnBoolean: bool) -> bool:
@@ -103,7 +102,6 @@ class Hardware_Server(Hardware):
     def getHardwareByIpAddress(self, ipAddress: str) -> 'Hardware_Server':
         """Retrieve a SoftLayer_Hardware_Server object by IP address."""
         data = self.client.call('SoftLayer_Hardware_Server', 'getHardwareByIpAddress', ipAddress)
-        from SoftLayer.sltypes.Hardware_Server import Hardware_Server
         return data
 
     def getItemPricesFromSoftwareDescriptions(self, identifier: int, softwareDescriptions: 'Software_Description', includeTranslationsFlag: bool, returnAllPricesFlag: bool) -> list['Product_Item']:
@@ -127,7 +125,6 @@ class Hardware_Server(Hardware):
     def getObject(self, identifier: int) -> 'Hardware_Server':
         """Retrieve a SoftLayer_Hardware_Server record."""
         data = self.client.call('SoftLayer_Hardware_Server', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Hardware_Server import Hardware_Server
         return data
 
     def getPMInfo(self, identifier: int) -> list['Container_RemoteManagement_PmInfo']:

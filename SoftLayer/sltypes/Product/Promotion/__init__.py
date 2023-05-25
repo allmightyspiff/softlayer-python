@@ -16,5 +16,4 @@ class Product_Promotion(Entity):
     def getObject(self, identifier: int) -> 'Product_Promotion':
         """Retrieve a SoftLayer_Product_Promotion record."""
         data = self.client.call('SoftLayer_Product_Promotion', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Product_Promotion import Product_Promotion
         return data

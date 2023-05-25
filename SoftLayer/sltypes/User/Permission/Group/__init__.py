@@ -44,7 +44,6 @@ SoftLayer_User_Permission_Role objects the group is linked."""
     def createObject(self, templateObject: 'User_Permission_Group') -> 'User_Permission_Group':
         """Create a new customer permission group"""
         data = self.client.call('SoftLayer_User_Permission_Group', 'createObject', templateObject)
-        from SoftLayer.sltypes.User_Permission_Group import User_Permission_Group
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -55,13 +54,11 @@ SoftLayer_User_Permission_Role objects the group is linked."""
     def editObject(self, identifier: int, templateObject: 'User_Permission_Group') -> 'User_Permission_Group':
         """Edit an existing customer permission group"""
         data = self.client.call('SoftLayer_User_Permission_Group', 'editObject', templateObject, id=identifier)
-        from SoftLayer.sltypes.User_Permission_Group import User_Permission_Group
         return data
 
     def getObject(self, identifier: int) -> 'User_Permission_Group':
         """Retrieve a SoftLayer_User_Permission_Group record."""
         data = self.client.call('SoftLayer_User_Permission_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Permission_Group import User_Permission_Group
         return data
 
     def linkRole(self, identifier: int, role: 'User_Permission_Role') -> None:

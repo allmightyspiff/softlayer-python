@@ -17,13 +17,11 @@ location, and its related object SoftLayer location."""
     def getAllObjects(self) -> list['Network_DirectLink_Location']:
         """Get all existing Direct Link location."""
         data = self.client.call('SoftLayer_Network_DirectLink_Location', 'getAllObjects')
-        from SoftLayer.sltypes.Network_DirectLink_Location import Network_DirectLink_Location
         return data
 
     def getObject(self, identifier: int) -> 'Network_DirectLink_Location':
         """Retrieve a SoftLayer_Network_DirectLink_Location record."""
         data = self.client.call('SoftLayer_Network_DirectLink_Location', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_DirectLink_Location import Network_DirectLink_Location
         return data
 
     def getLocation(self, identifier: int) -> 'Location':

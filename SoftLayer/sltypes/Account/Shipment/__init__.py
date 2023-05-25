@@ -57,7 +57,6 @@ type."""
     def getObject(self, identifier: int) -> 'Account_Shipment':
         """Retrieve a SoftLayer_Account_Shipment record."""
         data = self.client.call('SoftLayer_Account_Shipment', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Shipment import Account_Shipment
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

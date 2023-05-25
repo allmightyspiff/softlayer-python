@@ -16,17 +16,14 @@ class Configuration_Template_Section_Definition_Group(Entity):
 
     def getAllGroups(self) -> list['Configuration_Template_Section_Definition_Group']:
         data = self.client.call('SoftLayer_Configuration_Template_Section_Definition_Group', 'getAllGroups')
-        from SoftLayer.sltypes.Configuration_Template_Section_Definition_Group import Configuration_Template_Section_Definition_Group
         return data
 
     def getObject(self, identifier: int) -> 'Configuration_Template_Section_Definition_Group':
         """Retrieve a SoftLayer_Configuration_Template_Section_Definition_Group record."""
         data = self.client.call('SoftLayer_Configuration_Template_Section_Definition_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section_Definition_Group import Configuration_Template_Section_Definition_Group
         return data
 
     def getParent(self, identifier: int) -> 'Configuration_Template_Section_Definition_Group':
         """"""
         data = self.client.call('SoftLayer_Configuration_Template_Section_Definition_Group', 'getParent', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section_Definition_Group import Configuration_Template_Section_Definition_Group
         return data

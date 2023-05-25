@@ -31,13 +31,11 @@ class Account_Contact(Entity):
 
     def createComplianceReportRequestorContact(self, requestorTemplate: 'Account_Contact') -> 'Account_Contact':
         data = self.client.call('SoftLayer_Account_Contact', 'createComplianceReportRequestorContact', requestorTemplate)
-        from SoftLayer.sltypes.Account_Contact import Account_Contact
         return data
 
     def createObject(self, templateObject: 'Account_Contact') -> 'Account_Contact':
         """This method creates an account contact."""
         data = self.client.call('SoftLayer_Account_Contact', 'createObject', templateObject)
-        from SoftLayer.sltypes.Account_Contact import Account_Contact
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -59,7 +57,6 @@ class Account_Contact(Entity):
     def getObject(self, identifier: int) -> 'Account_Contact':
         """Retrieve a SoftLayer_Account_Contact record."""
         data = self.client.call('SoftLayer_Account_Contact', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Contact import Account_Contact
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

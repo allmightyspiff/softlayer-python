@@ -14,5 +14,4 @@ provider."""
     def getObject(self, identifier: int) -> 'Network_DirectLink_Provider':
         """Retrieve a SoftLayer_Network_DirectLink_Provider record."""
         data = self.client.call('SoftLayer_Network_DirectLink_Provider', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_DirectLink_Provider import Network_DirectLink_Provider
         return data

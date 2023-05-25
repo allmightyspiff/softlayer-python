@@ -25,19 +25,16 @@ generated for existing SoftLayer customer."""
     def claim(self, quoteKey: str, quoteId: int) -> 'Billing_Order_Quote':
         """Claim an anonymous quote"""
         data = self.client.call('SoftLayer_Billing_Order_Quote', 'claim', quoteKey, quoteId)
-        from SoftLayer.sltypes.Billing_Order_Quote import Billing_Order_Quote
         return data
 
     def deleteQuote(self, identifier: int) -> 'Billing_Order_Quote':
         """Delete the quote of an order"""
         data = self.client.call('SoftLayer_Billing_Order_Quote', 'deleteQuote', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Quote import Billing_Order_Quote
         return data
 
     def getObject(self, identifier: int) -> 'Billing_Order_Quote':
         """Retrieve a SoftLayer_Billing_Order_Quote record."""
         data = self.client.call('SoftLayer_Billing_Order_Quote', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Quote import Billing_Order_Quote
         return data
 
     def getPdf(self, identifier: int) -> str:
@@ -48,7 +45,6 @@ generated for existing SoftLayer customer."""
     def getQuoteByQuoteKey(self, quoteKey: str) -> 'Billing_Order_Quote':
         """Retrieve a [[SoftLayer_Billing_Order_Quote]] by the quote key specified."""
         data = self.client.call('SoftLayer_Billing_Order_Quote', 'getQuoteByQuoteKey', quoteKey)
-        from SoftLayer.sltypes.Billing_Order_Quote import Billing_Order_Quote
         return data
 
     def getRecalculatedOrderContainer(self, identifier: int, userOrderData: 'Container_Product_Order', orderBeingPlacedFlag: bool) -> 'Container_Product_Order':
@@ -72,7 +68,6 @@ generated for existing SoftLayer customer."""
     def saveQuote(self, identifier: int) -> 'Billing_Order_Quote':
         """Save the quote of an order"""
         data = self.client.call('SoftLayer_Billing_Order_Quote', 'saveQuote', id=identifier)
-        from SoftLayer.sltypes.Billing_Order_Quote import Billing_Order_Quote
         return data
 
     def verifyOrder(self, identifier: int, orderData: 'Container_Product_Order') -> 'Container_Product_Order':

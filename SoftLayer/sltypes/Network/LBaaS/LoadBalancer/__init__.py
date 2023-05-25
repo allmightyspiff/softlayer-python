@@ -34,13 +34,11 @@ and its related objects including listeners, pools and members."""
     def enableOrDisableDataLogs(self, uuid: str, enabled: bool) -> 'Network_LBaaS_LoadBalancer':
         """Enable or disable data logs forwarding."""
         data = self.client.call('SoftLayer_Network_LBaaS_LoadBalancer', 'enableOrDisableDataLogs', uuid, enabled)
-        from SoftLayer.sltypes.Network_LBaaS_LoadBalancer import Network_LBaaS_LoadBalancer
         return data
 
     def getAllObjects(self) -> list['Network_LBaaS_LoadBalancer']:
         """Get all existing load balancers."""
         data = self.client.call('SoftLayer_Network_LBaaS_LoadBalancer', 'getAllObjects')
-        from SoftLayer.sltypes.Network_LBaaS_LoadBalancer import Network_LBaaS_LoadBalancer
         return data
 
     def getListenerTimeSeriesData(self, loadBalancerUuid: str, metricName: str, timeRange: str, listenerUuid: str) -> list['Network_LBaaS_LoadBalancerMonitoringMetricDataPoint']:
@@ -52,7 +50,6 @@ and its related objects including listeners, pools and members."""
     def getLoadBalancer(self, uuid: str) -> 'Network_LBaaS_LoadBalancer':
         """Get a specific load balancer."""
         data = self.client.call('SoftLayer_Network_LBaaS_LoadBalancer', 'getLoadBalancer', uuid)
-        from SoftLayer.sltypes.Network_LBaaS_LoadBalancer import Network_LBaaS_LoadBalancer
         return data
 
     def getLoadBalancerMemberHealth(self, uuid: str) -> list['Network_LBaaS_PoolMembersHealth']:
@@ -70,25 +67,21 @@ and its related objects including listeners, pools and members."""
     def getObject(self, identifier: int) -> 'Network_LBaaS_LoadBalancer':
         """Retrieve a SoftLayer_Network_LBaaS_LoadBalancer record."""
         data = self.client.call('SoftLayer_Network_LBaaS_LoadBalancer', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LBaaS_LoadBalancer import Network_LBaaS_LoadBalancer
         return data
 
     def serviceLoadBalancer(self, data: str) -> 'Network_LBaaS_LoadBalancer':
         """Service function for a load balancer."""
         data = self.client.call('SoftLayer_Network_LBaaS_LoadBalancer', 'serviceLoadBalancer', data)
-        from SoftLayer.sltypes.Network_LBaaS_LoadBalancer import Network_LBaaS_LoadBalancer
         return data
 
     def updateLoadBalancer(self, uuid: str, newDescription: str) -> 'Network_LBaaS_LoadBalancer':
         """Update a load balancer's description."""
         data = self.client.call('SoftLayer_Network_LBaaS_LoadBalancer', 'updateLoadBalancer', uuid, newDescription)
-        from SoftLayer.sltypes.Network_LBaaS_LoadBalancer import Network_LBaaS_LoadBalancer
         return data
 
     def updateSslCiphers(self, loadBalancerUuid: str, cipherList: int) -> 'Network_LBaaS_LoadBalancer':
         """Updates the cipher list of the load balancer"""
         data = self.client.call('SoftLayer_Network_LBaaS_LoadBalancer', 'updateSslCiphers', loadBalancerUuid, cipherList)
-        from SoftLayer.sltypes.Network_LBaaS_LoadBalancer import Network_LBaaS_LoadBalancer
         return data
 
     def getDatacenter(self, identifier: int) -> 'Location':

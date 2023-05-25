@@ -137,7 +137,6 @@ necessarily associated with the customer account the user is assigned to."""
     def assignNewParentId(self, identifier: int, parentId: int, cascadePermissionsFlag: bool) -> 'User_Customer':
         """Assign a different parent to this user."""
         data = self.client.call('SoftLayer_User_Customer', 'assignNewParentId', parentId, cascadePermissionsFlag, id=identifier)
-        from SoftLayer.sltypes.User_Customer import User_Customer
         return data
 
     def changePreference(self, identifier: int, preferenceTypeKeyName: str, value: str) -> list['User_Preference']:
@@ -154,7 +153,6 @@ necessarily associated with the customer account the user is assigned to."""
     def createObject(self, templateObject: 'User_Customer', password: str, vpnPassword: str) -> 'User_Customer':
         """Create a new user record."""
         data = self.client.call('SoftLayer_User_Customer', 'createObject', templateObject, password, vpnPassword)
-        from SoftLayer.sltypes.User_Customer import User_Customer
         return data
 
     def createSubscriberDeliveryMethods(self, identifier: int, notificationKeyName: str, deliveryMethodKeyNames: str) -> bool:
@@ -241,7 +239,6 @@ SoftLayer_User_Customer_OpenIdConnect::getDefaultAccount instead."""
     def getObject(self, identifier: int) -> 'User_Customer':
         """Retrieve a SoftLayer_User_Customer record."""
         data = self.client.call('SoftLayer_User_Customer', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer import User_Customer
         return data
 
     def getOpenIdConnectMigrationState(self, identifier: int) -> 'Container_User_Customer_OpenIdConnect_MigrationState':
@@ -536,7 +533,6 @@ identity."""
     def getChildUsers(self, identifier: int) -> list['User_Customer']:
         """"""
         data = self.client.call('SoftLayer_User_Customer', 'getChildUsers', id=identifier)
-        from SoftLayer.sltypes.User_Customer import User_Customer
         return data
 
     def getClosedTickets(self, identifier: int) -> list['Ticket']:
@@ -640,7 +636,6 @@ identity."""
     def getParent(self, identifier: int) -> 'User_Customer':
         """"""
         data = self.client.call('SoftLayer_User_Customer', 'getParent', id=identifier)
-        from SoftLayer.sltypes.User_Customer import User_Customer
         return data
 
     def getPermissions(self, identifier: int) -> list['User_Customer_CustomerPermission_Permission']:

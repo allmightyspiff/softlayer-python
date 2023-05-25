@@ -26,7 +26,6 @@ class Network_LoadBalancer_Global_Host(Entity):
     def getObject(self, identifier: int) -> 'Network_LoadBalancer_Global_Host':
         """Retrieve a SoftLayer_Network_LoadBalancer_Global_Host record."""
         data = self.client.call('SoftLayer_Network_LoadBalancer_Global_Host', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_LoadBalancer_Global_Host import Network_LoadBalancer_Global_Host
         return data
 
     def getLoadBalancerAccount(self, identifier: int) -> 'Network_LoadBalancer_Global_Account':

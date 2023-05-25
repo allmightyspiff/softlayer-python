@@ -18,7 +18,6 @@ class Location_Group_Pricing(Location_Group):
     def getObject(self, identifier: int) -> 'Location_Group_Pricing':
         """Retrieve a SoftLayer_Location_Group_Pricing record."""
         data = self.client.call('SoftLayer_Location_Group_Pricing', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Location_Group_Pricing import Location_Group_Pricing
         return data
 
     def getPrices(self, identifier: int) -> list['Product_Item_Price']:

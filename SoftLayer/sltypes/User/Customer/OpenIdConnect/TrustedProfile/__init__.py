@@ -21,7 +21,6 @@ class User_Customer_OpenIdConnect_TrustedProfile(User_Customer_OpenIdConnect):
 
     def createObject(self, templateObject: 'User_Customer_OpenIdConnect_TrustedProfile', password: str, vpnPassword: str) -> 'User_Customer_OpenIdConnect_TrustedProfile':
         data = self.client.call('SoftLayer_User_Customer_OpenIdConnect_TrustedProfile', 'createObject', templateObject, password, vpnPassword)
-        from SoftLayer.sltypes.User_Customer_OpenIdConnect_TrustedProfile import User_Customer_OpenIdConnect_TrustedProfile
         return data
 
     def getLoginToken(self, request: 'Container_Authentication_Request_Contract') -> 'Container_Authentication_Response_Common':
@@ -33,7 +32,6 @@ class User_Customer_OpenIdConnect_TrustedProfile(User_Customer_OpenIdConnect):
     def getObject(self, identifier: int) -> 'User_Customer_OpenIdConnect_TrustedProfile':
         """Retrieve a SoftLayer_User_Customer_OpenIdConnect_TrustedProfile record."""
         data = self.client.call('SoftLayer_User_Customer_OpenIdConnect_TrustedProfile', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_OpenIdConnect_TrustedProfile import User_Customer_OpenIdConnect_TrustedProfile
         return data
 
     def getRequirementsForPasswordSet(self, identifier: int, passwordSet: 'Container_User_Customer_PasswordSet') -> 'Container_User_Customer_PasswordSet':

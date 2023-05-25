@@ -14,5 +14,4 @@ and a unique internal identifier that can be used when creating a new external b
     def getObject(self, identifier: int) -> 'User_Customer_External_Binding_Vendor':
         """Retrieve a SoftLayer_User_Customer_External_Binding_Vendor record."""
         data = self.client.call('SoftLayer_User_Customer_External_Binding_Vendor', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_External_Binding_Vendor import User_Customer_External_Binding_Vendor
         return data

@@ -15,7 +15,6 @@ class Network_Subnet_IpAddress_Global(Entity):
     def getObject(self, identifier: int) -> 'Network_Subnet_IpAddress_Global':
         """Retrieve a SoftLayer_Network_Subnet_IpAddress_Global record."""
         data = self.client.call('SoftLayer_Network_Subnet_IpAddress_Global', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet_IpAddress_Global import Network_Subnet_IpAddress_Global
         return data
 
     def route(self, identifier: int, newEndPointIpAddress: str) -> bool:

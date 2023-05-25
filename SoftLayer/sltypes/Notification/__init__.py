@@ -17,13 +17,11 @@ display purposes."""
     def getAllObjects(self) -> list['Notification']:
         """Retrieve all Notifications that can be subscribed to."""
         data = self.client.call('SoftLayer_Notification', 'getAllObjects')
-        from SoftLayer.sltypes.Notification import Notification
         return data
 
     def getObject(self, identifier: int) -> 'Notification':
         """Retrieve a SoftLayer_Notification record."""
         data = self.client.call('SoftLayer_Notification', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification import Notification
         return data
 
     def getPreferences(self, identifier: int) -> list['Notification_Preference']:

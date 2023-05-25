@@ -23,7 +23,6 @@ class Notification_Occurrence_Event(Entity):
 
     def getAllObjects(self) -> list['Notification_Occurrence_Event']:
         data = self.client.call('SoftLayer_Notification_Occurrence_Event', 'getAllObjects')
-        from SoftLayer.sltypes.Notification_Occurrence_Event import Notification_Occurrence_Event
         return data
 
     def getAttachedFile(self, identifier: int, attachmentId: int) -> str:
@@ -50,7 +49,6 @@ class Notification_Occurrence_Event(Entity):
     def getObject(self, identifier: int) -> 'Notification_Occurrence_Event':
         """Retrieve a SoftLayer_Notification_Occurrence_Event record."""
         data = self.client.call('SoftLayer_Notification_Occurrence_Event', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification_Occurrence_Event import Notification_Occurrence_Event
         return data
 
     def getAcknowledgedFlag(self, identifier: int) -> bool:

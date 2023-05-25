@@ -19,7 +19,6 @@ be used to predefine how a hard drive's partitions will be configured."""
     def getObject(self, identifier: int) -> 'Hardware_Component_Partition_Template':
         """Retrieve a SoftLayer_Hardware_Component_Partition_Template record."""
         data = self.client.call('SoftLayer_Hardware_Component_Partition_Template', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Hardware_Component_Partition_Template import Hardware_Component_Partition_Template
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

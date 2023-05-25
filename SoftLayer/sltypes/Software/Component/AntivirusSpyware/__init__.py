@@ -15,7 +15,6 @@ object."""
     def getObject(self, identifier: int) -> 'Software_Component_AntivirusSpyware':
         """Retrieve a SoftLayer_Software_Component_AntivirusSpyware record."""
         data = self.client.call('SoftLayer_Software_Component_AntivirusSpyware', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Software_Component_AntivirusSpyware import Software_Component_AntivirusSpyware
         return data
 
     def updateAntivirusSpywarePolicy(self, identifier: int, newPolicy: str, enforce: bool) -> bool:

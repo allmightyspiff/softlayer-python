@@ -29,13 +29,11 @@ instance. These registration instances can be updated to reflect changes, and wi
     def createObject(self, templateObject: 'Network_Subnet_Registration') -> 'Network_Subnet_Registration':
         """Create a new subnet registration"""
         data = self.client.call('SoftLayer_Network_Subnet_Registration', 'createObject', templateObject)
-        from SoftLayer.sltypes.Network_Subnet_Registration import Network_Subnet_Registration
         return data
 
     def createObjects(self, templateObjects: 'Network_Subnet_Registration') -> list['Network_Subnet_Registration']:
         """Create registrations for multiple subnets"""
         data = self.client.call('SoftLayer_Network_Subnet_Registration', 'createObjects', templateObjects)
-        from SoftLayer.sltypes.Network_Subnet_Registration import Network_Subnet_Registration
         return data
 
     def editObject(self, identifier: int, templateObject: 'Network_Subnet_Registration') -> bool:
@@ -52,7 +50,6 @@ instance. These registration instances can be updated to reflect changes, and wi
     def getObject(self, identifier: int) -> 'Network_Subnet_Registration':
         """Retrieve a SoftLayer_Network_Subnet_Registration record."""
         data = self.client.call('SoftLayer_Network_Subnet_Registration', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Subnet_Registration import Network_Subnet_Registration
         return data
 
     def getAccount(self, identifier: int) -> 'Account':

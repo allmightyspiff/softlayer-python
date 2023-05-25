@@ -14,5 +14,4 @@ class Network_Gateway_Status(Entity):
     def getObject(self, identifier: int) -> 'Network_Gateway_Status':
         """Retrieve a SoftLayer_Network_Gateway_Status record."""
         data = self.client.call('SoftLayer_Network_Gateway_Status', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Network_Gateway_Status import Network_Gateway_Status
         return data

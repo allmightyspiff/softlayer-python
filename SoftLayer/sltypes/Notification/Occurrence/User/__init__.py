@@ -22,7 +22,6 @@ class Notification_Occurrence_User(Entity):
         """Returns a collection of impacted users, an account master user has the ability to see all impacted users
 under the account."""
         data = self.client.call('SoftLayer_Notification_Occurrence_User', 'getAllObjects')
-        from SoftLayer.sltypes.Notification_Occurrence_User import Notification_Occurrence_User
         return data
 
     def getImpactedDeviceCount(self, identifier: int) -> int:
@@ -34,7 +33,6 @@ returned."""
     def getObject(self, identifier: int) -> 'Notification_Occurrence_User':
         """Retrieve a SoftLayer_Notification_Occurrence_User record."""
         data = self.client.call('SoftLayer_Notification_Occurrence_User', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification_Occurrence_User import Notification_Occurrence_User
         return data
 
     def getImpactedResources(self, identifier: int) -> list['Notification_Occurrence_Resource']:

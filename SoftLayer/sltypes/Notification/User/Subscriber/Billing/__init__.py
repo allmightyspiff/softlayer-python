@@ -15,5 +15,4 @@ Also, there are some subscriptions that are required."""
     def getObject(self, identifier: int) -> 'Notification_User_Subscriber_Billing':
         """Retrieve a SoftLayer_Notification_User_Subscriber_Billing record."""
         data = self.client.call('SoftLayer_Notification_User_Subscriber_Billing', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification_User_Subscriber_Billing import Notification_User_Subscriber_Billing
         return data

@@ -22,12 +22,10 @@ class Locale_Country(Entity):
 
     def getAvailableCountries(self) -> list['Locale_Country']:
         data = self.client.call('SoftLayer_Locale_Country', 'getAvailableCountries')
-        from SoftLayer.sltypes.Locale_Country import Locale_Country
         return data
 
     def getCountries(self) -> list['Locale_Country']:
         data = self.client.call('SoftLayer_Locale_Country', 'getCountries')
-        from SoftLayer.sltypes.Locale_Country import Locale_Country
         return data
 
     def getCountriesAndStates(self, usFirstFlag: bool) -> list['Container_Collection_Locale_CountryCode']:
@@ -38,7 +36,6 @@ class Locale_Country(Entity):
     def getObject(self, identifier: int) -> 'Locale_Country':
         """Retrieve a SoftLayer_Locale_Country record."""
         data = self.client.call('SoftLayer_Locale_Country', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Locale_Country import Locale_Country
         return data
 
     def getPostalCodeRequiredCountryCodes(self) -> list[str]:

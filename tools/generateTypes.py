@@ -530,6 +530,10 @@ class ServiceAndTypeGenerator:
     def getMethodImportStatement(self, returnType: str) -> str:
         if 'SoftLayer_' not in returnType:
             return ''
+        
+        # If the class returns an instance of itself, we don't need to add an import
+        if returnType == self._name:
+            return ''
 
         class_name = self.normalize_name(returnType)
         return f"from SoftLayer.sltypes.{class_name} import {class_name}"

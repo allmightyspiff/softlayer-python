@@ -14,7 +14,6 @@ class Billing_Currency_ExchangeRate(Entity):
 
     def getAllCurrencyExchangeRates(self, identifier: int, stringDate: str) -> list['Billing_Currency_ExchangeRate']:
         data = self.client.call('SoftLayer_Billing_Currency_ExchangeRate', 'getAllCurrencyExchangeRates', stringDate, id=identifier)
-        from SoftLayer.sltypes.Billing_Currency_ExchangeRate import Billing_Currency_ExchangeRate
         return data
 
     def getCurrencies(self) -> list['Billing_Currency']:
@@ -24,13 +23,11 @@ class Billing_Currency_ExchangeRate(Entity):
 
     def getExchangeRate(self, to: str, from_: str, effectiveDate: datetime) -> 'Billing_Currency_ExchangeRate':
         data = self.client.call('SoftLayer_Billing_Currency_ExchangeRate', 'getExchangeRate', to, from, effectiveDate)
-        from SoftLayer.sltypes.Billing_Currency_ExchangeRate import Billing_Currency_ExchangeRate
         return data
 
     def getObject(self, identifier: int) -> 'Billing_Currency_ExchangeRate':
         """Retrieve a SoftLayer_Billing_Currency_ExchangeRate record."""
         data = self.client.call('SoftLayer_Billing_Currency_ExchangeRate', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Billing_Currency_ExchangeRate import Billing_Currency_ExchangeRate
         return data
 
     def getPrice(self, identifier: int, price: float, formatOptions: 'Container_Billing_Currency_Format') -> str:

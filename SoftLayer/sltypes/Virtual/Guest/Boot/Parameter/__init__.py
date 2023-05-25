@@ -31,7 +31,6 @@ class Virtual_Guest_Boot_Parameter(Entity):
     def getObject(self, identifier: int) -> 'Virtual_Guest_Boot_Parameter':
         """Retrieve a SoftLayer_Virtual_Guest_Boot_Parameter record."""
         data = self.client.call('SoftLayer_Virtual_Guest_Boot_Parameter', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Virtual_Guest_Boot_Parameter import Virtual_Guest_Boot_Parameter
         return data
 
     def getGuest(self, identifier: int) -> 'Virtual_Guest':

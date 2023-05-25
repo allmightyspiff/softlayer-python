@@ -21,7 +21,6 @@ class Configuration_Template(Entity):
     def copyTemplate(self, identifier: int, templateObject: 'Configuration_Template') -> 'Configuration_Template':
         """Copy a configuration template and returns a newly created template copy"""
         data = self.client.call('SoftLayer_Configuration_Template', 'copyTemplate', templateObject, id=identifier)
-        from SoftLayer.sltypes.Configuration_Template import Configuration_Template
         return data
 
     def deleteObject(self, identifier: int) -> bool:
@@ -37,13 +36,11 @@ class Configuration_Template(Entity):
     def getAllObjects(self) -> list['Configuration_Template']:
         """Retrieves all available configuration templates."""
         data = self.client.call('SoftLayer_Configuration_Template', 'getAllObjects')
-        from SoftLayer.sltypes.Configuration_Template import Configuration_Template
         return data
 
     def getObject(self, identifier: int) -> 'Configuration_Template':
         """Retrieve a SoftLayer_Configuration_Template record."""
         data = self.client.call('SoftLayer_Configuration_Template', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template import Configuration_Template
         return data
 
     def updateDefaultValues(self, identifier: int, configurationValues: 'Configuration_Template_Section_Definition_Value') -> bool:
@@ -90,7 +87,6 @@ class Configuration_Template(Entity):
     def getParent(self, identifier: int) -> 'Configuration_Template':
         """"""
         data = self.client.call('SoftLayer_Configuration_Template', 'getParent', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template import Configuration_Template
         return data
 
     def getUser(self, identifier: int) -> 'User_Customer':

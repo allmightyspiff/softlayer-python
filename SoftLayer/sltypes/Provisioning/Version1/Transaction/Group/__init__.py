@@ -14,11 +14,9 @@ transactions or the hardware transaction group."""
 
     def getAllObjects(self) -> list['Provisioning_Version1_Transaction_Group']:
         data = self.client.call('SoftLayer_Provisioning_Version1_Transaction_Group', 'getAllObjects')
-        from SoftLayer.sltypes.Provisioning_Version1_Transaction_Group import Provisioning_Version1_Transaction_Group
         return data
 
     def getObject(self, identifier: int) -> 'Provisioning_Version1_Transaction_Group':
         """Retrieve a SoftLayer_Provisioning_Version1_Transaction_Group record."""
         data = self.client.call('SoftLayer_Provisioning_Version1_Transaction_Group', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Provisioning_Version1_Transaction_Group import Provisioning_Version1_Transaction_Group
         return data

@@ -16,7 +16,6 @@ SoftLayer hardware benchmark certification document."""
     def getObject(self, identifier: int) -> 'Hardware_Benchmark_Certification':
         """Retrieve a SoftLayer_Hardware_Benchmark_Certification record."""
         data = self.client.call('SoftLayer_Hardware_Benchmark_Certification', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Hardware_Benchmark_Certification import Hardware_Benchmark_Certification
         return data
 
     def getResultFile(self, identifier: int) -> str:

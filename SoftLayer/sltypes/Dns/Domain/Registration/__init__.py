@@ -54,7 +54,6 @@ class Dns_Domain_Registration(Entity):
     def getObject(self, identifier: int) -> 'Dns_Domain_Registration':
         """Retrieve a SoftLayer_Dns_Domain_Registration record."""
         data = self.client.call('SoftLayer_Dns_Domain_Registration', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Dns_Domain_Registration import Dns_Domain_Registration
         return data
 
     def getRegisteredNameserver(self, identifier: int) -> 'Container_Dns_Domain_Registration_Nameserver':

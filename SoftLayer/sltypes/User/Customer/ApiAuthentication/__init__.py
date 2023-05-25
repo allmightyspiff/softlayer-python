@@ -16,13 +16,11 @@ class User_Customer_ApiAuthentication(Entity):
     def editObject(self, identifier: int, templateObject: 'User_Customer_ApiAuthentication') -> 'User_Customer_ApiAuthentication':
         """Edit customer ApiAuthentication record."""
         data = self.client.call('SoftLayer_User_Customer_ApiAuthentication', 'editObject', templateObject, id=identifier)
-        from SoftLayer.sltypes.User_Customer_ApiAuthentication import User_Customer_ApiAuthentication
         return data
 
     def getObject(self, identifier: int) -> 'User_Customer_ApiAuthentication':
         """Retrieve a SoftLayer_User_Customer_ApiAuthentication record."""
         data = self.client.call('SoftLayer_User_Customer_ApiAuthentication', 'getObject', id=identifier)
-        from SoftLayer.sltypes.User_Customer_ApiAuthentication import User_Customer_ApiAuthentication
         return data
 
     def getUser(self, identifier: int) -> 'User_Customer':

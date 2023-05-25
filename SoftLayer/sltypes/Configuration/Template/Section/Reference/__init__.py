@@ -18,7 +18,6 @@ section and its associated configuration template."""
     def getObject(self, identifier: int) -> 'Configuration_Template_Section_Reference':
         """Retrieve a SoftLayer_Configuration_Template_Section_Reference record."""
         data = self.client.call('SoftLayer_Configuration_Template_Section_Reference', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Configuration_Template_Section_Reference import Configuration_Template_Section_Reference
         return data
 
     def getSection(self, identifier: int) -> 'Configuration_Template_Section':

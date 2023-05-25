@@ -40,7 +40,6 @@ class Account_Link_OpenStack(Account_Link):
     def getObject(self, identifier: int) -> 'Account_Link_OpenStack':
         """Retrieve a SoftLayer_Account_Link_OpenStack record."""
         data = self.client.call('SoftLayer_Account_Link_OpenStack', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Account_Link_OpenStack import Account_Link_OpenStack
         return data
 
     def listOSProjects(self) -> list['Account_Link_OpenStack_ProjectDetails']:

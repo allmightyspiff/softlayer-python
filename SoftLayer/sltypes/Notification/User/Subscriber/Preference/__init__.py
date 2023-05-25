@@ -26,7 +26,6 @@ NOTE: Some preferences have certain restrictions on values that can be set."""
     def getObject(self, identifier: int) -> 'Notification_User_Subscriber_Preference':
         """Retrieve a SoftLayer_Notification_User_Subscriber_Preference record."""
         data = self.client.call('SoftLayer_Notification_User_Subscriber_Preference', 'getObject', id=identifier)
-        from SoftLayer.sltypes.Notification_User_Subscriber_Preference import Notification_User_Subscriber_Preference
         return data
 
     def getDefaultPreference(self, identifier: int) -> 'Notification_Preference':
