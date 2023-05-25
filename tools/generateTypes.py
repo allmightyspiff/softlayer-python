@@ -323,20 +323,28 @@ class ServiceAndTypeGenerator:
 
     def generate_method_ast(self, method: dict) -> ast.FunctionDef:
         args = [ast.arg("self")]
+        call_args = [
+            ast.Name(id=f"'{self._name}'", ctx=ast.Load()),
+            ast.Name(id=f"'{method['name']}'", ctx=ast.Load())
+        ]
+        keyed_call_args = []
 
         if "static" not in method or not method["static"]:
             # method is not static, so an id is required. Make it the first argument
-            args.append(ast.arg("id_", annotation=ast.Name(self.use("typing", "Any"))))
+            args.append(ast.arg("identifier", annotation=ast.Name(self.use("typing", "int"))))
+            keyed_call_args.append(ast.keyword(arg='id', value=ast.arg("identifier")))
 
         if "parameters" in method:
             for parameter in method["parameters"]:
                 args.append(
                     ast.arg(get_property_name(parameter["name"]), annotation=self.meta_type_to_ast(parameter["type"]))
                 )
+                call_args.append(ast.arg(arg=parameter["name"]))
 
         func = ast.FunctionDef(method["name"])
+        # TODO Add objectmask / objectfilter / resultlimit
         func.args = ast.arguments([], args, [], [], [], [], [])
-        func.body = []
+        func.body = [        ]
         func.decorator_list = []
         func.returns = self.method_type_to_ast(method)
         func.type_comment = None
@@ -344,7 +352,21 @@ class ServiceAndTypeGenerator:
         if "docOverview" in method:
             func.body.append(doc_text_ast(method["docOverview"]))
 
-        func.body.append(ast.Pass())  # todo
+        # https://docs.python.org/3/library/ast.html#ast.Call
+
+        func.body.append(         
+            ast.Assign(
+                targets=[ast.Name(id="data", ctx=ast.Store())],
+                value=ast.Call(
+                    func=ast.Name(id="self.client.call", ctx=ast.Load()),
+                    args=call_args,
+                    keywords=keyed_call_args
+                )
+            )
+        )
+        func.body.append(
+            ast.parse(self.getReturnStatement(method['type']))
+        )
 
         return func
 
@@ -386,6 +408,7 @@ class ServiceAndTypeGenerator:
         if "typeArray" in method and method["typeArray"]:
             expr = ast.Subscript(ast.Name("list"), expr)
         return expr
+
 
     def meta_type_to_ast(self, meta_type: str, for_property: bool = False) -> object:
         """
@@ -475,6 +498,12 @@ class ServiceAndTypeGenerator:
         else:
             return name
 
+    def getReturnStatement(self, returnType: str) -> str:
+        if 'SoftLayer_' not in returnType:
+            return 'return data'
+        if returnType == 'void':
+            return 'return None'
+        return f"return {self.normalize_name(returnType)}(data)" 
 
 
 @click.command()
