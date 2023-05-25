@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Container.Product.Order.Virtual.Guest.Vpc import Container_Product_Order_Virtual_Guest_Vpc
+from SoftLayer.sltypes.Container_Product_Order_Virtual_Guest_Vpc import Container_Product_Order_Virtual_Guest_Vpc
+
+class Container_Product_Order_Virtual_Guest_Vpc_Upgrade(Container_Product_Order_Virtual_Guest_Vpc):
+    pass

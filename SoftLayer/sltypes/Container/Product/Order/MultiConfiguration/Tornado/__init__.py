@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Container.Product.Order.MultiConfiguration import Container_Product_Order_MultiConfiguration
+from SoftLayer.sltypes.Container_Product_Order_MultiConfiguration import Container_Product_Order_MultiConfiguration
+
+class Container_Product_Order_MultiConfiguration_Tornado(Container_Product_Order_MultiConfiguration):
+    pass

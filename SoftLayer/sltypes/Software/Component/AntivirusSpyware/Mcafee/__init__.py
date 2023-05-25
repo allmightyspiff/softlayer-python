@@ -1,0 +1,6 @@
+from SoftLayer.sltypes.Software.Component.AntivirusSpyware import Software_Component_AntivirusSpyware
+from SoftLayer.sltypes.Software_Component_AntivirusSpyware import Software_Component_AntivirusSpyware
+
+class Software_Component_AntivirusSpyware_Mcafee(Software_Component_AntivirusSpyware):
+    """The SoftLayer_Software_Component_AntivirusSpyware_Mcafee represents a single anti-virus/spyware software
+component."""

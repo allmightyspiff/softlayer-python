@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Metric.Tracking.Object.Abstract import Metric_Tracking_Object_Abstract
+from SoftLayer.sltypes.Metric_Tracking_Object_Abstract import Metric_Tracking_Object_Abstract
+
+class Metric_Tracking_Object_Virtual_Storage_Repository(Metric_Tracking_Object_Abstract):
+    pass

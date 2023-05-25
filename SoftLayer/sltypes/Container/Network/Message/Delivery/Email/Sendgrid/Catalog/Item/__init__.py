@@ -1,0 +1,7 @@
+from SoftLayer.sltypes.Container.Network.Message.Delivery.Email.Sendgrid.Catalog.Item.Offering import Container_Network_Message_Delivery_Email_Sendgrid_Catalog_Item_Offering
+from SoftLayer.sltypes.Container.Network.Message.Delivery.Email.Sendgrid.Catalog.Item.Entitlements import Container_Network_Message_Delivery_Email_Sendgrid_Catalog_Item_Entitlements
+from SoftLayer.sltypes.Entity import Entity
+
+class Container_Network_Message_Delivery_Email_Sendgrid_Catalog_Item(Entity):
+    entitlements: Container_Network_Message_Delivery_Email_Sendgrid_Catalog_Item_Entitlements
+    offering: Container_Network_Message_Delivery_Email_Sendgrid_Catalog_Item_Offering

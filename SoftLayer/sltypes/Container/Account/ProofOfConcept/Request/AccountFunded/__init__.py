@@ -1,0 +1,8 @@
+from SoftLayer.sltypes.Container.Account.ProofOfConcept.Request.CostRecovery import Container_Account_ProofOfConcept_Request_CostRecovery
+from SoftLayer.sltypes.Container.Account.ProofOfConcept.Request.GlobalFunded import Container_Account_ProofOfConcept_Request_GlobalFunded
+from SoftLayer.sltypes.Container_Account_ProofOfConcept_Request_GlobalFunded import Container_Account_ProofOfConcept_Request_GlobalFunded
+
+class Container_Account_ProofOfConcept_Request_AccountFunded(Container_Account_ProofOfConcept_Request_GlobalFunded):
+    """Proof of concept request using the account team funding model. Note that proof of concept account request are
+available only to internal IBM employees."""
+    costRecoveryRequest: Container_Account_ProofOfConcept_Request_CostRecovery

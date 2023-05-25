@@ -56,7 +56,7 @@ class $dataType($baseClass):
 
 SOFTLAYER_ENTITY = """# This file was automatically generated with tools/generateTypes.py
 from collections import UserDict
-class SoftLayer_Entity(UserDict):
+class Entity(UserDict):
     pass
 """
 
@@ -83,7 +83,7 @@ class SLDNgenerator():
         if not cwd.endswith(BASE_DIR):
             raise Exception(f"Working Directory should be {BASE_DIR}, is currently {cwd}")
         # Make sure required directories exist
-        self.typesDir = os.path.join(cwd, 'SoftLayer/sltypes')
+        self.typesDir = os.path.join(cwd, 'SoftLayer', 'sltypes')
         if not os.path.isdir(self.typesDir):
             print(f"Creating {self.typesDir}")
             os.mkdir(self.typesDir)
@@ -130,7 +130,8 @@ class SLDNgenerator():
 
     def finalTouches(self):
         # SoftLayer_Entity needs a special modification
-        with open(f"SoftLayer/sltypes/Entity/__init__.py", "w", encoding="utf-8") as f:
+        filename = os.path.join(self.typesDir, 'Entity', '__init__.py')
+        with open(filename, "w", encoding="utf-8") as f:
             f.write(SOFTLAYER_ENTITY)
         # ensure modules exist for every module folder that might not have a class
         for root, dirs, files in os.walk(self.typesDir, topdown=False):
@@ -235,7 +236,8 @@ class ServiceAndTypeGenerator:
     _name: str
     _service_doc: str
     _type_doc: str
-    _properties: dict
+    _local_properties: dict
+    _relational_properties: dict
     _methods: dict
     _no_service: bool
     _base: Optional[str]
@@ -246,10 +248,19 @@ class ServiceAndTypeGenerator:
         self._name = name
         self._service_doc = meta["serviceDoc"].strip() if "serviceDoc" in meta else ""
         self._type_doc = meta["typeDoc"].strip() if "typeDoc" in meta else ""
-        self._properties = meta["properties"] if "properties" in meta else {}
-        self._methods = meta["methods"] if "methods" in meta else {}
-        self._no_service = meta["noservice"] if "noservice" in meta else False
-        self._base = meta["base"] if "base" in meta else "SoftLayer_Entity"
+        self._local_properties = []
+        self._relational_properties = []
+        # Split properties out by local/relational
+        properties = meta.get('properties', {})
+        for propName, prop in properties.items():
+            if prop.get('form') == 'local':
+                self._local_properties.append(prop)
+            else:
+                self._relational_properties.append(prop)
+
+        self._methods = meta.get("methods", {})
+        self._no_service = meta.get("noservice", False)
+        self._base = self.normalize_name(meta.get("base", "Entity"))
         # if self._name == "SoftLayer_Entity":
         #     self._base = None
 
@@ -265,10 +276,16 @@ class ServiceAndTypeGenerator:
     def get_module(self) -> ast.Module:
         module = ast.Module()
         module.body = []
+        # Import whatever the self._base class is
+        self.use(f"SoftLayer.sltypes.{self._base}", self._base)
+        
+        class_def = self.get_type_ast()
 
-        module.body.append(self.get_type_ast())
         if not self._no_service:
-            module.body.append(self.get_service_ast())
+            # Add the BaseClient Import since its a service
+            module.body.append(ast.ImportFrom(module='SoftLayer', names=[ast.alias(name='BaseClient')]))
+            class_def = self.get_service_ast(class_def)
+        module.body.append(class_def)
         module.type_ignores = []
 
         # we looked at all the references to other types, import them and prepend
@@ -284,20 +301,13 @@ class ServiceAndTypeGenerator:
         ast.fix_missing_locations(module)
         return module
 
-    def get_service_ast(self) -> ast.ClassDef:
-        class_def = ast.ClassDef(self.normalize_name(self._name))
-        class_def.bases = []
-        class_def.keywords = []
-        class_def.body = []
-        class_def.decorator_list = []
-
-        # add service doc
-        if len(self._service_doc) > 0:
-            class_def.body.append(doc_text_ast(self._service_doc))
+    def get_service_ast(self, class_def: ast.ClassDef) -> ast.ClassDef:
+        """Adds __init__ and SLDN methods to the class definition"""
 
         # add __init__
         class_def.body.append(self._get_init_func())
 
+        # Add in each method
         for method in self._methods.values():
             class_def.body.append(self.generate_method_ast(method))
 
@@ -314,7 +324,9 @@ class ServiceAndTypeGenerator:
         func.type_comment = None
 
         func.body.append(
-            ast.Assign(targets=[ast.Attribute(value=ast.Name(id="self"), attr="_client")], value=ast.Name(id="client"))
+            ast.Assign(
+                targets = [ast.Attribute(value=ast.Name(id="self"), attr="client")],
+                value = ast.Name(id="client"))
         )
         func.body.append(
             ast.Assign(targets=[ast.Attribute(value=ast.Name(id="self"), attr="_name")], value=ast.Constant(self._name))
@@ -322,6 +334,7 @@ class ServiceAndTypeGenerator:
         return func
 
     def generate_method_ast(self, method: dict) -> ast.FunctionDef:
+        """Builds method definition for each SLDN method"""
         args = [ast.arg("self")]
         call_args = [
             ast.Name(id=f"'{self._name}'", ctx=ast.Load()),
@@ -331,7 +344,7 @@ class ServiceAndTypeGenerator:
 
         if "static" not in method or not method["static"]:
             # method is not static, so an id is required. Make it the first argument
-            args.append(ast.arg("identifier", annotation=ast.Name(self.use("typing", "int"))))
+            args.append(ast.arg("identifier", annotation=ast.Name('int')))
             keyed_call_args.append(ast.keyword(arg='id', value=ast.arg("identifier")))
 
         if "parameters" in method:
@@ -364,13 +377,17 @@ class ServiceAndTypeGenerator:
                 )
             )
         )
-        func.body.append(
-            ast.parse(self.getReturnStatement(method['type']))
-        )
+        # Imports the needed type "just in time" so we don't have circular imports
+        # `from SoftLayer.sltypes.Sldn_Class_Name import Sldn_Class_Name
+        func.body.append(ast.parse(self.getMethodImportStatement(method['type'])))
+        # Casts the return value as the return type
+        # `return Sldn_Class_Name(data)`
+        func.body.append(ast.parse(self.getReturnStatement(method['type'])))
 
         return func
 
     def get_type_ast(self) -> ast.ClassDef:
+        """Creates the base class instance and adds local properties"""
 
         class_def = ast.ClassDef(self.normalize_name(self._name))
         class_def.keywords = []
@@ -379,14 +396,14 @@ class ServiceAndTypeGenerator:
 
         class_def.bases = []
         if self._base:
-            class_def.bases.append(self.meta_type_to_ast(self._base))
+            class_def.bases.append(self.meta_type_to_ast(self._base, True))
 
         if len(self._type_doc) > 0:
             class_def.body.append(doc_text_ast(self._type_doc))
 
-        if len(self._properties) > 0:
-            for prop in self._properties.values():
-                class_def.body.append(self.type_property_ast(prop))
+
+        for prop in self._local_properties:
+            class_def.body.append(self.type_property_ast(prop))
 
         if len(class_def.body) == 0:
             # if an empty body, add pass
@@ -395,13 +412,11 @@ class ServiceAndTypeGenerator:
         return class_def
 
     def type_property_ast(self, prop: dict) -> ast.AnnAssign:
+        """converts a metadata property to Python property with annotation"""
         annotation = self.meta_type_to_ast(prop["type"], for_property=True)
         if "typeArray" in prop and prop["typeArray"]:
             annotation = ast.Subscript(value=ast.Name("list"), slice=annotation)
         return ast.AnnAssign(target=ast.Name(get_property_name(prop["name"])), annotation=annotation, simple=1)
-
-    def get_client_name(self):
-        return "BaseClient"
 
     def method_type_to_ast(self, method: dict) -> ast.Expr:
         expr = self.meta_type_to_ast(method["type"])
@@ -413,9 +428,9 @@ class ServiceAndTypeGenerator:
     def meta_type_to_ast(self, meta_type: str, for_property: bool = False) -> object:
         """
         Converts an IMS API type into a python ast expression.
-        :param meta_type:
-        :param for_property:
-        :return:
+        :param meta_type: SoftLayer_Service_Name or similar
+        :param for_property: Will not enclose the result in quotes if True
+        :return: Either returns the python base type, or SoftLayer base type
         """
         match meta_type:
             case "void":
@@ -450,8 +465,13 @@ class ServiceAndTypeGenerator:
                 if for_property and self.type_matches(module_name, type_name):
                     # type property references itself
                     return ast.Subscript(ast.Name(self.use("typing", "Optional")), ast.Name(self.use("typing", "Self")))
+                # Local properties that are SL types are fairly rare, so it should be ok to use them as imports.
+                elif for_property:
+                    return ast.Name(self.use(module_name, type_name))
 
-                return ast.Name(self.use(module_name, type_name))
+                # Return a string of the type name because we only want to do type checks at execution time
+                # OTHERWISE we have to import EVERY class this class uses, which creates circular dependencies.
+                return ast.Name(f"'{type_name}'")
 
     def use(self, module_name: str, type_name: str) -> str:
         """
@@ -489,7 +509,7 @@ class ServiceAndTypeGenerator:
     def get_module_name(self, meta_type: str) -> str:
         name = self.normalize_name(meta_type)
         module = ".".join(name.split("_"))
-        return module
+        return f"SoftLayer.sltypes.{module}"
 
     @staticmethod
     def normalize_name(name: str) -> str:
@@ -503,8 +523,16 @@ class ServiceAndTypeGenerator:
             return 'return data'
         if returnType == 'void':
             return 'return None'
-        return f"return {self.normalize_name(returnType)}(data)" 
+        return 'return data'
+        # TODO: Casting to Classes doesn't quite work right yet.
+        #return f"return {self.normalize_name(returnType)}(data)"
 
+    def getMethodImportStatement(self, returnType: str) -> str:
+        if 'SoftLayer_' not in returnType:
+            return ''
+
+        class_name = self.normalize_name(returnType)
+        return f"from SoftLayer.sltypes.{class_name} import {class_name}"
 
 @click.command()
 @click.option('--download', default=False, is_flag=True)

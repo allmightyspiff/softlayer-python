@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Workload.Citrix.Workspace.Response import Workload_Citrix_Workspace_Response
+from SoftLayer.sltypes.Workload_Citrix_Workspace_Response import Workload_Citrix_Workspace_Response
+
+class Workload_Citrix_Workspace_Response_Result(Workload_Citrix_Workspace_Response):
+    items: list[Workload_Citrix_Workspace_Response]

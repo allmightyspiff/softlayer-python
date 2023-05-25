@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Workload.Citrix.Client.Response import Workload_Citrix_Client_Response
+from SoftLayer.sltypes.Workload_Citrix_Client_Response import Workload_Citrix_Client_Response
+
+class Workload_Citrix_Client_Response_ResourceLocations(Workload_Citrix_Client_Response):
+    resourceLocations: list[str]

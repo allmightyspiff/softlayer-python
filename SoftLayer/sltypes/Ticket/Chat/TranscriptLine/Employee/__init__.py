@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Ticket.Chat.TranscriptLine import Ticket_Chat_TranscriptLine
+from SoftLayer.sltypes.Ticket_Chat_TranscriptLine import Ticket_Chat_TranscriptLine
+
+class Ticket_Chat_TranscriptLine_Employee(Ticket_Chat_TranscriptLine):
+    pass

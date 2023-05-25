@@ -1,0 +1,7 @@
+from SoftLayer.sltypes.Container.Network.Message.Delivery.Email.Sendgrid.Account.Profile import Container_Network_Message_Delivery_Email_Sendgrid_Account_Profile
+from SoftLayer.sltypes.Container.Network.Message.Delivery.Email.Sendgrid.Account.Offering import Container_Network_Message_Delivery_Email_Sendgrid_Account_Offering
+from SoftLayer.sltypes.Entity import Entity
+
+class Container_Network_Message_Delivery_Email_Sendgrid_Account(Entity):
+    offerings: list[Container_Network_Message_Delivery_Email_Sendgrid_Account_Offering]
+    profile: Container_Network_Message_Delivery_Email_Sendgrid_Account_Profile

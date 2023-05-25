@@ -1,0 +1,6 @@
+from SoftLayer.sltypes.Billing.Item.Software.Component.OperatingSystem.Addon import Billing_Item_Software_Component_OperatingSystem_Addon
+from SoftLayer.sltypes.Billing_Item_Software_Component_OperatingSystem_Addon import Billing_Item_Software_Component_OperatingSystem_Addon
+
+class Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials(Billing_Item_Software_Component_OperatingSystem_Addon):
+    """The SoftLayer_Billing_Item_Software_Component_OperatingSystem_Addon_Citrix_Essentials data type contains
+general information relating to a single SoftLayer billing item for Citrix Essentials software components."""

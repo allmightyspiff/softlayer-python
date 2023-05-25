@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Product.Item.Resource.Conflict import Product_Item_Resource_Conflict
+from SoftLayer.sltypes.Product_Item_Resource_Conflict import Product_Item_Resource_Conflict
+
+class Product_Item_Resource_Conflict_Item_Category(Product_Item_Resource_Conflict):
+    pass

@@ -1,0 +1,5 @@
+from SoftLayer.sltypes.Container.User.Customer.Profile.Event.HyperWarp.ProfileChange.EventProperties import Container_User_Customer_Profile_Event_HyperWarp_ProfileChange_EventProperties
+from SoftLayer.sltypes.Entity import Entity
+
+class Container_User_Customer_Profile_Event_HyperWarp_ProfileChange_Context(Entity):
+    previous_values: Container_User_Customer_Profile_Event_HyperWarp_ProfileChange_EventProperties

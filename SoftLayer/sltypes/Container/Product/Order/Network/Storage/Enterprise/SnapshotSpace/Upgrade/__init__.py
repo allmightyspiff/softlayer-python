@@ -1,0 +1,6 @@
+from SoftLayer.sltypes.Container.Product.Order.Network.Storage.Enterprise.SnapshotSpace import Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace
+from SoftLayer.sltypes.Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace import Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace
+
+class Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace_Upgrade(Container_Product_Order_Network_Storage_Enterprise_SnapshotSpace):
+    """This is the datatype that needs to be populated and sent to SoftLayer_Product_Order::placeOrder. This
+datatype has everything required to place an upgrade order for Enterprise Storage Snapshot Space."""

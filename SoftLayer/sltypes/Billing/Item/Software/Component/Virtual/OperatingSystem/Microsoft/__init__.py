@@ -1,0 +1,8 @@
+from SoftLayer.sltypes.Billing.Item.Software.Component.Virtual.OperatingSystem import Billing_Item_Software_Component_Virtual_OperatingSystem
+from SoftLayer.sltypes.Billing_Item_Software_Component_Virtual_OperatingSystem import Billing_Item_Software_Component_Virtual_OperatingSystem
+
+class Billing_Item_Software_Component_Virtual_OperatingSystem_Microsoft(Billing_Item_Software_Component_Virtual_OperatingSystem):
+    """The SoftLayer_Billing_Item_Software_Component_Virtual_OperatingSystem_Microsoft data type contains general
+information relating to a single SoftLayer billing item for a Microsoft operating system software components
+on virtual machines."""
+    resourceTableId: int
