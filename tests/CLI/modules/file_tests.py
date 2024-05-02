@@ -66,26 +66,18 @@ class FileTests(testing.TestCase):
     @mock.patch('SoftLayer.FileStorageManager.list_file_volumes')
     def test_volume_list_notes_format_output_json(self, list_mock):
         note_mock = 'test ' * 5
-        list_mock.return_value = [
-            {'notes': note_mock}
-        ]
+        list_mock.return_value = [{'notes': note_mock}]
 
         result = self.run_command(['--format', 'json', 'file', 'volume-list', '--columns', 'notes'])
 
         self.assert_no_fail(result)
-        self.assertEqual(
-            [{
-                'notes': note_mock,
-            }],
-            json.loads(result.output))
+        self.assertEqual([{'notes': note_mock,}], json.loads(result.output))
 
     @mock.patch('SoftLayer.FileStorageManager.list_file_volumes')
     def test_volume_list_reduced_notes_format_output_table(self, list_mock):
         note_mock = 'test ' * 10
         expected_reduced_note = 'test ' * 4
-        list_mock.return_value = [
-            {'notes': note_mock}
-        ]
+        list_mock.return_value = [{'notes': note_mock}]
         result = self.run_command(['--format', 'table', 'file', 'volume-list', '--columns', 'notes'])
 
         self.assert_no_fail(result)
@@ -103,12 +95,7 @@ class FileTests(testing.TestCase):
         result = self.run_command(['file', 'volume-count'])
 
         self.assert_no_fail(result)
-        self.assertEqual(
-            {
-                'ams01': 2,
-                'dal09': 1
-            },
-            json.loads(result.output))
+        self.assertEqual({'ams01': 2, 'dal09': 1}, json.loads(result.output))
 
     def test_snapshot_list(self):
         result = self.run_command(['file', 'snapshot-list', '1234'])
@@ -124,22 +111,17 @@ class FileTests(testing.TestCase):
             json.loads(result.output))
 
     def test_volume_cancel(self):
-        result = self.run_command([
-            '--really', 'file', 'volume-cancel', '1234'])
+        result = self.run_command(['--really', 'file', 'volume-cancel', '1234'])
 
         self.assert_no_fail(result)
-        self.assertEqual('File volume with id 1234 has been marked'
-                         ' for cancellation\n', result.output)
-        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem',
-                                args=(False, True, None))
+        self.assertEqual('Volume with id 1234 has been marked for cancellation\n', result.output)
+        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem', args=(False, True, None))
 
     def test_volume_cancel_with_billing_item(self):
-        result = self.run_command([
-            '--really', 'file', 'volume-cancel', '1234'])
+        result = self.run_command(['--really', 'file', 'volume-cancel', '1234'])
 
         self.assert_no_fail(result)
-        self.assertEqual('File volume with id 1234 has been marked'
-                         ' for cancellation\n', result.output)
+        self.assertEqual('Volume with id 1234 has been marked for cancellation\n', result.output)
         self.assert_called_with('SoftLayer_Network_Storage', 'getObject')
 
     def test_volume_cancel_without_billing_item(self):
@@ -153,8 +135,7 @@ class FileTests(testing.TestCase):
             "username": "SL01SEV307608_1"
         }
 
-        result = self.run_command([
-            '--really', 'file', 'volume-cancel', '1234'])
+        result = self.run_command(['--really', 'file', 'volume-cancel', '1234'])
 
         self.assertIsInstance(result.exception, SoftLayerError)
 
@@ -850,6 +831,7 @@ class FileTests(testing.TestCase):
         result = self.run_command(['file', 'snapshot-cancel', '4917309'])
         self.assertEqual(2, result.exit_code)
         self.assertEqual('Aborted.', result.exception.message)
+
 
     @mock.patch('SoftLayer.CLI.formatting.confirm')
     def test_file_volume_cancel_force(self, confirm_mock):

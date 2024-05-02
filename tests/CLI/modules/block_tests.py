@@ -26,10 +26,8 @@ class BlockTests(testing.TestCase):
             '--really', 'block', 'volume-cancel', '1234'])
 
         self.assert_no_fail(result)
-        self.assertEqual('Block volume with id 1234 has been marked'
-                         ' for cancellation\n', result.output)
-        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem',
-                                args=(False, True, None))
+        self.assertEqual('Volume with id 1234 has been marked for cancellation\n', result.output)
+        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem', args=(False, True, None))
 
     def test_volume_set_lun_id_in_range(self):
         lun_mock = self.set_mock('SoftLayer_Network_Storage', 'createOrUpdateLunId')
@@ -984,8 +982,24 @@ class BlockTests(testing.TestCase):
         confirm_mock.return_value = False
         result = self.run_command(['block', 'volume-cancel', '12345678', '--immediate', '--force'])
         self.assert_no_fail(result)
-        self.assertEqual('Block volume with id 12345678 has been marked'
-                         ' for immediate cancellation\n', result.output)
+        self.assertEqual('Volume with id 12345678 has been marked for immediate cancellation\n', result.output)
+
+    def test_cancel_block_volume_by_username(self):
+        result = self.run_command(['block', 'volume-cancel', 'SL123', '--immediate', '--force'])
+        self.assert_no_fail(result)
+        test_filter = {
+            'iscsiNetworkStorage': {
+                'serviceResource': {
+                    'type': {'type': {'operation': '!~ ISCSI'}}
+                }, 
+                'storageType': {'keyName': {'operation': '*= BLOCK_STORAGE'}},
+                'username': {'operation': '_= SL123'}
+            }
+        }
+        self.assert_called_with('SoftLayer_Account', 'getIscsiNetworkStorage', filter=test_filter)
+        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem', identifier=449)
+        self.assertEqual('Volume with id SL123 has been marked for immediate cancellation\n', result.output)
+
 
     @mock.patch('SoftLayer.CLI.formatting.confirm')
     def test_cancel_block_volume_no_force(self, confirm_mock):
