@@ -71,7 +71,7 @@ class FileTests(testing.TestCase):
         result = self.run_command(['--format', 'json', 'file', 'volume-list', '--columns', 'notes'])
 
         self.assert_no_fail(result)
-        self.assertEqual([{'notes': note_mock,}], json.loads(result.output))
+        self.assertEqual([{'notes': note_mock}], json.loads(result.output))
 
     @mock.patch('SoftLayer.FileStorageManager.list_file_volumes')
     def test_volume_list_reduced_notes_format_output_table(self, list_mock):
@@ -204,7 +204,7 @@ class FileTests(testing.TestCase):
     def test_volume_order_performance_iops_not_given(self):
         result = self.run_command(['file', 'volume-order',
                                    '--storage-type=performance', '--size=20',
-                                   '--location=dal05'])
+                                   '--location=dal05', '--force'])
 
         self.assertEqual(2, result.exit_code)
 
@@ -213,7 +213,7 @@ class FileTests(testing.TestCase):
                                    '--storage-type=performance', '--size=20',
                                    '--iops=100', '--location=dal05',
                                    '--snapshot-size=10',
-                                   '--service-offering=performance'])
+                                   '--service-offering=performance', '--force'])
 
         self.assertEqual(2, result.exit_code)
 
@@ -234,7 +234,7 @@ class FileTests(testing.TestCase):
         result = self.run_command(['file', 'volume-order',
                                    '--storage-type=performance', '--size=20',
                                    '--iops=100', '--location=dal05',
-                                   '--snapshot-size=10'])
+                                   '--snapshot-size=10', '--force'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
@@ -248,7 +248,7 @@ class FileTests(testing.TestCase):
     def test_volume_order_endurance_tier_not_given(self):
         result = self.run_command(['file', 'volume-order',
                                    '--storage-type=endurance', '--size=20',
-                                   '--location=dal05'])
+                                   '--location=dal05', '--force'])
 
         self.assertEqual(2, result.exit_code)
 
@@ -269,7 +269,7 @@ class FileTests(testing.TestCase):
         result = self.run_command(['file', 'volume-order',
                                    '--storage-type=endurance', '--size=20',
                                    '--tier=0.25', '--location=dal05',
-                                   '--snapshot-size=10'])
+                                   '--snapshot-size=10', '--force'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
@@ -286,7 +286,7 @@ class FileTests(testing.TestCase):
 
         result = self.run_command(['file', 'volume-order',
                                    '--storage-type=endurance', '--size=20',
-                                   '--tier=0.25', '--location=dal05'])
+                                   '--tier=0.25', '--location=dal05', '--force'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
@@ -298,7 +298,7 @@ class FileTests(testing.TestCase):
                                    '--storage-type=endurance', '--size=20',
                                    '--tier=0.25', '--location=dal10',
                                    '--billing=hourly',
-                                   '--service-offering=enterprise'])
+                                   '--service-offering=enterprise', '--force'])
 
         self.assertEqual(2, result.exit_code)
 
@@ -316,11 +316,9 @@ class FileTests(testing.TestCase):
             }
         }
 
-        result = self.run_command(['file', 'volume-order',
-                                   '--storage-type=endurance', '--size=20',
-                                   '--tier=0.25', '--location=dal05',
-                                   '--service-offering=storage_as_a_service',
-                                   '--billing=hourly', '--snapshot-size=10'])
+        result = self.run_command(['file', 'volume-order', '--storage-type=endurance', '--size=20',
+                                   '--tier=0.25', '--location=dal05', '--service-offering=storage_as_a_service',
+                                   '--billing=hourly', '--snapshot-size=10', '--force'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
@@ -337,9 +335,8 @@ class FileTests(testing.TestCase):
     def test_volume_order_performance_manager_error(self, order_mock):
         order_mock.side_effect = ValueError('failure!')
 
-        result = self.run_command(['file', 'volume-order',
-                                   '--storage-type=performance', '--size=20',
-                                   '--iops=100', '--location=dal05'])
+        result = self.run_command(['file', 'volume-order', '--storage-type=performance', '--size=20',
+                                   '--iops=100', '--location=dal05', '--force'])
 
         self.assertEqual(2, result.exit_code)
         self.assertEqual('Argument Error: failure!', result.exception.message)
@@ -350,26 +347,23 @@ class FileTests(testing.TestCase):
 
         result = self.run_command(['file', 'volume-order',
                                    '--storage-type=endurance', '--size=20',
-                                   '--tier=0.25', '--location=dal05'])
+                                   '--tier=0.25', '--location=dal05', '--force'])
 
         self.assertEqual(2, result.exit_code)
         self.assertEqual('Argument Error: failure!', result.exception.message)
 
     def test_enable_snapshots(self):
-        result = self.run_command(['file', 'snapshot-enable', '12345678',
-                                   '--schedule-type=HOURLY', '--minute=10',
+        result = self.run_command(['file', 'snapshot-enable', '12345678', '--schedule-type=HOURLY', '--minute=10',
                                    '--retention-count=5'])
 
         self.assert_no_fail(result)
 
     def test_disable_snapshots(self):
-        result = self.run_command(['file', 'snapshot-disable', '12345678',
-                                   '--schedule-type=HOURLY'])
+        result = self.run_command(['file', 'snapshot-disable', '12345678', '--schedule-type=HOURLY'])
         self.assert_no_fail(result)
 
     def test_list_volume_schedules(self):
-        result = self.run_command([
-            'file', 'snapshot-schedule-list', '12345678'])
+        result = self.run_command(['file', 'snapshot-schedule-list', '12345678'])
         self.assert_no_fail(result)
         self.assertEqual([
             {
@@ -422,8 +416,7 @@ class FileTests(testing.TestCase):
                          result.output)
 
     def test_snapshot_restore(self):
-        result = self.run_command(['file', 'snapshot-restore', '12345678',
-                                   '--snapshot-id=87654321'])
+        result = self.run_command(['file', 'snapshot-restore', '12345678', '--snapshot-id=87654321'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output, 'File volume 12345678 is being'
@@ -438,20 +431,17 @@ class FileTests(testing.TestCase):
     def test_snapshot_order_order_not_placed(self, order_mock):
         order_mock.return_value = {}
 
-        result = self.run_command(['file', 'snapshot-order', '1234',
-                                   '--capacity=10', '--tier=0.25'])
+        result = self.run_command(['file', 'snapshot-order', '1234', '--capacity=10', '--tier=0.25'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
-                         'Order could not be placed! Please verify '
-                         'your options and try again.\n')
+                         'Order could not be placed! Please verify your options and try again.\n')
 
     @mock.patch('SoftLayer.FileStorageManager.order_snapshot_space')
     def test_snapshot_order_performance_manager_error(self, order_mock):
         order_mock.side_effect = ValueError('failure!')
 
-        result = self.run_command(['file', 'snapshot-order', '1234',
-                                   '--capacity=10', '--tier=0.25'])
+        result = self.run_command(['file', 'snapshot-order', '1234', '--capacity=10', '--tier=0.25'])
 
         self.assertEqual(2, result.exit_code)
         self.assertEqual('Argument Error: failure!', result.exception.message)
@@ -467,8 +457,7 @@ class FileTests(testing.TestCase):
             }
         }
 
-        result = self.run_command(['file', 'snapshot-order', '1234',
-                                   '--capacity=10', '--tier=0.25'])
+        result = self.run_command(['file', 'snapshot-order', '1234', '--capacity=10', '--tier=0.25'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
@@ -477,18 +466,14 @@ class FileTests(testing.TestCase):
                          ' > Order status: PENDING_APPROVAL\n')
 
     def test_snapshot_cancel(self):
-        result = self.run_command(['--really',
-                                   'file', 'snapshot-cancel', '1234'])
+        result = self.run_command(['--really', 'file', 'snapshot-cancel', '1234'])
 
         self.assert_no_fail(result)
-        self.assertEqual('File volume with id 1234 has been marked'
-                         ' for snapshot cancellation\n', result.output)
-        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem',
-                                args=(False, True, None))
+        self.assertEqual('File volume with id 1234 has been marked for snapshot cancellation\n', result.output)
+        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem',  args=(False, True, None))
 
     def test_replicant_failover(self):
-        result = self.run_command(['file', 'replica-failover', '12345678',
-                                   '--replicant-id=5678'])
+        result = self.run_command(['file', 'replica-failover', '12345678', '--replicant-id=5678'])
 
         self.assert_no_fail(result)
         self.assertEqual('Failover to replicant is now in progress.\n',
@@ -498,11 +483,9 @@ class FileTests(testing.TestCase):
     def test_replicant_failover_unsuccessful(self, failover_mock):
         failover_mock.return_value = False
 
-        result = self.run_command(['file', 'replica-failover', '12345678',
-                                   '--replicant-id=5678'])
+        result = self.run_command(['file', 'replica-failover', '12345678', '--replicant-id=5678'])
 
-        self.assertEqual('Failover operation could not be initiated.\n',
-                         result.output)
+        self.assertEqual('Failover operation could not be initiated.\n', result.output)
 
     @mock.patch('SoftLayer.CLI.formatting.confirm')
     @mock.patch('SoftLayer.FileStorageManager.disaster_recovery_failover_to_replicant')
@@ -518,8 +501,7 @@ class FileTests(testing.TestCase):
     def test_disaster_recovery_failover_aborted(self, confirm_mock):
         confirm_mock.return_value = False
 
-        result = self.run_command(['file', 'disaster-recovery-failover', '12345678',
-                                   '--replicant-id=5678'])
+        result = self.run_command(['file', 'disaster-recovery-failover', '12345678', '--replicant-id=5678'])
 
         self.assertEqual(result.exit_code, 2)
         self.assertIsInstance(result.exception, exceptions.CLIAbort)
@@ -528,8 +510,7 @@ class FileTests(testing.TestCase):
         result = self.run_command(['file', 'replica-failback', '12345678'])
 
         self.assert_no_fail(result)
-        self.assertEqual('Failback from replicant is now in progress.\n',
-                         result.output)
+        self.assertEqual('Failback from replicant is now in progress.\n', result.output)
 
     @mock.patch('SoftLayer.FileStorageManager.failback_from_replicant')
     def test_replicant_failback_unsuccessful(self, failback_mock):
@@ -537,21 +518,18 @@ class FileTests(testing.TestCase):
 
         result = self.run_command(['file', 'replica-failback', '12345678'])
 
-        self.assertEqual('Failback operation could not be initiated.\n',
-                         result.output)
+        self.assertEqual('Failback operation could not be initiated.\n', result.output)
 
     @mock.patch('SoftLayer.FileStorageManager.order_replicant_volume')
     def test_replicant_order_order_not_placed(self, order_mock):
         order_mock.return_value = {}
 
-        result = self.run_command(['file', 'replica-order', '100',
-                                   '--snapshot-schedule=DAILY',
-                                   '--location=dal05'])
+        result = self.run_command(['file', 'replica-order', '100', '--snapshot-schedule=DAILY',
+                                   '--location=dal05', '--force'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
-                         'Order could not be placed! Please verify '
-                         'your options and try again.\n')
+                         'Order could not be placed! Please verify your options and try again.\n')
 
     @mock.patch('SoftLayer.FileStorageManager.order_replicant_volume')
     def test_replicant_order(self, order_mock):
@@ -569,9 +547,8 @@ class FileTests(testing.TestCase):
             }
         }
 
-        result = self.run_command(['file', 'replica-order', '100',
-                                   '--snapshot-schedule=DAILY',
-                                   '--location=dal05', '--tier=2'])
+        result = self.run_command(['file', 'replica-order', '100', '--snapshot-schedule=DAILY',
+                                   '--location=dal05', '--tier=2', '--force'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
@@ -586,19 +563,14 @@ class FileTests(testing.TestCase):
     def test_replication_locations(self):
         result = self.run_command(['file', 'replica-locations', '1234'])
         self.assert_no_fail(result)
-        self.assertEqual(
-            {
-                '12345': 'Dallas 05',
-            },
-            json.loads(result.output))
+        self.assertEqual({'12345': 'Dallas 05'}, json.loads(result.output))
 
     @mock.patch('SoftLayer.FileStorageManager.get_replication_locations')
     def test_replication_locations_unsuccessful(self, locations_mock):
         locations_mock.return_value = False
         result = self.run_command(['file', 'replica-locations', '1234'])
         self.assert_no_fail(result)
-        self.assertEqual('No data centers compatible for replication.\n',
-                         result.output)
+        self.assertEqual('No data centers compatible for replication.\n',  result.output)
 
     def test_replication_partners(self):
         result = self.run_command(['file', 'replica-partners', '1234'])
@@ -628,31 +600,25 @@ class FileTests(testing.TestCase):
     def test_replication_partners_unsuccessful(self, partners_mock):
         partners_mock.return_value = False
         result = self.run_command(['file', 'replica-partners', '1234'])
-        self.assertEqual(
-            'There are no replication partners for the given volume.\n',
-            result.output)
+        self.assertEqual('There are no replication partners for the given volume.\n', result.output)
 
     @mock.patch('SoftLayer.FileStorageManager.order_duplicate_volume')
     def test_duplicate_order_exception_caught(self, order_mock):
         order_mock.side_effect = ValueError('order attempt failed, oh noooo!')
 
-        result = self.run_command(['file', 'volume-duplicate', '100'])
+        result = self.run_command(['file', 'volume-duplicate', '100', '--force'])
 
         self.assertEqual(2, result.exit_code)
-        self.assertEqual('Argument Error: order attempt failed, oh noooo!',
-                         result.exception.message)
+        self.assertEqual('Argument Error: order attempt failed, oh noooo!', result.exception.message)
 
     @mock.patch('SoftLayer.FileStorageManager.order_duplicate_volume')
     def test_duplicate_order_order_not_placed(self, order_mock):
         order_mock.return_value = {}
 
-        result = self.run_command(['file', 'volume-duplicate', '100',
-                                   '--duplicate-iops=1400'])
+        result = self.run_command(['file', 'volume-duplicate', '100', '--duplicate-iops=1400', '--force'])
 
         self.assert_no_fail(result)
-        self.assertEqual(result.output,
-                         'Order could not be placed! Please verify '
-                         'your options and try again.\n')
+        self.assertEqual(result.output, 'Order could not be placed! Please verify your options and try again.\n')
 
     @mock.patch('SoftLayer.FileStorageManager.order_duplicate_volume')
     def test_duplicate_order(self, order_mock):
@@ -663,11 +629,9 @@ class FileTests(testing.TestCase):
             }
         }
 
-        result = self.run_command(['file', 'volume-duplicate', '100',
-                                   '--origin-snapshot-id=470',
-                                   '--duplicate-size=250',
-                                   '--duplicate-tier=2',
-                                   '--duplicate-snapshot-size=20'])
+        result = self.run_command(['file', 'volume-duplicate', '100', '--origin-snapshot-id=470',
+                                   '--duplicate-size=250', '--duplicate-tier=2',
+                                   '--duplicate-snapshot-size=20', '--force'])
 
         self.assert_no_fail(result)
         self.assertEqual(result.output,
@@ -683,11 +647,9 @@ class FileTests(testing.TestCase):
             }
         }
 
-        result = self.run_command(['file', 'volume-duplicate', '100',
-                                   '--origin-snapshot-id=470',
-                                   '--duplicate-size=250',
-                                   '--duplicate-tier=2', '--billing=hourly',
-                                   '--duplicate-snapshot-size=20'])
+        result = self.run_command(['file', 'volume-duplicate', '100', '--origin-snapshot-id=470',
+                                   '--duplicate-size=250', '--duplicate-tier=2', '--billing=hourly',
+                                   '--duplicate-snapshot-size=20', '--force'])
 
         order_mock.assert_called_with('100', origin_snapshot_id=470,
                                       duplicate_size=250, duplicate_iops=None,
@@ -704,7 +666,7 @@ class FileTests(testing.TestCase):
     def test_modify_order_exception_caught(self, order_mock):
         order_mock.side_effect = ValueError('order attempt failed, noooo!')
 
-        result = self.run_command(['file', 'volume-modify', '102', '--new-size=1000'])
+        result = self.run_command(['file', 'volume-modify', '102', '--new-size=1000', '--force'])
 
         self.assertEqual(2, result.exit_code)
         self.assertEqual('Argument Error: order attempt failed, noooo!', result.exception.message)
@@ -713,13 +675,15 @@ class FileTests(testing.TestCase):
     def test_modify_order_order_not_placed(self, order_mock):
         order_mock.return_value = {}
 
-        result = self.run_command(['file', 'volume-modify', '102', '--new-iops=1400'])
+        result = self.run_command(['--really', 'file', 'volume-modify', '102', '--new-iops=1400'])
 
         self.assert_no_fail(result)
         self.assertEqual('Order could not be placed! Please verify your options and try again.\n', result.output)
 
     @mock.patch('SoftLayer.FileStorageManager.order_modified_volume')
-    def test_modify_order(self, order_mock):
+    @mock.patch('SoftLayer.CLI.formatting.confirm')
+    def test_modify_order(self, confirm_mock, order_mock):
+        confirm_mock.return_value = True
         order_mock.return_value = {'placedOrder': {'id': 24602, 'items': [{'description': 'Storage as a Service'},
                                                                           {'description': '1000 GBs'},
                                                                           {'description': '4 IOPS per GB'}]}}
@@ -743,19 +707,13 @@ class FileTests(testing.TestCase):
         self.assert_no_fail(result)
 
     def test_volume_limit_empty_datacenter(self):
-        expect_result = {
-            'dal13': 52,
-            'global': 700,
-            'null': 50
-        }
+        expect_result = {'dal13': 52, 'global': 700, 'null': 50}
         result = self.run_command(['file', 'volume-limits'])
         self.assert_no_fail(result)
         self.assertEqual(json.loads(result.output), expect_result)
 
     def test_volume_limit_datacenter(self):
-        expect_result = {
-            "dal13": 52
-        }
+        expect_result = {"dal13": 52}
         result = self.run_command(['file', 'volume-limits', '-d', 'dal13'])
         self.assert_no_fail(result)
         self.assertEqual(json.loads(result.output), expect_result)
@@ -808,7 +766,7 @@ class FileTests(testing.TestCase):
         result = self.run_command(['file', 'volume-modify', '102'])
 
         self.assertEqual(2, result.exit_code)
-        self.assertEqual('Aborted', result.exception.message)
+        self.assertEqual('Aborted.', result.exception.message)
 
     def test_file_replica_order_iops(self):
         result_1 = self.run_command(['file', 'replica-order', '4917309', '-s', 'HOURLY', '-l', 'dal09', '-i', '121'])
@@ -832,7 +790,6 @@ class FileTests(testing.TestCase):
         self.assertEqual(2, result.exit_code)
         self.assertEqual('Aborted.', result.exception.message)
 
-
     @mock.patch('SoftLayer.CLI.formatting.confirm')
     def test_file_volume_cancel_force(self, confirm_mock):
         confirm_mock.return_value = False
@@ -846,3 +803,17 @@ class FileTests(testing.TestCase):
         result = self.run_command(['file', 'volume-duplicate', '100'])
         self.assertEqual(2, result.exit_code)
         self.assertEqual('Aborted.', result.exception.message)
+
+    def test_cancel_file_volume_by_username(self):
+        result = self.run_command(['file', 'volume-cancel', 'SL123', '--immediate', '--force'])
+        self.assert_no_fail(result)
+        test_filter = {
+            'nasNetworkStorage': {
+                'serviceResource': {'type': {'type': {'operation': '!~ NAS'}}},
+                'storageType': {'keyName': {'operation': '*= FILE_STORAGE'}},
+                'username': {'operation': '_= SL123'}
+            }
+        }
+        self.assert_called_with('SoftLayer_Account', 'getNasNetworkStorage', filter=test_filter)
+        self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem', identifier=449)
+        self.assertEqual('Volume with id SL123 has been marked for immediate cancellation\n', result.output)

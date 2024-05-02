@@ -991,7 +991,7 @@ class BlockTests(testing.TestCase):
             'iscsiNetworkStorage': {
                 'serviceResource': {
                     'type': {'type': {'operation': '!~ ISCSI'}}
-                }, 
+                },
                 'storageType': {'keyName': {'operation': '*= BLOCK_STORAGE'}},
                 'username': {'operation': '_= SL123'}
             }
@@ -999,7 +999,6 @@ class BlockTests(testing.TestCase):
         self.assert_called_with('SoftLayer_Account', 'getIscsiNetworkStorage', filter=test_filter)
         self.assert_called_with('SoftLayer_Billing_Item', 'cancelItem', identifier=449)
         self.assertEqual('Volume with id SL123 has been marked for immediate cancellation\n', result.output)
-
 
     @mock.patch('SoftLayer.CLI.formatting.confirm')
     def test_cancel_block_volume_no_force(self, confirm_mock):

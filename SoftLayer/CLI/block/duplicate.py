@@ -12,19 +12,16 @@ CONTEXT_SETTINGS = {'token_normalize_func': lambda x: x.upper()}
 
 @click.command(cls=SoftLayer.CLI.command.SLCommand, context_settings=CONTEXT_SETTINGS)
 @click.argument('origin-volume-id')
-@click.option('--origin-snapshot-id', '-o',
-              type=int,
+@click.option('--origin-snapshot-id', '-o', type=int,
               help="ID of an origin volume snapshot to use for duplcation.")
-@click.option('--duplicate-size', '-c',
-              type=int,
+@click.option('--duplicate-size', '-c', type=int,
               help='Size of duplicate block volume in GB. '
                    '***If no size is specified, the size of '
                    'the origin volume will be used.***\n'
                    'Potential Sizes: [20, 40, 80, 100, 250, '
                    '500, 1000, 2000, 4000, 8000, 12000] '
                    'Minimum: [the size of the origin volume]')
-@click.option('--duplicate-iops', '-i',
-              type=int,
+@click.option('--duplicate-iops', '-i', type=int,
               help='Performance Storage IOPS, between 100 and 6000 in '
                    'multiples of 100 [only used for performance volumes] '
                    '***If no IOPS value is specified, the IOPS value of the '
@@ -43,23 +40,16 @@ CONTEXT_SETTINGS = {'token_normalize_func': lambda x: x.upper()}
                    'for the origin volume is greater than 0.25, IOPS/GB '
                    'for the duplicate must also be greater than 0.25.]',
               type=click.Choice(['0.25', '2', '4', '10']))
-@click.option('--duplicate-snapshot-size', '-s',
-              type=int,
+@click.option('--duplicate-snapshot-size', '-s', type=int,
               help='The size of snapshot space to order for the duplicate. '
                    '***If no snapshot space size is specified, the snapshot '
                    'space size of the origin block volume will be used.***\n'
                    'Input "0" for this parameter to order a duplicate volume '
                    'with no snapshot space.')
-@click.option('--billing',
-              type=click.Choice(['hourly', 'monthly']),
-              default='monthly',
+@click.option('--billing', type=click.Choice(['hourly', 'monthly']), default='monthly',
               help="Optional parameter for Billing rate (default to monthly)")
-@click.option('--dependent-duplicate',
-              type=click.BOOL,
-              default=False,
-              show_default=True,
-              help='Whether or not this duplicate will be a dependent duplicate '
-                   'of the origin volume.')
+@click.option('--dependent-duplicate', type=click.BOOL, default=False, show_default=True,
+              help='Whether or not this duplicate will be a dependent duplicate of the origin volume.')
 @environment.pass_env
 def cli(env, origin_volume_id, origin_snapshot_id, duplicate_size,
         duplicate_iops, duplicate_tier, duplicate_snapshot_size, billing,
@@ -99,5 +89,4 @@ def cli(env, origin_volume_id, origin_snapshot_id, duplicate_size,
         for item in order['placedOrder']['items']:
             click.echo(" > %s" % item['description'])
     else:
-        click.echo("Order could not be placed! Please verify your options " +
-                   "and try again.")
+        click.echo("Order could not be placed! Please verify your options and try again.")

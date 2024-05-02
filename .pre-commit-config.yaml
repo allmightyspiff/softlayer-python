@@ -19,3 +19,11 @@ repos:
         # when "--baseline" with "--use-all-plugins", pre-commit scan with all available plugins
         # add "--fail-on-unaudited" to fail pre-commit for unaudited potential secrets
         args: [--baseline, .secrets.baseline, --use-all-plugins]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    - id: check-yaml
+    - id: debug-statements
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
+      exclude: ^tests/fixtures/

@@ -31,14 +31,13 @@ def cli(env, volume_id, reason, immediate, force):
     manager = SoftLayer.BlockStorageManager(env.client)
     # Get the actual number for the ID incase the user put in the volume username
     block_volume_id = helpers.resolve_id(manager.resolve_ids, volume_id, 'File Storage')
-    
 
     if not force:
         if not (env.skip_confirmations or
                 formatting.confirm(f"This will cancel the block volume: {volume_id} and cannot be undone. Continue?")):
             raise exceptions.CLIAbort('Aborted')
 
-    cancelled = manager.cancel_block_volume(12341111, reason, immediate)
+    cancelled = manager.cancel_block_volume(block_volume_id, reason, immediate)
 
     if cancelled:
         if immediate:

@@ -39,10 +39,10 @@ def cli(env, volume_id, new_size, new_iops, new_tier, force):
 
             slcli file volume-modify 12345678 --new-size 1000 --new-iops 400
     """
-    if not force:
-        if not (env.skip_confirmations or
-                formatting.confirm("This action will incur charges on your account. Continue?")):
-            raise exceptions.CLIAbort('Aborted')
+    if not (force or
+            env.skip_confirmations or
+            formatting.confirm("This action will incur charges on your account. Continue?")):
+        raise exceptions.CLIAbort('Aborted.')
 
     file_manager = SoftLayer.FileStorageManager(env.client)
 
