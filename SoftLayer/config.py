@@ -61,8 +61,8 @@ def get_client_settings_config_file(**kwargs):  # pylint: disable=inconsistent-r
         'proxy': '',
         'userid': '',
         'access_token': '',
-        'verify': True,
         'auth_cert': ''
+        'verify': "True"
     })
     config.read(config_files)
 
