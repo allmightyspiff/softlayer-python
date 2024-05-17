@@ -148,18 +148,16 @@ class X509Authentication(AuthenticationBase):
         :param CA Cert str: Path to the Servers signed certificate.
     """
 
-    def __init__(self, cert, ca_cert):
+    def __init__(self, cert):
         self.cert = cert
-        self.ca_cert = ca_cert
 
     def get_request(self, request):
         """Sets token-based auth headers."""
         request.cert = self.cert
-        request.verify = self.ca_cert
         return request
 
     def __repr__(self):
-        return f"X509Authentication(cert={self.cert}, ca_cert={self.ca_cert})"
+        return f"X509Authentication(cert={self.cert})"
 
 
 class EmployeeAuthentication(AuthenticationBase):

@@ -180,7 +180,6 @@ def employee_client(username=None,
                                           proxy=proxy,
                                           verify=None,
                                           config_file=config_file)
-
     url = settings.get('endpoint_url')
     verify = settings.get('verify', True)
 
@@ -211,9 +210,13 @@ def employee_client(username=None,
         access_token = settings.get('access_token')
 
     user_id = settings.get('userid')
+    certificate = settings.get('auth_cert', False)
 
+    # If they have a certifite configured, use that.
+    if certificate:
+        return CertificateClient(auth=None, transport=transport, config_file=config_file)
     # Assume access_token is valid for now, user has logged in before at least.
-    if access_token and user_id:
+    elif access_token and user_id:
         auth = slauth.EmployeeAuthentication(user_id, access_token)
         return EmployeeClient(auth=auth, transport=transport, config_file=config_file)
     else:
@@ -491,8 +494,7 @@ class CertificateClient(BaseClient):
         """Prepares the authentication property"""
         if auth is None:
             auth_cert = self.settings['softlayer'].get('auth_cert')
-            serv_cert = self.settings['softlayer'].get('server_cert', None)
-            auth = slauth.X509Authentication(auth_cert, serv_cert)
+            auth = slauth.X509Authentication(auth_cert)
         self.auth = auth
 
     def __repr__(self):
